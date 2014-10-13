@@ -1,0 +1,75 @@
+html,body {
+  height: 100%;
+  width: 100%; 
+}
+.icon-bar {
+	background-color: #CCCCCC;
+	height: 10%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+  z-index: 3;
+}
+[class^="menu--"] {
+  cursor: pointer;
+  display: table;
+	float: left;
+	font-size: 3em;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	width: 25%;
+}
+[class^="menu--"] i {
+  display: table-cell;
+  vertical-align: middle;
+}
+[class^="menu--"] i:not(:last-of-type) {
+  border-right: 2px solid #AAAAAA;
+}
+.sidebar {
+	background-color: #EEEEEE;
+  cursor: pointer;
+  display: table;
+  font-size: 200%;
+	height: 90%;
+	position: fixed;
+	text-align: center;
+	top: 10%;
+  transition: left 2s, right 2s;
+	right: 0;
+  width: 10vmin;
+}
+.sidebar-open {
+  left: auto;
+  right: 0;  
+}
+.sidebar-closed {
+  left: 0;
+  right: auto;
+}
+.sidebar i {
+  display: table-cell;
+  vertical-align: middle;  
+}
+.menu {
+	background-color: #DDDDDD;
+	height: 100%;
+	position: absolute;
+  overflow-x: hidden;
+	top: 0;
+	left: 0;
+  z-index: 2;
+}
+.menu-open {
+  width: 100%;  
+}
+.menu-closed {
+  width: 0;  
+}
+.content {
+	background-color: #333333;
+	height: 100%;
+	width: 100%;
+}
