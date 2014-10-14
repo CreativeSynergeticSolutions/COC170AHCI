@@ -6,6 +6,7 @@
 html, body {
 	height: 100%;
 	width: 100%;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .top-bar {
 	background-color: #CCCCCC;
@@ -26,7 +27,7 @@ html, body {
 [class^="top--menu"] i:not(:last-of-type) {
   border-right: 2px solid #AAAAAA;
 }
-[class^="menu-"] {
+.menu {
 	background-color: #DDDDDD;
 	position: absolute;
 	left: 0;
@@ -34,18 +35,60 @@ html, body {
 	height: 100%;
 	margin-bottom: -10vmin;
 	overflow: hidden;
+	transition: width 0.5s;
 }
 .menu-closed {
-	width: 5vmin;
+	width: 10vmin;
 }
 .menu-open {
 	width: 100%;
 }
+.menu-area {
+	float: left;
+	margin-left: -10vmin;
+	padding-left: 10vmin;
+	height: 100%;
+	width: 100%;
+}
+.menu-favourites {
+	border-bottom: 3px solid #AAAAAA;
+	overflow: hidden;
+	width: 100%;
+}
+.menu-favourites h4 {
+	background-color: #AAAAAA;
+	color: #FFFFFF;
+	height: 10vmin;
+	text-align: center;
+	line-height: 10vmin;
+}
+.menu-favourites li {
+	float: left;
+	height: 20vmin;
+	line-height: 20vmin;
+	text-align: center;
+	width: 33%;
+}
+.menu-favourites li:nth-of-type(3n+1) {
+	clear: both;
+}
+.menu-main li {
+	float: left;
+	height: 20vmin;
+	line-height: 20vmin;
+	text-align: center;
+	width: 33%;
+}
+.menu-main li:nth-of-type(3n+1) {
+	clear: both;
+}
 .sidebar {
 	background-color: #EEEEEE;
 	float: right;
+	font-size: 5vmin;
 	height: 100%;
-	width: 5vmin;
+	text-align: center;
+	width: 10vmin;
 	line-height: 98vh;
 }
 .content {
