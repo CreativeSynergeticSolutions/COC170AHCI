@@ -14,7 +14,7 @@ body{
 	cursor:pointer;
 }
 #customerMenuBar, #customerMenuOptionsBack{
-	height:10vmin;
+	height:10%;
 	padding-top:1%;
 	padding-bottom:1%;
 	width:100%;
@@ -28,8 +28,8 @@ body{
 } */
 #customerMenuOptions, #customerContainer{
 	width: 100%;
-	height: 80vh;
-	overflow-y: scroll;
+	height: 90%;
+	transition: height 0.5s;
 }
 #georgeLogo{
 	background-image: url(http://georgepackaging.com/images/george-logo.png);
@@ -44,7 +44,7 @@ body{
 }
 .customerMenuOptions{
 	width: 100%;
-	height:11%;
+	height:11.11%;
 	padding-top:1%;
 	padding-bottom:1%;
 	background-color: #eeeeee;
