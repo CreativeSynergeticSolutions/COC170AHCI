@@ -11,11 +11,14 @@ html,body {
 	width: 100%;
   z-index: 3;
 }
+.icons {
+  height: 100%;
+}
 [class^="menu--"] {
   cursor: pointer;
   display: table;
 	float: left;
-	font-size: 3em;
+	font-size: 8vmin;
 	height: 100%;
 	position: relative;
 	text-align: center;
@@ -29,16 +32,16 @@ html,body {
   border-right: 2px solid #AAAAAA;
 }
 .sidebar {
-	background-color: #EEEEEE;
+  background-color: #EEEEEE;
   cursor: pointer;
   display: table;
   font-size: 200%;
-	height: 90%;
-	position: fixed;
-	text-align: center;
-	top: 10%;
+  height: 90%;
+  position: fixed;
+  text-align: center;
+  top: 10%;
   transition: left 2s, right 2s;
-	right: 0;
+  right: 0;
   width: 10vmin;
 }
 .menu-open > .sidebar {
@@ -54,12 +57,13 @@ html,body {
   vertical-align: middle;  
 }
 .menu {
-	background-color: #DDDDDD;
-	height: 100%;
-	position: absolute;
+  background-color: #DDDDDD;
+  height: 100%;
+  position: absolute;
+  transition: width 0.5s ease-in 0s;
   overflow-x: hidden;
-	top: 0;
-	left: 0;
+  top: 0;
+  left: 0;
   z-index: 2;
 }
 .menu-open {
@@ -74,6 +78,7 @@ html,body {
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 	padding-left: 10vmin;
+	padding-top: 10vmin;
 	height: 100%;
 	width: 100%;
 }
