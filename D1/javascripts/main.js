@@ -10,7 +10,6 @@ menu = {
     this.sidebar.getElementsByTagName('i')[0].className = 'icon-right-open';
   },
   toggle: function(){
-    console.log(this.element.className);
     (this.element.offsetWidth === 0) ? this.open() : this.close();
   }
 };
