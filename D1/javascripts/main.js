@@ -1,3 +1,11 @@
+/*
+	Top Menu
+*/
+
+
+/*
+	Side Menu
+*/
 menu = {
   sidebar: document.getElementById('sidebar-toggle'),
   element: document.getElementById('sidebar-toggle').parentElement,
@@ -10,7 +18,19 @@ menu = {
     this.sidebar.getElementsByTagName('i')[0].className = 'icon-right-open';
   },
   toggle: function(){
-    (this.element.offsetWidth === 0) ? this.open() : this.close();
+    (this.element.offsetWidth === this.sidebar.offsetWidth) ? this.open() : this.close();
   }
 };
 menu.sidebar.addEventListener('click', function(){menu.toggle();},false);
+
+/*
+	Hammer Touch
+*/
+var hammertime = new Hammer(menu.sidebar, {});
+hammertime.on('swipe', function(ev) {
+	if(ev.direction===4){
+		menu.open();
+	} else if (ev.direction===2) {
+		menu.close();
+	}
+});

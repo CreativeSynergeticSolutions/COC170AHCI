@@ -1,83 +1,56 @@
-html,body {
-  height: 100%;
-  width: 100%; 
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
 }
-.icon-bar {
+html, body {
+	height: 100%;
+	width: 100%;
+}
+.top-bar {
 	background-color: #CCCCCC;
-	height: 10%;
+	display: table;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-  z-index: 3;
-}
-.icons {
-  height: 100%;
-}
-[class^="menu--"] {
-  cursor: pointer;
-  display: table;
-	float: left;
-	font-size: 8vmin;
-	height: 100%;
-	position: relative;
+	height: 10vmin;
+	overflow: hidden;
 	text-align: center;
-	width: 25%;
 }
-[class^="menu--"] i {
-  display: table-cell;
-  vertical-align: middle;
+.top-bar > div {
+	display: table-cell;
+	font-size: 5vh;
+	vertical-align: middle;
 }
-[class^="menu--"] i:not(:last-of-type) {
+[class^="top--menu"] i:not(:last-of-type) {
   border-right: 2px solid #AAAAAA;
 }
-.sidebar {
-  background-color: #EEEEEE;
-  cursor: pointer;
-  display: table;
-  font-size: 200%;
-  height: 90%;
-  position: fixed;
-  text-align: center;
-  top: 10%;
-  transition: left 2s, right 2s;
-  right: 0;
-  width: 10vmin;
-}
-.menu-open > .sidebar {
-  left: auto;
-  right: 0;  
-}
-.menu-closed > .sidebar {
-  left: 0;
-  right: auto;
-}
-.sidebar i {
-  display: table-cell;
-  vertical-align: middle;  
-}
-.menu {
-  background-color: #DDDDDD;
-  height: 100%;
-  position: absolute;
-  transition: width 0.5s ease-in 0s;
-  overflow-x: hidden;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-.menu-open {
-  width: 100%;  
+[class^="menu-"] {
+	background-color: #DDDDDD;
+	position: absolute;
+	left: 0;
+	top: 10vmin;
+	height: 100%;
+	margin-bottom: -10vmin;
+	overflow: hidden;
 }
 .menu-closed {
-  width: 0;  
+	width: 5vmin;
+}
+.menu-open {
+	width: 100%;
+}
+.sidebar {
+	background-color: #EEEEEE;
+	float: right;
+	height: 100%;
+	width: 5vmin;
+	line-height: 98vh;
 }
 .content {
 	background-color: #333333;
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
-	padding-left: 10vmin;
+	padding-left: 5vmin;
 	padding-top: 10vmin;
 	height: 100%;
 	width: 100%;
