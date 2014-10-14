@@ -1,19 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>George</title>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="stylesheets/_reset.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/template.css">
+	<link rel="stylesheet" type="text/css" href="vendor/fontello/css/creative-synergetic-solutions.css">
 	<link rel="stylesheet" href="vendor/jquery-ui-1.11.1/jquery-ui.min.css">
 	<link rel="stylesheet" href="stylesheets/product.css">
 </head>
+
 <body>
-	<div id='headerWrapper'>
-		<div id='logoBar'></div>
-		<div id='menuBar'></div>
+	<header class='top-bar'>
+		<div class='top--menu-icon'>
+			<i class="icon-menu"></i>
+		</div>
+		<div class="top--menu-account">
+			<i class="icon-user"></i>
+		</div>
+		<div class="top--menu-search">
+			<i class="icon-search-1"></i>
+		</div>
+		<div class="top--menu-cart">
+			<i class="icon-basket"></i>
+		</div>
+	</header>
+	<div class='menu menu-closed'>
+		<div class='menu-area'>
+			<div class='menu-favourites'>
+				<h4>Favourites</h4>
+				<ul>
+					<li>+</li>
+					<li>+</li>
+					<li>+</li>
+					<li>+</li>
+					<li>+</li>
+					<li>+</li>
+				</ul>
+			</div>
+			<div class='menu-main'>
+				<ul>
+					<li>Sales</li>
+					<li>Women</li>
+					<li>Men</li>
+					<li>Boys</li>
+					<li>Girls</li>
+					<li>Baby</li>
+					<li>School</li>
+					<li>Occasion</li>
+					<li>Shoes</li>
+					<li>More</li>
+				</ul>				
+			</div>
+		</div>
+		<div id="sidebar-toggle" class="sidebar sidebar-closed">
+			<i class="icon-right-open"></i>
+		</div>
 	</div>
-	<div id='productContent'>
-	</div>
+	<section class='content'>
+		
+		<div id='productWrapper'>
+			
+			<div id='productName'>Boston Crew Pea Coat</div>
+			
+			<div id='productImg'></div>
+			
+		</div>
+		
+	</section>
+	
+	<script src="vendor/hammer.min.js"></script>
+	<script src="javascripts/main.js"></script>
+	<script type='text/javascript' src='vendor/jquery-1.11.1.min.js'></script>
+	<script type='text/javascript' src='vendor/jquery-ui-1.11.1/jquery-ui.min.js'></script>
+	<script type='text/javascript' src='javascripts/product.js'></script>
+	
 </body>
-<script type='text/javascript' src='vendor/jquery-1.11.1.min.js'></script>
-<script type='text/javascript' src='vendor/jquery-ui-1.11.1/jquery-ui.min.js'></script>
-<script type='text/javascript' src='javascripts/product.js'></script>
 </html>
