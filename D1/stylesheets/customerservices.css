@@ -22,10 +22,10 @@ body{
 	box-shadow: inset 0px 2px 2px #dddddd;
 	cursor:pointer;
 }
-#innerContainer{
+/* #innerContainer{
 	height:90vmin;
 	width:95vmin;
-}
+} */
 #customerMenuOptions, #customerContainer{
 	width: 100%;
 	height: 80vh;
@@ -56,5 +56,5 @@ body{
 	color: #ffffff;
 }
 .customerMenuOptions, #customerMenuBar{
-	font-size: 1.6em;
+	font-size: 1em;
 }

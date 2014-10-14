@@ -20,73 +20,98 @@
 		</script>
 	</head>
 	<body>
-		<header class='top-bar'>
-				<div class='top--menu-icon'>
-					<i class="icon-menu"></i>
-				</div>
-				<div class="top--menu-account">
-					<i class="icon-user"></i>
-				</div>
-				<div class="top--menu-search">
-					<i class="icon-search-1"></i>
-				</div>
-				<div class="top--menu-cart">
-					<i class="icon-basket"></i>
-				</div>
-		</header>
-		<div class='menu-closed'>
-			<div id="sidebar-toggle" class="sidebar sidebar-closed">
-				<i class="icon-right-open"></i>
+	<header class='top-bar'>
+		<div class='top--menu-icon'>
+			<i class="icon-menu"></i>
+		</div>
+		<div class="top--menu-account">
+			<i class="icon-user"></i>
+		</div>
+		<div class="top--menu-search">
+			<i class="icon-search-1"></i>
+		</div>
+		<div class="top--menu-cart">
+			<i class="icon-basket"></i>
+		</div>
+	</header>
+	<div class='menu menu-closed'>
+		<div class='menu-area'>
+			<div class='menu-favourites'>
+				<h4>Favourites</h4>
+				<ul>
+					<li>+</li>
+					<li>+</li>
+					<li>+</li>
+					<li>+</li>
+					<li>+</li>
+					<li>+</li>
+				</ul>
+			</div>
+			<div class='menu-main'>
+				<ul>
+					<li>Sales</li>
+					<li>Women</li>
+					<li>Men</li>
+					<li>Boys</li>
+					<li>Girls</li>
+					<li>Baby</li>
+					<li>School</li>
+					<li>Occasion</li>
+					<li>Shoes</li>
+					<li>More</li>
+				</ul>				
 			</div>
 		</div>
-		<section class='content'>
-			<div id='innerContainer'>
-				<div id='customerMenuBar' onclick='customerMenuToggle();'>
-					<div id='customerBarHeader'> 
-						Customer Services - 
-						<div id='customerBarHeaderSelected'>
-							Delivery Charges
-						</div>
-						\/
-					</div>	
+		<div id="sidebar-toggle" class="sidebar sidebar-closed">
+			<i class="icon-right-open"></i>
+		</div>
+	</div>
+	<section class='content'>
+			<div id='customerMenuBar' onclick='customerMenuToggle();'>
+				<div id='customerBarHeader'> 
+					Customer Services - 
+					<div id='customerBarHeaderSelected'>
+						Delivery Charges
+					</div>
+					\/
+				</div>	
+			</div>
+			<!-- details about selected option -->
+			<div id='customerContainer'>
+				
+			</div>
+			<!-- menu displayed -->
+			<div id='customerMenuOptions' style='display:none;'>
+				<div id='customerMenuOptionsDel' class='customerMenuOptions' >
+					Deliveries
 				</div>
-				<!-- details about selected option -->
-				<div id='customerContainer'>
-					
+				<div id='customerMenuOptionsRet' class='customerMenuOptions'>
+					Returns/Exchanges
 				</div>
-				<!-- menu displayed -->
-				<div id='customerMenuOptions' style='display:none;'>
-					<div id='customerMenuOptionsDel' class='customerMenuOptions' >
-						Deliveries
-					</div>
-					<div id='customerMenuOptionsRet' class='customerMenuOptions'>
-						Returns/Exchanges
-					</div>
-					<div id='customerMenuOptionsCon' class='customerMenuOptions'>
-						Contact Us
-					</div>
-					<div id='customerMenuOptionsPay' class='customerMenuOptions'>
-						Payment Methods
-					</div>
-					<div id='customerMenuOptions100' class='customerMenuOptions'>
-						100 Days of Satisfaction
-					</div>
-					<div id='customerMenuOptionsPri' class='customerMenuOptions'>
-						Privacy Policy
-					</div>
-					<div id='customerMenuOptionsT&C' class='customerMenuOptions'>
-						Terms and Conditions
-					</div>
-					<div id='customerMenuOptionsSit' class='customerMenuOptions'>
-						Site Map
-					</div>
-					<div id='customerMenuOptionsWin' class='customerMenuOptions'>
-						Wine
-					</div>
-					<!-- <div id='customerMenuOptionsBack'>
-						Back
-					</div> -->
+				<div id='customerMenuOptionsCon' class='customerMenuOptions'>
+					Contact Us
 				</div>
+				<div id='customerMenuOptionsPay' class='customerMenuOptions'>
+					Payment Methods
+				</div>
+				<div id='customerMenuOptions100' class='customerMenuOptions'>
+					100 Days of Satisfaction
+				</div>
+				<div id='customerMenuOptionsPri' class='customerMenuOptions'>
+					Privacy Policy
+				</div>
+				<div id='customerMenuOptionsT&C' class='customerMenuOptions'>
+					Terms and Conditions
+				</div>
+				<div id='customerMenuOptionsSit' class='customerMenuOptions'>
+					Site Map
+				</div>
+				<div id='customerMenuOptionsWin' class='customerMenuOptions'>
+					Wine
+				</div>
+				<!-- <div id='customerMenuOptionsBack'>
+					Back
+				</div> -->
 			</div>
 		</section>
 		<script src="vendor/hammer.min.js"></script>
