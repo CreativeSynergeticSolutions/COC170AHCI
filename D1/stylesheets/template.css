@@ -36,6 +36,7 @@ html, body {
 	margin-bottom: -10vmin;
 	overflow: hidden;
 	transition: width 0.5s;
+	z-index: 2;
 }
 .menu-closed {
 	width: 10vmin;
