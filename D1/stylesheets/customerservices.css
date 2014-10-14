@@ -11,13 +11,25 @@ body{
 	width:100%;
 	background-color:#ffffff;
 	padding-top: 4%;
+	cursor:pointer;
 }
-#customerMenuBar{
-	height:5%;
+#customerMenuBar, #customerMenuOptionsBack{
+	height:10vmin;
+	padding-top:1%;
+	padding-bottom:1%;
 	width:100%;
 	background-color:#ffffff;
 	box-shadow: inset 0px 2px 2px #dddddd;
-	padding-top: 4%;
+	cursor:pointer;
+}
+#innerContainer{
+	height:90vmin;
+	width:95vmin;
+}
+#customerMenuOptions, #customerContainer{
+	width: 100%;
+	height: 80vh;
+	overflow-y: scroll;
 }
 #georgeLogo{
 	background-image: url(http://georgepackaging.com/images/george-logo.png);
@@ -32,13 +44,17 @@ body{
 }
 .customerMenuOptions{
 	width: 100%;
-	height: 5%; /*to change*/
+	height:11%;
+	padding-top:1%;
+	padding-bottom:1%;
 	background-color: #eeeeee;
 	box-shadow: inset 0px 2px 2px #dddddd;
-	padding-top: 3%;
+	cursor:pointer;
 }
 .customerMenuOptions:hover{
 	background-color:#330066;
 	color: #ffffff;
-	
+}
+.customerMenuOptions, #customerMenuBar{
+	font-size: 1.6em;
 }

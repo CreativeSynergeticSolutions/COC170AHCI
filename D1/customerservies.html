@@ -1,84 +1,95 @@
+<!doctype html>
 <html>
 	<head>
 		<title>George</title>
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="stylesheets/_reset.css">
 		<link rel="stylesheet" type="text/css" href="stylesheets/template.css">
 		<link rel="stylesheet" type="text/css" href="vendor/fontello/css/creative-synergetic-solutions.css">
 		<link rel="stylesheet" href="stylesheets/customerservices.css">
+		<script>
+			function customerMenuToggle(){
+				if(document.getElementById('customerMenuOptions').style.display == "none"){
+					document.getElementById('customerMenuOptions').style.display = 'block';
+					document.getElementById('customerContainer').style.display = 'none';
+				}else{
+					document.getElementById('customerMenuOptions').style.display = 'none';
+					document.getElementById('customerContainer').style.display = 'block';
+				}
+			}
+		</script>
 	</head>
 	<body>
-		<header class='icon-bar'>
-			<div class="icons">
-				<div class='menu--icon'>
+		<header class='top-bar'>
+				<div class='top--menu-icon'>
 					<i class="icon-menu"></i>
 				</div>
-				<div class="menu--account">
+				<div class="top--menu-account">
 					<i class="icon-user"></i>
 				</div>
-				<div class="menu--search">
+				<div class="top--menu-search">
 					<i class="icon-search-1"></i>
 				</div>
-				<div class="menu--cart">
+				<div class="top--menu-cart">
 					<i class="icon-basket"></i>
 				</div>
-			</div>
 		</header>
-		<div class='menu menu-closed'>
-			<nav>
-				<div class="menu-favourites">
-					<div class="favourite"></div>
-					<div class="favourite"></div>
-					<div class="favourite"></div>
-					<div class="favourite"></div>
-					<div class="favourite"></div>
-					<div class="favourite"></div>
-				</div>
-			</nav>
+		<div class='menu-closed'>
 			<div id="sidebar-toggle" class="sidebar sidebar-closed">
 				<i class="icon-right-open"></i>
 			</div>
 		</div>
 		<section class='content'>
-			<div id='customerMenuBar'>
-			<div id='customerBarHeader'> 
-				Customer Services - 
-				<div id='customerBarHeaderSelected'>
-					Delivery Charges
+			<div id='innerContainer'>
+				<div id='customerMenuBar' onclick='customerMenuToggle();'>
+					<div id='customerBarHeader'> 
+						Customer Services - 
+						<div id='customerBarHeaderSelected'>
+							Delivery Charges
+						</div>
+						\/
+					</div>	
 				</div>
-				\/
-			</div>	
-		</div>
-			<div id='customerMenuOptions'>
-				<div id='customerMenuOptionsDel' class='customerMenuOptions'>
-					Deliveries
+				<!-- details about selected option -->
+				<div id='customerContainer'>
+					
 				</div>
-				<div id='customerMenuOptionsRet' class='customerMenuOptions'>
-					Returns/Exchanges
-				</div>
-				<div id='customerMenuOptionsCon' class='customerMenuOptions'>
-					Contact Us
-				</div>
-				<div id='customerMenuOptionsPay' class='customerMenuOptions'>
-					Payment Methods
-				</div>
-				<div id='customerMenuOptions100' class='customerMenuOptions'>
-					100 Days of Satisfaction
-				</div>
-				<div id='customerMenuOptionsPri' class='customerMenuOptions'>
-					Privacy Policy
-				</div>
-				<div id='customerMenuOptionsT&C' class='customerMenuOptions'>
-					Terms and Conditions
-				</div>
-				<div id='customerMenuOptionsSit' class='customerMenuOptions'>
-					Site Map
-				</div>
-				<div id='customerMenuOptionsBack' class='customerMenuOptions'>
-					Back
+				<!-- menu displayed -->
+				<div id='customerMenuOptions' style='display:none;'>
+					<div id='customerMenuOptionsDel' class='customerMenuOptions' >
+						Deliveries
+					</div>
+					<div id='customerMenuOptionsRet' class='customerMenuOptions'>
+						Returns/Exchanges
+					</div>
+					<div id='customerMenuOptionsCon' class='customerMenuOptions'>
+						Contact Us
+					</div>
+					<div id='customerMenuOptionsPay' class='customerMenuOptions'>
+						Payment Methods
+					</div>
+					<div id='customerMenuOptions100' class='customerMenuOptions'>
+						100 Days of Satisfaction
+					</div>
+					<div id='customerMenuOptionsPri' class='customerMenuOptions'>
+						Privacy Policy
+					</div>
+					<div id='customerMenuOptionsT&C' class='customerMenuOptions'>
+						Terms and Conditions
+					</div>
+					<div id='customerMenuOptionsSit' class='customerMenuOptions'>
+						Site Map
+					</div>
+					<div id='customerMenuOptionsWin' class='customerMenuOptions'>
+						Wine
+					</div>
+					<!-- <div id='customerMenuOptionsBack'>
+						Back
+					</div> -->
 				</div>
 			</div>
 		</section>
-		<script src="javascripts/main.js"></script>	
+		<script src="vendor/hammer.min.js"></script>
+		<script src="javascripts/main.js"></script>
 	</body>
 </html>
