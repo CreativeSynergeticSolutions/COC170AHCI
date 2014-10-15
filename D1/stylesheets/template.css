@@ -20,9 +20,13 @@ html, body {
 	text-align: center;
 }
 .top-bar > div {
+	cursor: pointer;
 	display: table-cell;
 	font-size: 5vh;
 	vertical-align: middle;
+}
+.top-bar > div:hover {
+	background-color: #BBBBBB;
 }
 [class^="top--menu"] i:not(:last-of-type) {
   border-right: 2px solid #AAAAAA;
@@ -50,6 +54,8 @@ html, body {
 	padding-left: 10vmin;
 	height: 100%;
 	width: 100%;
+	overflow-y: auto;
+	padding-bottom: 10vmin;
 }
 .menu-favourites {
 	border-bottom: 3px solid #AAAAAA;
@@ -85,6 +91,7 @@ html, body {
 }
 .sidebar {
 	background-color: #EEEEEE;
+	cursor: pointer;
 	float: right;
 	font-size: 5vmin;
 	height: 100%;
