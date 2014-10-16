@@ -8,14 +8,21 @@
 		<link rel="stylesheet" type="text/css" href="vendor/fontello/css/creative-synergetic-solutions.css">
 		<link rel="stylesheet" href="stylesheets/customerservices.css">
 		<script>
+			var previous = "customerDeliveryContainer"; //starts as default on deliveries
 			function customerMenuToggle(){
 				if(document.getElementById('customerMenuOptions').style.display == "none"){
 					document.getElementById('customerMenuOptions').style.display = 'block';
-					document.getElementById('customerContainer').style.display = 'none';
+					document.getElementById(previous).style.display = 'none';
 				}else{
 					document.getElementById('customerMenuOptions').style.display = 'none';
-					document.getElementById('customerContainer').style.display = 'block';
+					document.getElementById(previous).style.display = 'block';
 				}
+			}
+			function toggleMenu(menu){
+				document.getElementById(menu).style.display = 'block';
+				document.getElementById('customerMenuOptions').style.display = 'none';
+				previous = menu;
+				
 			}
 		</script>
 	</head>
@@ -77,7 +84,7 @@
 				</div>	
 			</div>
 			<!-- details about selected option -->
-			<div id='customerContainer'>
+			<div id='customerDeliveryContainer' class="customerContainer">
 				<div class="infoHeader">
 					<div class="titleHeader">
 						FREE Click and Collect
@@ -135,15 +142,63 @@
 					<p><strong>Order before 4pm, collect in store by 8pm next day</strong></p>
 					<p>Applies to selected George and ASDA Direct Small/Medium products.</p>
 				</div>	
-				
 			</div>
-				
+			<div id="customerReturnsContainer" class="customerContainer" style="display:none;">
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Returning George Orders
+					</div>
+					<p><strong>100 Day Satisfaction Guarantee</strong></p>
+					<p>If for any reason you are not satisfied with your George Clothing or George Home product, simply return it within 100 days with proof of purchase for an exchange or refund. George branded products only. Excludes watches, jewellery, hair accessories, part assembled flat pack furniture and mattresses. Your statutory rights are not affected. UK Mainland stores only. Excludes franchises.</p>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Return through Collect+
+					</div>
+					<ol>
+						<li><p>Complete your returns information on the George returns delivery note included in your order</p></li>
+						<li><p>Peel off the Collect+ returns label from the insert that came with your order and attach it to your parcel, ensuring any original delivery labels are covered</p></li>
+						<li><p>Simply take your parcel to ANY of 4,000 local stores offering Collect+ services. You'll receive proof of postage and a code to track your return online</p></li>
+						<li><p>You can find your nearest store at ww.collectplus.co.uk or text COLLECT and your postcode  (e.g. COLLECT NG23 5HD) to 84555.<br>Texts from 84555 are FREE to receive. Texts to 84555 are charged at your  standard network rate. Full terms and conditions at <a href="http://www.collectplus.co.uk/smsterms">www.collectplus.co.uk/smsterms</a></p></li>
+					</ol>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Returning George Orders
+					</div>
+					<p><strong>Return to Store</strong></p>
+					<p>You can take your item to any Asda Superstore or Asda Living store along with the Despatch Note you received in your parcel and the Debit / Credit card which you used to buy the goods. We will refund the purchase price of the returned items or exchange for another item if you prefer. Product marked "Online Exclusive" cannot be returned to store.</p>
+					<p>You can also return the purchased item to an Asda Supermarket store where you have collected the product from the store (all store details are available on the Asda store locator).</p>
+					<p><strong>Return by Post</strong></p>
+					<p>You can send your product back to us including the Despatch Note you received in your parcel via the Post Office at the address shown below. Please note that the Post Office will charge you for this service and we recommend that you ask for a free Certificate of Posting and take a note of the Order number on the Despatch Note as this may help us keep track of your parcel. Your refund will be credited back to your Debit / Credit card when we receive your parcel. Your statutory rights are not affected in any way.</p>
+					<table border="0">
+						<tbody>
+							<tr>
+								<td width='60%'>Returns Address</td>
+								<td>Asda Direct</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>PO Box 9564</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>Newark</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>NG24 9GF</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 			<!-- menu displayed -->
 			<div id='customerMenuOptions' style='display:none;'>
-				<div id='customerMenuOptionsDel' class='customerMenuOptions' >
+				<div id='customerMenuOptionsDel' class='customerMenuOptions' onclick='toggleMenu("customerDeliveryContainer")'>
 					Deliveries
 				</div>
-				<div id='customerMenuOptionsRet' class='customerMenuOptions'>
+				<div id='customerMenuOptionsRet' class='customerMenuOptions' onclick='toggleMenu("customerReturnsContainer")'>
 					Returns/Exchanges
 				</div>
 				<div id='customerMenuOptionsCon' class='customerMenuOptions'>

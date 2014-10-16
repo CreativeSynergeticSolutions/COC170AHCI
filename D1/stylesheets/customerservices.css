@@ -6,10 +6,13 @@ body{
 	text-align:center;
 	font-family:Arial,Helvetica,Tahoma,sans-serif;
 }
-p{
+p, table{
 	padding: 1%;
 	font-size: 0.8em;
 }
+table{
+	margin:1%;
+}	
 strong{
 	font-weight: bold;
 }
@@ -33,12 +36,12 @@ strong{
 	height:90vmin;
 	width:95vmin;
 } */
-#customerMenuOptions, #customerContainer{
+#customerMenuOptions, .customerContainer{
 	width: 100%;
 	height: 90%;
 	transition: height 0.5s;
 }
-#customerContainer{
+.customerContainer{
 	background-color: #e8e8e8;
 	padding: 2%;
 	overflow-y:auto;
