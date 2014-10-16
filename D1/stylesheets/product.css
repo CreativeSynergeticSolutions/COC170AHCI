@@ -9,6 +9,17 @@
 	
 }
 
+#productCategory {
+	
+	margin-left: 50%;
+	padding: 5px;
+	
+	width: 50%;
+	
+	text-align: right;
+	
+}
+
 #productName {
 	
 	margin: 0 auto;
@@ -34,4 +45,128 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 		
+}
+
+#productPrice, #productReview {
+	
+	float: left;
+	margin: 0%;
+	padding: 5px;
+		
+}
+
+
+#productPrice {
+	
+	padding-left: 20px;
+	
+	width: 30%;
+	
+}
+
+#productReview {
+	
+	padding-right: 20px;
+	
+	width: 70%;
+	
+	text-align: right;
+	
+}
+
+#productReview a {
+	
+	color: black;
+	
+}
+
+#productOptions {
+	
+	clear: both;
+	
+	padding-top: 10px;
+	
+}
+
+#productOptions .accordianSection {
+	
+	margin-bottom: 5px;
+	
+	background-color: lightgrey;
+	
+}
+
+.optionTitle {
+	
+	display: inline-block;
+	padding: 5px;
+	
+}
+
+.selectionOptions {
+	
+	float: left;
+	
+	height: 20vmin;
+	width: 33.33%;
+	
+	color: white;
+	background-color: grey;
+	
+	border: 1px solid dimgray;
+	
+	text-align: center;
+	vertical-align: middle;
+	line-height: 20vmin;
+	
+}
+
+.selectionOptions:hover {
+	
+	background-color: dimgray;
+	
+}
+
+.selectionOptions:nth-of-type(3n+1){
+	
+	clear: both;
+	
+}
+
+
+
+
+
+/*			Accordion Mechanism			*/
+
+.accordianSection{
+
+	display:block;
+	width:100%;
+	
+}
+
+.accordianContent{
+	
+	display:block;
+	max-height:0px;
+	
+	width:100%;
+	overflow:hidden;
+	
+	transition-property: max-height, margin-top;
+    transition-duration: 0.7s;
+	transition-timing-function: ease;
+	
+}
+
+.accordianSection input[type=checkbox] {
+	position:absolute;
+	display:none;
+}
+
+.accordianSection input[type=checkbox]:checked~.accordianContent {
+	display:block;
+	max-height: 60vmin;
+	margin-top:5px;
 }
