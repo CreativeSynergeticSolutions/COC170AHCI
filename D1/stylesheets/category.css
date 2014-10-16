@@ -1,0 +1,14 @@
+.category-list li {
+	float: left;
+	height: 20vmin;
+	line-height: 20vmin;
+	text-align: center;
+	width: 33%;
+	color: white;
+	background-color:grey;
+	border: solid black;
+	border-width:1px;
+}
+.category-list li:nth-of-type(3n+1) {
+	clear: both;
+}
