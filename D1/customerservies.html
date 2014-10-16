@@ -9,20 +9,24 @@
 		<link rel="stylesheet" href="stylesheets/customerservices.css">
 		<script>
 			var previous = "customerDeliveryContainer"; //starts as default on deliveries
+			var pretitle = "Delivery Charges"
 			function customerMenuToggle(){
 				if(document.getElementById('customerMenuOptions').style.display == "none"){
 					document.getElementById('customerMenuOptions').style.display = 'block';
 					document.getElementById(previous).style.display = 'none';
+					document.getElementById("customerBarHeaderSelected").innerHTML="Select";
 				}else{
 					document.getElementById('customerMenuOptions').style.display = 'none';
 					document.getElementById(previous).style.display = 'block';
+					document.getElementById("customerBarHeaderSelected").innerHTML=pretitle;
 				}
 			}
-			function toggleMenu(menu){
+			function toggleMenu(menu, title){
 				document.getElementById(menu).style.display = 'block';
 				document.getElementById('customerMenuOptions').style.display = 'none';
 				previous = menu;
-				
+				pretitle = title;
+				document.getElementById("customerBarHeaderSelected").innerHTML=title;
 			}
 		</script>
 	</head>
@@ -193,24 +197,205 @@
 					</table>
 				</div>
 			</div>
+			<div id="customerContactContainer" class="customerContainer" style="display:none;">
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Need Help?
+					</div>
+					Call us on: 0800 952 3003
+				</div>
+			</div>
+			<div id="customerPaymentContainer" class="customerContainer" style="display:none;">
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Payment Options
+					</div>
+					<p>We are able to accept Asda Credit Card, MasterCard, Delta, Maestro, Visa, Visa Electron and Solo or American Express although we reserve the right to vary these from time to time without notice.</p>
+					<p>We also accept payment via PayPal.</p>
+					<p>We take every reasonable care to ensure that your order and subsequent transactions are conducted in a secure environment. We will let you know if products are not available for any reason after we have accepted your order. We will refund amounts already paid by way of a credit to your credit or debit card.</p>
+					<p>You are responsible for payment of all orders placed using your user name and password.</p>
+				</div>
+			</div>
+			<div id="customer100Container" class="customerContainer" style="display:none;">
+				<div class="infoHeader">
+					<div class="titleHeader">
+						100 Days of Satisfaction Guarantee
+					</div>
+					<p>	If for any reason you are not satisfied with your George Clothing
+						or George Home product, simply return it within 100 days with
+						proof of purchase for an exchange or refund. George branded
+						products only. Excludes watches, jewellery, hair accessories,
+						part assembled flat pack furniture and mattresses.
+						Your statutory rights are not affected.
+						UK Mainland stores only. Excludes franchises.</p>
+				</div>
+			</div>
+			<div id="customerPrivacyContainer" class="customerContainer" style="display:none;">
+				<p><strong>Last Updated: 26/11/2012</strong></p>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Our Privacy Mission Statement
+					</div>
+					<p>"At ASDA, we value the trust placed in us by customers, suppliers and colleagues who give us their personal data. Data security is one of our highest priorities and we aim to be as clear as possible about what we do with personal data and why we do it."</p>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Our Privacy Statement for ASDA websites
+					</div>
+					<p>Your privacy is really important to us, and we understand how important it is to you. Our aim is to be as clear and open as possible about what we do and why we do it. ASDA is committed to the online privacy of all its users.</p> 
+					<p>This Privacy Policy regulates the use by ASDA and its partner companies of the information you provide when using ASDA websites. It is to be read in conjunction with the terms and conditions of use of the website.</p>
+					<p>This ASDA website is operated by the ASDA group of companies and its partners ("we", "us", "our").</p>
+					<p>We operate this site in order to promote products and services and, where these are provided by our partners, to be the interface between our customers and our partners. Our partners may have their own privacy policies which you should also view.</p>
+					<p>Where we refer to an order in this policy, this includes an order for goods or services, registration on a site, an application for a quotation or application for a product or service or opening an account.</p>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Information We Collect
+					</div>
+					<p>To be able to order from us we have to collect certain information from you. During such processes you are required to give your contact information. We use the information supplied by you to provide the service you request from us and as set out in this privacy policy. You can amend your registration details easily through the account facilities available on the website or by contacting our Data Protection Officer at the address below.</p>
+					<p><strong>User name and password</strong> – if we collect a user name and password, this is to keep your information secure and so that we can recall your information each time you visit us.</p>
+					<p><strong>Name, address and postcode</strong> - without this we won't know where to send your order or to whom. We also use postcodes to quickly get your full address to save you typing it out, and in some cases to identify whether we deliver or offer services in your area.</p>
+					<p><strong>Age / date of birth</strong> – we may need to collect your age or date of birth in order to be able to sell you certain products, such as insurance, financial services products or alcohol, and we may also use this to send you age or birthday related offers if you agree.</p>
+					<p><strong>Email address</strong> - we send a confirmation of your orders via email.</p>
+					<p><strong>Telephone numbers</strong> - if there are any problems with your order or we need to clarify anything, we need to be able to contact you quickly.</p>
+					<p><strong>Payment card number, expiry date, issue no and name of card holder</strong> – in the event that you purchase a product or service we need this to collect payment in the same way as when we take payment in a store via chip and pin.</p>
+					<p><strong>Where you heard about us</strong> – we may ask you this to make our marketing more efficient.</p>
+					<p><strong>Correspondence</strong> – if you contact us we may keep a record of that correspondence.</p>
+					<p><strong>Sensitive personal data</strong> - sensitive personal data includes, for example, data related to your health, race or ethnic origin or religion.  We may need to obtain sensitive personal data from you for certain products and services, and in some cases, we may be able to infer sensitive personal data about you from the information you provide. By providing us with any sensitive personal data, you explicitly consent to us using and disclosing any of your sensitive personal data in order to provide you with the goods or services requested by you and in accordance with this Privacy Policy.</p>
+					<p><strong>Third party information</strong> - if you give us information about another person, (for example if someone else is taking delivery for you or is included in the purchase of a product) you confirm that you have identified ASDA to them and told them what we will use their information for, as set out in this Privacy Policy and that they have given permission for us to be able to process their personal information in the manner described.</p> 
+					<p>Personal information of recipients will be used to ensure that the delivery is performed correctly, to communicate with the recipient if required and to respond to any communications from the recipient. Recipients will not be sent marketing information unless they subsequently become customers and provide us with any necessary consents.</p>
+					<p><strong>IP addresses</strong> - when you visit our site, we will automatically receive your IP address, a unique identifier for your computer or other access device.</p>
+					<p>You may also provide us with personal information if you contact customer services, if you enter promotions or competitions run by us or if you communicate with us in some other way, for example by way of an email facility provided on the website.</p>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						How We Use The Information We Collect
+					</div>
+					<p>Our main uses of your information are explained above which in general is to process your orders, as well as to help us understand your needs and provide you with a better service. Your account may be used to store information about your previous purchases, personal preferences and shopping lists. But you should also be aware of the following uses – </p>
+					<p><strong>Marketing</strong> – we (including our group companies) may use the information we collect to inform you, by letter, phone, SMS or email, about special offers and new products and services that we think may be of interest to you. We will tell you about this when we collect your information and <strong>if you do not wish to receive these communications</strong>, please indicate this where requested. You can change your mind at any time by going to the account facilities available on the website or by contacting our Data Protection Officer at the address below. You can also unsubscribe following the instructions that we will include in any communication, such as email or text, we send to you.</p>
+					<p><strong>Customer care and correspondence</strong> - as part of our customer care procedures, our representatives may follow-up, either by letter, phone, SMS or email, to customers who have purchased goods or services from our website or who have posted comments about ASDA on the internet, for example to resolve a complaint or to ask for a testimonial.</p>
+					<p><strong>Market research</strong> we may also with your prior consent use your information to contact you for market research purposes. We may contact you by letter, phone, SMS or email.</p>
+					<p><strong>Personalise shopping</strong> - we may personalise your experience by using your past purchases and browsing habits to present special offers and new products and services that we think may be of interest to you. As technology develops this will really help us to improve our service to you.</p>
+					<p><strong>Website improvement</strong> - in order to help us design our website and improve your experience, we may collect information about the way you use and access our website. Our web system collects information about each visitor, including IP address, the length of time spent on the website and the order in which pages are visited. We may employ third party experts to help us look at this information. However, rest assured that anyone we employ will treat all information with the same sensitivity and security that we treat it. This is explained in more detail in the cookies section below.</p>
+					<p><strong>Fraud Prevention</strong> - in order to protect our customers and us from fraud and theft, we may review the information that we obtain from making identity checks and other information in our customer records, including how you conduct your account, and may pass this to other group companies, other retailers and to financial and other organisations (including law enforcement agencies) involved in fraud prevention and detection, to use in the same way. When you apply for products or services through our website you may also be subject to more detailed credit checks on terms which will be communicated to you.</p>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Cookies
+					</div>
+					<p>A cookie is a small piece of text that a website may place on your computer's hard drive.</p>
+					<p>We use cookies to:</p>
+					<ul>
+					<li>operate online ordering mechanisms (cookies are required to browse, apply and purchase);</li>
+					<li>greet you personally and speed up your log-in when you come back to the site and to remember your previous orders;</li> 
+					<li>help analyse web traffic to enable us to improve your experience; and</li>
+					<li>ensure the security and authenticity of registered users.</li>
+					</ul>
+					<p>You may set up your web browser to notify you of cookie placement requests or decline cookies completely (although declining them may prevent you from being able to use the website properly or at all). How to do this is explained below.</p>
+					<p>We may access cookies stored on your computer when you visit our website in future or when you open an email from us. We are able to do this by including web beacons (also known as clear GIFS or web bugs) in our emails and on our website. Our web beacons do not store additional information on your computer but, by communicating with our cookies on your computer, they can tell us when you have opened emails from us and what pages you look at.</p>
+					<p>We may also use third party web analytics services (for example Google Analytics, a popular web analytics service provided by Google, Inc.) to help us to analyse how users use the site. The service provider may be based outside the UK but your information will only be used for the purpose of evaluating your use of our website, compiling reports on website activity and providing other services relating to website activity and internet usage. The service provider may also transfer this information to third parties where required to do so by law, or where such third party provides the information on the service provider's behalf. The service provider will not associate your IP address with any other data held by them.</p>
+					<p>If you have Adobe Flash installed on your computer (most computers do) and you use our audio or video players, the web analytics service may try to store some additional data on your computer. This data is known as a Local Shared Object or Flash cookie. This helps us to analyse the popularity of our media files. We can count the total number of times each file is played, how many people watch videos right to the end and how people give up half way through. Adobe's website explains how to control Flash cookies on your computer.</p>
+					<p><strong>Turning cookies and web beacons off</strong> - If you want to delete any cookies or web beacons that are already on your computer or stop future cookies or web beacons, please refer to the instructions for your file management software or look at <a href="http://www.AboutCookies.org" target="_blank">www.AboutCookies.org</a>. Please remember that cookies are required to browse, add to trolley and checkout.</p>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Who We Share The Information With
+					</div>
+					<p>We will not sell, distribute or lease your personal information to third parties other than our subsidiaries, affiliates or parent companies unless we have your permission (for example for carefully selected third parties to contact you) or are required by law. For example we are required by law to provide customer name and address details to the TV Licensing Authority for purchases of TV's, Video/DVD/HDD recorders and TV enabled computers. We may disclose your information to process and fulfil your order, to provide services you request, for internal business analysis purposes, for the purposes of fraud prevention or if ASDA itself, or any of our business is bought or sold.</p>
+					<p><strong>Market Research</strong> - we may provide information at an aggregated statistical level about our customers, sales, traffic patterns and related site information to third parties, but this information will not identify individuals.</p>
+					<p><strong>Processing by third parties</strong> - from time to time we may employ other companies and individuals to perform functions on our behalf. Examples include fulfilling orders, delivering packages, sending postal mail and e-mail, removing repetitive information from customer lists, validating contact details, analysing information, providing marketing assistance, providing search results and links (including paid listings and links), processing credit card payments and providing customer service (such as through our call centre staff located in the UK or South Africa). They have access to personal information needed to perform their functions, but may not use it for other purposes. Further, they must process the personal information in accordance with this Privacy Policy and as permitted by the UK's Data Protection Act.</p>
+					<p><strong>International transfers</strong> - in order to carry out the steps detailed above we may send your personal information outside of the European Economic Area and, if necessary, across international borders. The data protection laws in these countries may not be as extensive as in the European Economic Area. However, we have taken appropriate steps to ensure the same level of protection for the processing carried out in these countries as within the European Economic Area.</p>
+					<p>Any details you provide may be electronically transferred to the US to our parent company Wal-Mart Stores Inc., which assists us in operating our websites. However, any such transferred information will be dealt with in accordance with the UK's Data Protection Act.</p>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Storage of Data
+					</div>
+					<p>We will not store your personal information for any longer than necessary, however we may be obliged by law to store your communications and personal information including activity logs and we may need to disclose details of these to government or authorised officials upon request. Like many websites, we use log files to monitor the effectiveness of our online marketing programmes.</p>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Access Rights
+					</div>
+					<p>You have a right to access the personal information that is held about you. To obtain a copy of the personal information ASDA holds about you, please write to us at the following address enclosing your postal details and a cheque for £10, which we are entitled by law to charge, payable to ASDA Stores Limited:</p>
+					<p>
+					Data Protection Officer,<br> 
+					Legal Department,<br>
+					ASDA Stores Limited,<br>
+					ASDA House,<br>
+					Great Wilson Street,<br>
+					Southbank,<br>
+					Leeds, LS11 5AD
+					</p>
+
+					<p>If you would like to make payment by other means or with another currency, please contact the Data Protection Officer on the address above.</p>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Security
+					</div>
+					<p>At ASDA, information security is one of our highest priorities and we have taken many steps to ensure your shopping experience with us is secure. Information about you will be kept safe and secure.</p>
+					<p>In order to prevent unauthorised access or disclosure of your information, we have put in place suitable physical, electronic and managerial procedures to safeguard and secure information that is collected online.</p> 
+					<p><strong>Keeping your information secure</strong> - to help us keep your information confidential you should:</p>
+					<p>Keep your password secret.</p>
+					<p>Never distribute the website addresses for pages that you have looked at while logged in as a registered customer.</p>
+					<p><strong>Password</strong> - you should choose a password that is not obvious or known to anyone else. You should never divulge your password to any third party, as you will be liable for all activity and charges incurred through use of your password whether authorised by you or not.</p>
+					<p>If you forget your password, you can request a new password, which will be emailed to the address we hold for you. You can change your password anytime through the account facilities on the website. Should we have reason to suspect that there is likely to be, or has been any breach of security, we may change your password and notify you of the change by email.</p>
+					<p><strong>Payment Card Security</strong> - we use Verisign and the latest SSL (Secure Sockets Layer) technology to ensure that the details you provide when placing an order are kept private and secure, making shopping on our website safe. Our secure server encrypts your credit or debit card number details along with your personal information and converts them into bits of code that are then securely transmitted over the internet. Your browser will show when you are in a secure environment by displaying either a locked padlock or an image of a key in the grey bar at the bottom of the page; it may also warn you when you are entering a secured environment as you go to place your order. Once your payment information is received by us, your payment card is processed through the same systems that handle our store sales - so they're tried and tested over many years of secure operation.</p>
+					<p><strong>Security in our offices</strong> - access to your information is restricted in our stores and offices. Only employees who need the information to perform a specific job are granted access to personally identifiable information. The servers that store this information are kept in a secure environment.</p>
+					<p><strong>Purchase Guarantee</strong> - we are so confident about security on our website that when you shop with us we back each of your credit card purchases with a guarantee. In the unlikely event that unauthorised use is made of your credit card, most card issuers either cover all the charges that result from the unauthorised use or may limit your liability to £50. If your credit card issuer holds you liable for any of this £50 we will reimburse you up to the full £50. This guarantee applies where the unauthorised use is as a direct result of giving us your credit card details on our secure server and not through your own fault.</p>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Links
+					</div>
+					<p>Our website may contain links to enable you to visit other websites of interest easily. However, once you have used these links to leave our website, you should note that we do not have any control over that other website. Therefore, we cannot be responsible for the protection and privacy of any information which you provide whilst visiting these websites, and they are not governed by this Privacy Policy. ASDA is not responsible for any products and/or services featured on any third party website. You should exercise caution and look at the Privacy Policy applicable to the website in question.</p>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Notification of Changes to This Policy
+					</div>
+					<p>If we decide to change our Privacy Policy, we will post these changes on this website so you know what information we collect and how we use it. If at any point we decide to use personally identifiable information in a manner different from that stated at the time it was collected, we will notify you. You will have a choice as to whether or not we use your information in this different manner.</p>
+				</div>
+				<div class="infoHeader">
+					<div class="titleHeader">
+						Feedback
+					</div>
+					<p>We want to make sure we're giving you the information about privacy and security that you want - let us know what you think. If you have any feedback, questions or concerns, please contact us at the following address:- </p>
+					<p>
+					Data Protection Officer,<br>
+					Legal Department,<br>
+					ASDA Stores Limited,<br>
+					ASDA House,<br>
+					Great Wilson Street,<br>
+					Southbank,<br>
+					Leeds, LS11 5AD<br>
+					</p>
+				</div>
+
+				<p>This Privacy Policy was last updated on: 26/11/2012</p>
+
+
+			</div>
+
 			<!-- menu displayed -->
 			<div id='customerMenuOptions' style='display:none;'>
-				<div id='customerMenuOptionsDel' class='customerMenuOptions' onclick='toggleMenu("customerDeliveryContainer")'>
-					Deliveries
+				<div id='customerMenuOptionsDel' class='customerMenuOptions' onclick='toggleMenu("customerDeliveryContainer","Delivery Charges")'>
+					Delivery Charges
 				</div>
-				<div id='customerMenuOptionsRet' class='customerMenuOptions' onclick='toggleMenu("customerReturnsContainer")'>
+				<div id='customerMenuOptionsRet' class='customerMenuOptions' onclick='toggleMenu("customerReturnsContainer", "Returns/Exchanges")'>
 					Returns/Exchanges
 				</div>
-				<div id='customerMenuOptionsCon' class='customerMenuOptions'>
+				<div id='customerMenuOptionsCon' class='customerMenuOptions' onclick='toggleMenu("customerContactContainer", "Contact Us")'>
 					Contact Us
 				</div>
-				<div id='customerMenuOptionsPay' class='customerMenuOptions'>
+				<div id='customerMenuOptionsPay' class='customerMenuOptions' onclick='toggleMenu("customerPaymentContainer", "Payment Methods")'>
 					Payment Methods
 				</div>
-				<div id='customerMenuOptions100' class='customerMenuOptions'>
+				<div id='customerMenuOptions100' class='customerMenuOptions' onclick='toggleMenu("customer100Container", "100 Days")'>
 					100 Days of Satisfaction
 				</div>
-				<div id='customerMenuOptionsPri' class='customerMenuOptions'>
+				<div id='customerMenuOptionsPri' class='customerMenuOptions' onclick='toggleMenu("customerPrivacyContainer", "Privacy Policy")'>
 					Privacy Policy
 				</div>
 				<div id='customerMenuOptionsT&C' class='customerMenuOptions'>
