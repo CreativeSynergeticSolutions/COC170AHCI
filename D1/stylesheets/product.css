@@ -7,6 +7,8 @@
 	
 	background-color: white;
 	
+	overflow-y: scroll;
+	
 }
 
 #productCategory {
@@ -19,6 +21,7 @@
 	text-align: right;
 	
 }
+
 
 #productName {
 	
@@ -47,6 +50,7 @@
 		
 }
 
+
 #productPrice, #productReview {
 	
 	float: left;
@@ -54,7 +58,6 @@
 	padding: 5px;
 		
 }
-
 
 #productPrice {
 	
@@ -80,6 +83,7 @@
 	
 }
 
+
 #productOptions {
 	
 	clear: both;
@@ -90,16 +94,51 @@
 
 #productOptions .accordianSection {
 	
-	margin-bottom: 5px;
+	margin-bottom: 10px;
+	
+	height: 10vmin;
 	
 	background-color: lightgrey;
+	
+}
+
+#productOptions .accordianSection .accordianContent {
+	
+	margin-top: 2vmin;
+	
+}
+
+.disabled {
+	
+	opacity: 0.5;
 	
 }
 
 .optionTitle {
 	
 	display: inline-block;
+	margin-top: 1vmin;
 	padding: 5px;
+	
+}
+
+#productOptions .accordianSection .accordianArrow {
+	
+	display: inline-block;
+	float: right;
+	margin: 10px;
+	
+	transition-property: transform;
+    transition-duration: 0.2s;
+	transition-timing-function: linear;
+	
+}
+
+#productOptions .accordianSection input[type=checkbox]:checked~.accordianArrow {
+	
+	-ms-transform: scaleY(-1); /* IE 9 */
+    -webkit-transform: scaleY(-1); /* Chrome, Safari, Opera */
+    transform: scaleY(-1);
 	
 }
 
@@ -134,6 +173,109 @@
 }
 
 
+#userOptions {
+	
+	margin-bottom: 2vmin;
+	
+	height: 20vmin;
+	width: 100%;
+	
+}
+
+#saveForLater, #addToBasket {
+	
+	display: block;
+	float: left;
+	height: 100%;
+	width: 48%;
+	margin: 1%;
+	
+	border: 1px solid darkgray;
+	
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+	
+	cursor: pointer;
+	
+}
+
+#saveForLater {
+	
+	padding-top: 7.5vmin;
+	
+	color: black;
+	background-color: lightgray;
+	
+}
+
+#addToBasket {
+	
+	padding-top: 5vmin;
+	
+	color: white;
+	background-color: dimgray;
+	
+}
+
+
+#deliveryIcons {
+	
+	margin-bottom: 5vmin;
+	
+	min-height: 40vmin;
+	width: 100%;
+	
+}
+
+#deliveryIcons ul {
+	
+	list-style: none;
+	
+}
+
+#deliveryIcons ul li {
+	
+	float: left;
+	
+	margin: 1%;
+	
+	min-height: 20vmin;
+	width: 48%;
+	
+	text-align: center;
+	vertical-align: bottom;
+	
+}
+
+#deliveryIcons ul li span {
+	
+	display: block;
+	margin-top: 10vmin;
+	
+}
+
+#collectMsg, #deliveryMsg, #internationalMsg, #returnsMsg {
+	
+	background-position: center top !important;
+	background-origin: content-box !important;
+	background-size: auto 50% !important;
+	background-repeat: no-repeat !important;
+	
+	
+}
+
+#collectMsg {	background: url(../Images/clickandcollectIcon.png);	}
+
+#deliveryMsg {	background: url(../Images/truckIcon.png);	}
+
+#internationalMsg {	background: url(../Images/planeIcon.png);	}
+
+#returnsMsg {	background: url(../Images/returnsIcon.png);	}
+
+
+
+
 
 
 
@@ -141,22 +283,22 @@
 
 .accordianSection{
 
-	display:block;
-	width:100%;
+	display: inline-block;
+	width: 100%;
 	
 }
 
 .accordianContent{
 	
-	display:block;
+	display: block;
 	max-height:0px;
 	
 	width:100%;
 	overflow:hidden;
 	
-	transition-property: max-height, margin-top;
-    transition-duration: 0.7s;
-	transition-timing-function: ease;
+	transition-property: max-height;
+    transition-duration: 0.5s;
+	transition-timing-function: linear;
 	
 }
 
@@ -168,5 +310,4 @@
 .accordianSection input[type=checkbox]:checked~.accordianContent {
 	display:block;
 	max-height: 60vmin;
-	margin-top:5px;
 }

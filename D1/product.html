@@ -78,6 +78,7 @@
 				<label class='accordianSection'>
 					<input type='checkbox'/>
 					<span class='optionTitle'>Select Color: </span><span id='selectedProductColor'></span>
+					<div class='accordianArrow'>&#9660;</div>
 					<div id='productColor' class='accordianContent'>
 						<div class='selectionOptions'>White</div>
 						<div class='selectionOptions'>Blue</div>
@@ -88,6 +89,7 @@
 				<label class='accordianSection'>
 					<input type='checkbox'/>
 					<span class='optionTitle'>Select Size: </span><span id='selectedProductSize'></span>
+					<div class='accordianArrow'>&#9660;</div>
 					<div id='productSize' class='accordianContent'>
 						<div class='selectionOptions'>S</div>
 						<div class='selectionOptions'>M</div>
@@ -98,9 +100,10 @@
 					</div>
 				</label>
 				
-				<label class='accordianSection'>
+				<label id='labelProductQuantity' class='accordianSection'>
 					<input type='checkbox'/>
 					<span class='optionTitle'>Select Quantity: </span><span id='selectedProductQuantity'></span>
+					<div class='accordianArrow'>&#9660;</div>
 					<div id='productQuantity' class='accordianContent'>
 						<div class='selectionOptions'>1</div>
 						<div class='selectionOptions'>2</div>
@@ -108,6 +111,20 @@
 					</div>
 				</label>
 				
+			</div>
+			
+			<div id='userOptions'>
+				<div id='saveForLater'>Save For Later</div>
+				<div id='addToBasket'><i class="icon-basket"></i><br />Add To Basket</div>
+			</div>
+			
+			<div id='deliveryIcons'>
+				<ul>
+					<li id='collectMsg'><span>Collect in store FREE</span></li>
+					<li id='deliveryMsg'><span>Have this item delivered</span></li>
+					<li id='internationalMsg'><span>International delivery available</span></li>
+					<li id='returnsMsg'><span>Free returns in store</span></li>
+				</ul>
 			</div>
 			
 		</div>
