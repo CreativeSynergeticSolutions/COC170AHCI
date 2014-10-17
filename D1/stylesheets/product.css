@@ -122,6 +122,13 @@
 	
 }
 
+#selectedProductColor, #selectedProductSize, #selectedProductQuantity {
+	
+	font-size: 110%;
+	font-weight: bold;
+	
+}
+
 #productOptions .accordianSection .accordianArrow {
 	
 	display: inline-block;
@@ -192,7 +199,7 @@
 	
 	border: 1px solid darkgray;
 	
-	font-size: 20px;
+	font-size: 130%;
 	text-align: center;
 	vertical-align: middle;
 	
@@ -274,6 +281,46 @@
 #returnsMsg {	background: url(../Images/returnsIcon.png);	}
 
 
+#productOtherSegments .accordianSection {
+	
+	margin-bottom: 10px;
+	
+	height: 10vmin;
+	
+	background-color: lightgrey;
+	
+}
+
+#productOtherSegments .accordianSection .accordianArrow {
+	
+	display: inline-block;
+	float: right;
+	margin: 10px;
+	
+	transition-property: transform;
+    transition-duration: 0.2s;
+	transition-timing-function: linear;
+	
+}
+
+#productOtherSegments .accordianSection input[type=checkbox]:checked~.accordianArrow {
+	
+	-ms-transform: scaleY(-1); /* IE 9 */
+    -webkit-transform: scaleY(-1); /* Chrome, Safari, Opera */
+    transform: scaleY(-1);
+	
+}
+
+#productOtherSegments .accordianSection input[type=checkbox]:checked~ .accordianContent {
+	
+	padding: 10px;
+	
+	max-height: 100vmin !important;
+	
+	background-color: white;
+	
+}
+
 
 
 
@@ -286,6 +333,8 @@
 	display: inline-block;
 	width: 100%;
 	
+	cursor: pointer;
+	
 }
 
 .accordianContent{
@@ -296,7 +345,7 @@
 	width:100%;
 	overflow:hidden;
 	
-	transition-property: max-height;
+	transition-property: padding, max-height, background-color;
     transition-duration: 0.5s;
 	transition-timing-function: linear;
 	
