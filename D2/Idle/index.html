@@ -1,0 +1,158 @@
+<html>
+	<head>
+		<style>
+			table{
+				border-width: 0px;
+				margin-left:auto;
+				margin-right: auto;
+				padding: 5px;
+			}
+			td{
+				width:305px;
+				height:382px;
+			}
+			img{
+				height:auto;
+				width:100%;
+				-webkit-border-radius: 4px;
+			}
+			body{
+				font-family: Arial,Helvetica,Tahoma,sans-serif;
+				background: -webkit-radial-gradient(#3c3432 40% ,#0d0d0d);
+			}
+			#price{
+				position:relative;
+				top: -45px;
+				left: 15px;
+				color:#ffd530;
+				font-size: 200%;
+				font-weight: bold;
+				height:0px;
+			}	
+			table th{
+				color:#ffd530;
+				padding: 10px;
+				font-size: 150%;
+			}
+		</style>
+		<script type="text/javascript" src="utils.js"></script>
+		<script>
+			function fin (a) {
+				utils({'time':2000,'element':document.getElementById(a)}).fadeIn();  
+			}
+			function fout (a) {
+				utils({'time':1000,'element':document.getElementById(a)}).fadeOut();    
+			}
+			json = [
+				{"name":"Lace Layer Dress","image":"images/LaceLayerDress.jpg","price":"35","used":"false"},
+				{"name":"Patterned Midi Dress","image":"images/PatternedMidiDress.jpg","price":"14","used":"false"},
+				{"name":"Leopard Fur Coat","image":"images/LeopardFurCoat.jpg","price":"18","used":"false"},
+				{"name":"Moda V-neck Dress","image":"images/V-neckDress.jpg","price":"16","used":"false"},
+				{"name":"Embellished Shoulder Jumpsuit","image":"images/Jumpsuit.jpg","price":"20","used":"false"},
+				{"name":"Faux Fur Parka Coat","image":"images/ParkaCoat.jpg","price":"40","used":"false"},
+				{"name":"Lace Panel Dress","image":"images/LacePanel.jpg","price":"10","used":"false"},
+				{"name":"Floral Lace Panel Dress","image":"images/FloralLacePanel.jpg","price":"10","used":"false"},
+				{"name":"Floral Bodycon Dress","image":"images/FloralBodycon.jpg","price":"16","used":"false"},
+				{"name":"Bardot Lace Dress","image":"images/BardorLace.jpg","price":"20","used":"false"},
+				{"name":"Moda Belted Jumpsuit","image":"images/ModaBelted.jpg","price":"20","used":"false"},
+				{"name":"Tailored Coat","image":"images/TailoredCoat.jpg","price":"42","used":"false"}
+			];
+			function item(number){
+				var current= -1;
+				setInterval(function(){
+					fout(number.toString());
+					fin(number.toString());
+					if(current != -1){
+						json[current].used = "false";
+						
+					}
+					current = Math.floor((Math.random()*12));
+					while (json[current].used == "true"){
+						current = Math.floor((Math.random()*12));
+					}
+					json[current].used = "true";
+					var html = "<img src="+json[current].image+">";
+					html += "<div id='price'>£"+json[current].price+"</div>";
+					
+					document.getElementById(number.toString()).innerHTML = html;
+					
+				}, Math.floor((Math.random()*5000)+5000));
+			}
+			window.onload=function(){
+				var image1 = new item(1);
+				var image2 = new item(2);
+				var image3 = new item(3);
+				var image4 = new item(4);
+				var image5 = new item(5);
+				var image6 = new item(6);
+				var image7 = new item(7);
+				var image8 = new item(8);
+				var image9 = new item(9);
+				var image10 = new item(10);
+			}
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th colspan="5">
+					Digi-Wall
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<div id="1">
+						1
+					</div>
+				</td>
+				<td>
+					<div id="2">
+						2
+					</div>
+				</td>
+				<td>
+					<div id="3">
+						3
+					</div>
+				</td>
+				<td>
+					<div id="4">
+						4
+					</div>
+				</td>
+				<td>
+					<div id="5">
+						5
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div id="6">
+						6
+					</div>
+				</td>
+				<td>
+					<div id="7">
+						7
+					</div>
+				</td>
+				<td>
+					<div id="8">
+						8
+					</div>
+				</td>
+				<td>
+					<div id="9">
+						9
+					</div>
+				</td>
+				<td>
+					<div id="10">
+						10
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
