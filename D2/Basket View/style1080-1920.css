@@ -56,3 +56,62 @@ body{
     background: linear-gradient(90deg, rgba(255,213,49,1) , rgba(222,222,222,0)); /* Standard syntax (must be last) */
 	color:rgba(255,255,255,1);
 }
+.items{
+	position:absolute;
+	width:1075px;
+	height: 828px;
+	background-color: rgba(255,255,255,0.2);
+	top: 30px;
+	left: 30px;
+}
+.total{
+	position:absolute;
+	width:1075px;
+	height: 90px;
+	background-color: rgba(255,255,255,0.2);
+	top: 868px;
+	left: 30px;
+}
+.buttons{
+	position:absolute;
+	width:1860px;
+	height: 82px;
+	background-color: rgba(255,255,255,0.2);
+	top: 968px;
+	left: 30px;
+}
+.buttons>button{
+	background-color:rgba(255,213,49,1);
+	color:#3c3432;
+	font-size:120%;
+	border-width: 0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding-top: 10px;
+	padding-bottom:10px;
+	padding-left:0px;
+	padding-right:0px;
+	text-align:center;
+	width: 300px;
+	margin-top: 20px;
+	margin-left: 60px;
+}
+.buttons>.cancel{
+	background-color:rgba(120,34,25,1);
+	color:#fff;
+}
+.buttons>button:hover{
+	background-color:rgba(255,213,49,0.5);
+}
+.cancel:hover{
+	background-color:rgba(120,34,25,0.5)!important;
+}
+.description{
+	position:absolute;
+	width:775px;
+	height: 928px;
+	background-color: rgba(255,255,255,0.2);
+	top: 30px;
+	left: 1115px;
+}
