@@ -1,0 +1,138 @@
+html, body {
+    height: 100%;    
+}
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #3c3432; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #3c3432 1%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#3c3432), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #3c3432 1%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #3c3432 1%,#000000 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #3c3432 1%,#000000 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #3c3432 1%,#000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c3432', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.topReviews {
+    height: 15%;
+    left: 4%;
+    top: 5%;
+    position: fixed;
+    width: 70%;
+}
+.review {
+    background-color: #2C2C2C;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 30%;
+    z-index: 2;
+}
+.review:not(:last-child) {
+    margin-right: 5%;    
+}
+.review:first-of-type {
+    left: 10%;
+    top: -15%;
+    z-index: 1;
+}
+.review:last-of-type {
+    right: 10%;
+    top: -15%;
+    z-index: 1;
+}
+.review img {
+    height: 50%;
+    margin-top: 5%;
+    margin-left: 5%;
+    width: auto;
+}
+.sidebar {
+    height: 80%;
+    position: fixed;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20%;    
+}
+.itemGroup {
+    background-color: #1F1F1F;
+    display: block;
+    height: 90%;
+    margin: 0 auto;
+    width: 90%;
+}
+.itemGroupHeader {
+    background-color: #FFCC00;
+    font-size: 2em;
+    padding: 5%;
+}
+.item {
+    background-color: #2C2C2C;
+    border-color: #0D0D0D;
+    border-top-style: solid;
+    border-width: 2px;
+    color: #FFFFFF;    
+    height: 10%;
+    width: 100%;    
+}
+.item:last-of-type {
+    border-bottom-style: solid;    
+}
+.description {
+    float: left;  
+    line-height: 3.8em;
+    text-indent: 5%;
+}
+.quanitiyControl {
+    float: right;
+    font-size: 1.1em;
+    height: 100%;
+    text-align: center;
+}
+.bottomBtns {
+    margin-top: 5%;
+    width: 100%;    
+}
+.bottomBtn {
+    background-color: #FFCC00;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    float: left;
+    height: 100%;
+    padding: 3%;
+    text-align: center;
+    width: 30%;    
+}
+.bottomBtn:not(:last-child) {
+    margin-right: 5%;     
+}
+.outfitArea {
+    bottom: 2%;
+    height: 75%;
+    left: 2%;
+    position: fixed;
+    width: 75%;
+}
+.addBtn {
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 7em;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 1em;
+}
+.addBtn .icon:before {
+    content:'\e810';
+    font-family: AHCI;
+    font-style: normal;
+}
+.addBtn:hover .icon:before {
+    content:'\e811';
+}
