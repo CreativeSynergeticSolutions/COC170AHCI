@@ -1,0 +1,51 @@
+body {	margin: 0px;	}
+
+#mainWrapper {
+	
+	height: 1200px;
+	width: 1600px;
+	
+	background: #303030; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #303030 0%, #000000 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#303030), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center, #303030 0%,#000000 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303030', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+}
+
+#productSection {
+	
+	position: relative;
+	
+	height: 950px;
+	width: 100%;
+	
+}
+
+#productBox {
+	
+	position: absolute;
+	top: 30px;
+	left: calc(50% - 350px);
+	
+	height: 700px;
+	width: 700px;
+	
+	background-color: #F6F6F6;
+	
+}
+
+
+#controlSection {
+	
+	position: relative;
+	
+	height: 250px;
+	width: 100%;
+	
+	background-color: grey;
+	
+}
