@@ -38,6 +38,76 @@ body {	margin: 0px;	}
 	
 }
 
+#productImages {
+	
+	position: absolute;
+	top: 780px;
+	left: calc(50% - 250px);
+	
+	height: 120px;
+	width: 500px;
+	
+	background-color: #000;
+	
+}
+
+#productDescription {
+	
+	position: absolute;
+	top: 30px;
+	left: 25px;
+	
+	height: 880px;
+	width: 400px;
+	
+	background-color: #000;
+	
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	
+}
+
+#otherSection {
+	
+	position: absolute;
+	top: 30px;
+	right: 25px;
+	
+	height: 880px;
+	width: 400px;
+			
+}
+
+#deliveryIcons {
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	height: 105px;
+	width: 100%;
+	
+	background-image: url(images/DeliveryIcons.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top center;
+	
+}
+
+#recWrapper {
+	
+	position: absolute;
+	top: 120px;
+	left: 0px;
+	
+	height: 400px;
+	width: 100%;
+	
+	background-color: white;
+	
+}
+
+
+
 
 #controlSection {
 	
