@@ -8,8 +8,8 @@ body {
 
 #mainWrapper {
 	
-	height: 1200px;
-	width: 1600px;
+	height: 1024px;
+	width: 1280px;
 	
 	background: #303030; /* Old browsers */
 	background: -moz-radial-gradient(center, ellipse cover, #303030 0%, #000000 100%); /* FF3.6+ */
@@ -37,9 +37,9 @@ body {
 
 .btnStyle:hover {
 	
-	color: #FFD231;
+	color: #FFD231 !important;
 	
-	background-color: #000;
+	background-color: #000 !important;
 	
 }
 
@@ -50,7 +50,7 @@ body {
 	
 	position: relative;
 	
-	height: 950px;
+	height: 800px;
 	width: 100%;
 	
 }
@@ -60,10 +60,10 @@ body {
 	
 	position: absolute;
 	top: 30px;
-	left: calc(50% - 350px);
+	left: calc(50% - 250px);
 	
-	height: 700px;
-	width: 700px;
+	height: 500px;
+	width: 500px;
 	
 	background-color: #F6F6F6;
 	
@@ -78,7 +78,7 @@ body {
 #productCode {
 	
 	position: absolute;
-	top: 750px;
+	top: 550px;
 	left: calc(50% - 250px);
 	
 	height: 40px;
@@ -93,7 +93,7 @@ body {
 #productImages {
 	
 	position: absolute;
-	top: 810px;
+	top: 610px;
 	left: calc(50% - 250px);
 	
 	height: 120px;
@@ -202,21 +202,48 @@ body {
 	top: 30px;
 	left: 25px;
 	
-	height: 880px;
-	width: 400px;
-	
-	color: white;
-	font-size: 25px;
+	height: 750px;
+	width: 350px;
 	
 	background-color: #000;
 	
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	
+	overflow: hidden;
+	
 }
+
+#productDescription:before {
+		
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	
+	height: 50px;
+	width: 100%;
+	
+	background: linear-gradient(to bottom, rgba(82, 82, 82, 0.5), rgba(82, 82, 82, 1));
+	
+	content: "";
+	
+}
+
+#descriptionWrapper {
+	
+	height: 100%;
+	width: 100%;
+	
+	color: white;
+	font-size: 20px;
+	
+	overflow: scroll;
+	
+}
+
 
 #productName {
 	
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: bold;
 	text-decoration: underline;
 	
@@ -224,7 +251,7 @@ body {
 
 #productPrice {
 	
-	font-size: 30px;
+	font-size: 25px;
 	text-decoration: underline;
 }
 
@@ -236,8 +263,8 @@ body {
 	top: 30px;
 	right: 25px;
 	
-	height: 880px;
-	width: 400px;
+	height: 750px;
+	width: 350px;
 			
 }
 
@@ -248,7 +275,7 @@ body {
 	top: 0px;
 	left: 0px;
 	
-	height: 105px;
+	height: 90px;
 	width: 100%;
 	
 	background-image: url(images/DeliveryIcons.png);
@@ -265,13 +292,13 @@ body {
 	
 	position: absolute;
 	padding: 5px 10px;
-	top: 120px;
+	top: 105px;
 	left: 0px;
 	
-	height: 660px;
+	height: 550px;
 	width: 100%;
 	
-	font-size: 30px;
+	font-size: 25px;
 	font-weight: bold;
 	
 	background-color: white;
@@ -284,8 +311,8 @@ body {
 	top: 50px;
 	left: 75px;
 	
-	height: 250px;
-	width: 250px;
+	height: 200px;
+	width: 200px;
 	
 	background-image: url(recommendedImages/R1.png);
 	background-size: contain;
@@ -297,11 +324,11 @@ body {
 #itemB {
 	
 	position: absolute;
-	top: 310px;
+	top: 260px;
 	left: 75px;
 	
-	height: 250px;
-	width: 250px;
+	height: 200px;
+	width: 200px;
 	
 	background-image: url(recommendedImages/R2.png);
 	background-size: contain;
@@ -317,10 +344,12 @@ body {
 	bottom: 10px;
 	right: 10px;
 	
-	height: 70px;
-	width: 200px;
+	height: 60px;
+	width: 150px;
 	
-	line-height: 70px;
+	background-color: #FFCC00;
+	
+	line-height: 60px;
 	text-align: center;
 		
 }
@@ -359,7 +388,7 @@ body {
 	
 	position: relative;
 	
-	height: 250px;
+	height: 224px;
 	width: 100%;
 	
 	background-color: rgba(82, 82, 82, 0.5);
@@ -371,7 +400,7 @@ body {
 	
 	position: absolute;
 	
-	font-size: 40px;
+	font-size: 30px;
 	
 	text-align: center;
 	
@@ -379,49 +408,49 @@ body {
 
 #backBtn {
 	
-	top: 85px;
+	top: 82px;
 	left: 20px;
 	
-	height: 80px;
-	width: 200px;
+	height: 60px;
+	width: 160px;
 	
-	line-height: 80px;
+	line-height: 60px;
 	
 }
 
 #atoBtn {
 	
-	top: 65px;
-	right: 440px;
+	top: 72px;
+	right: 360px;
 	
-	height: 120px;
-	width: 180px;
+	height: 80px;
+	width: 140px;
 	
-	line-height: 60px;
+	line-height: 40px;
 	
 }
 
 #atbBtn {
 	
-	top: 65px;
-	right: 240px;
+	top: 72px;
+	right: 200px;
 	
-	height: 120px;
-	width: 180px;
+	height: 80px;
+	width: 140px;
 	
-	line-height: 60px;
+	line-height: 40px;
 	
 }
 
 #atwlBtn {
 	
-	top: 65px;
+	top: 72px;
 	right: 20px;
 	
-	height: 120px;
-	width: 200px;
+	height: 80px;
+	width: 160px;
 	
-	line-height: 60px;
+	line-height: 40px;
 	
 }
 
