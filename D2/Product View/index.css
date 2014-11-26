@@ -38,10 +38,24 @@ body {	margin: 0px;	}
 	
 }
 
+#productCode {
+	
+	position: absolute;
+	top: 750px;
+	left: calc(50% - 250px);
+	
+	height: 40px;
+	width: 500px;
+	
+	color: #FFF;
+	text-align: center;
+	font-size: 30px;
+}
+
 #productImages {
 	
 	position: absolute;
-	top: 780px;
+	top: 810px;
 	left: calc(50% - 250px);
 	
 	height: 120px;
@@ -51,20 +65,44 @@ body {	margin: 0px;	}
 	
 }
 
+
+
 #productDescription {
 	
+	box-sizing: border-box;
+	
 	position: absolute;
+	padding: 5px 10px;
 	top: 30px;
 	left: 25px;
 	
 	height: 880px;
 	width: 400px;
 	
+	color: white;
+	font-size: 25px;
+	
 	background-color: #000;
 	
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	
 }
+
+#productName {
+	
+	font-size: 40px;
+	font-weight: bold;
+	text-decoration: underline;
+	
+}
+
+#productPrice {
+	
+	font-size: 30px;
+	text-decoration: underline;
+}
+
+
 
 #otherSection {
 	
@@ -93,19 +131,41 @@ body {	margin: 0px;	}
 	
 }
 
-#recWrapper {
+#recommendedWrapper {
+	
+	box-sizing: border-box;
 	
 	position: absolute;
+	padding: 5px 10px;
 	top: 120px;
 	left: 0px;
 	
-	height: 400px;
+	height: 660px;
 	width: 100%;
+	
+	font-size: 30px;
+	font-weight: bold;
 	
 	background-color: white;
 	
 }
 
+
+#socialIcons {
+	
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	
+	height: 80px;
+	width: 100%;
+	
+	background-image: url(images/SocialIcons.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top center;
+	
+}
 
 
 
