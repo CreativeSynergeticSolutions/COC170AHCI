@@ -5,6 +5,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+
 #mainWrapper {
 	
 	height: 1200px;
@@ -21,6 +22,30 @@ body {
 	
 }
 
+
+.btnStyle {
+	
+	color: #000;
+	
+	background-color: #FFD231;
+	
+	border-radius: 0.15em;
+	
+	cursor: pointer;
+	
+}
+
+.btnStyle:hover {
+	
+	color: #FFD231;
+	
+	background-color: #000;
+	
+}
+
+
+
+
 #productSection {
 	
 	position: relative;
@@ -29,6 +54,7 @@ body {
 	width: 100%;
 	
 }
+
 
 #productBox {
 	
@@ -48,6 +74,7 @@ body {
 	
 }
 
+
 #productCode {
 	
 	position: absolute;
@@ -62,6 +89,7 @@ body {
 	font-size: 30px;
 }
 
+
 #productImages {
 	
 	position: absolute;
@@ -75,39 +103,92 @@ body {
 	
 }
 
-#productImages:before {
+#productImages:before, #productImages:after{
 	
 	position: absolute;
 	top: 0px;
-	left: 0px;
 	
 	height: 100%;
 	width: 50px;
 	
 	background-color: #FFD231;
 	
-	content: "\25c0";
-	
+	font-size: 40px;
 	line-height: 120px;
 	text-align: center;
 	
 }
 
-#productImages:after {
+#productImages:before {
 	
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	
-	height: 100%;
-	width: 50px;
-	
-	background-color: #FFD231;
+	left: 0px;
 	
 	content: "\25b6";
 	
-	line-height: 120px;
-	text-align: center;
+	transform: rotate(180deg);
+	
+}
+
+#productImages:after {
+	
+	right: 0px;
+	
+	content: "\25b6";
+	
+}
+
+#productImages:hover:before, #productImages:hover:after{
+	
+	color: #FFD231;
+	background-color: #2C2C2C;
+	
+}
+
+.imgBtns {
+	
+	position: absolute;
+	top: 10px;
+	
+	height: 100px;
+	width: 100px;
+	
+	background-color: white;
+	
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	cursor: pointer;
+	
+}
+
+.imgBtns:hover {
+	
+	box-shadow: 0px 0px 10px 3px #FFD231;
+	
+}
+
+#frontImg {
+	
+	left: 70px;
+	
+	background-image: url(productImages/DressFront.jpg);
+	
+}
+
+#backImg {
+	
+	left: 200px;
+	
+	background-image: url(productImages/DressBack.png);
+	
+}
+
+#patternImg {
+	
+	left: 330px;
+	
+	background-image: url(productImages/DressPattern.jpg);
 	
 }
 
@@ -160,6 +241,7 @@ body {
 			
 }
 
+
 #deliveryIcons {
 	
 	position: absolute;
@@ -175,6 +257,7 @@ body {
 	background-position: top center;
 	
 }
+
 
 #recommendedWrapper {
 	
@@ -239,20 +322,6 @@ body {
 	
 	line-height: 70px;
 	text-align: center;
-	
-	border-radius: 0.15em;
-	
-	background-color: #FFD231;
-	
-	cursor: pointer;
-		
-}
-
-#moreBtn:hover {
-	
-	color: #FFD231;
-	
-	background-color: #000;
 		
 }
 
@@ -275,6 +344,17 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 #controlSection {
 	
 	position: relative;
@@ -282,6 +362,67 @@ body {
 	height: 250px;
 	width: 100%;
 	
-	background-color: grey;
+	background-color: rgba(82, 82, 82, 0.5);
 	
 }
+
+
+#backBtn, #atoBtn, #atbBtn, #atwlBtn {
+	
+	position: absolute;
+	
+	font-size: 40px;
+	
+	text-align: center;
+	
+}
+
+#backBtn {
+	
+	top: 85px;
+	left: 20px;
+	
+	height: 80px;
+	width: 200px;
+	
+	line-height: 80px;
+	
+}
+
+#atoBtn {
+	
+	top: 65px;
+	right: 440px;
+	
+	height: 120px;
+	width: 180px;
+	
+	line-height: 60px;
+	
+}
+
+#atbBtn {
+	
+	top: 65px;
+	right: 240px;
+	
+	height: 120px;
+	width: 180px;
+	
+	line-height: 60px;
+	
+}
+
+#atwlBtn {
+	
+	top: 65px;
+	right: 20px;
+	
+	height: 120px;
+	width: 200px;
+	
+	line-height: 60px;
+	
+}
+
+
