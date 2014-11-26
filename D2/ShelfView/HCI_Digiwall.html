@@ -34,25 +34,24 @@ var CAT={
 	]
 	
 };
-
 var SUB_CAT={
 
 	"Women":[
-		"Accesories",
+		"Accessories",
 		"Coats and Jackets",
 		"Dresses and Jumpsuits",
 		"Knitwear and Sweatshirts",
-		"LIngerie",
+		"Lingerie",
 		"Nightwear and Slippers"
 	],
 	"Men":[
-		"Accesories",
+		"Accessories",
 		"Coats and Jackets",
 		"Dresses and Jumpsuits",
 		"Knitwear",
 		"Nightwear and Slippers",
 		"Tops",
-		"Underwear and socks"
+		"Underwear and Socks"
 	
 	]
 	
@@ -64,28 +63,12 @@ var IMG_CAT={
 		"image1.png",
 		"image2.png",
 		"image3.png",
-		"image4.png"
+		"image4.png",
 	]
 };
 	
 
-/*------------------------------------------------------------------------------------------------
-		InsertSelected(divName,amount,cssName,idStart)
 
-			> (divName): 
-				Loading information into what <div>
-			
-			> (amount) : 
-				How many values to loop
-			
-			> (cssName) : 
-				CSS name of most inner <div>
-			
-			> (idStart) : 
-				Name given to starting div (example:
-				~ idStart=Hello, starting value >> Hello_0
-
-*/
 function loadSubCategory(category){
 	//Run text through loop (output)
 	var output="";
@@ -145,7 +128,7 @@ function loadSelection(category){
 		var id="sel_"+i.toString();
 		
 		//Load Next div  with id,className and Test Text
-		output+="<div class='SubCategorySelection blend3' >";
+		output+="<div class='SubCategorySelection' >";
 		output+="<img id='"+id+"' src='"+array[i]+"'  />";
 		output+="<br /><br />";
 		output+="<div id='Scroll'>";
@@ -188,9 +171,11 @@ function loadSelection(category){
 	background-color:black;
 	font-size:1.4em;
 	border-radius:2px;
+	padding:2px;
 	width:100%;
 	font-weight:bold;
 	color:white;
+	border-radius:5px;
 	
 }
 
@@ -270,15 +255,12 @@ function loadSelection(category){
 	margin-right:20px;
 	float:left;
 	background-color:#DDDDDD !important;
-	border-radius:5px;
-	
-	
-	
-	
+	border-radius:5px;	
 }
 .SubCategorySelection img{
 	width:100%;
-	height:75%;
+	height:auto;
+	
 			
 }
 
@@ -286,12 +268,10 @@ function loadSelection(category){
 
 
 #main{
-	margin-right:200px;
+	margin-left:200px;
 	
 
 }
-
-
 
 .inner_wrapper{
 	height:95%;
@@ -308,14 +288,15 @@ function loadSelection(category){
     overflow: scroll;  
     width:100%;
     height:60px;
-    box-shadow:0px 0px 1px 1px #ffffff;
+    
     
 }
 .outer_wrapper_large {  
     overflow: scroll;  
     margin-top:5px;
     width:100%;
-    height:350px;
+    height:500px;
+ 
     
   
     /*box-shadow:1px 1px 1px 1px #000000;*/
@@ -325,7 +306,7 @@ function loadSelection(category){
    
     width:100%;
     height:50px;
-    box-shadow:0px 0px 1px 1px #ffffff;
+    
     
 }
 .outer_wrapper_smaller {  
@@ -333,7 +314,7 @@ function loadSelection(category){
    
     width:100%;
     height:40px;
-   box-shadow:0px 0px 1px 1px #ffffff;
+   
     
 }
 
@@ -414,84 +395,68 @@ div.label1{
 .bottomBarLeft{
 	padding:2%;
 	height:35px;
-	background-color: #FFD530;
 	margin-bottom:10px;
 	font-size:1.3em;
 	border-radius:5px;
+	
+	color:#FFD530;
 	
 }
 .bottomBarRight{
 	padding:2%;
 	height:35px;
-	background-color: red;
-	
 	font-size:1.3em;
 	border-radius:5px;
+	color:red;
 }
 #topBar{
 	
 	height:50px;
 	width:100%;
-	box-shadow:1px 1px 1px 1px #000000;
+	
 	margin-bottom:10px;
-	background-color:#FFFFFF;
+	
 	
 	
 }
 #sideBar {
 	
 	position:fixed;
+	margin-right:20px;
 	top:60px;
-	right:5px;
+	left:5px;
 	height:99% !important;
-	width:190px !important;
-	opacity:0.7;
-	
+	width:180px !important;
+	background-color:inherit;
 	
 	
 
 }
 .blend{
 	/* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000000), to( #3C3432));
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000000), to( #444444));
   /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, #000000,  #3C3432);
+  background: -webkit-linear-gradient(top, #000000,  #444444);
   /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, #000000,  #3C3432);
+  background: -moz-linear-gradient(top, #000000,  #444444);
   /* IE 10 */
-  background: -ms-linear-gradient(top, #000000,  #3C3432);
+  background: -ms-linear-gradient(top, #000000,  #444444);
   /* Opera 11.10+ */
-  background: -o-linear-gradient(top, #000000, #3C3432);
+  background: -o-linear-gradient(top, #000000, #444444);
 }
-
-/* Blend of colours 1 */
-
 .blend2{
 	/* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDDDDD), to( #2C2C2C));
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDDDDD), to( #444444));
   /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, #2C2C2C,  #DDDDDD);
+  background: -webkit-linear-gradient(top, #2C2C2C,  #444444);
   /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, #2C2C2C,  #DDDDDD);
+  background: -moz-linear-gradient(top, #2C2C2C,  #444444);
   /* IE 10 */
-  background: -ms-linear-gradient(top, #2C2C2C,  #DDDDDD);
+  background: -ms-linear-gradient(top, #2C2C2C,  #444444);
   /* Opera 11.10+ */
-  background: -o-linear-gradient(top, #2C2C2C,  #DDDDDD);
+  background: -o-linear-gradient(top, #2C2C2C,  #444444);
 }
 
-
-.blend3{
-	/* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDDDDD), to( #FFFFFF));
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, #DDDDDD, #FFFFFF);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, #DDDDDD, #FFFFFF);
-  /* IE 10 */
-  background: -ms-linear-gradient(top, #DDDDDD, #FFFFFF);
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(top, #DDDDDD, #FFFFFF);
-}
 .rotate{
 	
 	-webkit-transform: rotate(-90deg);
@@ -537,38 +502,40 @@ div.label1{
 	
 	
 	
+	
 }
 #outfit_header{
 	height:44%;
-	
+	background-color:black;
 	width:99%;
 	text-align:center;
-	font-size:1.2em;
+	font-size:1.4em;
 	color:white;
 	border-radius:5px;
 	box-shadow:0px 0px 3px 3px black;
-	border:1px solid white;
 	padding:5px;
+	border:1px solid white;
 	
 }
 #rec_header{
 	
 	height:44%;
-	
+	background-color:black;
 	width:99%;
 	text-align:center;
-	font-size:1.2em;
+	font-size:1.4em;
 	color:white;
 	border-radius:5px;
 	box-shadow:0px 0px 3px 3px black;
-	border:1px solid white;
 	padding:5px;
+	border:1px solid white;
 	
 }
 
 .ScrollInner1{
 	
 	width:1500px;
+	
 	
 }
 .ScrollInner2{
@@ -577,6 +544,7 @@ div.label1{
 }
 .ScrollInner1 div{
 	
+	margin-top:3%;
 	margin-left:10px;
 	text-align:center;
 	height:25px !important;
@@ -674,16 +642,6 @@ div.label1{
 		width:99%;
 		
 	}	
-	#outfit_header{
-		height:400px;
-		margin-left:2px;
-		margin-right:2px;
-	}
-	#rec_header{
-		height:400px;
-		margin-left:2px;
-		margin-right:2px;
-	}
 
 }
 
@@ -693,12 +651,13 @@ div.label1{
 </head>
 
 <body onload="loadPage();" class="blend2">
-<applet width="300" height="300" mayscript></applet>
+
 <!-- TOP BAR -->
-
-
 <div id="topBar" class="blend2">
-	
+	<div  id="GeorgeImgDiv">
+		<!--<img src="George.gif" />-->
+		
+	</div>
 
 </div>
 <!-- /TOPBAR -->
@@ -719,11 +678,11 @@ div.label1{
 			<div class="Categories" id="C_5">Boys</div>
 			<div class="Categories" id="C_6">Girls</div>
 			<div class="Categories" id="C_7">Baby</div>
-			<div class="Categories" id="C_8">Sschool</div>
+			<div class="Categories" id="C_8">School</div>
 			<div class="Categories" id="C_9">Shoes</div>
 			<div class="Categories" id="C_10">Fancy Dress</div>
 			<div class="Categories" id="C_11">Trends</div>
-			<div class="Categories" id="C_12" >Sale</div>
+			<div class="Categories" id="C_12">Sale</div>
 		</div>
 		<!-- /CATEGORIES-->
 	</div>
@@ -767,9 +726,9 @@ div.label1{
 					<div class="label1">BASKET</div>
 					
 					<div id="basketBar">
-					<div class="bottomBarLeft">BUY</div>
+					<div class="bottomBarLeft blend2">BUY</div>
 					
-					<div class="bottomBarRight">CLEAR</div>
+					<div class="bottomBarRight blend2">CLEAR</div>
 					</div>
 		
 		</div>
@@ -781,13 +740,13 @@ div.label1{
 <!-- /MAIN -->
 
 <!-- SIDE BAR -->
-<div id="sideBar" class="blend2">
+<div id="sideBar" >
 	<div id="outfit_header" class="blend">
-		<span class="headBit">Outfits</span>
+		<span>Outfits</span>
 	</div>
 	<br />
 	<div id="rec_header" class="blend">
-		<span class="headBit">Recommendations</span>
+		<span>Recommendations</span>
 	</div>
 </div>
 <!-- SIDE BAR -->
