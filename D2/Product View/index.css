@@ -1,4 +1,9 @@
-body {	margin: 0px;	}
+body {
+	
+	margin: 0px;	
+	
+	font-family: Arial, Helvetica, sans-serif;
+}
 
 #mainWrapper {
 	
@@ -36,6 +41,11 @@ body {	margin: 0px;	}
 	
 	background-color: #F6F6F6;
 	
+	background-image: url(productImages/DressFront.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
 }
 
 #productCode {
@@ -65,6 +75,41 @@ body {	margin: 0px;	}
 	
 }
 
+#productImages:before {
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	height: 100%;
+	width: 50px;
+	
+	background-color: #FFD231;
+	
+	content: "\25c0";
+	
+	line-height: 120px;
+	text-align: center;
+	
+}
+
+#productImages:after {
+	
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	
+	height: 100%;
+	width: 50px;
+	
+	background-color: #FFD231;
+	
+	content: "\25b6";
+	
+	line-height: 120px;
+	text-align: center;
+	
+}
 
 
 #productDescription {
@@ -148,6 +193,67 @@ body {	margin: 0px;	}
 	
 	background-color: white;
 	
+}
+
+#itemA {
+	
+	position: absolute;
+	top: 50px;
+	left: 75px;
+	
+	height: 250px;
+	width: 250px;
+	
+	background-image: url(recommendedImages/R1.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+}
+
+#itemB {
+	
+	position: absolute;
+	top: 310px;
+	left: 75px;
+	
+	height: 250px;
+	width: 250px;
+	
+	background-image: url(recommendedImages/R2.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	
+}
+
+#moreBtn {
+	
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	
+	height: 70px;
+	width: 200px;
+	
+	line-height: 70px;
+	text-align: center;
+	
+	border-radius: 0.15em;
+	
+	background-color: #FFD231;
+	
+	cursor: pointer;
+		
+}
+
+#moreBtn:hover {
+	
+	color: #FFD231;
+	
+	background-color: #000;
+		
 }
 
 
