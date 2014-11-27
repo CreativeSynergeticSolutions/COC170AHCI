@@ -102,7 +102,7 @@ body {
 	
 }
 
-#productImages:before, #productImages:after{
+#lBtn, #rBtn{
 	
 	position: absolute;
 	top: 0px;
@@ -116,27 +116,25 @@ body {
 	line-height: 120px;
 	text-align: center;
 	
+	cursor: pointer;
+	
 }
 
-#productImages:before {
+#lBtn {
 	
 	left: 0px;
-	
-	content: "\25b6";
 	
 	transform: rotate(180deg);
 	
 }
 
-#productImages:after {
+#rBtn {
 	
 	right: 0px;
 	
-	content: "\25b6";
-	
 }
 
-#productImages:hover:before, #productImages:hover:after{
+#lBtn:hover, #rBtn:hover{
 	
 	color: #FFD231;
 	background-color: #2C2C2C;
@@ -234,8 +232,6 @@ body {
 	
 	color: white;
 	font-size: 20px;
-	
-	overflow: scroll;
 	
 }
 
@@ -419,8 +415,8 @@ body {
 
 #atoBtn {
 	
-	top: 72px;
-	right: 360px;
+	top: 20px;
+	right: 200px;
 	
 	height: 80px;
 	width: 140px;
@@ -431,19 +427,19 @@ body {
 
 #atbBtn {
 	
-	top: 72px;
-	right: 200px;
+	top: 120px;
+	right: 20px;
 	
 	height: 80px;
-	width: 140px;
+	width: 320px;
 	
-	line-height: 40px;
+	line-height: 80px;
 	
 }
 
 #atwlBtn {
 	
-	top: 72px;
+	top: 20px;
 	right: 20px;
 	
 	height: 80px;
@@ -453,4 +449,39 @@ body {
 	
 }
 
+
+#colorWrapper, #sizeWrapper, #quantityWrapper {
+	
+	position: absolute;
+	top: 0px;
+	
+	height: 100%;
+	
+	background-color: white;
+	
+}
+
+#colorWrapper {
+	
+	left: 200px;
+	
+	width: 220px;
+	
+}
+
+#sizeWrapper {
+	
+	left: 440px;
+	
+	width: 220px;
+	
+}
+
+#quantityWrapper {
+	
+	left: 680px;
+	
+	width: 220px;
+	
+}
 
