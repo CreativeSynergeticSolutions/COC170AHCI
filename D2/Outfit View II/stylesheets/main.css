@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;   
+}
+body {
+    background: #3C3432; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #3C3432 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(100%,#3C3432)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#3C3432 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  #ffffff 0%,#3C3432 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #ffffff 0%,#3C3432 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  #ffffff 0%,#3C3432 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3C3432',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.main-area {
+    height: 80%;
+    left: 5%;
+    position: fixed;
+    top: 10%;
+    width: 90%;    
+}
+
+.btn-touchable {
+    cursor: pointer;
+    height: 48px;
+    padding: 0 4px;
+}
+
+.btn-touchable:hover > .btn {
+    transform: translateY(5px);
+}
+
+.btn-touchable > .btn {
+    background-color: #FFCC00;
+    display: inline-block;
+    font-size: 1.25em;
+    line-height: 36px;
+    min-height: 36px;
+    min-width: 88px;
+    padding: 0 8px;
+    position: relative;
+    top: 6px;
+    text-align: center;
+}
+
+.outfit-btn {
+    bottom: 20%;  
+    position: absolute;
+    left: 10%;
+}
+
+.basket-area {
+    bottom: 20%;
+    height: 80%;
+    position: absolute;
+    right: 10%;
+    width: 20%;
+}
+
+.basket {
+    background-color: #2C2C2C;
+    display: block;
+    position: absolute;
+    bottom: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+}
+
+.basket-btn {
+    bottom: 0;    
+    position: absolute;
+    transform: translateX(50%);
+    right: 50%;
+}
