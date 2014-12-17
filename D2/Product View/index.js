@@ -12,4 +12,8 @@ $(document).ready(function(){
 	
 	$("#frontImg").click();
 	
+	$("li[data-colour=1]").css("background-color", "white", "important");
+	$("li[data-colour=2]").css("background-color", "black", "important");
+	$("li[data-colour=3]").css("background-color", "grey",  "important");
+	
 });
