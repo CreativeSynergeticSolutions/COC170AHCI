@@ -85,18 +85,40 @@ body {
     bottom: 0;    
     position: absolute;
     transform: translateX(50%);
+    transition: width 5s;
     right: 50%;
 }
 
-.basket-area>.btn-touchable:hover, 
-.basket:hover+.btn-touchable, 
+.basket-area .basket-btn>.btn>.inner:before {
+    font-family: 'ahci';
+    float: right;
+}
+
+.basket-area .basket-btn>.btn>.inner:after {
+    font-family: 'ahci';
+    float: left;
+}
+
+.basket-area>.btn-touchable:hover>.btn>.inner:before {
+    content:'\e83b';
+}
+.basket-area.active .basket-btn>.btn>.inner:before {
+    content:'\e838';
+}
+.basket-area>.btn-touchable:hover>.btn>.inner:after {
+    content:'\e83b';
+}
+.basket-area.active .basket-btn>.btn>.inner:after {
+    content:'\e838';
+}
+
+.basket-area>.btn-touchable:hover,
 .basket-area.active .btn-touchable {
     box-sizing: border-box;
     min-width: 100%;
 }
 
-.basket-area>.btn-touchable:hover > .btn, 
-.basket:hover+.btn-touchable>.btn,
+.basket-area>.btn-touchable:hover > .btn,
 .basket-area.active .btn-touchable>.btn {
     box-sizing: border-box;
     min-width: 100%;
