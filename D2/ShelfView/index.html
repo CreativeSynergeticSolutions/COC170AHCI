@@ -395,6 +395,38 @@ function loadSelection(category){
 	border-radius:5px;
 
 }
+.buy{
+	background-color:rgba(255,213,49,1);
+	color:#3c3432;
+	font-size:120%;
+	border-width: 0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	height:30px;
+	padding-left:0px;
+	padding-right:0px;
+	text-align:center;
+	width: 150px;
+	margin-top: 5px;
+
+}
+.clear{
+	background-color:rgba(120,34,25,1);
+	color:#fff;
+	font-size:120%;
+	border-width: 0px;
+	height:30px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	padding-left:0px;
+	padding-right:0px;
+	text-align:center;
+	width: 150px;
+	margin-top: 10px;
+}
 
 .Categories{
 	padding-top:10px;
@@ -729,10 +761,41 @@ div.label1{
 	font-size:1.0em;
 	color:white;
 	border-radius:5px;
-
+	overflow:auto;
 	padding:5px;
 
 
+}
+.outfit{
+	background-color:rgba(255,213,49,1);
+	color:#3c3432;
+	font-size:0.8em;
+	border-width: 0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	padding-left:0px;
+	padding-right:0px;
+	text-align:center;
+	width: 99%;
+	margin-top: 5px;
+
+}
+.side_title{
+	background-color:rgba(120,34,25,1);
+	color:white;
+	font-size:1.2em;
+	border-width: 0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+	padding-left:0px;
+	padding-right:0px;
+	text-align:center;
+	width: 99%;
+	margin-bottom:50px;
 }
 #rec_header{
 
@@ -932,9 +995,9 @@ div.label1{
 					<div class="label1">BASKET</div>
 
 					<div id="basketBar">
-					<div class="bottomBarLeft blend2">BUY</div>
-
-					<div class="bottomBarRight blend2">CLEAR</div>
+							<button class="buy">BUY</button>
+							<br />
+							<button class="clear">CLEAR</button>
 					</div>
 
 		</div>
@@ -948,9 +1011,23 @@ div.label1{
 <!-- SIDE BAR -->
 <div id="sideBar" >
 	<div id="outfit_header">
+		<div class="side_title">Saved Outfits</div>
+		<div class="outfit">Outfit 1<span></span><span></span></div>
+		<div class="outfit">Outfit 2</div>
+		<div class="outfit">Outfit 3</div>
+		<div class="outfit">Outfit 4</div>
+		<div class="outfit">Outfit 5</div>
+		<div class="outfit">Outfit 6</div>
+		<div class="outfit">Outfit 7</div>
+		<div class="outfit">Outfit 8</div>
+		<div class="outfit">Outfit 9</div>
+		<div class="outfit">Outfit 10</div>
+		<div class="outfit">Outfit 11</div>
+		<div class="outfit">Outfit 12</div>
 	</div>
 	<br />
 	<div id="rec_header">
+		<div class="side_title">Recommendations</div>
 	</div>
 </div>
 <!-- SIDE BAR -->
