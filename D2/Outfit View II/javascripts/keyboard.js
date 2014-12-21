@@ -4,7 +4,7 @@ $(function(){
         shift = false,
         capslock = false;
         var keyboard = '<ul id="keyboard" class="hide">';
-        keyboard += '<input id="write" type="text">';
+        keyboard += '<div><input id="write" type="text"><i class="icon-cancel"></i></div>';
             keyboard += '<li class="symbol"><span class="off">`</span><span class="on">~</span></li>';
             keyboard += '<li class="symbol"><span class="off">1</span><span class="on">!</span></li>';
             keyboard += '<li class="symbol"><span class="off">2</span><span class="on">@</span></li>';
@@ -114,14 +114,18 @@ $(function(){
         $writeTo.val($write.val());
     });
     
-    $('input[type=text]').focus(function(e){
+    $('input[type=text]:not(#write)').focus(function(e){
         $('#keyboard').slideDown("fast", function() {});
         $writeTo = $(this);
         $write.val($writeTo.val());
         e.preventDefault();
     });
-    $('#keyboard li').on('mousedown', function (e) {
+    $('#keyboard *').on('mousedown', function (e) {
         e.preventDefault();
+    });
+    $('#keyboard .icon-cancel').on('click', function (e) {
+        $write.val('');
+        $writeTo.val('');
     });
     $('input[type=text]').focusout(function(e){
         $write.val('');

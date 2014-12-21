@@ -24,6 +24,17 @@
 #keyboard input:focus {
     outline: none !important;
 }
+#keyboard>div {
+    position: relative;    
+}
+#keyboard>div i {
+    cursor: pointer;
+    font-size: 2em;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    right: 1%;
+}
 #keyboard li {
     float: left;
     margin: 0 5px 5px 0;
