@@ -9,9 +9,9 @@
     left: 50%;
     list-style: none;
     margin: 0;
-    padding: 0 0 3% 0;
+    padding: 0 0 50% 0;
     position: fixed;
-    transform: translateX(-50%);
+    transform: translate(-50%, 50%);
 }
 #keyboard input {
     box-sizing: border-box;
