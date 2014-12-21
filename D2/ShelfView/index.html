@@ -20,7 +20,7 @@
 	
 var CAT={
 
-	"CHRISTMAS": [
+	"Christmas": [
 		"Women",
 		"Men",
 		"Boys",
@@ -31,7 +31,69 @@ var CAT={
 		"Gifts by Price",
 		"Home Decor",
 		"Trees and Decorations"
+	],
+	"Home and Garden":[
+		"Just Arrived",
+		"Furnishings",
+		"Office",
+		"Bedroom",
+		"Bathroom",
+		"Kids",
+		"Nursery",
+		"Outdoor",
+		"Living Room",
+		"Appliances",
+		"Kitchen and Dining"		
+	],
+	"Women":[
+		"Clothing",
+		"Footwear",
+		"Christmas",
+		"Collections",
+		"Latest Trends",
+		"Shop By Fit",
+		"Offers",
+		"Electrical Beauty",
+	],
+	"Lingerie":[
+		"Bras",
+		"Help to Buy",
+		"Underwear and Lingerie",
+		"Nightwear and Slippers",
+		"Christmas",
+		"Offers"
+	],
+	"Men":[
+		"Clothing",
+		"Footwear",
+		"Christmas",
+		"Brands",
+		"Collections",
+		"Offers",
+		"Christmas",
+		"Personal Grooming"
+	],
+	"Boys":[
+		"Clothing",
+		"Footwear",
+		"School",
+		"Collections",
+		"Christmas",
+		"Shop by",
+		"Character",
+		"Kids Home",
+	],
+	"Girls":[
+	],
+	"Baby":[
+	],
+	"School":[
+	],
+	"Fancy Dress":[
+	],
+	"Sale":[
 	]
+	
 	
 };
 var SUB_CAT={
@@ -77,15 +139,17 @@ function loadSubCategory(category){
 
 	for (var i=0;i<array.length;i++){
 		//Concatenate "_"
-		var id="subc_"+i.toString();
+		var id="subc_"+array[i];
 		
 		//Load Next div  with id,className and Test Text
-		output+="<div class='SubCategories' id='"+id+"'>"+array[i]+"</div>";	
+		output+="<div class='SubCategories' onclick=loadSubSubCategory('"+array[i]+"') id='"+id+"'>"+array[i]+"</div>";	
 		
 	}
 	
 	//Reload New Div HTML content
 	document.getElementById("sub_categories").innerHTML=output;
+	loadSubSubCategory("");
+	loadSelection("");
 
 }
 
@@ -93,24 +157,31 @@ function loadSubCategory(category){
 /*------------------------------------------------------------------------------------------------*/
 function loadPage(){
 	
-	loadSubCategory("CHRISTMAS");
+	loadSubCategory("Christmas");
 	loadSubSubCategory("Women");
 	loadSelection("Women");
 }
 
 function loadSubSubCategory(subCategory){
 	var output="";
-	var array=new Array();
-	array=SUB_CAT[subCategory];
-	//Run text through loop (output)
 	
-	for (var i=0;i<array.length;i++){
-		//Concatenate "_"
-		var id="subsubc_"+i.toString();
+	
+	if(subCategory==""){
+		document.getElementById("sub_categories_sub").innerHTML=output;
+		return;
+	}
+	var array=new Array();
+	if(SUB_CAT[subCategory]!=null){
+		array=SUB_CAT[subCategory];
+	
 		
-		//Load Next div  with id,className and Test Text
-		output+="<div class='SubSubCategories' id='"+id+"'>"+array[i]+"</div>";	
-		
+		for (var i=0;i<array.length;i++){
+			//Concatenate "_"
+			var id="subsubc_"+array[i];
+			//Load Next div  with id,className and Test Text
+			output+="<div class='SubSubCategories' onclick=loadSelection('"+array[i]+"') id='"+id+"'>"+array[i]+"</div>";	
+			
+		}
 	}
 	
 	//Reload New Div HTML content
@@ -119,7 +190,7 @@ function loadSubSubCategory(subCategory){
 function loadSelection(category){
 	var output="";
 	var array=new Array();
-	array=IMG_CAT["Accessories"];
+	array=IMG_CAT[category];
 	//Run text through loop (output)
 	var sizes=new Array("XXS","XS","S","M","L","XL");
 	var color=new Array("red","yellow","blue","black","white","green");
@@ -366,13 +437,13 @@ div.label1{
 	margin-top:5px;
 	margin-bottom:5px;
 	margin-left:5px;
-	box-shadow:0px 0px 5px 5px #000000;
-	border:1px solid white;
+	box-shadow:0px 0px 1px 1px black;
+	
 	background-color:#ffffff;
 	text-align:center;
 	border-radius:2px;
 	overflow:auto;
-	background-color:#3C3432 !important;
+	
 	color:white;
 	
 	
@@ -512,9 +583,9 @@ div.label1{
 	font-size:1.4em;
 	color:white;
 	border-radius:5px;
-	box-shadow:0px 0px 3px 3px black;
+	box-shadow:0px 0px 1px 1px black;
 	padding:5px;
-	border:1px solid white;
+	
 	
 }
 #rec_header{
@@ -526,9 +597,9 @@ div.label1{
 	font-size:1.4em;
 	color:white;
 	border-radius:5px;
-	box-shadow:0px 0px 3px 3px black;
+	box-shadow:0px 0px 1px 1px black;
 	padding:5px;
-	border:1px solid white;
+	
 	
 }
 
@@ -671,18 +742,17 @@ div.label1{
 		
 		<!-- CATEGORIES InsertSelected("categories","Categories","C",cat); -->
 		<div id="categories" class="inner_wrapper">
-			<div class="Categories" id="C_1">Christmas</div>
-			<div class="Categories" id="C_2">Home and Garden</div>
-			<div class="Categories" id="C_3">Women</div>
-			<div class="Categories" id="C_4">Men</div>
-			<div class="Categories" id="C_5">Boys</div>
-			<div class="Categories" id="C_6">Girls</div>
-			<div class="Categories" id="C_7">Baby</div>
-			<div class="Categories" id="C_8">School</div>
-			<div class="Categories" id="C_9">Shoes</div>
-			<div class="Categories" id="C_10">Fancy Dress</div>
-			<div class="Categories" id="C_11">Trends</div>
-			<div class="Categories" id="C_12">Sale</div>
+			<div class="Categories" onclick='loadSubCategory("Christmas")' id="C_1">Christmas</div>
+			<div class="Categories" onclick='loadSubCategory("Home and Garden")' id="C_2">Home and Garden</div>
+			<div class="Categories" onclick='loadSubCategory("Women")' id="C_3">Women</div>
+			<div class="Categories" onclick='loadSubCategory("Men")' id="C_4">Men</div>
+			<div class="Categories" onclick='loadSubCategory("Boys")' id="C_5">Boys</div>
+			<div class="Categories" onclick='loadSubCategory("Girls")'  id="C_6">Girls</div>
+			<div class="Categories" onclick='loadSubCategory("Baby")'  id="C_7">Baby</div>
+			<div class="Categories" onclick='loadSubCategory("School")'  id="C_8">School</div>
+			<div class="Categories" onclick='loadSubCategory("Shoes")'   id="C_9">Shoes</div>
+			<div class="Categories" onclick='loadSubCategory("Fancy Dress")'  id="C_10">Fancy Dress</div>
+			<div class="Categories" onclick='loadSubCategory("Sale")'  id="C_12">Sale</div>
 		</div>
 		<!-- /CATEGORIES-->
 	</div>
