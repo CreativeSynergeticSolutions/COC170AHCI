@@ -272,14 +272,16 @@ body {
     width: 33%;
 }
 
-.main-outfit-area > * > .item:after {
+.main-outfit-area > * .remove-item {
     background-color: #2C2C2C;
     color: #FFFFFF;
-    content: '\e80c';
     cursor: pointer;
-    font-family: 'ahci';
+    display: inline;
     font-size: 1em;
-    padding: 0 1% 1% 1%;
+    left: 0.5em;
+    padding: 0 0 1% 0;
+    position: relative;
+    top: 0.5em;
     text-align: center;
     vertical-align: middle;
 }
@@ -291,18 +293,18 @@ body {
     transform: translateX(-50%);
 }
 
-.main-outfit-area .head-area {
+#head-area {
     height: 15%;
 }
 
-.main-outfit-area .body-area {
-    height: 40%;
-}
-
-.main-outfit-area .bottom-area {
+#body-area {
     height: 30%;
 }
 
-.main-outfit-area .shoes-area {
+#bottom-area {
+    height: 40%;
+}
+
+#shoes-area {
     height: 15%; 
 }
