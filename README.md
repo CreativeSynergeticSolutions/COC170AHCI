@@ -10,7 +10,7 @@
 
 For use with text inputs only.
 
-Use by adding the following to your head.
+Use by adding the following to your head, and including the files. The files can be found under Outfit 2 at the moment.
 ```html
 <link rel="stylesheet" href="stylesheets/keyboard.css">
 <script type="text/javascript" src="javascripts/keyboard.js"></script>
