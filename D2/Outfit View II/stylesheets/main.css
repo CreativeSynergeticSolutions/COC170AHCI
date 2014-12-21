@@ -41,25 +41,27 @@ body {
     text-align: center;
 }
 
-.outfit-btn {
-    bottom: 20%;  
+.outfit-area, 
+.basket-area {
+    bottom: 20%;
     position: absolute;
-    left: 10%;
+    width: 20%;    
+}
+
+.outfit-area {
+    left: 10%;    
 }
 
 .basket-area {
-    background-color: red;
-    bottom: 20%;
-    position: absolute;
     right: 10%;
-    width: 20%;
 }
 
-.basket-area.active > .basket {
+.basket-area.active > .basket,
+.outfit-area.active > .outfits {
     height: auto;
 }
 
-.basket {
+.basket, .outfits {
     display: block;
     position: absolute;
     bottom: 42px;
@@ -70,18 +72,47 @@ body {
     width: 90%;
 }
 
-.basket-item {
+.basket-item,
+.outfit-item {
     background-color: #2C2C2C;
     color: #FFFFFF;
+    cursor: pointer;
     display: block;
-    padding: 20px;
+    padding: 5%;
+    overflow: hidden;
+    vertical-align:middle;
 }
 
-.basket-item:not(:last-of-type){
+.basket-item>.left,
+.outfit-item>.left {  
+    float: left;
+    text-overflow: ellipsis;
+    transform: translateY(20%);
+    overflow: hidden;
+    width: 65%;
+    white-space: nowrap;
+}
+
+.basket-item>.right,
+.outfit-item>.right {  
+    float: right;
+    font-size: 1.25em;
+    text-align: center;
+    width: 35%;
+}
+
+.basket-item:not(:last-of-type),
+.outfit-item:not(:last-of-type){
     border-bottom: 2px solid #1F1F1F;
 }
 
-.basket-btn {
+.basket-item:hover,
+.outfit-item:hover {
+    background-color: #1F1F1F;
+}
+
+.basket-btn,
+.outfit-btn {
     bottom: 0;    
     position: absolute;
     transform: translateX(50%);
@@ -89,37 +120,50 @@ body {
     right: 50%;
 }
 
-.basket-area .basket-btn>.btn>.inner:before {
+.basket-area .basket-btn>.btn>.inner:before,
+.outfit-area .outfit-btn>.btn>.inner:before {
     font-family: 'ahci';
     float: right;
 }
 
-.basket-area .basket-btn>.btn>.inner:after {
+.basket-area .basket-btn>.btn>.inner:after, 
+.outfit-area .outfit-btn>.btn>.inner:after {
     font-family: 'ahci';
     float: left;
 }
 
-.basket-area>.btn-touchable:hover>.btn>.inner:before {
+.basket-area>.btn-touchable:hover>.btn>.inner:before,
+.outfit-area>.btn-touchable:hover>.btn>.inner:before {
     content:'\e83b';
 }
-.basket-area.active .basket-btn>.btn>.inner:before {
+
+.basket-area.active .basket-btn>.btn>.inner:before,
+.outfit-area.active .outfit-btn>.btn>.inner:before {
     content:'\e838';
 }
-.basket-area>.btn-touchable:hover>.btn>.inner:after {
+
+.basket-area>.btn-touchable:hover>.btn>.inner:after,
+.outfit-area>.btn-touchable:hover>.btn>.inner:after {
     content:'\e83b';
 }
-.basket-area.active .basket-btn>.btn>.inner:after {
+
+.basket-area.active .basket-btn>.btn>.inner:after,
+.outfit-area.active .outfit-btn>.btn>.inner:after {
     content:'\e838';
 }
 
 .basket-area>.btn-touchable:hover,
-.basket-area.active .btn-touchable {
+.basket-area.active .btn-touchable,
+.outfit-area>.btn-touchable:hover,
+.outfit-area.active .btn-touchable {
     box-sizing: border-box;
     min-width: 100%;
 }
 
 .basket-area>.btn-touchable:hover > .btn,
-.basket-area.active .btn-touchable>.btn {
+.basket-area.active .btn-touchable>.btn,
+.outfit-area>.btn-touchable:hover > .btn,
+.outfit-area.active .btn-touchable>.btn {
     box-sizing: border-box;
     min-width: 100%;
 }
