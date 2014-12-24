@@ -1,7 +1,8 @@
 var wall = new wall();
 function loadOutfit () {
     var outfits = wall.getOutfits();
-    if(outfits.length>0){
+    if(outfits!=null&&outfits.length>0){
+        $('.outfit-trash-area').show();
         for(var i = 0; i < outfits.length; i++){
             var item = outfits[i],
                 itemEle = document.createElement('div'),
@@ -14,8 +15,21 @@ function loadOutfit () {
             addIcon.className = "icon-plus";
             addEle.appendChild(addIcon);
             itemEle.appendChild(addEle);
+            $('#'+item.type+'-area').find('.add-area').hide();
             document.getElementById(item.type+'-area').appendChild(itemEle);
         }
+        $('.item').draggable({
+            cursor: '-webkit-grabbing',
+            zIndex: 100,
+            drag: function (event, ui) {
+                 $(this).css('transform','rotate(0deg)');
+            },
+            stop: function(event, ui) {
+                $(this).css('transform','none');
+                this._originalPosition = this._originalPosition || ui.originalPosition;
+                ui.helper.animate( this._originalPosition );
+            }
+        });
     }
 }
 function makeBasketItem(itemName) {
@@ -27,7 +41,7 @@ function makeBasketItem(itemName) {
 function loadBasketList() {
     var basket = wall.getBasket();
     console.log(basket);
-    if(basket.length>0){
+    if(basket!=null&&basket.length>0){
         for(var i = 0; i < basket.length; i++){
             var item = basket[i];
             document.getElementById('basket').appendChild(makeBasketItem(item.name));
@@ -96,18 +110,6 @@ window.onload = function () {
     $('.add-item').on('click', function () {
 
     });
-    $('.item').draggable({
-        cursor: '-webkit-grabbing',
-        cursorAt: {top: 10, left: 4},
-        zIndex: 100,
-        stop: function(event, ui) {
-            $(this).css('transform','none');
-            console.log(this._originalPosition);
-            console.log(ui.originalPosition);
-            this._originalPosition = this._originalPosition || ui.originalPosition;
-            ui.helper.animate( this._originalPosition );
-        }
-    });
     $('.outfit-trash-area').droppable({
         accept: '.item',
         tolerance: 'touch',
@@ -120,7 +122,6 @@ window.onload = function () {
             ui.draggable[0].remove();
         },
         out: function (event, ui) {
-            console.log('OUT');
             $('.outfit-trash-area i').removeClass('icon-trash').addClass('icon-trash-empty');
             $(ui.draggable[0]).find('.add-item').fadeIn("fast", function () {});
         }

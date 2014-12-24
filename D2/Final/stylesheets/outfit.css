@@ -278,6 +278,27 @@
     transform: translateX(-50%);
 }
 
+.main-outfit-area .add-area {
+    cursor: pointer;
+    font-size: 2em;
+    height: 2em;
+    left: 50%;
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    vertical-align: -0.2em;
+}
+
+.main-outfit-area .add-area:hover {
+    opacity: 1;
+}
+
+.main-outfit-area .add-area i {
+    font-size: 2em;
+    vertical-align: -0.2em;
+}
+
 #head-area {
     height: 15%;
 }
@@ -290,13 +311,14 @@
     height: 42%;
 }
 
-#shoes-area {
+#feet-area {
     height: 15%;
 }
 
 .outfit-trash-area {
     bottom: 40%;
     color: #B71C1C;
+    display: none;
     font-size: 3em;
     position: absolute;
     right: 30%;
