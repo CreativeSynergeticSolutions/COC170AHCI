@@ -1,0 +1,31 @@
+.item {
+    float: left;
+    height: 30%;
+    margin-left: 2%;
+    margin-top: 1%;
+    text-align: center;
+    width: 14%;
+}
+
+.item:nth-of-type(6n+1) {
+    clear: both;
+}
+
+.item img {
+    height: auto;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.start-area {
+    bottom: 3%;
+    font-weight: bold;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.start-area .btn-touchable {
+    margin-top: 5%;    
+}

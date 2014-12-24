@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'ahci';
-  src: url('../font/ahci.eot?70897655');
-  src: url('../font/ahci.eot?70897655#iefix') format('embedded-opentype'),
-       url('../font/ahci.woff?70897655') format('woff'),
-       url('../font/ahci.ttf?70897655') format('truetype'),
-       url('../font/ahci.svg?70897655#ahci') format('svg');
+  src: url('../font/ahci.eot?26064522');
+  src: url('../font/ahci.eot?26064522#iefix') format('embedded-opentype'),
+       url('../font/ahci.woff?26064522') format('woff'),
+       url('../font/ahci.ttf?26064522') format('truetype'),
+       url('../font/ahci.svg?26064522#ahci') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'ahci';
-    src: url('../font/ahci.svg?70897655#ahci') format('svg');
+    src: url('../font/ahci.svg?26064522#ahci') format('svg');
   }
 }
 */
@@ -176,3 +176,4 @@
 .icon-gwallet:before { content: '\e87b'; } /* '' */
 .icon-paypal:before { content: '\e87c'; } /* '' */
 .icon-pied-piper-squared:before { content: '\e87d'; } /* '' */
+.icon-download:before { content: '\e87e'; } /* '' */
