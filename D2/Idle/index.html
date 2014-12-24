@@ -72,7 +72,7 @@
 					}
 					json[current].used = "true";
 					var html = "<img src="+json[current].image+">";
-					html += "<div id='price'>£"+json[current].price+"</div>";
+					html += "<div id='price'>&pound"+json[current].price+"</div>";
 					
 					document.getElementById(number.toString()).innerHTML = html;
 					
