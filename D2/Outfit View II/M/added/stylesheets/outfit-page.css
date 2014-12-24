@@ -1,0 +1,68 @@
+.outfit-area {
+    text-align: center;
+}
+
+.outfit-area .btn-touchable {
+    cursor: pointer;
+    display: inline-block;
+    height: 48px;
+    min-width: 88px;
+    padding: 0 4px;
+}
+
+.outfit-area .btn-touchable > .btn {
+    background-color: #FFCC00;
+    display: inline-block;
+    font-size: 1.25em;
+    line-height: 36px;
+    min-height: 36px;
+    padding: 0 8px;
+    position: relative;
+    top: 6px;
+    text-align: center;
+}
+
+.outfit-area > h1 {
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 1%;
+}
+
+.outfit-area .add-outfit-btn {
+    margin: 0.5%;
+}
+
+.outfit-area .outfit-list > li {
+    margin: 0 auto;
+    padding: 1em;
+    width: 80%;
+}
+
+.outfit-area .outfit-list > li:not(:last-of-type) {
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.outfit-area .outfit-list > li > * {
+    display: inline-block;
+}
+
+.outfit-area .outfit-list .outfit-info {
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60%;
+}
+
+.outfit-area .outfit-list .outfit-name {
+    font-weight: bold;
+}
+
+.outfit-area .outfit-list .outfit-tools {
+    text-align: right;
+    width: 35%;
+}
+
+.outfit-area .outfit-list .outfit-tools .icon-cancel {
+    color: #B71C1C;
+}
