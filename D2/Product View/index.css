@@ -483,6 +483,8 @@ body {
 	
 	width: 220px;
 	
+	
+	
 }
 
 .selectionTitle {
@@ -575,4 +577,42 @@ body {
 	background: linear-gradient(to bottom,  rgba(112,112,112,0.5) 0%,rgba(112,112,112,0) 30%,rgba(112,112,112,0) 70%,rgba(112,112,112,0.5) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80707070', endColorstr='#80707070',GradientType=0 ); /* IE6-9 */
 
+}
+
+
+
+
+#dialImg {
+	
+	position: absolute;
+	top: 50%;
+	margin-top: -100px;
+	left: 50%;
+	margin-left: -100px;
+	
+	height: 200px;
+	width: 200px;
+	
+	background-image: url(images/Dial.png);
+	
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+}
+
+#quantityVal {
+	
+	position: absolute;
+	
+	height: 224px;
+	width: 210px;
+	
+	color: #FFD231;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 224px;
+	vertical-align: middle;
+	
 }
