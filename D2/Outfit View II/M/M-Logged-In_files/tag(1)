@@ -1,0 +1,95 @@
+BrightTag.instance.errors({enabled:false});
+BrightTag.instance.load(
+'//s.btstatic.com/lib/22799b12e7c66e214a458d227c51193761c9d8d2.js',
+'//s.btstatic.com/lib/1c5a58acecb4a0e435ae05d7d961b43010c5ccbe.js',
+'//s.btstatic.com/lib/0e3c4f3706c468b919d1b289257ffb3889f4c6e8.js',
+function (page) {
+BrightTag.instance.dbe('ga account', '\x22UA-25558359-3\x22', {pageId:20713});
+BrightTag.instance.dbe('gm/george/wine', '(function(){\r\n\tvar bt_logoClass \x3d \x22GM\x22;\r\n\tif(jQuery(\x22#logo img\x22).length \x3e 0){\r\n\t\tif(jQuery(\x22#logo img\x22).attr(\x22class\x22) \x3d\x3d \x22logoAsdaWine\x22){\r\n\t\t\tbt_logoClass \x3d \x22Wine\x22;\r\n\t\t}else if(jQuery(\x22#logo img\x22).attr(\x22class\x22) \x3d\x3d \x22logoGeorge\x22){\r\n\t\t\tbt_logoClass \x3d \x22George\x22;\r\n\t\t}\r\n\t}else{\r\n\t\tif(jQuery(\x22#logo a\x22).attr(\x22title\x22) \x3d\x3d \x22ASDA Direct\x22){\r\n\t\t\tbt_logoClass \x3d \x22GM\x22;\r\n\t\t}else if(jQuery(\x22#logo a\x22).attr(\x22title\x22) \x3d\x3d \x22ASDA Wine\x22){\r\n\t\t\tbt_logoClass \x3d \x22Wine\x22;\r\n\t\t}else{\r\n\t\t\tbt_logoClass \x3d \x22George\x22;\r\n\t\t}\r\n\t}\r\n\treturn bt_logoClass;\r\n})();', {pageId:20723});
+BrightTag.instance.dbe('staging environment', '(function(){\r\n\tif(location.hostname.indexOf(\x27stag\x27)\x3e-1 || location.hostname.indexOf(\x27local\x27)\x3e-1 || location.hostname.indexOf(\x27ecommera.demandware.net\x27)\x3e-1){\r\n\t\treturn \x22Staging\x22;\r\n\t}\r\n})();', {pageId:20723});
+BrightTag.instance.dbe('dfa brand', '(function(){ if(location.href.indexOf(\x22/D24\x22)\x3e-1){ return \x22Asda George Home\x22; }else{ return \x22\x22; } })()', {pageId:20723});
+BrightTag.instance.dbe('brand', '(function(){\r\n\tvar bt_logoClass \x3d \x22direct\x22;\r\n\tif(jQuery(\x22#logo img\x22).length \x3e 0){\r\n\t\tif(jQuery(\x22#logo img\x22).attr(\x22class\x22) \x3d\x3d \x22logoAsdaWine\x22){\r\n\t\t\tbt_logoClass \x3d \x22wine\x22;\r\n\t\t}else if(jQuery(\x22#logo img\x22).attr(\x22class\x22) \x3d\x3d \x22logoGeorge\x22){\r\n\t\t\tbt_logoClass \x3d \x22george\x22;\r\n\t\t}\r\n\t}else{\r\n\t\tif(jQuery(\x22#logo a\x22).attr(\x22title\x22) \x3d\x3d \x22ASDA Direct\x22){\r\n\t\t\tbt_logoClass \x3d \x22direct\x22;\r\n\t\t}else if(jQuery(\x22#logo a\x22).attr(\x22title\x22) \x3d\x3d \x22ASDA Wine\x22){\r\n\t\t\tbt_logoClass \x3d \x22wine\x22;\r\n\t\t}else{\r\n\t\t\tbt_logoClass \x3d \x22george\x22;\r\n\t\t}\r\n\t}\r\n\treturn bt_logoClass;\r\n})();', {pageId:20724});
+BrightTag.EventBinding.bind('header engagement - george', '.login a[title\x3d\x27Sign in / Register\x27]', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('header engagement - george', '.signOut a[title\x3d\x27Sign Out\x27]', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('footer navigation', '#quickLinks div[id*\x3d\x27listLinks\x27] a,input.quickLinksSubmit', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('suggested search', '#suggestions div.selected', 'keydown', {pageId:20723});
+BrightTag.EventBinding.bind('header engagement - george', 'a[title\x3d\x27View/edit your account\x27]', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('product - recommendation clicked', 'area[href*\x3d\x27cm_sp\x3d\x27]', 'DIRECT/mousedown', {pageId:20723}).data('s.evar28', '\x22Banner\x22');
+BrightTag.EventBinding.bind('campaign id capture', 'area[href*\x3d\x27icid\x3d\x27]', 'DIRECT/mousedown', {pageId:20723}).data('internal campaign id', '(function() {\r\nreturn eventObject.currentTarget.getAttribute(\x22href\x22).match(/icid\x3d(.*)/)[1].replace(/^icid[\x3d]/ig, \x27\x27);\r\n})();');
+BrightTag.EventBinding.bind('campaign id capture', 'a[manual_icid]', 'DIRECT/mousedown', {pageId:20723}).data('internal campaign id', '(function() {\r\nreturn eventObject.currentTarget.getAttribute(\x22manual_icid\x22).replace(/^icid[\x3d]/ig, \x27\x27);\r\n})();');
+BrightTag.EventBinding.bind('header engagement - george', 'a[title\x3d\x27Save for later\x27]', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('header engagement - george', '.mw_search_button', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('level 6 navigation', '.level6Category a', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('quick buy pop-up', '.quickBuyLink', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('campaign id capture', 'a[href*\x3d\x27icid\x27]', 'DIRECT/mousedown', {pageId:20723}).data('internal campaign id', '(function() {\r\nreturn eventObject.currentTarget.getAttribute(\x22href\x22).match(/icid\x3d(.*)/)[1].replace(/^icid[\x3d]/ig, \x27\x27);\r\n})();');
+BrightTag.EventBinding.bind('campaign id capture', 'a[manual_cm_sp]', 'DIRECT/mousedown', {pageId:20723}).data('internal campaign id', '(function() {\r\nreturn eventObject.currentTarget.getAttribute(\x22manual_cm_sp\x22).replace(/^cm_sp[\x3d]/ig, \x27\x27);\r\n})();');
+BrightTag.EventBinding.bind('submit search', '#SimpleSearchForm input.submit', 'DIRECT/mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('header engagement - george', 'a[name\x3d\x27George_logo\x27]', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('header engagement - george', 'a.basket_checkout', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('quick buy pop-up', '#quickBuyDialog input[name\x3d\x27addProduct\x27]', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('suggested search', '#suggestions div.selected', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('product - recommendation clicked', 'a[manual_cm_sp]', 'DIRECT/mousedown', {pageId:20723}).data('s.evar28', '\x22Banner\x22');
+BrightTag.EventBinding.bind('header engagement - george', '#go', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('quick buy pop-up', '.saveForLaterBtn', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('campaign id capture', 'area[href*\x3d\x27cm_sp\x3d\x27]', 'DIRECT/mousedown', {pageId:20723}).data('internal campaign id', '(function() {\r\nreturn eventObject.currentTarget.getAttribute(\x22href\x22).match(/cm_sp\x3d(.*)/)[1].replace(/^cm_sp[\x3d]/ig, \x27\x27);\r\n})();');
+BrightTag.EventBinding.bind('campaign id capture', 'a[href*\x3d\x27cm_sp\x27]', 'DIRECT/mousedown', {pageId:20723}).data('internal campaign id', '(function() {\r\nreturn eventObject.currentTarget.getAttribute(\x22href\x22).match(/cm_sp\x3d(.*)/)[1].replace(/^cm_sp[\x3d]/ig, \x27\x27);\r\n})();');
+BrightTag.EventBinding.bind('header engagement - george', 'a.expandMinicart', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('header engagement - george', '#q', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('header engagement - george', '#showSiteLauncher', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('header engagement - george', '.mw_menu_button', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('header engagement - george', '.help a', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('header engagement - george', '.mw_basket_buttonG', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('quick buy pop-up', '#quickBuyDialog .viewDetailsVariant a', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('submit search', '#q', 'DIRECT/keydown', {pageId:20723});
+BrightTag.EventBinding.bind('product - recommendation clicked', 'a[href*\x3d\x27cm_sp\x27]', 'DIRECT/mousedown', {pageId:20723}).data('s.evar28', '\x22Banner\x22');
+BrightTag.EventBinding.bind('header engagement - george', 'a.closeMinicart', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('footer navigation', '#qllinkswrapper a,span.qlsocialtext,#emailsubmit', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('footer navigation', '#footer a', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('header engagement - george', 'a[title\x3d\x27Track your order\x27]', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('sub-category box tracking', '.hubCategory .catcontent', 'mousedown', {pageId:20723});
+BrightTag.EventBinding.bind('footer navigation', '#mw_sign_up', 'mousedown', {pageId:20713});
+BrightTag.EventBinding.bind('footer navigation', '#quickLinksContainerReskin a', 'mousedown', {pageId:20713});
+BrightTag.EventBinding.bind('menu navigation', '#mainNav li a', 'mousedown', {pageId:20713});
+BrightTag.EventBinding.bind('footer navigation', '#quickLinksContainer a', 'mousedown', {pageId:20713});
+BrightTag.EventBinding.bind('product - recommendation clicked', '#homepagePaBottomPageSet a', 'mousedown', {pageId:20724}).data('s.evar28', '\x22CrossSell\x22');
+BrightTag.EventBinding.bind('product - recommendation clicked', '.recentlyViewed a', 'mousedown', {pageId:20724}).data('s.evar28', '\x22RecentlyViewed\x22');
+BrightTag.EventBinding.bind('add to basket', '#homepagePaBottomPageSet input[name\x3d\x27addProduct\x27]', 'mousedown', {pageId:20724}).data('s.evar28', '\x22CrossSell\x22').data('s.evar22', '\x22PMV\x22').data('s.evar15', '(function(){\r\n\treturn \x22HomePage^DynamicRecommendations^\x22 + jQuery(\x22#homepagePaSlotBottomHeader\x22).text();\r\n})()');
+BrightTag.EventBinding.bind('add to basket', '#homepagePaTopPageSet input[name\x3d\x27addProduct\x27]', 'mousedown', {pageId:20724}).data('s.evar28', '\x22CrossSell\x22').data('s.evar22', '\x22PMV\x22').data('s.evar15', '(function(){\r\n\treturn \x22HomePage^DynamicRecommendations^\x22 + jQuery(\x22#homepagePaSlotTopHeader\x22).text();\r\n})()');
+BrightTag.EventBinding.bind('product - recommendation viewed', window, 'DIRECT/load', {pageId:20724}).data('s.prop26', '\x22HomePage\x22');
+BrightTag.EventBinding.bind('menu navigation', '#mw_abtiles img:not([title])', 'DIRECT/mousedown', {pageId:20714});
+BrightTag.EventBinding.bind('menu navigation', '.mw_client_content_box img', 'DIRECT/mousedown', {pageId:20714});
+BrightTag.instance.appendContent('\x3cscript type\x3d\x22text/JavaScript\x22\x3e\n\tvar script \x3d document.createElement(\x22script\x22);\n\tscript.src \x3d \x22//d3c3cq33003psk.cloudfront.net/opentag-41168-1286131.js\x22;\n\tscript.setAttribute(\x27async\x27,\x27async\x27);\n\tscript.setAttribute(\x27defer\x27, \x27defer\x27);\n\tdocument.getElementsByTagName(\x22head\x22)[0].appendChild(script);\n\x3c/script\x3e',{tagId:1430407});
+BrightTag.instance.appendContent('\x3cscript type\x3d\x22text/javascript\x22\x3e\n\n        var _gaq \x3d window._gaq || [];\n        _gaq.push([\x27_setAccount\x27, (""+bt_data(\x27ga account\x27))]);\n        _gaq.push([\x27_trackPageview\x27]);\n\n        (function() {\n          var ga \x3d document.createElement(\x27script\x27); ga.type \x3d \x27text/javascript\x27; ga.async \x3d true;\n          ga.src \x3d \x27//www.google-analytics.com/ga.js\x27;\n          var s \x3d document.getElementsByTagName(\x27script\x27)[0]; s.parentNode.insertBefore(ga, s);\n        })();\n\n      \x3c/script\x3e',{tagId:27749});
+BrightTag.instance.appendContent('\x3cscript\x3e\ntry{\n    var cookieDate \x3d new Date();\n    cookieDate.setDate(cookieDate.getDate() - 30);\n    document.cookie \x3d \x22s_pers\x3d; path\x3d/; domain\x3d.asda.com; expires\x3d\x22 + cookieDate + \x22;\x22;\n}catch(err){}\n\x3c/script\x3e',{tagId:89934});
+BrightTag.instance.appendContent('\x3cscript\x3e\njQuery(function($){\n    var bt_isOverGoogleAd \x3d false;\n    $(\x22iframe[id\x3d\x27master-1\x27]\x22).mouseover(function(){\n    \tbt_isOverGoogleAd \x3d true;\n\t}).mouseout(function(){\n\t\tbt_isOverGoogleAd \x3d false;\n\t});\n\t$(window).blur(function(){\n\t\tif(bt_isOverGoogleAd){\n\t\t\ts.linkTrackVars\x3d\x22events,channel,eVar53\x22;\n\t\t\ts.linkTrackEvents\x3d\x22event15\x22;\n\t\t\ts.events\x3d\x22event15\x22;\n\t\t\ts.tl(true,\x27o\x27,\x27AdWords Clicked\x27);\n\t\t\ts.events\x3d\x22\x22;\n\t\t\twindow.setTimeout(function() {\n\t\t\t\t$(\x22#q\x22).focus();\n\t\t\t\tbt_isOverGoogleAd \x3d false;\n\t\t\t}, 100);\n\t\t}\n\t});\n});\nwindow.setTimeout(function(){\n\tif(jQuery(\x22iframe[id\x3d\x27master-1\x27]\x22).length \x3e 0){\n\t\tif(jQuery(\x22iframe[id\x3d\x27master-1\x27]\x22).css(\x22visibility\x22) \x3d\x3d \x22visible\x22){\n\t\t\ts.linkTrackVars\x3d\x22channel,eVar43,eVar45,eVar53\x22;\n\t\t\ts.eVar43\x3d\x22Active\x22;\n\t\t\ts.eVar45\x3d(GoogleAdsenseCatId ? (GoogleAdsenseCatId !\x3d \x22\x22 ? \x22Included\x22 : \x22Not Included\x22) : \x22Not Included\x22);\n\t\t\ts.tl(true,\x27o\x27,\x27Sponsored Links\x27);\n\t\t\ts.eVar43\x3d\x22\x22;\n            s.eVar45\x3d\x22\x22;\n\t\t}else{\n\t\t\ts.linkTrackVars\x3d\x22channel,eVar43,eVar45,eVar53\x22;\n\t\t\ts.eVar43\x3d\x22Inactive\x22;\n\t\t\ts.eVar45\x3d(GoogleAdsenseCatId ? (GoogleAdsenseCatId !\x3d \x22\x22 ? \x22Included\x22 : \x22Not Included\x22) : \x22Not Included\x22);\n\t\t\ts.tl(true,\x27o\x27,\x27Sponsored Links\x27);\n\t\t\ts.eVar43\x3d\x22\x22;\n            s.eVar45\x3d\x22\x22;\n\t\t}\n\t}\n}, 1000);\n\x3c/script\x3e',{tagId:167712});
+BrightTag.instance.secondary(function(serverURL) {
+try { if (eval('(bt_data(\x27gm/george/wine\x27) \x3d\x3d \x22GM\x22 || bt_data(\x27gm/george/wine\x27) \x3d\x3d \x22Wine\x22 || bt_data(\x27dfa brand\x27) \x3d\x3d \x22Asda George Home\x22)')) {
+serverURL.cf(48475);
+}
+} catch(e) { bt_handle_exception(e); }
+try { if (eval('bt_data(\x27staging environment\x27) !\x3d \x22Staging\x22 \x26\x26 (universal_variable.Order \x3d\x3d undefined || universal_variable.Order.order_id \x3d\x3d undefined)')) {
+serverURL.cf(53582);
+}
+} catch(e) { bt_handle_exception(e); }
+try { if (eval('(bt_data(\x27gm/george/wine\x27) \x3d\x3d \x22George\x22 \x26\x26 bt_data(\x27dfa brand\x27) !\x3d \x22Asda George Home\x22)')) {
+serverURL.cf(451157);
+}
+} catch(e) { bt_handle_exception(e); }
+try { if (eval('bt_data(\x27brand\x27) !\x3d \x22george\x22')) {
+serverURL.cf(462228);
+}
+} catch(e) { bt_handle_exception(e); }
+try { if (eval('bt_data(\x27brand\x27) \x3d\x3d \x22george\x22')) {
+serverURL.cf(462237);
+}
+} catch(e) { bt_handle_exception(e); }
+try { if (eval('bt_data(\x27brand\x27) !\x3d \x22george\x22')) {
+serverURL.cf(462455);
+}
+} catch(e) { bt_handle_exception(e); }
+try { if (eval('bt_data(\x27brand\x27) \x3d\x3d \x22george\x22')) {
+serverURL.cf(462461);
+}
+} catch(e) { bt_handle_exception(e); }
+});
+});
