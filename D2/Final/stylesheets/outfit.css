@@ -1,4 +1,4 @@
-.outfit-area, 
+.outfit-area,
 .basket-area {
     bottom: 20%;
     position: absolute;
@@ -245,7 +245,6 @@
 }
 
 .main-outfit-area > * {
-    overflow: hidden;
     position: relative;
 }
 
@@ -255,9 +254,10 @@
     background-position: center center;
     height: 100%;
     width: 33%;
+    z-index: 2;
 }
 
-.main-outfit-area > * .remove-item {
+.main-outfit-area > * .add-item {
     background-color: #2C2C2C;
     color: #FFFFFF;
     cursor: pointer;
@@ -292,4 +292,13 @@
 
 #shoes-area {
     height: 15%;
+}
+
+.outfit-trash-area {
+    bottom: 40%;
+    color: #B71C1C;
+    font-size: 3em;
+    position: absolute;
+    right: 30%;
+    z-index: 1;
 }

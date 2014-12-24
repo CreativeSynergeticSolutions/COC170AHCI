@@ -5,15 +5,15 @@ function loadOutfit () {
         for(var i = 0; i < outfits.length; i++){
             var item = outfits[i],
                 itemEle = document.createElement('div'),
-                rmvEle = document.createElement('div'),
-                rmvIcon = document.createElement('i');
+                addEle = document.createElement('div'),
+                addIcon = document.createElement('i');
             itemEle.className = "main-item item";
-            itemEle.style.backgroundImage = "url('"+item.imgSrc+"')";
+            itemEle.style.backgroundImage = "url('"+item.imgURL+"')";
             itemEle.dataset.itemname = item.name;
-            rmvEle.className = "remove-item";
-            rmvIcon.className = "icon-cancel";
-            rmvEle.appendChild(rmvIcon);
-            itemEle.appendChild(rmvEle);
+            addEle.className = "add-item";
+            addIcon.className = "icon-plus";
+            addEle.appendChild(addIcon);
+            itemEle.appendChild(addEle);
             document.getElementById(item.type+'-area').appendChild(itemEle);
         }
     }
@@ -33,7 +33,7 @@ function loadBasketList() {
             document.getElementById('basket').appendChild(makeBasketItem(item.name));
         }
     } else {
-        document.getElementById('basket').appendChild(makeBasketItem('Your Basket is Empty'));    
+        document.getElementById('basket').appendChild(makeBasketItem('Your Basket is Empty'));
     }
 }
 function loadOutfitList() {
@@ -84,8 +84,8 @@ window.onload = function () {
         });
     });
     $('.outfit-name').focus(function () {
-        $(this).parent().removeClass('saved').addClass('saving');    
-    });    
+        $(this).parent().removeClass('saved').addClass('saving');
+    });
     $('.outfit-name').focusout(function () {
         if($(this).val()!==""){
             $(this).parent().removeClass('saving').addClass('saved');
@@ -93,9 +93,36 @@ window.onload = function () {
             $(this).parent().removeClass('saving').removeClass('saved');
         }
     });
-    $('.remove-item').on('click', function () {
-        console.log($(this).parent().data('itemname'));
-        wall.removeFromOutfit({'itemName':$(this).parent().data('itemname')});
-        $(this).parent().remove();
+    $('.add-item').on('click', function () {
+
+    });
+    $('.item').draggable({
+        cursor: '-webkit-grabbing',
+        cursorAt: {top: 10, left: 4},
+        zIndex: 100,
+        stop: function(event, ui) {
+            $(this).css('transform','none');
+            console.log(this._originalPosition);
+            console.log(ui.originalPosition);
+            this._originalPosition = this._originalPosition || ui.originalPosition;
+            ui.helper.animate( this._originalPosition );
+        }
+    });
+    $('.outfit-trash-area').droppable({
+        accept: '.item',
+        tolerance: 'touch',
+        over: function (event, ui) {
+            $('.outfit-trash-area i').removeClass('icon-trash-empty').addClass('icon-trash');
+            $(ui.draggable[0]).find('.add-item').fadeOut("fast", function () {});
+        },
+        drop: function (event, ui) {
+            //wall.removeFromOutfit({'itemName':$(this).parent().data('itemname')});
+            ui.draggable[0].remove();
+        },
+        out: function (event, ui) {
+            console.log('OUT');
+            $('.outfit-trash-area i').removeClass('icon-trash').addClass('icon-trash-empty');
+            $(ui.draggable[0]).find('.add-item').fadeIn("fast", function () {});
+        }
     });
 };
