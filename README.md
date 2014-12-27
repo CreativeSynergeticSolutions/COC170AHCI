@@ -4,6 +4,11 @@
 - [ ] Finish storyboard for Marketing Video - 04/01/15
 - [ ] Film Marketing Video - 05/01/15
 - [ ] Finish editing Marketing Video - 06/01/15
+- [ ] Finish report - 07/01/15
+- [ ] Hand in report - 07/01/15
+- [ ] Obtain TV for presentation - 07/01/15
+- [ ] Test TV for presentation - 07/01/15
+- [ ] Rehearse presentation - 08/01/15
 - [ ] Demonstration - 08/01/15
 
 ##Onscreen Keyboard
