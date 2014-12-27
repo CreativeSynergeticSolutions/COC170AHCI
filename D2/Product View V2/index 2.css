@@ -94,7 +94,7 @@ body {
 	background-color: #000;
 	border: 1px solid #FFF;
 	
-	transform: rotateX(50deg);
+	transform: rotateX(40deg);
 	transform-origin: center bottom;
 	
 }
@@ -131,7 +131,7 @@ body {
 	
 	transition: .1s;
 	
-	transform: rotateX(50deg);
+	transform: rotateX(40deg);
 	transform-origin: center bottom;
 	
 		
@@ -273,15 +273,23 @@ body {
 
 #productSectionWrapper {
 	
-	//perspective: 100em;
-	//perspective-origin: right;
-	
-}
-
-#productSectionLabel {
+	position: absolute;
+	height: 640px;
+	width: 420px;
 	
 	perspective: 100em;
 	perspective-origin: right;
+	
+	transition: 1s;
+		
+}
+
+#productSectionLabel input:checked~ #productSectionWrapper {
+	
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
 	
 }
 
@@ -304,7 +312,7 @@ body {
 	
 }
 
-#productSectionLabel input:checked~ #productSectionContainer {
+#productSectionLabel input:checked~ #productSectionWrapper #productSectionContainer {
 	
 	top: 0px;
 	left: 0px;
@@ -345,7 +353,7 @@ body {
 	
 }
 
-#productSectionLabel input:checked~ #productDetailsTitle {
+#productSectionLabel input:checked~ #productSectionWrapper #productDetailsTitle {
 	
 	left: 0px;
 	width: 100%;
@@ -370,7 +378,7 @@ body {
 	
 }
 
-#productSectionLabel input:checked~ #productDetailsTitle .titleLine {
+#productSectionLabel input:checked~ #productSectionWrapper #productDetailsTitle .titleLine {
 	
 	opacity: 1;
 	
@@ -389,28 +397,118 @@ body {
 	
 	color: white;
 	font-size: 20px;
+	word-wrap: normal;
 	
-	background-color: black;
+	background-color: #000;
 	
 	transform: rotateY(30deg);
 	transform-origin: left center;
 	
 	transition: 1s;
 	
-	overflow-y: hidden;
+	overflow: hidden;
 	
 }
 
-#productSectionLabel input:checked~  #productDetails {
+#productSectionLabel input:checked~ #productSectionWrapper  #productDetails {
 	
 	height: 800px;
-	width: 700px;
+	width: 1100px;
 	
+	font-size: 25px;
+	
+	background-color: rgba(0, 0, 0, 0.5);
+	
+	overflow-y: scroll;
 	
 	transform: rotateY(0deg);
 	
 }
 
+#deliveryIcons {
+	
+	float: right;
+	margin: 0px;	
+	height: 0px;
+	width: 0px;
+	
+	transition: 1s;
+	
+	overflow: hidden;
+	
+}
+
+#deliveryIcons:after {
+	
+	content: "";
+	
+	position: absolute;
+	top: -110px;
+	height: 100px;
+	width: 400px;
+	
+	background-image: url(images/DeliveryIcons.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top center;
+	
+	transition: 1s;
+	
+	transition-delay: 0s;
+	
+}
+
+#productSectionLabel input:checked~ #productSectionWrapper  #productDetails #deliveryIcons {
+	
+	margin: 10px;
+	height: 100px;
+	width: 400px;
+	
+}
+
+#productSectionLabel input:checked~ #productSectionWrapper  #productDetails #deliveryIcons:after {
+	
+	top: 20px;
+	height: 100px;
+	width: 400px;
+	
+	transition-delay: 1s;
+	
+}
+
+
+
+#socialIconsImg {
+	
+	position: absolute;
+	top: 200px;
+	right: -100px;
+	
+	height: 500px;
+	width: 91px;
+	
+	background-image: url(images/SocialIcons.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	opacity: 0;
+	
+	transition: 1s;
+	
+	transition-delay: 0s;
+	
+}
+
+#productSectionLabel input:checked~ #productSectionWrapper #productSectionContainer #socialIconsImg {
+	
+	right: 20px;
+	
+	opacity: 1;
+	
+	transition-delay: 1s;
+	
+}
 
 
 

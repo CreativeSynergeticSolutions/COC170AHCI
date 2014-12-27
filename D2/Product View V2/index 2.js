@@ -4,7 +4,8 @@ $(document).ready(function(){
 	
 	setupDisplay();
 	
-		
+	$("#productSectionLabel").click();
+	
 });
 
 function setupDisplay() {
