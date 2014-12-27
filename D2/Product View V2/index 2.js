@@ -2,6 +2,13 @@ var imgs = ["DressFront.png", "DressBack.png", "DressPattern.png"];
 
 $(document).ready(function(){
 	
+	setupDisplay();
+	
+		
+});
+
+function setupDisplay() {
+	
 	for (var iC = 0; iC < imgs.length; iC++){
 		$("#ulImages").append("<div class='imgBtns' data-Img="+ iC + " ></div>");
 	}
@@ -17,36 +24,28 @@ $(document).ready(function(){
 	
 	$("#displayImgLabel input").change(function(){
 		
+		console.log("the state is: " + this.checked);
+		
 		if(this.checked) {
 			
 			$("#displayImg").panzoom("enable");
 			$("#displayImgLabel").css("cursor", "default");
-			$(this).prop("disabled", true);
-			
-		} else {
-			
-			$("#displayImgLabel").css("cursor", "pointer");
-			
-			$("#displayImg").panzoom("reset");
-			$("#displayImg").panzoom("disable");
-			
+			document.getElementById("displayImgCheck").disabled = true;
+						
 		}
 		
 	});
 	
 	$("#closeDisplayImg").click(function(){
 		
-		$("#displayImgLabel input").prop("disabled", false);
-		$("#displayImgLabel").click()
+		document.getElementById("displayImgCheck").disabled = false;
+		
+		$("#displayImgLabel").css("cursor", "pointer");
+		
+		$("#displayImg").panzoom("reset");
+		$("#displayImg").panzoom("disable");
 		
 	});
-	
-	
-	/*
-	$("li[data-colour=1]").css("background-color", "white", "important");
-	$("li[data-colour=2]").css("background-color", "black", "important");
-	$("li[data-colour=3]").css("background-color", "grey",  "important");
-	*/
 		
 	$(".imgBtns").first().click();
 	
@@ -63,6 +62,6 @@ $(document).ready(function(){
 		});
 	});
 	$("#displayImg").panzoom("disable");
-		
-});
+	
+}
 
