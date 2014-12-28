@@ -1,6 +1,230 @@
 {"items": [
-    {"name":"Black Jumper","mainCategory":"Mens","subCategory":"Jumpers & Cardigans","type":"body","price": "£19.99", "imgURL":"images/stock/mens/body/Black Jumper.png"},
-    {"name":"Straight Jeans","mainCategory":"Mens","subCategory":"Jeans","type":"bottom","price": "£29.99", "imgURL":"images/stock/mens/bottom/Straight Jeans.png"},
-    {"name":"Acid Wash Jeggings","mainCategory":"Womens","subCategory":"Jeans","type":"bottom","price": "£10.00", "imgURL":["front":"images/stock/womens/bottom/Acid Wash Jeggings/front.png","back":"images/stock/womens/bottom/Acid Wash Jeggings/back.png"], "colour":"Navy",description":"We’re all for that grunge, messy hair look this season and with these acid wash jeggings you’re sure to be half way there. The perfect pick for an edgy new staple that will transform every look into a style statement instantly, you’re sure to adore these.", "bulletpoint":["Elasticated waistband"], "fabric":"70% Cotton, 25% Polyester, 5% Elastane","productCode":"4929029"},
-    {"name":"Jeggings","mainCategory":"Womens","subCategory":"Jeans","type":"bottom","price": "£12.00", "imgURL":["front":"images/stock/womens/bottom/Jeggings/front.png","close":"images/stock/womens/bottom/Jeggings/close.png"], "colour":"Black", "description":"Go for a stylish staple you’ll be wearing year-round with these great jeggings. Crafted with soft fabric and featuring an elasticated waistband, these are a comfy alternative to jeans that you’re sure to adore. ", "bulletpoint":["Twin back pockets","Elasticated waistband"], "fabric":"72% Cotton, 25% Polyester, 3% Elastane","productCode":"4869167"}
+    {
+		"name": "Acid Wash Jeggings",
+		"mainCategory": "Womens",
+		"subCategory": "Jeans",
+		"type": "bottom",
+		"price": "£10.00",
+		"images": [
+			{
+				"front": "images/stock/womens/bottom/Acid Wash Jeggings/front.png",
+				"back": "images/stock/womens/bottom/Acid Wash Jeggings/back.png"
+			}
+		],
+		"colour": "Navy",
+		"description": "We’re all for that grunge, messy hair look this season and with these acid wash jeggings you’re sure to be half way there. The perfect pick for an edgy new staple that will transform every look into a style statement instantly, you’re sure to adore these.",
+		"bulletpoint": [
+			"Elasticated waistband"
+		],
+		"fabric": "70% Cotton, 25% Polyester, 5% Elastane",
+		"productCode": "4929029"
+	},
+	{
+		"name": "Jeggings",
+		"mainCategory": "Womens",
+		"subCategory": "Jeans",
+		"type": "bottom",
+		"price": "£12.00",
+		"images": [
+			{
+				"front": "images/stock/womens/bottom/Jeggings/front.png",
+				"close": "images/stock/womens/bottom/Jeggings/close.png"
+			}
+		],
+		"colour": "Black",
+		"description": "Go for a stylish staple you’ll be wearing year-round with these great jeggings. Crafted with soft fabric and featuring an elasticated waistband, these are a comfy alternative to jeans that you’re sure to adore. ",
+		"bulletpoint": [
+			"Twin back pockets",
+			"Elasticated waistband"
+		],
+		"fabric": "72% Cotton, 25% Polyester, 3% Elastane",
+		"productCode": "4869167"
+	},
+	{
+		"name": "Skinny Jeans",
+		"mainCategory": "Womens",
+		"subCategory": "Jeans",
+		"type": "bottom",
+		"price": "£8.00",
+		"images": [
+			{
+				"front": "images/stock/womens/bottom/Skinny Jeans/front.png",
+				"back": "images/stock/womens/bottom/Skinny Jeans/back.png"
+			}
+		],
+		"colour": "Navy",
+		"description": "Bound to become your keep-forever favourites, these skinny jeans are a stylish must-have. With a versatile design and a flattering fit, these are an indispensable staple you’ll be wearing time and again. ",
+		"bulletpoint": [
+			"Zip and button fly fastening",
+			"Twin front and back pockets"
+		],
+		"fabric": "80% Cotton, 19% Polyester, 1% Elastane",
+		"productCode": "4868138"
+	},
+	{
+		"name": "Floral Chiffon Wrap Blouse",
+		"mainCategory": "Womens",
+		"subCategory": "Blouse",
+		"type": "top",
+		"price": "£12.00",
+		"images": [
+			{
+				"front": "images/stock/womens/bottom/Floral Chiffon Wrap Blouse/front.png",
+				"back": "images/stock/womens/bottom/Floral Chiffon Wrap Blouse/back.png"
+			}
+		],
+		"colour": "Multi",
+		"description": "Give your formal wardrobe a wonderful update with this floral chiffon wrap blouse. Crafted with light fabric, this piece is a stunning fusion of comfort and style that will take you from your desk to the dancefloor time and again. ",
+		"bulletpoint": [
+			"Elasticated waistband",
+			"Long sleeve"
+		],
+		"fabric": "Outer: 100% Polyester Inner: 95% Viscose, 5% Elastane",
+		"productCode": "4943984"
+	},
+	{
+		"name": "Crochet Shoulder Blouse",
+		"mainCategory": "Womens",
+		"subCategory": "Blouse",
+		"type": "top",
+		"price": "£14.00",
+		"images": [
+			{
+				"front": "images/stock/womens/bottom/Crochet Shoulder Blouse/front.png",
+				"back": "images/stock/womens/bottom/Crochet Shoulder Blouse/back.png",
+				"close": "images/stock/womens/bottom/Crochet Shoulder Blouse/close.png"
+			}
+		],
+		"colour": "Cream",
+		"description": "Invest in this gently unique crochet shoulder blouse this season. This lovely piece will add a delightful touch to every look and will work in perfect harmony with your formal outfits. Team with one of our camisole vests to complete the look.",
+		"bulletpoint": [
+			"Button through fastening",
+			"Long sleeve"
+		],
+		"fabric": "Main body: 100% Polyester Trim: 100% Cotton",
+		"productCode": "4931794"
+	},
+	{
+		"name": "Turn-up Sleeve Blouse",
+		"mainCategory": "Womens",
+		"subCategory": "Blouse",
+		"type": "top",
+		"price": "£10.00",
+		"images": [
+			{
+				"front": "images/stock/womens/bottom/Turn-up Sleeve Blouse/front.png",
+				"back": "images/stock/womens/bottom/Turn-up Sleeve Blouse/back.png"
+			}
+		],
+		"colour": "Red",
+		"description": "Infuse some colour into your formal wardrobe with this stunning turn-up sleeve blouse this season. This versatile piece is guaranteed to become your go-to for an instant fashion fix.",
+		"bulletpoint": [
+			"Dipped hem",
+			"V-neck"
+		],
+		"fabric": "100% Polyester",
+		"productCode": "4929704"
+	},
+	{
+		"name": "Butterfly Sweater",
+		"mainCategory": "Womens",
+		"subCategory": "Jumpers/Cardigan",
+		"type": "top",
+		"price": "£10.00",
+		"images": [
+			{
+				"front": "images/stock/womens/bottom/Butterfly Sweater/front.png",
+				"back": "images/stock/womens/bottom/Butterfly Sweater/back.png"
+			}
+		],
+		"colour": "Multi",
+		"description": "Go for an ethereal feel with this lovely butterfly sweater this winter. Crafted using soft fabric to keep you warm and with a pretty butterfly design, you’ll be completing your casual looks with this again and again. ",
+		"bulletpoint": [
+			"Long sleeve"
+		],
+		"fabric": "67% Cotton, 29% Polyester, 4% Elastane",
+		"productCode": "4941316"
+	},
+	{
+		"name": "Tunic Dress",
+		"mainCategory": "Womens",
+		"subCategory": "Dress",
+		"type": "top",
+		"price": "£8.00",
+		"images": [
+			{
+				"front": "images/stock/womens/bottom/Tunic Dress/front.png",
+				"back": "images/stock/womens/bottom/Tunic Dress/back.png"
+			}
+		],
+		"colour": "Black",
+		"description": "This minimalist tunic dress is the perfect, eminently wearable staple. Ideal for acing that layered look or as a comfy and stylish foundation, you’ll be wearing this piece time and again. ",
+		"bulletpoint": [
+			"Cropped sleeve",
+			"Length: 33½ Inches / 85cm"
+		],
+		"fabric": "95% Viscose, 5% Elastane",
+		"productCode": "4897338"
+	},
+	{
+		"name": "Longline Cardigan",
+		"mainCategory": "Womens",
+		"subCategory": "Jumpers/Cardigan",
+		"type": "top",
+		"price": "£14.00",
+		"images": [
+			{
+				"front": "images/stock/womens/bottom/Longline Cardigan/front.png",
+				"back": "images/stock/womens/bottom/Longline Cardigan/back.png"
+			}
+		],
+		"colour": "Navy",
+		"description": "Cover up in warm and wonderful style this season with this eminently wearable longline cardigan. Created with soft fabric, this versatile piece is perfect for adding a little cosiness to your everyday outfits. ",
+		"bulletpoint": [
+			"Twin front pockets",
+			"Long sleeve",
+			"Open front"
+		],
+		"fabric": "30% Nylon, 30% Polyester, 20% Cotton, 20% Viscose",
+		"productCode": "4890728"
+	},
+	{
+		"name": "Tube Skirt",
+		"mainCategory": "Womens",
+		"subCategory": "Skirt",
+		"type": "bottom",
+		"price": "£5.00",
+		"images": [
+			{
+				"front": "images/stock/womens/bottom/Tube Skirt/front.png"
+			}
+		],
+		"colour": "Black",
+		"description": "For a cute and trendy new staple, invest in this wonderful tube skirt. With a versatile design and figure hugging cut, this piece is sure to become your go-to for completing your outfits. ",
+		"bulletpoint": [
+			"Elasticated waistband",
+			"Length: 14½ Inches / 37cm"
+		],
+		"fabric": "96% Cotton, 4% Elastane",
+		"productCode": "4977698"
+	},
+	{
+		"name": "Aztec Print Shorts",
+		"mainCategory": "Womens",
+		"subCategory": "Trousers & Shorts",
+		"type": "bottom",
+		"price": "£6.00",
+		"images": [
+			{
+				"front": "images/stock/womens/bottom/Aztec Print Shorts/front.png"
+			}
+		],
+		"colour": "Multi",
+		"description": "Day to night, these Aztec print shorts will transform both your formal and casual looks effortlessly. With an elasticated waistband and light fabric, these are a comfy staple you’ll be able to wear time and again. ",
+		"bulletpoint": [
+			"Elasticated waistband"
+		],
+		"fabric": "96% Viscose, 4% Elastane",
+		"productCode": "4949187"
+	}
 ]}
