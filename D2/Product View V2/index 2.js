@@ -2,13 +2,17 @@ var imgs = ["DressFront.png", "DressBack.png", "DressPattern.png"];
 
 $(document).ready(function(){
 	
-	setupDisplay();
+	setupImageDisplay();
+	setupProductDetails();
 	
-	$("#productSectionLabel").click();
+	//$("#productSectionLabel").click();
+	//$("#displayImgLabel").click();
+	
+	
 	
 });
 
-function setupDisplay() {
+function setupImageDisplay() {
 	
 	for (var iC = 0; iC < imgs.length; iC++){
 		$("#ulImages").append("<div class='imgBtns' data-Img="+ iC + " ></div>");
@@ -37,7 +41,7 @@ function setupDisplay() {
 		
 	});
 	
-	$("#closeDisplayImg").click(function(){
+	$("#closeDisplayImgBtn").click(function(){
 		
 		document.getElementById("displayImgCheck").disabled = false;
 		
@@ -66,3 +70,25 @@ function setupDisplay() {
 	
 }
 
+function setupProductDetails() {
+	
+	$("#productSectionLabel input").change(function(){
+				
+		if(this.checked){
+			
+			$("#productSectionLabel").css("cursor", "default");
+			document.getElementById("productDetailsCheck").disabled = true;
+						
+		}
+		
+	});
+	
+	$("#closeProductDetailsBtn").click(function(){
+		
+		document.getElementById("productDetailsCheck").disabled = false;
+		
+		$("#productSectionLabel").css("cursor", "pointer");
+		
+	});
+	
+}
