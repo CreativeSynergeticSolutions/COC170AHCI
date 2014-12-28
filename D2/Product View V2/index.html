@@ -2,115 +2,105 @@
 <html>
 
 <link rel='stylesheet' type='text/css' href='index.css'>
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 
 <body>
 	
 	<div id='mainWrapper'>
 		
-		<div id='productSection'>
+		<div id='displayWrapper'>
 			
-			<div id='productDescription'>
-				<div id='descriptionWrapper'>
-					<span id='productName'>G21 Longline Embellished Blouse</span>
-					<br />
-					<span id='productPrice'>Price: &#163;14</span>
-					<br />
-					<br />
-					Give your formal wardrobe a pop of style with this gorgeous G21 
-					longline embellished blouse. With eye-catching bead adornment on 
-					the collar, this piece will add a sensational twist to your outfits 
-					again and again. Team with one of our camisole vests to complete 
-					the look.
-					<br />
-					<ul>
-						<li>Button through fastening</li>
-						<li>Turn-up 3/4 sleeve</li>
-						<li>Dipped hem</li>
-					</ul>
-					<br />
-					Cool and coordinated, G21 is your one-stop shop for today&#39;s 
-					hottest trends. In carefully synchronised colourways, our expert 
-					edit of key shapes makes styling your new look a cinch.
-					<br />
-					<br />
-					<br />
+			<div id='imagesListContainer'>
+				<div id='listDisplayPlatform'></div>
+				<ul id='ulImages'>
+				</ul>
+			</div>
+			
+			<label id='displayImgLabel' class='inputLabels'>
+				<input id='displayImgCheck' type='checkbox'/>
+				<div id='imgContainer'>
+					<div id='displayImg'></div>
+					<div id='closeDisplayImgBtn' class='closeOverlayButton'></div>
 				</div>
-			</div>
-			
-			<div id='productBox'></div>
-			<div id='productCode'>Product Code: 4819375</div>
-			<div id='productImages'>
-				
-				<div id='frontImg' class='imgBtns' data-Img=0></div>
-				<div id='backImg' class='imgBtns' data-Img=1></div>
-				<div id='patternImg' class='imgBtns' data-Img=2></div>
-				
-				<div id='lBtn'>&#9654;</div>
-				<div id='rBtn'>&#9654;</div>
-				
-			</div>
-			
-			<div id='otherSection'>
-				
-				<div id='deliveryIcons'></div>
-				
-				<div id='recommendedWrapper'>
-					<span>Recommended:</span>
-					<div id='itemA'></div>
-					<div id='itemB'></div>
-					<div id='moreBtn' class='btnStyle'>More</div>
-				</div>
-				
-				<div id='socialIcons'></div>
-				
-			</div>
+			</label>
 			
 		</div>
 		
-		<div id='controlSection'>
-			
-			<div id='backBtn' class='btnStyle'>&#9664; BACK</div>
-			
-			<div id='colorWrapper'>
-				<div id='colourTitle' class='selectionTitle'>Colour:</div>
-				<div id='colourSelCont' class='selectionContainer'>
-					<ul class='selectionList'>
-						<li data-colour=1 class='selectionItem'></li>
-						<li data-colour=2 class='selectionItem selectedItem'></li>
-						<li data-colour=3 class='selectionItem'></li>
-					</ul>
+		<label id='productSectionLabel' class='inputLabels'>
+			<input id='productDetailsCheck' type='checkbox'/>
+			<div id='productSectionWrapper'>
+				
+				<div id='productSectionContainer'>
+					
+					<div id='productDetailsTitle'>
+						Product Details
+						<div class='titleLine'></div>
+					</div>
+					
+					<div id='productDetails'>
+						
+						<div id='productDetailsOtherContainerA'>
+							<div id='deliveryIcons'></div>
+						</div>
+						
+						<div id='productDetailsOtherContainerB'>
+							<div id='socialIconsImg'></div>
+							<div id='closeProductDetailsBtn' class='closeOverlayButton'></div>
+						</div>
+						
+						Give your formal wardrobe a pop of style with this gorgeous G21 
+						longline embellished blouse. With eye-catching bead adornment on 
+						the collar, this piece will add a sensational twist to your outfits 
+						again and again. Team with one of our camisole vests to complete 
+						the look.
+						<br />
+						<ul>
+							<li>Button through fastening</li>
+							<li>Turn-up 3/4 sleeve</li>
+							<li>Dipped hem</li>
+						</ul>
+						<br />
+						Cool and coordinated, G21 is your one-stop shop for today&#39;s 
+						hottest trends. In carefully synchronised colourways, our expert 
+						edit of key shapes makes styling your new look a cinch.
+						<br />
+						seadfgsd
+						fsadgfhbskajdfmdakms.dn jas
+						fsadfask djflsldm nfbhk.ajsidkm CBEFHJKNWMKLDS .KAJFMLCDV KJSDK
+						ERADSGFJKNKL
+						SADFASDFIJO;KPM NBWJ,ABDHLUFIJOSKM NABF,VDFHLJIEDKML BF,HJ
+					</div>
+					
 				</div>
-				<div class='selectionContainerOverlay'></div>
+				
 			</div>
+		</label>
+		
+		<div></div>
 			
-			<div id='sizeWrapper'>
-				<div id='sizeTitle' class='selectionTitle'>Colour:</div>
-				<div id='sizeSelCont' class='selectionContainer'>
-					<ul class='selectionList'>
-						<li data-size=1 class='selectionItem'>12</li>
-						<li data-size=2 class='selectionItem selectedItem'>14</li>
-						<li data-size=3 class='selectionItem'>16</li>
-					</ul>
+		
+		<label id='optionSectionLabel' class='inputLabels'>
+			<input id='optionsCheck' type='checkbox'/>
+			<div id='optionsWrapper'>
+				
+				<div id='optionSectionContainer'>
+					
 				</div>
-				<div class='selectionContainerOverlay'></div>
+				
 			</div>
-			
-			<div id='quantityWrapper'>
-				<div id='dialImg'></div>
-				<div id='quantityVal'>2</div>
-			</div>
-			
-			<div id='atoBtn' class='btnStyle'>Add To Outfits</div>
-			<div id='atbBtn' class='btnStyle'>Add To Basket</div>
-			<div id='atwlBtn' class='btnStyle'>Add To Wish-List</div>
-			
-		</div>
+		</label>
+		
+		<div id='recommendedWrapper'></div>
+		
+		
 		
 	</div>
 	
 </body>
 
-<script type='text/javascript' src='jquery-2.1.1.min.js'></script>
+<script type='text/javascript' src='libs/jquery-2.1.1.min.js'></script>
+<script type='text/javascript' src='libs/jquery.panzoom.min.js'></script>
+<script type='text/javascript' src='libs/jquery.mousewheel.js'></script>
 <script type='text/javascript' src='index.js'></script>
 
 </html>
