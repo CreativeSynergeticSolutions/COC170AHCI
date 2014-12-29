@@ -16,6 +16,7 @@ function loadBasketList() {
 }
 function displayItems(){
 	var html = "";
+	var total = 0;
 	for(var i = 0; i < basket.length;i++){
 		html += "<div class='item'>";
 		html += "<div class='price'>"+basket[i].price+"</div>";
@@ -23,9 +24,14 @@ function displayItems(){
 		html += "<img src='"+basket[i].images[0].front+"'>";
 		html += "</div>";
 		html += "<p>"+basket[i].name+"</p>";
+		html += "<a class='dial'>"+1+"</a>";
+		html += "<p class='product'>Product Code: "+basket[i].productCode+"</p>";
 		html += "</div>";
+		//need quantity
+		total += parseInt((basket[i].price).substring(1,basket[i].price.length));
 	}
 	$('#items').html(html);
+	$('#total').html("&#163 "+total)
 }
 
 
