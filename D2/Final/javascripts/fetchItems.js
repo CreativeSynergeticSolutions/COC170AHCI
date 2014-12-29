@@ -9,3 +9,4 @@ $.getJSON("data/items.json")
 .success(function (data) {
     items = data.items;
 });
+console.log(items);
