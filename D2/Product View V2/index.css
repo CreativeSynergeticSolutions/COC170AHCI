@@ -45,7 +45,7 @@ body {
 	
 }
 
-.btnStyle:hover {
+.btnStyle:active {
 	
 	color: #FFD231 !important;
 	
@@ -311,12 +311,13 @@ body {
 
 #backButtonWrapper {
 	
-	top: 700px;
+	top: 670px;
+	left: 60px;
 	height: 100px;
-	width: 330px;
+	width: 300px;
 	
 	perspective: 50em;
-	perspective-origin: right;
+	perspective-origin: right top;
 	
 	transform: rotate(-15deg);
 	transform-origin: center bottom;
@@ -325,21 +326,26 @@ body {
 
 #backButton {
 	
-	left: 70px;
-	height: 60px;
+	top: 10px;
+	left: 10px;
+	height: 80px;
 	width: 430px;
 	
 	font-size: 30px;
 	text-align: center;
-	line-height: 60px;
+	line-height: 80px;
 	
 	transform: rotateY(50deg);
 	transform-origin: left center;
 	
 }
 
-#backButtonWrapper:active, #backButton:active {
-	transform: rotateY(0deg);	
+#backButtonWrapper:active, #backButton:active, #backButtonWrapper:active #backButton {
+	
+	z-index: 10;
+	
+	transform: rotateY(0deg);
+		
 }
 
 
@@ -467,7 +473,7 @@ body {
 	
 }
 
-#productSectionLabel input:checked~ #productSectionWrapper  #productDetails {
+#productSectionLabel input:checked~ #productSectionWrapper #productDetails {
 	
 	top: 121px;
 	left: 50px;
@@ -479,9 +485,7 @@ body {
 	background-color: rgba(0, 0, 0, 0.5);
 	
 	overflow-y: scroll;
-	
-	//transition: 1.5s;
-	
+		
 }
 
 
@@ -627,6 +631,340 @@ body {
 
 
 
+#recommendedWrapper{
+	
+	position: absolute;
+	right: 0px;
+	height: 450px;
+	width: 330px;
+	
+	perspective: 100em;
+	perspective-origin: left;
+	
+	transition: 1s;
+	
+	
+}
+
+#recommendedSectionLabel input:checked~ #recommendedWrapper {
+	
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 100%;
+	
+	z-index: 10;
+	
+}
+
+#recommendedContainer {
+	
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	height: 400px;
+	width: 430px;
+	
+	border: 1px solid white;
+	
+	background-color: none;
+	
+	transform: rotateY(-50deg);
+	transform-origin: right center;
+	
+	transition: 1s;
+	
+}
+
+#recommendedSectionLabel input:checked~ #recommendedWrapper #recommendedContainer {
+	
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 100%;
+	
+	background-color: rgba(13, 13, 13, 0.9);
+	
+	border: none;
+	
+	transform: rotateY(0deg);
+	
+}
+
+#recommendedTitle {
+	
+	box-sizing: border-box;
+	
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 70px;
+	width: 410px;
+	
+	color: white;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 70px;
+	vertical-align: middle;
+	
+	background-color: #000;
+	
+	transition: 1s;
+	
+}
+
+#recommendedSectionLabel input:checked~ #recommendedWrapper #recommendedTitle {
+	
+	top: 50px;
+	right: 50px;
+	left: 0px;
+	width: 100%;
+	
+	background-color: rgba(0, 0, 0, 0.3);
+	
+}
+
+#recommendedSectionLabel input:checked~ #recommendedWrapper #recommendedTitle .titleLine {
+	
+	opacity: 1;
+	
+}
+
+#recommndedContent {
+	
+	box-sizing: border-box;
+	
+	position: absolute;
+	top: 81px;
+	right: 10px;
+	height: 310px;
+	width: 410px;
+	
+	background-color: #000;
+	
+	transition: 1s;
+	
+	overflow: hidden;
+	
+}
+
+#recommendedSectionLabel input:checked~ #recommendedWrapper #recommndedContent {
+	
+	top: 121px;
+	right: 50px;
+	height: 900px;
+	width: 1180px;
+		
+	background-color: rgba(0, 0, 0, 0.5);
+	
+	overflow-y: scroll;
+		
+}
+
+
+#recommndedList {
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 310px;
+	width: 410px;
+	
+	text-align: left;
+	
+	overflow: hidden;
+	
+}
+
+#recommendedSectionLabel input:checked~ #recommendedWrapper #recommndedContent #recommndedList {
+	
+	box-sizing: border-box;
+	
+	padding: 10px;
+	height: 100%;
+	width: 1050px;
+	
+	text-align: center;
+	
+	overflow-y: scroll;
+	
+}
+
+.rCard {
+	
+	display: inline-block;
+	
+	margin: 10px 5px;
+	
+	height: 290px;
+	width: 190px;
+		
+}
+
+#recommendedSectionLabel input:checked~ #recommendedWrapper #recommndedContent 
+#recommndedList .rCard{
+	
+	margin: 10px 50px;
+	height: 400px;
+	width: 250px;
+	
+}
+
+.rCardImg {
+	
+	height: 290px;
+	width: 190px;
+	
+	background-image: url(recommendedImages/R1.png);
+	
+	background-color: #DDD;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	
+}
+
+#recommendedSectionLabel input:checked~ #recommendedWrapper #recommndedContent 
+#recommndedList .rCard .rCardImg {
+	
+	height: 350px;
+	width: 250px;
+	
+}
 
 
 
+
+#optionsWrapper{
+	
+	position: absolute;
+	top: 480px;
+	right: 80px;
+	height: 300px;
+	width: 330px;
+	
+	perspective: 100em;
+	perspective-origin: left;
+	
+	transition: 1s;
+	
+	transform: rotate(15deg);
+	transform-origin: center bottom;
+	
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper {
+	
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 100%;
+	
+	z-index: 10;
+	
+	transform: rotate(0deg);
+	
+}
+
+#optionSectionContainer {
+	
+	position: absolute;
+	right: 40px;
+	height: 300px;
+	width: 430px;
+	
+	border: 1px solid white;
+	
+	background-color: none;
+	
+	transform: rotateY(-50deg);
+	transform-origin: right center;
+	
+	transition: 1s;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper #optionSectionContainer {
+	
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 100%;
+	
+	background-color: rgba(13, 13, 13, 0.9);
+	
+	border: none;
+	
+	transform: rotateY(0deg);
+	
+}
+
+#optionsTitle {
+	
+	box-sizing: border-box;
+	
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 70px;
+	width: 410px;
+	
+	color: white;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 70px;
+	vertical-align: middle;
+	
+	background-color: #000;
+	
+	transition: 1s;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper #optionsTitle {
+	
+	top: 50px;
+	right: 50px;
+	left: 0px;
+	width: 100%;
+	
+	background-color: rgba(0, 0, 0, 0.3);
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper #optionsTitle .titleLine {
+	
+	opacity: 1;
+	
+}
+
+#optionsContent {
+	
+	box-sizing: border-box;
+	
+	position: absolute;
+	top: 81px;
+	right: 10px;
+	height: 210px;
+	width: 410px;
+	
+	background-color: #000;
+	
+	transition: 1s;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper #optionsContent {
+	
+	top: 121px;
+	right: 50px;
+	height: 900px;
+	width: 1180px;
+		
+	background-color: rgba(0, 0, 0, 0.5);
+	
+}
