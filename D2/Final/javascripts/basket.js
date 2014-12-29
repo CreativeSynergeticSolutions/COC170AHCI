@@ -14,11 +14,17 @@ function loadBasketList() {
 		console.log("empty basket")
     }
 }
+function loadModal(index){
+	var item = basket[index];
+	console.log(item);
+}
+
 function displayItems(){
 	var html = "";
 	var total = 0;
 	for(var i = 0; i < basket.length;i++){
 		html += "<div class='item'>";
+		html += "<div class='info' onclick='loadModal("+i+")'><span title='Product info'><i class='icon-info'></i></span></div>";
 		html += "<div class='price'>"+basket[i].price+"</div>";
 		html += "<div class='image'>";
 		html += "<img src='"+basket[i].images[0].front+"'>";

@@ -147,3 +147,9 @@ button:first-child{
 	position:relative;
 	top:40%;
 }
+.info{
+	float:right;
+	cursor:pointer;
+	margin-right:1%;
+	margin-top:1%;
+}
