@@ -4,6 +4,9 @@ $(document).ready(function(){
 	
 	setupImageDisplay();
 	setupProductDetails();
+	setupRecommended();
+	
+	//$("#recommendedSectionLabel").click();
 	
 });
 
@@ -83,6 +86,29 @@ function setupProductDetails() {
 		document.getElementById("productDetailsCheck").disabled = false;
 		
 		$("#productSectionLabel").css("cursor", "pointer");
+		
+	});
+	
+}
+
+function setupRecommended() {
+	
+	$("#recommendedSectionLabel input").change(function(){
+				
+		if(this.checked){
+			
+			$("#recommendedSectionLabel").css("cursor", "default");
+			document.getElementById("recommendedCheck").disabled = true;
+						
+		}
+		
+	});
+	
+	$("#closeRecommendedBtn").click(function(){
+		
+		document.getElementById("recommendedCheck").disabled = false;
+		
+		$("#recommendedSectionLabel").css("cursor", "pointer");
 		
 	});
 	
