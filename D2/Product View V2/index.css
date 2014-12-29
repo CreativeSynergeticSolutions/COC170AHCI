@@ -708,6 +708,12 @@ body {
 	
 }
 
+#recommendedWrapper * {
+	
+	transition: 1s;
+	
+}
+
 #recommendedSectionLabel input:checked~ #recommendedWrapper {
 	
 	top: 0px;
@@ -856,6 +862,7 @@ body {
 .rCard {
 	
 	display: inline-block;
+	position: relative;
 	
 	margin: 10px 5px;
 	
@@ -867,13 +874,19 @@ body {
 #recommendedSectionLabel input:checked~ #recommendedWrapper #recommndedContent 
 #recommndedList .rCard{
 	
-	margin: 10px 50px;
+	margin: 10px 16px;
 	height: 400px;
-	width: 250px;
+	width: 300px;
+	
+	border: 1px solid #FFF;
 	
 }
 
 .rCardImg {
+	
+	position: absolute;
+	left: 0px;
+	margin-left: 0px;
 	
 	height: 290px;
 	width: 190px;
@@ -885,14 +898,104 @@ body {
 	background-repeat: no-repeat;
 	background-position: center center;
 	
+	transition: 1s;
 	
 }
 
 #recommendedSectionLabel input:checked~ #recommendedWrapper #recommndedContent 
 #recommndedList .rCard .rCardImg {
 	
+	left: 50%;
+	margin: 0px auto;
+	margin-left: -125px;
+	
 	height: 350px;
 	width: 250px;
+	
+}
+
+.rCardName {
+	
+	position: absolute;
+	bottom: 110px;
+	height: 40px;
+	width: 160px;
+	
+	color: white;
+	font-size: 22px;
+	text-align: left;
+	
+	overflow: hidden;
+	
+	opacity: 0;
+	
+	transition: 1s;
+	
+}
+
+#recommendedSectionLabel input:checked~ #recommendedWrapper #recommndedContent 
+#recommndedList .rCard .rCardName {
+	
+	left: 5px;
+	bottom: 0px;
+	
+	opacity: 1;
+	
+}
+
+.rCardPrice {
+	
+	position: absolute;
+	right: 0px;
+	bottom: 110px;
+	height: 40px;
+	width: 120px;
+	
+	color: white;
+	font-size: 25px;
+	text-align: right;
+	
+	overflow: hidden;
+	
+	opacity: 0;
+	
+	transition: 1s;
+	
+}
+
+#recommendedSectionLabel input:checked~ #recommendedWrapper #recommndedContent 
+#recommndedList .rCard .rCardPrice {
+	
+	right: 5px;
+	bottom: 0px;
+	
+	opacity: 1;
+	
+}
+
+
+#closeRecommendedBtn {
+	
+	position: absolute;
+	top: 20%;
+	right: -100px;
+	
+	opacity: 0;
+	
+	transition: 1s;
+	
+	transition-delay: 0s;
+	
+}
+
+#recommendedSectionLabel input:checked~ #recommendedWrapper 
+#recommndedContent #closeRecommendedBtn {
+	
+	right: 10px;
+	
+	opacity: 1;
+	
+	transition-delay: 1s;
 	
 }
 
