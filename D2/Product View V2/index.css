@@ -300,6 +300,69 @@ body {
 }
 
 
+#leftArrowPerspective, #rightArrowPerspective {
+	
+	position: absolute;
+	top: 280px;
+	
+	perspective: 50em;
+	
+	z-index: 4;
+	
+}
+
+#leftArrowPerspective {
+	
+	left: 370px;
+	
+	perspective-origin: left;
+	
+}
+
+#rightArrowPerspective {
+	
+	right: 370px;
+	
+	perspective-origin: right;
+	
+}
+
+#displayImgLeftArrow, #displayImgRightArrow {
+	
+	color: rgba(255, 210, 49, 0.5);
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 200px;
+	
+	cursor: pointer;
+	
+}
+
+#displayImgLeftArrow:active, #displayImgRightArrow:active {
+	
+	color: rgba(255, 210, 49, 0.9);
+	text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
+		
+}
+
+#displayImgLeftArrow {
+	
+	
+	
+	transform: rotateY(-40deg);
+	transform-origin: right center;
+	
+}
+
+#displayImgRightArrow {
+	
+	
+	
+	transform: rotateY(40deg);
+	transform-origin: left center;
+	 
+}
+
+
 
 
 #backButtonWrapper, #backButton {
@@ -316,8 +379,7 @@ body {
 	height: 100px;
 	width: 300px;
 	
-	perspective: 50em;
-	perspective-origin: right top;
+	
 	
 	transform: rotate(-15deg);
 	transform-origin: center bottom;
