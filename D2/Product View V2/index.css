@@ -365,48 +365,72 @@ body {
 
 
 
-#backButtonWrapper, #backButton {
+#buttonsWrapper, #buttonsContainer, #backButton, #homeButton {
 	
 	position: absolute;
 	transition: 0.5s;
 	
 }
 
-#backButtonWrapper {
+#buttonsWrapper {
 	
-	top: 670px;
-	left: 60px;
+	top: 700px;
+	left: 80px;
 	height: 100px;
 	width: 300px;
 	
+	perspective: 100em;
+	perspective-origin: 0% -320%;
 	
+}
+
+#buttonsContainer {
 	
-	transform: rotate(-15deg);
-	transform-origin: center bottom;
+	bottom: 0px;
+	left: 0px;
+	
+	height: 80px;
+	width: 450px;
+	
+	transform: rotateY(50deg) rotateX(30deg);
+	transform-origin: left bottom;
 	
 }
 
 #backButton {
 	
-	top: 10px;
-	left: 10px;
+	bottom: 0px;
+	left: 20px;
 	height: 80px;
-	width: 430px;
+	width: 200px;
 	
 	font-size: 30px;
 	text-align: center;
 	line-height: 80px;
 	
-	transform: rotateY(50deg);
-	transform-origin: left center;
+	
+	
 	
 }
 
-#backButtonWrapper:active, #backButton:active, #backButtonWrapper:active #backButton {
+#homeButton {
+	
+	bottom: 0px;
+	left: 230px;
+	height: 80px;
+	width: 200px;
+	
+	font-size: 30px;
+	text-align: center;
+	line-height: 80px;
+	
+}
+
+#buttonsContainer:active {
 	
 	z-index: 10;
 	
-	transform: rotateY(0deg);
+	transform: rotate(0deg);
 		
 }
 
@@ -705,7 +729,6 @@ body {
 	
 	transition: 1s;
 	
-	
 }
 
 #recommendedWrapper * {
@@ -842,6 +865,8 @@ body {
 	text-align: left;
 	
 	overflow: hidden;
+	
+	transition: 1s;
 	
 }
 
@@ -1005,17 +1030,16 @@ body {
 #optionsWrapper{
 	
 	position: absolute;
-	top: 480px;
-	right: 80px;
+	top: 500px;
+	right: 0px;
 	height: 300px;
 	width: 330px;
 	
 	perspective: 100em;
-	perspective-origin: left;
+	perspective-origin: 0% -100%;
 	
 	transition: 1s;
 	
-	transform: rotate(15deg);
 	transform-origin: center bottom;
 	
 	
@@ -1037,7 +1061,7 @@ body {
 #optionSectionContainer {
 	
 	position: absolute;
-	right: 40px;
+	right: 80px;
 	height: 300px;
 	width: 430px;
 	
@@ -1045,7 +1069,7 @@ body {
 	
 	background-color: none;
 	
-	transform: rotateY(-50deg);
+	transform: rotateY(-50deg) rotateX(20deg);
 	transform-origin: right center;
 	
 	transition: 1s;
