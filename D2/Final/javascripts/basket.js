@@ -29,12 +29,15 @@ function loadModal(index){
 	$("#bullet").html(bullets);
 	console.log(item);
 }
-
+function deleteItem(index){
+	$("#item"+index).remove();
+}
 function displayItems(){
 	var html = "";
 	var total = 0;
 	for(var i = 0; i < basket.length;i++){
-		html += "<div class='item'>";
+		html += "<div class='item' id='item"+i+"'>";
+		html += "<div class='delete' onclick='deleteItem("+i+")'><div><span title='Delete Item'><i class='icon-trash-empty'></i></span></div></div>";
 		html += "<div class='info' onclick='loadModal("+i+")'><div><span title='Product info'><i class='icon-info'></i></span></div></div>";
 		html += "<div class='price'>"+basket[i].price+"</div>";
 		html += "<div class='image'>";
