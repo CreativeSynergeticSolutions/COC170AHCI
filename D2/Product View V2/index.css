@@ -848,8 +848,6 @@ body {
 	width: 1180px;
 		
 	background-color: rgba(0, 0, 0, 0.5);
-	
-	overflow-y: scroll;
 		
 }
 
@@ -1069,7 +1067,7 @@ body {
 	
 	background-color: none;
 	
-	//transform: rotateY(-50deg) rotateX(20deg);
+	transform: rotateY(-50deg) rotateX(20deg);
 	transform-origin: right center;
 	
 	transition: 1s;
@@ -1180,12 +1178,17 @@ body {
 	box-sizing: border-box;
 	
 	position: absolute;
-	
+	top: 10px;
 	width: 120px;
 	height: 50px;
 	
-	border: 2px solid #FFCC00;
-	border-radius: 7px;
+	color: #FFCC00;
+	font-size: 30px;
+	text-align: center;
+	line-height: 40px;
+	
+	border: 5px solid #FFCC00;
+	border-radius: 10px;
 	
 	
 }
@@ -1194,6 +1197,8 @@ body {
 	
 	position: absolute;
 	left: 10px;
+	
+	background-color: black;
 	
 }
 
@@ -1223,5 +1228,26 @@ body {
 	background-size: 90% 100%;
 	background-repeat: no-repeat;
 	background-position: center center;
+	
+}
+
+#basketImg:after {
+	
+	content: "Add To Basket";
+	
+	position: absolute;
+	top: 40px;
+	left: 115px;
+	height: 80px;
+	width: 160px;
+	
+	color: black;
+	font-size: 30px;
+	text-align: center;
+	
+	background-color: #FFCC40;
+	
+	border-radius: 7px;
+	
 	
 }
