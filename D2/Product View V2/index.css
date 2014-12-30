@@ -1069,7 +1069,7 @@ body {
 	
 	background-color: none;
 	
-	transform: rotateY(-50deg) rotateX(20deg);
+	//transform: rotateY(-50deg) rotateX(20deg);
 	transform-origin: right center;
 	
 	transition: 1s;
@@ -1155,5 +1155,73 @@ body {
 	width: 1180px;
 		
 	background-color: rgba(0, 0, 0, 0.5);
+	
+}
+
+#basketSection {
+	
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	
+}
+
+#basketContainer {
+	
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	
+	
+}
+
+#basketColorVal, #basketSizeVal, #basketQuantityVal {
+	
+	box-sizing: border-box;
+	
+	position: absolute;
+	
+	width: 120px;
+	height: 50px;
+	
+	border: 2px solid #FFCC00;
+	border-radius: 7px;
+	
+	
+}
+
+#basketColorVal {
+	
+	position: absolute;
+	left: 10px;
+	
+}
+
+#basketSizeVal {
+	
+	position: absolute;
+	left: 145px;
+	
+}
+
+#basketQuantityVal {
+	
+	position: absolute;
+	left: 280px;
+	
+}
+
+#basketImg {
+	
+	position: absolute;
+	bottom: 0px;
+	left: 10px;
+	height: 140px;
+	width: 390px;
+	
+	background-image: url(images/Basket.png);
+	background-size: 90% 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
 	
 }
