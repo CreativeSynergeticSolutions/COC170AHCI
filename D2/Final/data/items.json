@@ -13,7 +13,10 @@
                 }
             ],
             "colours": [
-                "Navy"
+                {
+					"name":"Navy",
+					"class":"navy"
+				}
             ],
             "description": [
                 {
@@ -49,7 +52,10 @@
                 }
             ],
             "colours": [
-                "Black"
+				{
+					"name":"Black",
+					"class":"black"
+				}
             ],
             "description": [
                 {
@@ -89,7 +95,10 @@
                 }
             ],
             "colours": [
-                "Navy"
+                {
+					"name":"Navy",
+					"class":"navy"
+				}
             ],
             "description": [
                 {
@@ -129,7 +138,10 @@
                 }
             ],
             "colours": [
-                "Multi"
+                {
+					"name":"Multi",
+					"class":"multi"
+				}
             ],
             "description": [
                 {
@@ -170,7 +182,10 @@
                 }
             ],
             "colours": [
-                "Cream"
+                {
+					"name":"Cream",
+					"class":"cream"
+				}
             ],
             "description": [
                 {
@@ -210,7 +225,10 @@
                 }
             ],
             "colours": [
-                "Red"
+                {
+					"name":"Red",
+					"class":"red"
+				}
             ],
             "description": [
                 {
@@ -250,7 +268,10 @@
                 }
             ],
             "colours": [
-                "Multi"
+                {
+					"name":"Multi",
+					"class":"multi"
+				}
             ],
             "description": [
                 {
@@ -286,7 +307,10 @@
                 }
             ],
             "colours": [
-                "Black"
+                {
+					"name":"Black",
+					"class":"black"
+				}
             ],
             "description": [
                 {
@@ -326,7 +350,10 @@
                 }
             ],
             "colours": [
-                "Navy"
+                {
+					"name":"Navy",
+					"class":"navy"
+				}
             ],
             "description": [
                 {
@@ -369,7 +396,10 @@
                 }
             ],
             "colours": [
-                "Black"
+                {
+					"name":"Black",
+					"class":"black"
+				}
             ],
             "description": [
                 {
@@ -408,7 +438,10 @@
                 }
             ],
             "colours": [
-                "Multi"
+                {
+					"name":"Multi",
+					"class":"multi"
+				}
             ],
             "description": [
                 {
