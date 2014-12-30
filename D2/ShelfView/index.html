@@ -11,271 +11,15 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
-
+	
+	<link rel="stylesheet" href="../Product View/index.css">
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
 
+<script type="text/javascript" src='categories.js'>
+</script>
 <script type="text/javascript">
-
-var currentCategory="";
-var currentSubCategory="";
-var currentSelection="";
-
-var CAT={
-
-	"Christmas": [
-		"Women",
-		"Men",
-		"Boys",
-		"Girls",
-		"Baby",
-		"Christmas Jumpers",
-		"Novelty",
-		"Gifts by Price",
-		"Home Decor",
-		"Trees and Decorations"
-	],
-	"Home and Garden":[
-		"Just Arrived",
-		"Furnishings",
-		"Office",
-		"Bedroom",
-		"Bathroom",
-		"Kids",
-		"Nursery",
-		"Outdoor",
-		"Living Room",
-		"Appliances",
-		"Kitchen and Dining"
-	],
-	"Women":[
-		"Clothing",
-		"Footwear",
-		"Christmas",
-		"Collections",
-		"Latest Trends",
-		"Shop By Fit",
-		"Offers",
-		"Electrical Beauty",
-	],
-	"Lingerie":[
-		"Bras",
-		"Help to Buy",
-		"Underwear and Lingerie",
-		"Nightwear and Slippers",
-		"Christmas",
-		"Offers"
-	],
-	"Men":[
-		"Clothing",
-		"Footwear",
-		"Christmas",
-		"Brands",
-		"Collections",
-		"Offers",
-		"Christmas",
-		"Personal Grooming"
-	],
-	"Boys":[
-		"Clothing",
-		"Footwear",
-		"School",
-		"Collections",
-		"Christmas",
-		"Shop by",
-		"Character",
-		"Kids Home",
-	],
-	"Girls":[
-		"Clothing",
-		"Footwear",
-		"School",
-		"Collections",
-		"Christmas",
-		"Shop by",
-		"Character",
-		"Kids Home"
-
-	],
-	"Baby":[
-		"New in",
-		"New Baby",
-		"Baby Accessories",
-		"Girls",
-		"Boys",
-		"Collections",
-		"Christmas",
-		"Offers",
-		"Nursery"
-	],
-	"School":[
-		"Boys",
-		"Girls",
-		"Older Boys",
-		"Older Girls",
-		"Last Chance"
-	],
-	"Fancy Dress":[
-		"Fancy Dress",
-		"Fancy Dress Accessories",
-		"Christmas"
-	],
-	"Sale":[
-		"Shop by"
-	]
-
-
-};
-var SUB_CAT={
-
-	//category_subcategory
-	"Christmas_Women":
-		[
-			"Shop all Gifts",
-			"Accessories",
-			"Coats and Jackets",
-			"Dresses and Jumpsuits",
-			"Jumpers and Cardigans",
-			"Lingerie",
-			"Nightwear and Slippers",
-			"Onesies"
-
-		],
-	"Christmas_Men":[
-		"Shop all Gifts",
-		"Accessories",
-		"Coats and Jackets",
-		"Jumpers and Cardigans",
-		"Nightwear and Slippers",
-		"Onesies",
-		"Tops",
-		"Underwear and Socks"
-	],
-	"Christmas_Boys":[
-		"Shop all Gifts",
-		"Accessories",
-		"Coats and Jackets",
-		"Fancy Dress",
-		"Jumpers and Cardigans",
-		"Nightwear and Slippers",
-		"Onesies",
-		"Tops",
-	],
-	"Christmas_Girls":[
-		"Shop all Gifts",
-		"Accessories",
-		"Coats and Jackets",
-		"Fancy Dress",
-		"Jumpers and Cardigans",
-		"Nightwear and Slippers",
-		"Onesies",
-	],
-	"Christmas_Baby":[
-		"Shop all Gifts",
-		"Accessories",
-		"All in Ones",
-		"Jumpers and Cardigans",
-		"Coats and Pramsuits",
-		"Fancy Dress",
-		"Outfits",
-		"Sleepsuits and Pyjamas"
-	],
-	"Christmas_Christmas Jumpers":[],
-	"Christmas_Novelty":[],
-	"Christmas_Gifts by Price":[],
-	"Christmas_Home Decor":[],
-	"Christmas_Trees and Decorations":[],
-
-	"Home and Garden_Just Arrived":[],
-	"Home and Garden_Furnishings":[],
-	"Home and Garden_Office":[],
-	"Home and Garden_Bedroom":[],
-	"Home and Garden_Bathroom":[],
-	"Home and Garden_Kids":[],
-	"Home and Garden_Nursery":[],
-	"Home and Garden_Outdoor":[],
-	"Home and Garden_Living Room":[],
-	"Home and Garden_Appliances":[],
-	"Home and Garden_Kitchen and Dining":[],
-
-	"Women_Clothing":[],
-	"Women_Footwear":[],
-	"Women_Christmas":[],
-	"Women_Collections":[],
-	"Women_Latest Trends":[],
-	"Women_Shop By Fit":[],
-	"Women_Offers":[],
-	"Women_Electrical Beauty":[],
-
-	"Lingerie_Bras":[],
-	"Lingerie_Help to Buy":[],
-	"Lingerie_Underwear and Lingerie":[],
-	"Lingerie_Nightwear and Slippers":[],
-	"Lingerie_Christmas":[],
-	"Lingerie_Offers":[],
-
-	"Men_Clothing":[],
-	"Men_Footwear":[],
-	"Men_Christmas":[],
-	"Men_Brands":[],
-	"Men_Collections":[],
-	"Men_Offers":[],
-	"Men_Christmas":[],
-	"Men_Personal Grooming":[],
-
-	"Boys_Clothing":[],
-	"Boys_Footwear":[],
-	"Boys_School":[],
-	"Boys_Collections":[],
-	"Boys_Christmas":[],
-	"Boys_Shop by":[],
-	"Boys_Character":[],
-	"Boys_Kids Home":[],
-
-	"Girls_Clothing":[],
-	"Girls_Footwear":[],
-	"Girls_School":[],
-	"Girls_Collections":[],
-	"Girls_Christmas":[],
-	"Girls_Shop by":[],
-	"Girls_Character":[],
-	"Girls_Kids Home":[],
-
-	"Baby_New in":[],
-	"Baby_New Baby":[],
-	"Baby_Baby Accessories":[],
-	"Baby_Girls":[],
-	"Baby_Boys":[],
-	"Baby_Collections":[],
-	"Baby_Christmas":[],
-	"Baby_Offers":[],
-	"Baby_Nursery":[],
-
-	"School_Boys":[],
-	"School_Girls":[],
-	"School_Older Boys":[],
-	"School_Older Girls":[],
-	"School_Last Chance":[],
-	"School_Fancy Dress":[],
-	"School_Fancy Dress":[],
-	"School_Fancy Dress Accessories":[],
-	"School_Christmas":[],
-
-	"Sale_Shop by":[]
-
-
-};
-
-var IMG_CAT={
-
-	"Accessories":[
-		"image1.png",
-		"image2.png",
-		"image3.png",
-		"image4.png",
-	]
-};
 
 
 
@@ -433,7 +177,7 @@ function loadSelection(category){
 	background-color:#1F1F1F;
 	text-align:center;
 	font-size:1.1em;
-	width:140px;
+	width:200px;
 
 	height:85%;
 	margin-top:5px;
@@ -456,7 +200,7 @@ function loadSelection(category){
  	background-color:#1F1F1F;
 	text-align:center;
 	font-size:1.1em;
-	width:160px;
+	width:200px;
 
 	height:90%;
 	margin-top:2px;
@@ -477,7 +221,7 @@ function loadSelection(category){
  	background-color:#1F1F1F;
 	text-align:center;
 	font-size:1.1em;
-	width:200px;
+	width:300px;
 
 	height:90%;
 	margin-top:2px;
@@ -518,7 +262,8 @@ function loadSelection(category){
 
 #main{
 	margin-left:200px;
-
+	height:auto;
+	background-color:inherit !important;
 
 }
 
@@ -603,10 +348,13 @@ div.label1{
 
 }
 #bottomBar{
-
-	height:110px;
-	width:99%;
-
+	height:30%;
+	max-height:100px;
+	width:calc(100% - 200px);
+	margin-left:200px;
+	position:fixed;
+	bottom:0;
+	
 
 
 }
@@ -633,12 +381,27 @@ div.label1{
 	top:-200px;
 	font-size:8pt;
 	margin-top:5px;
-	margin-right:5px;
+	margin-left:100px;
 	font-weight:bold;
 	float:right;
 
 
 
+}
+.recommendBox{
+	background-color:rgba(120,34,25,1);
+	color:#3c3432;
+	font-size:1.4em;
+	border-width: 0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	height:200px;
+	padding-top:auto;
+	padding-bottom:auto;
+	text-align:center;
+	width: 99%;
+	margin-top: 5px;
 }
 
 .bottomBarLeft{
@@ -672,49 +435,28 @@ div.label1{
 
 	position:fixed;
 	margin-right:20px;
-	top:5px;
+	top:0;
 	left:10px;
-	height:99% !important;
+	
 	width:190px !important;
-	background-color:inherit;
+	
+	
 
 
 
 }
-.blend{
-	/* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000000), to( #444444));
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, #000000,  #444444);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, #000000,  #444444);
-  /* IE 10 */
-  background: -ms-linear-gradient(top, #000000,  #444444);
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(top, #000000, #444444);
-}
+
 .blend2{
-	/* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDDDDD), to( #444444));
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, #2C2C2C,  #444444);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, #2C2C2C,  #444444);
-  /* IE 10 */
-  background: -ms-linear-gradient(top, #2C2C2C,  #444444);
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(top, #2C2C2C,  #444444);
+	background: #858585; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #858585 0%, #0D0D0D 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#858585), color-stop(100%,#0D0D0D)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center, #858585 0%,#0D0D0D 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#0D0D0D',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-.rotate{
-
-	-webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);
-	-o-transform: rotate(-90deg);
-	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-
-}
 .sideCategories{
 
 	height:450px !important;
@@ -754,8 +496,7 @@ div.label1{
 
 }
 #outfit_header{
-	height:48%;
-	background-color:#1F1F1F;
+	height:450px;
 	width:99%;
 	text-align:center;
 	font-size:1.0em;
@@ -763,20 +504,19 @@ div.label1{
 	border-radius:5px;
 	overflow:auto;
 	padding:5px;
-
-
+	
 }
 .outfit{
 	background-color:rgba(255,213,49,1);
 	color:#3c3432;
-	font-size:0.8em;
+	font-size:1.4em;
 	border-width: 0px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
-
-	padding-left:0px;
-	padding-right:0px;
+	height:30px;
+	padding-top:auto;
+	padding-bottom:auto;
 	text-align:center;
 	width: 99%;
 	margin-top: 5px;
@@ -799,15 +539,15 @@ div.label1{
 }
 #rec_header{
 
-	height:48%;
-	background-color:#1F1F1F;
+	height:450px;
+	
 	width:99%;
 	text-align:center;
 	font-size:1.0em;
 	color:white;
 	border-radius:5px;
-
 	padding:5px;
+	overflow:auto;
 
 
 }
@@ -940,7 +680,7 @@ div.label1{
 	<div class="outer_wrapper ">
 
 		<!-- CATEGORIES InsertSelected("categories","Categories","C",cat); -->
-		<div id="categories" class="inner_wrapper">
+		<div id="categories" class="inner_wrapper rCard">
 			<div class="Categories" onclick='loadSubCategory("Christmas")' id="C_1">Christmas</div>
 			<div class="Categories" onclick='loadSubCategory("Home and Garden")' id="C_2">Home and Garden</div>
 			<div class="Categories" onclick='loadSubCategory("Women")' id="C_3">Women</div>
@@ -987,12 +727,17 @@ div.label1{
 	</div>
 	<!-- /OUTER WRAPPER LARGE -->
 
+</div>
+<!-- /MAIN -->
+
+<!-- SIDE BAR -->
+
 	<!-- BOTTOMBAR -->
 	<div id="bottomBar">
 		<!-- INNER -->
 		<div class="inner">
 
-					<div class="label1">BASKET</div>
+					
 
 					<div id="basketBar">
 							<button class="buy">BUY</button>
@@ -1005,13 +750,8 @@ div.label1{
 		<!-- /INNER -->
 	</div>
 	<!-- /BOTTOMBAR -->
-</div>
-<!-- /MAIN -->
-
-<!-- SIDE BAR -->
 <div id="sideBar" >
 	<div id="outfit_header">
-		<div class="side_title">Saved Outfits</div>
 		<div class="outfit">Outfit 1<span></span><span></span></div>
 		<div class="outfit">Outfit 2</div>
 		<div class="outfit">Outfit 3</div>
@@ -1024,13 +764,21 @@ div.label1{
 		<div class="outfit">Outfit 10</div>
 		<div class="outfit">Outfit 11</div>
 		<div class="outfit">Outfit 12</div>
+		<div class="outfit">Outfit 7</div>
+		<div class="outfit">Outfit 8</div>
+		<div class="outfit">Outfit 9</div>
+		<div class="outfit">Outfit 10</div>
+		<div class="outfit">Outfit 11</div>
+		<div class="outfit">Outfit 12</div>
+		
 	</div>
 	<br />
 	<div id="rec_header">
-		<div class="side_title">Recommendations</div>
+		<div class="recommendBox"></div>
+		<div class="recommendBox"></div>
 	</div>
 </div>
-<!-- SIDE BAR -->
+<!-- /SIDE BAR -->
 
 
 
