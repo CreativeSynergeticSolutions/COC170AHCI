@@ -33,7 +33,8 @@
                 "12",
                 "14",
                 "16"
-            ]
+            ],
+			"recommendations":["4869167","4868138"]
         },
         {
             "name": "Jeggings",
@@ -72,7 +73,8 @@
                 "12",
                 "14",
                 "16"
-            ]
+            ],
+			"recommendations":["4929029","4868138"]
         },
         {
             "name": "Skinny Jeans",
@@ -111,7 +113,8 @@
                 "12",
                 "14",
                 "16"
-            ]
+            ],
+			"recommendations":["4929029","4869167"]
         },
         {
             "name": "Floral Chiffon Wrap Blouse",
@@ -150,7 +153,8 @@
                 "12",
                 "14",
                 "16"
-            ]
+            ],
+			"recommendations":["4931794"]
         },
         {
             "name": "Crochet Shoulder Blouse",
@@ -190,7 +194,8 @@
                 "12",
                 "14",
                 "16"
-            ]
+            ],
+			"recommendations":["4943984","4929704"]
         },
         {
             "name": "Turn-up Sleeve Blouse",
@@ -222,7 +227,15 @@
                 }
             ],
             "fabric": "100% Polyester",
-            "productCode": "4929704"
+            "productCode": "4929704",
+            "sizes": [
+                "8",
+                "10",
+                "12",
+                "14",
+                "16"
+            ],
+			"recommendations":["4943984"]
         },
         {
             "name": "Butterfly Sweater",
@@ -257,7 +270,8 @@
                 "12",
                 "14",
                 "16"
-            ]
+            ],
+			"recommendations":[]
         },
         {
             "name": "Tunic Dress",
@@ -296,7 +310,8 @@
                 "12",
                 "14",
                 "16"
-            ]
+            ],
+			"recommendations":[]
         },
         {
             "name": "Longline Cardigan",
@@ -339,7 +354,8 @@
                 "12",
                 "14",
                 "16"
-            ]
+            ],
+			"recommendations":[]
         },
         {
             "name": "Tube Skirt",
@@ -377,7 +393,8 @@
                 "12",
                 "14",
                 "16"
-            ]
+            ],
+			"recommendations":["4949187"]
         },
         {
             "name": "Aztec Print Shorts",
@@ -411,7 +428,8 @@
                 "12",
                 "14",
                 "16"
-            ]
+            ],
+			"recommendations":["4977698"]
         }
     ]
 }
