@@ -92,6 +92,7 @@ body{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+	margin-top:1%;
 }
 .item>.product{
 	margin:0!important;
@@ -111,7 +112,7 @@ body{
 	float:right;
 	margin-right:1%;
 }
-.price, .item>p{
+.price{
 	margin-top:5%;
 }
 button{
@@ -261,6 +262,10 @@ button:first-child{
 	position:relative;
 	top: 50%;
 	text-align:center;
+}
+#container .goToItem>div>div{
+	width:50%;
+	float:left;
 }
 #container #inputText{
 	width: 80%;
