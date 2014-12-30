@@ -13,7 +13,7 @@ window.onload = function () {
         itemImgEle.className = "item-img";
         itemName.className = "item-name";
         itemPrice.className = "item-price";
-        itemImg.src = item.imgURL;
+        itemImg.src = item.images.front;
         itemName.innerHTML = item.name;
         itemPrice.innerHTML = item.price;
         itemImgEle.appendChild(itemImg);

@@ -20,7 +20,7 @@ function loadModal(index){
 	$("#inputText").html(item.items.name);
 	$("#paragraph").html(item.items.description[0].content);
 	$("#productCode").html(item.items.productCode);
-	$("#image").html("<img src='"+item.items.images[0].front+"'>");
+	$("#image").html("<img src='"+item.items.images.front+"'>");
 	var bullets = "<ul>";
 	for (var i = 1; i < item.items.description.length; i++){
 		bullets += "<li>"+item.items.description[i].content+"</li>";
@@ -35,7 +35,7 @@ function deleteItem(index){
 	var current = ($("#total").text()).substring(9,($("#total").text()).length);
 	console.log(current);
 	var total = parseInt(current) - (parseInt(basket[index].items.price.substring(1,basket[index].items.price.length)))*basket[index].quantity;
-	
+
 	$("#total").html("Total: &#163 "+ add00(total));
 }
 function add00(a){
@@ -44,7 +44,7 @@ function add00(a){
 	}else{
 		return a+".00";
 	}
-	
+
 }
 function displayItems(){
 	var html = "";
@@ -55,7 +55,7 @@ function displayItems(){
 		html += "<div class='info' onclick='loadModal("+i+")'><div><span title='Product info'><i class='icon-info'></i></span></div></div>";
 		html += "<div class='price'>"+basket[i].items.price+"</div>";
 		html += "<div class='image'>";
-		html += "<img src='"+basket[i].items.images[0].front+"'>";
+		html += "<img src='"+basket[i].items.images.front+"'>";
 		html += "</div>";
 		html += "<p>"+basket[i].items.name+"</p>";
 		html += "<a class='dial'>"+basket[i].quantity+"</a>";
@@ -121,7 +121,7 @@ window.onload = function () {
 			},
 			"size":"8"
 		},
-		{		
+		{
 			"items":{
 				"name": "Acid Wash Jeggings",
 				"mainCategory": "Womens",
@@ -169,11 +169,11 @@ window.onload = function () {
 			"size":"14"
 		}
 	];
-	
-	
+
+
 	displayItems();
 	$("#items").css('left','0');
 	$("#total").css('left','0');
 	$("#options").css('right','0');
-	
+
 }

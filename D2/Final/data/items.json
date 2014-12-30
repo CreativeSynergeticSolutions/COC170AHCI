@@ -6,12 +6,10 @@
             "subCategory": "Jeans",
             "type": "bottom",
             "price": "£10.00",
-            "images": [
-                {
-                    "front": "images/stock/womens/bottom/Acid Wash Jeggings/front.png",
-                    "back": "images/stock/womens/bottom/Acid Wash Jeggings/back.png"
-                }
-            ],
+            "images": {
+                "front": "images/stock/womens/bottom/Acid Wash Jeggings/front.png",
+                "back": "images/stock/womens/bottom/Acid Wash Jeggings/back.png"
+            },
             "colours": [
                 {
 					"name":"Navy",
@@ -45,12 +43,10 @@
             "subCategory": "Jeans",
             "type": "bottom",
             "price": "£12.00",
-            "images": [
-                {
-                    "front": "images/stock/womens/bottom/Jeggings/front.png",
-                    "close": "images/stock/womens/bottom/Jeggings/close.png"
-                }
-            ],
+            "images": {
+                "front": "images/stock/womens/bottom/Jeggings/front.png",
+                "close": "images/stock/womens/bottom/Jeggings/close.png"
+            },
             "colours": [
 				{
 					"name":"Black",
@@ -88,12 +84,10 @@
             "subCategory": "Jeans",
             "type": "bottom",
             "price": "£8.00",
-            "images": [
-                {
-                    "front": "images/stock/womens/bottom/Skinny Jeans/front.png",
-                    "back": "images/stock/womens/bottom/Skinny Jeans/back.png"
-                }
-            ],
+            "images": {
+                "front": "images/stock/womens/bottom/Skinny Jeans/front.png",
+                "back": "images/stock/womens/bottom/Skinny Jeans/back.png"
+            },
             "colours": [
                 {
 					"name":"Navy",
@@ -131,12 +125,10 @@
             "subCategory": "Blouse",
             "type": "body",
             "price": "£12.00",
-            "images": [
-                {
-                    "front": "images/stock/womens/body/Floral Chiffon Wrap Blouse/front.png",
-                    "back": "images/stock/womens/body/Floral Chiffon Wrap Blouse/back.png"
-                }
-            ],
+            "images": {
+                "front": "images/stock/womens/body/Floral Chiffon Wrap Blouse/front.png",
+                "back": "images/stock/womens/body/Floral Chiffon Wrap Blouse/back.png"
+            },
             "colours": [
                 {
 					"name":"Multi",
@@ -174,13 +166,11 @@
             "subCategory": "Blouse",
             "type": "body",
             "price": "£14.00",
-            "images": [
-                {
-                    "front": "images/stock/womens/body/Crochet Shoulder Blouse/front.png",
-                    "back": "images/stock/womens/body/Crochet Shoulder Blouse/back.png",
-                    "close": "images/stock/womens/body/Crochet Shoulder Blouse/close.png"
-                }
-            ],
+            "images": {
+                "front": "images/stock/womens/body/Crochet Shoulder Blouse/front.png",
+                "back": "images/stock/womens/body/Crochet Shoulder Blouse/back.png",
+                "close": "images/stock/womens/body/Crochet Shoulder Blouse/close.png"
+            },
             "colours": [
                 {
 					"name":"Cream",
@@ -218,12 +208,10 @@
             "subCategory": "Blouse",
             "type": "body",
             "price": "£10.00",
-            "images": [
-                {
-                    "front": "images/stock/womens/body/Turn-up Sleeve Blouse/front.png",
-                    "back": "images/stock/womens/body/Turn-up Sleeve Blouse/back.png"
-                }
-            ],
+            "images": {
+                "front": "images/stock/womens/body/Turn-up Sleeve Blouse/front.png",
+                "back": "images/stock/womens/body/Turn-up Sleeve Blouse/back.png"
+            },
             "colours": [
                 {
 					"name":"Red",
@@ -261,12 +249,10 @@
             "subCategory": "Jumpers/Cardigan",
             "type": "body",
             "price": "£10.00",
-            "images": [
-                {
-                    "front": "images/stock/womens/body/Butterfly Sweater/front.png",
-                    "back": "images/stock/womens/body/Butterfly Sweater/back.png"
-                }
-            ],
+            "images": {
+                "front": "images/stock/womens/body/Butterfly Sweater/front.png",
+                "back": "images/stock/womens/body/Butterfly Sweater/back.png"
+            },
             "colours": [
                 {
 					"name":"Multi",
@@ -300,12 +286,10 @@
             "subCategory": "Dress",
             "type": "body",
             "price": "£8.00",
-            "images": [
-                {
-                    "front": "images/stock/womens/body/Tunic Dress/front.png",
-                    "back": "images/stock/womens/body/Tunic Dress/back.png"
-                }
-            ],
+            "images": {
+                "front": "images/stock/womens/body/Tunic Dress/front.png",
+                "back": "images/stock/womens/body/Tunic Dress/back.png"
+            },
             "colours": [
                 {
 					"name":"Black",
@@ -343,12 +327,10 @@
             "subCategory": "Jumpers/Cardigan",
             "type": "body",
             "price": "£14.00",
-            "images": [
-                {
-                    "front": "images/stock/womens/body/Longline Cardigan/front.png",
-                    "back": "images/stock/womens/body/Longline Cardigan/back.png"
-                }
-            ],
+            "images": {
+                "front": "images/stock/womens/body/Longline Cardigan/front.png",
+                "back": "images/stock/womens/body/Longline Cardigan/back.png"
+            },
             "colours": [
                 {
 					"name":"Navy",
@@ -390,11 +372,9 @@
             "subCategory": "Skirt",
             "type": "bottom",
             "price": "£5.00",
-            "images": [
-                {
-                    "front": "images/stock/womens/bottom/Tube Skirt/front.png"
-                }
-            ],
+            "images": {
+                "front": "images/stock/womens/bottom/Tube Skirt/front.png"
+            },
             "colours": [
                 {
 					"name":"Black",
@@ -432,11 +412,9 @@
             "subCategory": "Trousers & Shorts",
             "type": "bottom",
             "price": "£6.00",
-            "images": [
-                {
-                    "front": "images/stock/womens/bottom/Aztec Print Shorts/front.png"
-                }
-            ],
+            "images": {
+                "front": "images/stock/womens/bottom/Aztec Print Shorts/front.png"
+            },
             "colours": [
                 {
 					"name":"Multi",
