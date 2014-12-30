@@ -243,13 +243,27 @@ button:first-child{
 	transition:0.5s;
 	cursor:pointer;
 }
-#container .closebar>div{
+#container .goToItem{
+	width:10%;
+	height:100%;
+	background-color:#3c3432;
+	color:#fff;
+	transition:0.5s;
+	cursor:pointer;
+	float:right;
+}
+#container .goToItem:hover, #container .goToItem:active{
+	background-color:#fff;
+	color:#3c3432;
+	transition:0.5s;
+}
+#container .closebar>div, #container .goToItem>div{
 	position:relative;
 	top: 50%;
 	text-align:center;
 }
 #container #inputText{
-	width: 90%;
+	width: 80%;
 	float:left;
 	margin:0;
 	text-overflow: ellipsis;
@@ -268,7 +282,7 @@ button:first-child{
 }
 #container #description{
 	float:right;
-	width:65%;
+	width:55%;
 	height:90%;
 	color:#fff;
 	font-size:100%;

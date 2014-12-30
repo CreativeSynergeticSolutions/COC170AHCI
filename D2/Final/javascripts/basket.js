@@ -32,6 +32,19 @@ function loadModal(index){
 }
 function deleteItem(index){
 	$("#item"+index).remove();
+	var current = ($("#total").text()).substring(9,($("#total").text()).length);
+	console.log(current);
+	var total = parseInt(current) - parseInt(basket[index].price.substring(1,basket[index].price.length));
+	
+	$("#total").html("Total: &#163 "+ add00(total));
+}
+function add00(a){
+	if(toString(a).indexOf('.')!=-1){
+		return a
+	}else{
+		return a+".00";
+	}
+	
 }
 function displayItems(){
 	var html = "";
@@ -52,7 +65,7 @@ function displayItems(){
 		total += parseInt((basket[i].price).substring(1,basket[i].price.length));
 	}
 	$('#items').html(html);
-	$('#total').html("&#163 "+total)
+	$('#total').html("Total: &#163 "+add00(total))
 }
 
 
@@ -72,8 +85,12 @@ window.onload = function () {
 		console.log("success");
 		basket = items;
 		displayItems();
+		
+		$("#items").scrollTop($("#items").height()/4);
 	});/////////////////////////////////////////////////////////////////////////////////////
+	
 	$("#items").css('left','0');
 	$("#total").css('left','0');
 	$("#options").css('right','0');
+	
 }
