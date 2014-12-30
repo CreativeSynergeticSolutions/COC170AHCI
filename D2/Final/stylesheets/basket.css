@@ -11,6 +11,9 @@ body{
 	height: 91vh;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
+	left: -100%;
+	transition:0.5s;
+	position:relative;
 }
 #items, #total{
 	width:68vw;
@@ -22,6 +25,9 @@ body{
 	text-align:right;
 	color:rgba(255,213,49,1);
 	font-size: 220%;
+	left: -100%;
+	transition:0.5s;
+	position:relative;
 }
 #items::-webkit-scrollbar { 
     display: none; 
@@ -36,7 +42,10 @@ body{
 	overflow-y: scroll;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
-	border-radius: 4px
+	border-radius: 4px;
+	right: -100%;
+	transition:0.5s;
+	position:relative;
 }
 #options::-webkit-scrollbar { 
     display: none; 
@@ -117,6 +126,7 @@ button{
 	border-radius: 4px;
 	transition: 0.5s;
 	-webkit-transition: 0.5s;
+	cursor:pointer;
 }
 button:not(:last-child){
 	margin-bottom:5%;
@@ -136,7 +146,7 @@ button:first-child{
 	/*margin-bottom:40vh;*//*for scrolling*/
 }
 .cancel:hover, .cancel:active , #container .closebar:hover, #container .closebar:active, .delete:hover, .delete:active{
-	color:rgba(120,34,25,1);
+	color:rgba(120,34,25,1)!important;
 	background-color:#fff;
 }
 .dial{
@@ -231,6 +241,7 @@ button:first-child{
 	-moz-border-radius-bottomright: 4px;
 	border-bottom-right-radius: 4px;
 	transition:0.5s;
+	cursor:pointer;
 }
 #container .closebar>div{
 	position:relative;

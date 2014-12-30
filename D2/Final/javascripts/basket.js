@@ -28,6 +28,7 @@ function loadModal(index){
 	bullets += "</ul>"
 	$("#bullet").html(bullets);
 	console.log(item);
+	$("#containerInner").css("left","12.5%");
 }
 function deleteItem(index){
 	$("#item"+index).remove();
@@ -72,4 +73,7 @@ window.onload = function () {
 		basket = items;
 		displayItems();
 	});/////////////////////////////////////////////////////////////////////////////////////
+	$("#items").css('left','0');
+	$("#total").css('left','0');
+	$("#options").css('right','0');
 }
