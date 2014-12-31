@@ -46,6 +46,11 @@ var wall = function (options) {
         messageStyle = 'background-color:#fea;color:#000000;padding:2px;';
         console.log('%c Wall | %c'+message+' ',wallStyle,messageStyle);
     };
+    var existing = this.getObjectFromStorage();
+    if(existing===null){
+        existing = {'basket':[],'outfits':[]};
+    }
+    localStorage.setItem(this.userStorage, JSON.stringify(existing));
 };
 
 /*
@@ -149,21 +154,18 @@ wall.prototype.addToBasket = function (item, quantity, size, colour) {
         if(basket===null){
             basket = [];
         }
-        entry.id = basket.length;
+        entry.id = (basket.length==0) ? 0 : basket[basket.length-1].id+1;
         basket.push(entry);
         this.saveObjectToStorage('basket',basket);
     } else {
         this.removeItemFromBasket(entry);
     }
 };
-wall.prototype.removeItemFromBasket = function (entry) {
+wall.prototype.removeItemFromBasket = function (id) {
     this.wallLog('Removing item from basket');
     var basket = this.getBasket();
     for(var i = 0; i < basket.length; i++) {
-        var check = (basket[i].item.name == entry.item.name)
-                    && (basket[i].quantity == entry.quantity)
-                    && (basket[i].size == entry.size)
-                    && (basket[i].colour == entry.colour);
+        var check = (basket[i].id == id);
         if(check){
             console.log('Removed at '+i);
             basket.splice(i, 1);
