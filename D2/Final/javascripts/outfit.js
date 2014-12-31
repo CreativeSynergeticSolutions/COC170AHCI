@@ -10,7 +10,7 @@ function makeItemListItem (item) {
     console.log("Item" + item);
     var itemEle = document.createElement('div');
     itemEle.className = "current-item btn-link";
-    itemEle.setAttribute("data-href","product.html?"+item.item.productCode);
+    itemEle.setAttribute("data-href","product.html?productCode="+item.item.productCode);
     itemEle.innerHTML = item.item.name;
     return itemEle;
 }
@@ -23,12 +23,19 @@ function loadItemList(outfit){
             outfitItemListEle.appendChild(makeItemListItem(outfit.items[i]));
         }
     } else {
-        outfitItemListEle.appendChild(makeEmptyEle('No items.','current-item'));
+        outfitItemListEle.appendChild(makeEmptyEle('No items.','current-item empty-item'));
     }
 }
-function loadOutfit (outfit) {
+function loadOutfit () {
+    var outfit = wall.getCurrentOutfit();
+    $('.main-outfit-area > * > *:not(.add-area)').each(function () {
+        $(this).remove();
+    });
+    $('.add-area').show();
     if(outfit!=null){
         $('.outfit-name').val(outfit.name);
+    } else {
+        $('.outfit-name').val('');
     }
     if(outfit!=null&&outfit.items.length>0){
         $('.outfit-trash-area').show();
@@ -40,10 +47,11 @@ function loadOutfit (outfit) {
                 addIcon = document.createElement('i'),
                 buyIcon = document.createElement('i');
             itemEle.className = "main-item item btn-link";
-            itemEle.setAttribute("data-href","product.html?"+item.productCode);
+            itemEle.setAttribute("data-href","product.html?productCode="+item.productCode);
             itemEle.style.backgroundImage = "url('"+item.images.front+"')";
             itemEle.dataset.itemname = item.name;
-            addEle.className = "add-item";
+            addEle.className = "add-item btn-link";
+            addEle.setAttribute("data-href","shelf.html?type="+item.type);
             addIcon.className = "icon-plus";
             buyEle.className = "buy-item";
             buyIcon.className = "icon-basket";
@@ -70,10 +78,33 @@ function loadOutfit (outfit) {
     loadItemList(outfit);
 }
 function makeBasketItem(item) {
-    var itemEle = document.createElement('div');
-    itemEle.className = 'basket-item btn-link';
-    itemEle.setAttribute("data-href","product.html?"+item.item.productCode);
-    itemEle.innerHTML = item.item.name + " (" + item.size + ") " + "x" + item.quantity;
+    var itemEle = document.createElement('div'),
+        itemName = document.createElement('div'),
+        itemSize = document.createElement('div'),
+        itemColour = document.createElement('div'),
+        itemQuantity = document.createElement('div'),
+        itemRemove = document.createElement('div')
+        removeIcon = document.createElement('i');
+    itemEle.className = 'basket-item';
+    itemEle.setAttribute("data-item-id",item.id);
+    itemName.className = 'basket-item__name btn-link';
+    itemName.setAttribute("data-href","product.html?productCode="+item.item.productCode);
+    itemName.innerHTML = item.item.name;
+    itemSize.className = 'basket-item__size';
+    itemSize.innerHTML = "(" + item.size + ")";
+    itemColour.className = 'basket-item__colour';
+    itemColour.className = item.colour.class;
+    itemQuantity.className = 'basket-item__quantity';
+    itemQuantity.innerHTML = item.quantity;
+    itemRemove.className = 'basket-item__remove';
+    removeIcon.className = "icon-cancel";
+
+    itemRemove.appendChild(removeIcon);
+
+    itemEle.appendChild(itemName);
+    itemEle.appendChild(itemSize);
+    itemEle.appendChild(itemRemove);
+    itemEle.appendChild(itemQuantity);
     return itemEle;
 }
 function loadBasketList() {
@@ -85,7 +116,7 @@ function loadBasketList() {
             basketEle.appendChild(makeBasketItem(basket[i]));
         }
     } else {
-        //document.getElementById('basket').appendChild(makeBasketItem('Your Basket is Empty'));
+        basketEle.appendChild(makeEmptyEle('Your basket is empty.','basket-item empty-item'));
     }
 }
 function makeOutfitListItem(outfit, selected) {
@@ -99,8 +130,8 @@ function makeOutfitListItem(outfit, selected) {
     itemEle.className = itemClasses;
     nameEle.className = "left outfit-name";
     toolsEle.className = "right outfit-tools";
-    eyeIcon.className = "icon-eye";
-    basketIcon.className = "icon-basket";
+    eyeIcon.className = "icon-eye view-outfit";
+    basketIcon.className = "icon-basket buy-outfit";
     nameEle.innerHTML = outfit.name;
     itemEle.appendChild(nameEle);
     toolsEle.appendChild(eyeIcon);
@@ -119,7 +150,8 @@ function loadOutfitList() {
             outfitsEle.appendChild(makeOutfitListItem(outfits[i], selected));
         }
     } else {
-        //document.getElementById('outfits').appendChild(makeOutfitListItem('You have no outfits'));
+        wall.addOutfit('First outfit');
+        loadOutfitList();
     }
 }
 function initialLoad() {
@@ -127,7 +159,7 @@ function initialLoad() {
     loadOutfitList();
     var outfitName = $.trim($('.outfit-selected>.outfit-name').text());
     wall.setCurrentOutfit(outfitName);
-    loadOutfit(wall.getCurrentOutfit());
+    loadOutfit();
 }
 window.onload = function () {
     $('.main-area').hide().fadeIn(500);
@@ -184,10 +216,11 @@ window.onload = function () {
             $(this).parent().removeClass('saving').removeClass('saved');
         }
     });
-    $('.add-item').on('click', function () {
-
+    $('.add-item').on('click', function (e) {
+        console.log('HEY');
+        e.stopPropagation();
     });
-    $('.buy-item').on('click', function () {
+    $('.buy-item').on('click', function (e) {
         var itemName = $(this).parent().data('itemname');
         var outfit = wall.getCurrentOutfit();
         for(var i=0; i<outfit.items.length; i++){
@@ -198,6 +231,31 @@ window.onload = function () {
                 break;
             }
         }
+        e.stopPropagation();
+    });
+    $('.view-outfit').on('click', function () {
+
+    });
+    $('.buy-outfit').on('click', function () {
+        var outfit = wall.getCurrentOutfit();
+        for(var i=0; i<outfit.items.length; i++){
+            var item = outfit.items[i];
+            wall.addToBasket(item.item, item.quantity, item.size, item.colour);
+        }
+        loadBasketList();
+    });
+    $('.outfit-item').on('click', function () {
+        console.log("CHANGING");
+        $('.outfit-selected').removeClass('outfit-selected');
+        $(this).addClass('outfit-selected');
+        var outfitName = $.trim($('.outfit-selected>.outfit-name').text());
+        wall.setCurrentOutfit(outfitName);
+        loadOutfit();
+    });
+    $('.basket-item__remove').on('click', function () {
+        var toRemove = $(this).parent().data('item-id');
+        wall.removeItemFromBasket(toRemove);
+        loadBasketList();
     });
     $('.outfit-trash-area').droppable({
         accept: '.item',

@@ -33,12 +33,56 @@ a {
     color: #FFFFFF;
     cursor: pointer;
     display: block;
-    padding: 6% 5%;
     opacity: 0.9;
     overflow: hidden;
     vertical-align:middle;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.basket-item {
+    line-height: 1.5em;
+    padding: 8% 5%;
+    vertical-align:middle;
+}
+
+.basket-item__name {
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 65%;
+}
+
+.basket-item__size {
+    float: left;
+    font-size: 0.8em;
+    overflow: hidden;
+    width: 10%;
+}
+
+.basket-item__quantity {
+    float: right;
+    text-align: center;
+    width: 15%;
+}
+
+.basket-item__quantity:before {
+    content: 'x';
+}
+
+.basket-item__remove {
+    color: #B71C1C;
+    float: right;
+    font-size: 1.5em;
+    overflow: hidden;
+    text-align: center;
+    width: 10%;
+}
+
+.outfit-item,
+.current-item {
+    padding: 5% 5%;
 }
 
 .basket-item>.left,
