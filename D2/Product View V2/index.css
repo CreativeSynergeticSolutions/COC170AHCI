@@ -1214,6 +1214,14 @@ label[name="optionsLabels"] {
 	line-height: 70px;
 	vertical-align: middle;
 	
+	opacity: 0.8;
+	
+}
+
+#wishListBtn:active {
+	
+	opacity: 1;
+	
 }
 
 
@@ -1225,8 +1233,11 @@ label[name="optionsLabels"] {
 	height: 210px;
 	width: 410px;
 	
+	background-color: #000;
 	border: 0px solid #000;
 	border-radius: 10px;
+	
+	
 	
 }
 
@@ -1239,8 +1250,11 @@ label[name="optionsLabels"] {
 	width: 700px;
 	
 	border: 3px solid #FFCC00;
+	
+	transition: height 1s ease 1s;
 		
 }
+
 
 #filterContainer {
 	
@@ -1341,11 +1355,28 @@ label[name="optionsLabels"] {
 	margin: 20px 0px;
 	height: 80px;
 	width: 176px;
-	
+		
 	border: 4px solid #FFF;
 	border-radius: 10px;
 	
+	list-style: none;
+	
+	cursor: pointer;
+	
 	transition: 0.5s;
+	
+}
+
+#sizeList li span{
+	
+	display: table-cell;
+	height: 80px;
+	width: 176px;
+	
+	color: #FFF;
+	font-size: 34px;
+	text-align: center;
+	vertical-align: middle;
 	
 }
 
@@ -1355,6 +1386,26 @@ label[name="optionsLabels"] {
 	
 }
 
+#quantityContainer {
+
+	border: none;
+	
+}
+
+#quantityImg {
+	
+	position: absolute;
+	top: 100px;
+	height: 200px;
+	width: 200px;
+	
+	background-image: url(images/Dial.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top center;
+	
+	
+}
 
 
 #basketContainer {
@@ -1367,8 +1418,11 @@ label[name="optionsLabels"] {
 	height: 200px;
 	width: 400px;
 	
+	background-color: #000;
 	border: 3px solid #FFCC00;
 	border-radius: 10px;
+	
+	cursor: pointer;
 	
 }
 
@@ -1496,6 +1550,8 @@ label[name="optionsLabels"] {
 	border: 3px solid #FFCC00;
 	border-radius: 10px;
 	
+	overflow: hidden;
+	
 	opacity: 0;
 	
 	transition-delay: 0s;
@@ -1507,13 +1563,166 @@ label[name="optionsLabels"] {
 	
 	bottom: 40px;
 	
-	opacity: 1;
+	opacity: 0.8;
 	
 	transition-delay: 1s;
+	
+	transition: width 1s ease 1s;
+	
+}
+
+#outfitsMainText {
+	
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 395px;
+	width: 250px;
+	
+	background-color: #FFCC00;
+	
+}
+
+#outfitsMainText span{
+	
+	height: 395px;
+	width: 250px;
+	
+	display: table-cell;
+	font-size: 45px;
+	text-align: center;
+	vertical-align: middle;
+	
+}
+
+#outfitsNewButtonContainer {
+	
+	box-sizing: border-box;
+	
+	position: absolute;
+	padding-top: 47px;
+	padding-left: 10px;
+	height: 395px;
+	width: 320px;
+	
+	background-color: rgba(0, 0, 0, 0.8);
+	
+	overflow: hidden;
+	
+}
+
+#outfitsNewButton {
+
+	height: 300px;
+	width: 300px;
+	
+	display: table-cell;
+	font-size: 45px;
+	text-align: center;
+	vertical-align: middle;
+	
+	background-color: #FFCC00;
+	
+	opacity: 0.8;
+	
+	transition: 0.5s;
+	
+}
+
+#outfitsNewButton:active {
+	
+	opacity: 1;
+	
+}
+
+#outfitsListContainer {
+	
+	position: absolute;
+	height: 395px;
+	width: 900px;
+	
+	overflow: hidden;
+	
+}
+
+#outfitsList {
+	
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+	height: 395px;
+	width: 900px;
+	
+	overflow: hidden;
+	
+}
+
+#outfitsList li {
+	
+	display: inline-block;
+	
+	margin: 72px 10px;
+	height: 250px;
+	width: 250px;
+	
+	background-color: lightgrey;
+	
+}
+
+#outfitsList:first-child {
+	
+	margin-left: 310px;
+	
+}
+
+#outfitsList:first-child {
+	
+	margin-right: 30px;
 	
 }
 
 
+#basketSectionLabel input:not(:checked)~ #basketSection {
+	
+	height: 350px !important;
+	
+	opacity: 0.8 !important;
+	
+}
+
+#basketSectionLabel input:not(:checked)~ #basketSection #filterContainer {
+	
+	height: 200px !important;
+	
+	opacity: 0.3 !important;
+	
+	transition-delay: 0s !important;
+	
+}
+
+#outfitsSectionLabel input:checked~ #outfitsContainer {
+	
+	width: 990px !important;
+	
+	opacity: 1 !important;
+	
+	transition-delay: 1s;
+	
+	transition: width 1s ease 1s;
+	
+}
+
+#outfitsSectionLabel input:checked~ #outfitsContainer #outfitsMainText {
+	
+	width: 100px;
+	
+}
+
+#outfitsSectionLabel input:checked~ #outfitsContainer #outfitsMainText span{
+	
+	width: 100px;
+		
+}
 
 
 #closeOptionsBtn {

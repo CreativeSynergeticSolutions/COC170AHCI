@@ -6,8 +6,6 @@ $(document).ready(function(){
 	setupProductDetails();
 	setupRecommended();
 	setupOptions();
-	
-	$("#optionSectionLabel").click();
 		
 });
 
@@ -135,6 +133,42 @@ function setupOptions() {
 		$("#optionSectionLabel").css("cursor", "pointer");
 		
 	});
+	
+	
+	$('#basketSectionLabel input').prop('checked', true);
+	
+	$("#basketSectionLabel input").change(function(){
+				
+		if(this.checked){
+			
+			$("#basketSectionLabel").css("cursor", "default");
+			document.getElementById("basketRadio").disabled = true;
+			document.getElementById("outfitRadio").disabled = false;
+						
+		}
+		
+	});
+	
+	$("#outfitsSectionLabel input").change(function(){
+				
+		if(this.checked){
+			
+			$("#outfitsSectionLabel").css("cursor", "default");
+			document.getElementById("outfitRadio").disabled = true;
+			document.getElementById("basketRadio").disabled = false;
+						
+		}
+		
+	});
+	
+	$("#basketSectionLabel").css("cursor", "default");
+	document.getElementById("basketRadio").disabled = true;
+	
+	
+	
+	//$("#optionSectionLabel").click();
+	//$("#outfitsSectionLabel").click();
+	
 	
 }
 
