@@ -2,6 +2,7 @@
 <html>
 
 <link rel='stylesheet' type='text/css' href='index.css'>
+<link rel='stylesheet' type='text/css' href='productColours.css'>
 <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
@@ -175,28 +176,91 @@
 					
 					<div id='optionsContent'>
 						
-						<div id='basketSection'>
+						<div id='wishListWrapper'><div id='wishListBtn' class='btnStyle'>Add <br /> To <br /> Wish <br /> List</div></div>
+						
+						<label id='basketSectionLabel' class='inputLabels' name='optionsLabels'>
+							<input id='basketRadio' type='radio' name='optionsRadio' />	
+							<div id='basketSection'>
 							
-							<div id='filterContainer'>
+								<div id='filterContainer'>
+									
+									<div id='colourFilterSection'>
+										
+										<div id='colourListContainer'>
+											<ul id='colourList'>
+												<li class='redPC'></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+												<li></li>
+											</ul>
+										</div>
+										
+										<div id='colourFilterText'>
+											<span class='textArrows'>&#9650;</span>
+											<br />
+											Colour
+											<br />
+											<span class='textArrows'>&#9660;</span>
+										</div>
+									</div>
+									
+									<div id='sizeFilterSection'>
+										
+										<div id='sizeListContainer'>
+											<ul id='sizeList'>
+												<li></li>
+											</ul>
+										</div>
+										
+										<div id='sizeFilterText'>
+											<span class='textArrows'>&#9650;</span>
+											<br />
+											Size
+											<br />
+											<span class='textArrows'>&#9660;</span>
+										</div>
+									</div>
+									
+									<div id='quantityFilterSection'>
+										
+										<div id='quantityContainer'>
+											
+										</div>
+										
+										<div id='quantityFilterText'>
+											<span class='textArrows'>&#9650;</span>
+											<br />
+											Quantity
+											<br />
+											<span class='textArrows'>&#9660;</span>
+										</div>
+									</div>
+									
+								</div>
+							
+								<div id='basketContainer'>
+									<div id='basketColorVal'></div>
+									<div id='basketSizeVal'>16</div>
+									<div id='basketQuantityVal'>4</div>
+									<div id='basketText'>Add To Basket</div>
+								</div>
+						
+							</div>
+						</label>	
+						
+						<label id='outfitsSectionLabel' class='inputLabels' name='optionsLabels'>
+							<input id='outfitRadio' type='radio' name='optionsRadio' />
+							<div id='outfitsContainer'>
 								
 							</div>
-							
-							<div id='basketContainer'>
-								<div id='basketColorVal'></div>
-								<div id='basketSizeVal'>16</div>
-								<div id='basketQuantityVal'>4</div>
-								<div id='basketText'>Add To Basket</div>
-							</div>
-						
-						</div>
-						
-						<div id='wishListWrapper'></div>
-						
-						<div id='outfitsContainer'></div>
-						
-						<!--
+						</label>
+										
 						<div id='closeOptionsBtn' class='closeOverlayButton'></div>
-						-->
+						
 					</div>
 					
 					

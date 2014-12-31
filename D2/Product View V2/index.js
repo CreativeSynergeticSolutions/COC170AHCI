@@ -5,9 +5,10 @@ $(document).ready(function(){
 	setupImageDisplay();
 	setupProductDetails();
 	setupRecommended();
+	setupOptions();
 	
 	$("#optionSectionLabel").click();
-	
+		
 });
 
 function setupImageDisplay() {
@@ -113,3 +114,27 @@ function setupRecommended() {
 	});
 	
 }
+
+function setupOptions() {
+	
+	$("#optionSectionLabel input").change(function(){
+				
+		if(this.checked){
+			
+			$("#optionSectionLabel").css("cursor", "default");
+			document.getElementById("optionsCheck").disabled = true;
+						
+		}
+		
+	});
+	
+	$("#closeOptionsBtn").click(function(){
+		
+		document.getElementById("optionsCheck").disabled = false;
+		
+		$("#optionSectionLabel").css("cursor", "pointer");
+		
+	});
+	
+}
+
