@@ -6,7 +6,7 @@ $(document).ready(function(){
 	setupProductDetails();
 	setupRecommended();
 	
-	//$("#recommendedSectionLabel").click();
+	$("#optionSectionLabel").click();
 	
 });
 
