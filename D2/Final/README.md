@@ -59,6 +59,13 @@ This will make the array of items objects available in the ``` items ``` global 
 ```
 This function is in the items object, and allows an item to be retrieved via its product code.
 
+## Get Product Code from query string
+
+```js
+    var productCode = items.getCodeFromSearch();
+```
+This function looks for and returns any parameters in the query string such that productCode=value, and returns the value.
+
 ## javascripts/Wall.js
 Exposes useful functions for basket and outfit management with localStorage.
 
