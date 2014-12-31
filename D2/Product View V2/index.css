@@ -1073,7 +1073,7 @@ body {
 	
 	background-color: none;
 	
-	//transform: rotateY(-50deg) rotateX(20deg);
+	transform: rotateY(-50deg) rotateX(20deg);
 	transform-origin: right center;
 	
 	transition: 1s;
@@ -1149,6 +1149,8 @@ body {
 	
 	transition: 1s;
 	
+	overflow: hidden;
+	
 }
 
 #optionSectionLabel input:checked~ #optionsWrapper #optionsContent {
@@ -1161,6 +1163,59 @@ body {
 	background-color: rgba(0, 0, 0, 0.5);
 	
 }
+
+label[name="optionsLabels"] {
+	
+	pointer-events: none;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionSectionContainer #optionsContent label {
+	
+	pointer-events: auto;
+	
+}
+
+
+#wishListWrapper {
+	
+	position: absolute;
+	top: -410px;
+	right: 140px;
+	height: 400px;
+	width: 250px;
+	
+	opacity: 0;
+	
+	transition-delay: 0s;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #wishListWrapper {
+	
+	top: 20px;
+	
+	opacity: 1;
+	
+	transition-delay: 1s;
+	
+}
+
+#wishListBtn {
+	
+	height: 400px;
+	width: 250px;
+	
+	display: table-cell;
+	font-size: 50px;
+	text-align: center;
+	line-height: 70px;
+	vertical-align: middle;
+	
+}
+
 
 #basketSection {
 	
@@ -1178,7 +1233,7 @@ body {
 #optionSectionLabel input:checked~ #optionsWrapper 
 #optionsContent #basketSection {
 	
-	top: 50px;
+	top: 40px;
 	left: 50px;
 	height: 800px;
 	width: 700px;
@@ -1186,6 +1241,121 @@ body {
 	border: 3px solid #FFCC00;
 		
 }
+
+#filterContainer {
+	
+	position: absolute;
+	width: 700px;
+	height: 0px;
+	
+	overflow: hidden;
+	
+	transition-delay: 0s;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #basketSection #filterContainer {
+	
+	height: 500px;
+	
+	transition-delay: 0.5s;
+	
+}
+
+#colourFilterSection, #sizeFilterSection, #quantityFilterSection {
+	
+	position: absolute;
+	top: 10px;
+	height: 480px;
+	width: 200px;
+	
+}
+
+#colourFilterSection {
+	
+	left: 17px;
+	
+}
+
+#sizeFilterSection {
+	
+	left: 252px;
+	
+}
+
+#quantityFilterSection {
+	
+	left: 482px;
+	
+}
+
+#colourListContainer, #sizeListContainer, #quantityContainer {
+	
+	position: absolute;
+	height: 380px;
+	width: 196px;
+	
+	border: 2px solid #FFF;
+	border-radius: 10px;
+	
+	overflow: hidden;
+	
+}
+
+#colourFilterText, #sizeFilterText, #quantityFilterText {
+	
+	position: absolute;
+	bottom: 0px;
+	height: 80px;
+	width: 200px;
+	
+	color: #FFCC00;
+	font-size: 25px;
+	text-align: center;
+	line-height: 23px;
+	
+}
+
+.textArrows {
+	
+	font-size: 16px;
+	
+}
+
+#colourList, #sizeList {
+	
+	margin: 0px;
+	padding: 0px 6px;
+	
+	height: 378px;
+	width: 210px;
+	
+	overflow-y: scroll;
+	overflow-x: hidden;
+	
+}
+
+#colourList li, #sizeList li{
+	
+	margin: 20px 0px;
+	height: 80px;
+	width: 176px;
+	
+	border: 4px solid #FFF;
+	border-radius: 10px;
+	
+	transition: 0.5s;
+	
+}
+
+#colourList li:active, #sizeList li:active{
+	
+	border: 4px solid #FFCC00;
+	
+}
+
+
 
 #basketContainer {
 	
@@ -1234,26 +1404,58 @@ body {
 	
 }
 
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #basketSection #basketContainer #basketColorVal, 
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #basketSection #basketContainer #basketSizeVal, 
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #basketSection #basketContainer #basketQuantityVal {
+	
+	top: 15px;
+	height: 150px;
+	width: 200px;
+	
+	font-size: 60px;
+	line-height: 150px;
+	
+}
+
 #basketColorVal {
 	
-	position: absolute;
-	left: 10px;
+	left: 15px;
 	
 	background-color: black;
 	
 }
 
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #basketSection #basketContainer #basketColorVal {
+	
+}
+
 #basketSizeVal {
 	
-	position: absolute;
-	left: 145px;
+	left: 150px;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #basketSection #basketContainer #basketSizeVal {
+	
+	left: 250px;
 	
 }
 
 #basketQuantityVal {
 	
-	position: absolute;
-	left: 280px;
+	left: 285px;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #basketSection #basketContainer #basketQuantityVal {
+	
+	left: 480px;
 	
 }
 
@@ -1267,7 +1469,74 @@ body {
 	color: #000;
 	font-size: 40px;
 	text-align: center;
-	background-color: #FFCC40;
+	background-color: #FFCC00;
 	line-height: 80px;
 		
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #basketSection #basketContainer #basketText {
+	
+	height: 110px;
+	font-size: 70px;
+	line-height: 110px;
+}
+
+
+#outfitsContainer {
+	
+	box-sizing: border-box;
+	
+	position: absolute;
+	bottom: -410px;
+	right: 140px;
+	height: 400px;
+	width: 250px;
+	
+	border: 3px solid #FFCC00;
+	border-radius: 10px;
+	
+	opacity: 0;
+	
+	transition-delay: 0s;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #outfitsContainer {
+	
+	bottom: 40px;
+	
+	opacity: 1;
+	
+	transition-delay: 1s;
+	
+}
+
+
+
+
+#closeOptionsBtn {
+	
+	position: absolute;
+	top: 200px;
+	right: -100px;
+	
+	opacity: 0;
+	
+	transition: 1s;
+	
+	transition-delay: 0s;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #closeOptionsBtn {
+	
+	right: 10px;
+	
+	opacity: 1;
+	
+	transition-delay: 1s;
+	
 }
