@@ -19,16 +19,7 @@
 <body>
     <div class="main-area">
         <div class="outfit-area">
-            <div class="outfits">
-                <div class="outfit-item">
-                    <span class="left">Outfit 1</span>
-                    <span class="right"><i class="icon-eye"></i> | <i class="icon-basket"></i></span>
-                </div>
-                <div class="outfit-item">
-                    <span class="left">A really long outfit name</span>
-                    <span class="right"><i class="icon-eye"></i> | <i class="icon-basket"></i></span>
-                </div>
-            </div>
+            <div id="outfits" class="outfits"></div>
             <div class="btn-touchable outfit-btn">
                 <div class="btn"><span class="inner"><i class="icon-heart"></i>Outfits</span></div>
             </div>
@@ -60,14 +51,12 @@
         <div class="outfit-management-area">
             <span class="outfit-name-input"><input type="text" class="outfit-name" placeholder="Outfit Name..."></span>
             <div class="current-items-area">
-                <div class="current-items">
-                    <div class="current-item">Item</div>
-                </div>
+                <div id="current-items" class="current-items"></div>
                 <div class="btn-touchable current-items-btn">
                     <div class="btn"><span class="inner"><i class="icon-th-list"></i>Items</span></div>
                 </div>
             </div>
-            <div class="btn-touchable shelf-swap-btn">
+            <div class="btn-touchable shelf-swap-btn btn-link" data-href="shelf.html">
                 <div class="btn"><span class="inner"><i class="icon-menu"></i>Swap to Shelf View</span></div>
             </div>
         </div>

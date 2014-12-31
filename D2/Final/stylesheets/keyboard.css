@@ -2,7 +2,7 @@
     display: block;
 }
 #keyboard.hide {
-    display: none;    
+    display: none;
 }
 #keyboard {
     bottom: 0;
@@ -12,6 +12,7 @@
     padding: 0 0 50% 0;
     position: fixed;
     transform: translate(-50%, 50%);
+    z-index: 3;
 }
 #keyboard input {
     box-sizing: border-box;
@@ -19,13 +20,13 @@
     font-size: 1.5em;
     margin-bottom: 1%;
     padding: 2%;
-    width: 100%;    
+    width: 100%;
 }
 #keyboard input:focus {
     outline: none !important;
 }
 #keyboard>div {
-    position: relative;    
+    position: relative;
 }
 #keyboard>div i {
     cursor: pointer;
