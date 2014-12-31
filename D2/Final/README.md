@@ -59,7 +59,7 @@ This will make the array of items objects available in the ``` items ``` global 
 ```
 This function is in the items object, and allows an item to be retrieved via its product code.
 
-## Get Product Code from query string
+### Get Product Code from query string
 
 ```js
     var productCode = items.getCodeFromSearch();
