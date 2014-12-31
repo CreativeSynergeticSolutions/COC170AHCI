@@ -15,10 +15,10 @@ var wall = function (options) {
     this.getObjectFromStorage = function (name) {
         var existing = JSON.parse(localStorage.getItem(this.userStorage));
         if(existing===null){
-            return null;    
+            return null;
         } else {
             if(typeof name === 'undefined'){
-                return  existing;    
+                return  existing;
             } else {
                 return existing[name];
             }
@@ -27,7 +27,7 @@ var wall = function (options) {
     this.wallLog = function (message) {
         var wallStyle = 'background-color:#fea;color:#a80;font-weight:bold;padding:2px;',
         messageStyle = 'background-color:#fea;color:#000000;padding:2px;';
-        console.log('%c Wall | %c'+message+' ',wallStyle,messageStyle);   
+        console.log('%c Wall | %c'+message+' ',wallStyle,messageStyle);
     };
 };
 wall.prototype.addToOutfit = function (outfit) {
@@ -65,33 +65,43 @@ wall.prototype.removeFromOutfit = function (item) {
 wall.prototype.getOutfits = function () {
     this.wallLog('Getting outfits.');
     var userStorage = this.getObjectFromStorage('outfits');
-    return (userStorage===null ? null : userStorage); 
+    return (userStorage===null ? null : userStorage);
 };
-wall.prototype.addToBasket = function (item) {
+wall.prototype.addToBasket = function (item, quantity, size, colour) {
     this.wallLog('Adding item to basket.');
-    if(item.quantity>0){
+    var entry = {
+        "item": item,
+        "quantity": quantity,
+        "size": size,
+        "colour": colour
+    };
+    if(entry.quantity>0){
         var basket = this.getBasket();
         if(basket===null){
             basket = [];
         }
-        item.id = basket.length;
-        basket.push(item);  
+        entry.id = basket.length;
+        basket.push(entry);
         this.saveObjectToStorage('basket',basket);
     } else {
-        this.removeItemFromBasket(item);    
+        this.removeItemFromBasket(entry);
     }
 };
-wall.prototype.removeItemFromBasket = function (item) {
+wall.prototype.removeItemFromBasket = function (entry) {
     this.wallLog('Removing item from basket.');
     var basket = this.getBasket();
     for(var i = 0; i < basket.length; i++) {
-        if(basket[i].name == item.name){
+        var check = (basket[i].item.name == entry.item.name)
+                    && (basket[i].quantity == entry.quantity)
+                    && (basket[i].size == entry.size)
+                    && (basket[i].colour == entry.colour);
+        if(check){
             console.log('Removed at '+i);
             basket.splice(i, 1);
             break;
         }
     }
-    this.saveObjectToStorage('basket',basket);    
+    this.saveObjectToStorage('basket',basket);
 }
 wall.prototype.updateBasket = function (items) {
     this.wallLog('Updating basket.');
