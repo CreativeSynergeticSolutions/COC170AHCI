@@ -1043,6 +1043,12 @@ body {
 	
 }
 
+#optionsWrapper *{
+	
+	transition: 1s;	
+	
+}
+
 #optionSectionLabel input:checked~ #optionsWrapper {
 	
 	top: 0px;
@@ -1067,7 +1073,7 @@ body {
 	
 	background-color: none;
 	
-	transform: rotateY(-50deg) rotateX(20deg);
+	//transform: rotateY(-50deg) rotateX(20deg);
 	transform-origin: right center;
 	
 	transition: 1s;
@@ -1159,16 +1165,50 @@ body {
 #basketSection {
 	
 	position: absolute;
-	height: 100%;
-	width: 100%;
+	top: 0px;
+	left: 0px;
+	height: 210px;
+	width: 410px;
 	
+	border: 0px solid #000;
+	border-radius: 10px;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #basketSection {
+	
+	top: 50px;
+	left: 50px;
+	height: 800px;
+	width: 700px;
+	
+	border: 3px solid #FFCC00;
+		
 }
 
 #basketContainer {
 	
+	box-sizing: border-box;
+	
 	position: absolute;
-	height: 100%;
-	width: 100%;
+	bottom: 5px;
+	left: 5px;
+	height: 200px;
+	width: 400px;
+	
+	border: 3px solid #FFCC00;
+	border-radius: 10px;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #basketSection #basketContainer {
+	
+	bottom: -2px;
+	left: 0px;
+	height: 300px;
+	width: 700px;
 	
 	
 }
@@ -1179,17 +1219,18 @@ body {
 	
 	position: absolute;
 	top: 10px;
-	width: 120px;
-	height: 50px;
+	width: 100px;
+	height: 80px;
 	
 	color: #FFCC00;
-	font-size: 30px;
+	font-size: 40px;
 	text-align: center;
-	line-height: 40px;
+	line-height: 80px;
 	
 	border: 5px solid #FFCC00;
 	border-radius: 10px;
 	
+	overflow: hidden;
 	
 }
 
@@ -1216,38 +1257,17 @@ body {
 	
 }
 
-#basketImg {
+#basketText {
 	
 	position: absolute;
 	bottom: 0px;
-	left: 10px;
-	height: 140px;
-	width: 390px;
-	
-	background-image: url(images/Basket.png);
-	background-size: 90% 100%;
-	background-repeat: no-repeat;
-	background-position: center center;
-	
-}
-
-#basketImg:after {
-	
-	content: "Add To Basket";
-	
-	position: absolute;
-	top: 40px;
-	left: 115px;
 	height: 80px;
-	width: 160px;
+	width: 100%;
 	
-	color: black;
-	font-size: 30px;
+	color: #000;
+	font-size: 40px;
 	text-align: center;
-	
 	background-color: #FFCC40;
-	
-	border-radius: 7px;
-	
-	
+	line-height: 80px;
+		
 }
