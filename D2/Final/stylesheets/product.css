@@ -156,7 +156,62 @@ body {
 
 
 
-#displayWrapper {}
+#productHeader {
+	
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -230px;
+	min-height: 102px;
+	width: 460px;
+	
+	background-color: #000;
+	
+	border-radius: 10px;
+	
+	overflow: hidden;
+	
+}
+
+#productTitle, #productCode, #productPrice  {
+	
+	box-sizing: border-box;
+	
+	display: inline-block;
+	
+	position: absolute;
+	padding: 0px 10px;
+	
+	font-size: 40px;
+	background-color: #FFCC00;
+	
+}
+
+#productTitle {
+	
+	min-height: 50px;
+	width: 100%;
+	
+}
+
+#productCode {
+	
+	margin-top: 2px;
+	height: 50px;
+	width: 300px;
+	
+}
+
+#productPrice {
+	
+	margin-top: 2px;
+	margin-left: 2px;
+	height: 50px;
+	width: 158px;
+	
+}
+
+
 
 
 #imagesListContainer {
@@ -211,7 +266,7 @@ body {
 	height: 110px;
 	width: 100px;
 	
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.2);
 	
 	background-size: contain;
 	background-repeat: no-repeat;
