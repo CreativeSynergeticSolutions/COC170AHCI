@@ -5,7 +5,7 @@ a {
 .basket-area {
     bottom: 20%;
     position: absolute;
-    width: 20%;
+    width: 25%;
 }
 
 .outfit-area {
@@ -80,6 +80,9 @@ a {
     width: 10%;
 }
 
+.outfit-item .remove-outfit {
+    color: #B71C1C;   
+}
 .outfit-item,
 .current-item {
     padding: 5% 5%;
@@ -196,14 +199,13 @@ a {
     background-color: transparent;
     border-style: none none dotted none;
     font-size: 1.25em;
-    left: 0;
-    margin-top: 2%;
+    margin: 0 auto;
     outline: none;
-    position: absolute;
-    top: 0;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 50%;
+    width: auto;
+    min-width: 25%;
+    max-width: 90%;
 }
 
 .outfit-management-area input::-webkit-input-placeholder {
@@ -223,28 +225,29 @@ a {
 }
 
 .outfit-management-area .current-items-area{
-    top: 0;
     position: absolute;
-    right: 0;
-    width: 45%;
+    width: 100%;
 }
 
 .outfit-management-area .shelf-swap-btn {
-    bottom: 0;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
+    margin: 0 auto;
+}
+
+.outfit-management-area .current-outfit-name-input {
+    display: inline-block;
+    margin-top: 3em;
+    position: relative;
 }
 
 .outfit-management-area .current-outfit-name-input:after {
+    float: right;
     font-family: 'ahci';
     font-size: 1.25em;
     height: 1.25em;
-    left: 0.5em;
+    right: 0;
     line-height: 1.25em;
-    position: relative;
+    position: absolute;
     text-align: center;
-    top: 0.4em;
     width: 1.25em;
 }
 
@@ -391,6 +394,6 @@ a {
     display: none;
     font-size: 3em;
     position: absolute;
-    right: 30%;
+    right: 35%;
     z-index: 1;
 }

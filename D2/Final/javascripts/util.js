@@ -1,4 +1,5 @@
-$('.btn-link').click(function (e) {
+$(document.body).on('click', '.btn-link', function (e) {
+    console.log(this);
     newLocation = $(this).data('href');
     $('body').fadeOut(500, function () {
         window.location = newLocation;
