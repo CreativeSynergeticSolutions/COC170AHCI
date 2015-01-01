@@ -19,7 +19,12 @@
 
 <script type="text/javascript" src='categories.js'>
 </script>
+
+<script type="text/javascript" src='../RESOURCES/javascripts/fetchItems.js'>
+</script>
+
 <script type="text/javascript">
+
 
 
 
@@ -28,6 +33,7 @@ function loadSubCategory(category){
 	var output="";
 	var array=new Array();
 	array=CAT[category];
+	
 
 	for (var i=0;i<array.length;i++){
 		//Concatenate "_"
@@ -77,13 +83,26 @@ function loadSubSubCategory(subCategory){
 }
 function loadSelection(category){
 	var output="";
-
+	
 	currentSelection=category;
 	var array=new Array();
-	array=IMG_CAT[category];
-	//Run text through loop (output)
-	var sizes=new Array("XXS","XS","S","M","L","XL");
-	var color=new Array("red","yellow","blue","black","white","green");
+	
+	if(category=="Women"){
+		
+		for (var i=0;i<items.length;i++){
+			var sub=items[i]["subCategory"];
+			var name=items[i]["name"];
+			var main=items[i]["mainCategory"];
+			var price=items[i]["price"];
+			var img=items[i]["images"]["front"];
+			
+			if(main=="Womens" && sub==currentSubCategory){
+				array.push(i);
+			}
+		}
+	
+	}
+	
 	for (var i=0;i<array.length;i++){
 		//Concatenate "_"
 		var id="sel_"+i.toString();
@@ -92,30 +111,17 @@ function loadSelection(category){
 		output+="<div class='SubCategorySelection' >";
 		output+="<img id='"+id+"' src='"+array[i]+"'  />";
 		output+="<br /><br />";
-		output+="<div id='Scroll'>";
-		output+="<div class='ScrollInner1' >";
+		
+		
 
-		for(var j=0;j<6;j++){
-			output+="<div style='border-radius:2px;'>"+sizes[j]+"</div>";
-		}
-
-		output+="</div>";
-		output+="</div>";
-		output+="<br />";
-		output+="<div id='Scroll'>";
-		output+="<div class='ScrollInner2' >";
-
-		for(var j2=0;j2<6;j2++){
-			output+="<div style='border-radius:2px;background-color:"+color[j2]+"'></div>";
-		}
-
-		output+="</div>";
-		output+="</div>";
-		output+="<br />";
-
+		output+="<div class='itemContainer'>";
+		output+="<div class='clothesInfo' >Item: <div id='name'></div></div>";
+		output+="<div class='clothesInfo' >Price: &pound<div id='price'></div></div>";
+		output+="<br /><br />";
 		output+="<div class='addBasket' >ADD TO BASKET</div>";
-
 		output+="</div>";
+		output+="</div>";
+		
 
 	}
 
@@ -130,37 +136,55 @@ function loadSelection(category){
 
 .addBasket{
 	background-color:black;
-	font-size:1.4em;
+	font-size:18pt;
 	border-radius:2px;
 	padding:2px;
 	width:100%;
 	font-weight:bold;
 	color:white;
 	border-radius:5px;
+	height:40px;
 
+}
+.itemContainer{
+	
+	background-color:#1f1f1f;
+}
+.clothesInfo{
+	width:100%;
+	font-size:16pt;
+	border:1px solid white;
+	
+	color:#fff;
+	border-width: 0px;
+	padding-left:0px;
+	padding-right:0px;
+	text-align:center;
+	margin-top: 10px;
+	padding:auto;
 }
 .buy{
 	background-color:rgba(255,213,49,1);
 	color:#3c3432;
-	font-size:120%;
+	font-size:150%;
 	border-width: 0px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
-	height:30px;
+	height:50px;
 	padding-left:0px;
 	padding-right:0px;
 	text-align:center;
-	width: 150px;
+	width: 200px;
 	margin-top: 5px;
 
 }
 .clear{
 	background-color:rgba(120,34,25,1);
 	color:#fff;
-	font-size:120%;
+	font-size:150%;
 	border-width: 0px;
-	height:30px;
+	height:50px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
@@ -168,7 +192,7 @@ function loadSelection(category){
 	padding-left:0px;
 	padding-right:0px;
 	text-align:center;
-	width: 150px;
+	width: 200px;
 	margin-top: 10px;
 }
 
@@ -176,9 +200,10 @@ function loadSelection(category){
 	padding-top:10px;
 	background-color:#1F1F1F;
 	text-align:center;
-	font-size:1.1em;
+	font-size:120%;
+	font-variant:capitalize;
 	width:200px;
-
+	
 	height:85%;
 	margin-top:5px;
 	margin-bottom:2px;
@@ -239,7 +264,8 @@ function loadSelection(category){
 .SubCategorySelection{
 	text-align:center;
 	font-size:0.6em;
-	width:210px;
+	width:400px;
+	height:500px;
 	border:1px solid #ddd;
 	box-shadow:0px 0px 3px 3px #ffffff;
 	margin-top:20px;
@@ -247,11 +273,11 @@ function loadSelection(category){
 	margin-left:10px;
 	margin-right:20px;
 	float:left;
-	background-color:#DDDDDD !important;
+	background-color:white;
 	border-radius:5px;
 }
 .SubCategorySelection img{
-	width:100%;
+	width:80%;
 	height:auto;
 
 
@@ -261,16 +287,18 @@ function loadSelection(category){
 
 
 #main{
-	margin-left:200px;
-	height:auto;
+	<!-- margin-left:200px; -->
+	height:100%;
 	background-color:inherit !important;
-
+	position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }
 
 .inner_wrapper{
 	height:95%;
-
-
 }
 
 ::-webkit-scrollbar {
@@ -289,7 +317,7 @@ function loadSelection(category){
     overflow: scroll;
     margin-top:5px;
     width:100%;
-    height:500px;
+    height:700px;
 
 
 
@@ -328,49 +356,51 @@ div.label1{
 
 
 /* Categories*/
-.outer_wrapper #categories {
-    width:2650px; /* If you have more elements, increase the width accordingly */
+#categories {
+    width:100%; /* If you have more elements, increase the width accordingly */
+	margin-left:250px;
+	
 }
 
 /* Subcategory*/
 .outer_wrapper_small #sub_categories{
     width:2560px; /* If you have more elements, increase the width accordingly */
+	margin-left:250px;
 }
 /* Sub sub category*/
 .outer_wrapper_smaller #sub_categories_sub{
     width:2140px; /* If you have more elements, increase the width accordingly */
+	margin-left:250px;
 
 }
 
 /* Subcategory Selection 1*/
 .outer_wrapper_large #selection  {
     width:8000px; /* If you have more elements, increase the width accordingly */
+	margin-left:250px;
 
 }
 #bottomBar{
-	height:30%;
-	max-height:100px;
-	width:calc(100% - 200px);
-	margin-left:200px;
+	height:150px;
+	width:98%;
 	position:fixed;
 	bottom:0;
+	left:10px;
+	border: 1px solid;
+	border-color:white;
+	
 	
 
 
 }
 #bottomBar .inner{
-	height:90%;
-	margin-top:5px;
-	margin-bottom:5px;
-	margin-left:5px;
-	box-shadow:0px 0px 1px 1px black;
-
-	background-color:#1F1F1F;
+	
+	height:100%;
+	background-color:rgb(44, 44, 44);
 	text-align:center;
 	border-radius:2px;
 	overflow:auto;
-
-	color:white;
+	
 
 
 }
@@ -378,10 +408,8 @@ div.label1{
 
 
 	width:20%;
-	top:-200px;
-	font-size:8pt;
-	margin-top:5px;
-	margin-left:100px;
+	font-size:12pt;
+	margin-top:10px;
 	font-weight:bold;
 	float:right;
 
@@ -434,11 +462,12 @@ div.label1{
 #sideBar {
 
 	position:fixed;
+	margin-top:5px;
 	margin-right:20px;
 	top:0;
 	left:10px;
-	
-	width:190px !important;
+	float:left;
+	width:230px !important;
 	
 	
 
@@ -447,14 +476,16 @@ div.label1{
 }
 
 .blend2{
-	background: #858585; /* Old browsers */
-	background: -moz-radial-gradient(center, ellipse cover, #858585 0%, #0D0D0D 100%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#858585), color-stop(100%,#0D0D0D)); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* IE10+ */
-	background: radial-gradient(ellipse at center, #858585 0%,#0D0D0D 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#0D0D0D',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-repeat: no-repeat;
+background-attachment: fixed;
+background: #3c3432;
+background: -moz-radial-gradient(center, ellipse cover, #3c3432 1%, #000000 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#3c3432), color-stop(100%,#000000));
+background: -webkit-radial-gradient(center, ellipse cover, #3c3432 1%,#000000 100%);
+background: -o-radial-gradient(center, ellipse cover, #3c3432 1%,#000000 100%);
+background: -ms-radial-gradient(center, ellipse cover, #3c3432 1%,#000000 100%);
+background: radial-gradient(ellipse at center, #3c3432 1%,#000000 100%);
+height:100%;
 }
 
 .sideCategories{
@@ -497,56 +528,53 @@ div.label1{
 }
 #outfit_header{
 	height:450px;
-	width:99%;
+	width:100%;
 	text-align:center;
 	font-size:1.0em;
 	color:white;
 	border-radius:5px;
 	overflow:auto;
-	padding:5px;
 	
+	background-color:rgb(31, 31, 31);
 }
 .outfit{
-	background-color:rgba(255,213,49,1);
-	color:#3c3432;
+	background-color:rgba(44,44,44);
+	color:white;
+	margin-top:20px;
+	border:1px solid white;
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	
 	font-size:1.4em;
-	border-width: 0px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	height:30px;
-	padding-top:auto;
-	padding-bottom:auto;
+
 	text-align:center;
 	width: 99%;
-	margin-top: 5px;
+	
 
 }
 .side_title{
-	background-color:rgba(120,34,25,1);
-	color:white;
+	background-color:rgb(255, 204, 0);
+	color:black;
 	font-size:1.2em;
-	border-width: 0px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-
-	padding-left:0px;
-	padding-right:0px;
 	text-align:center;
-	width: 99%;
-	margin-bottom:50px;
+	width: 105%;
+	font-size:15pt;
+	font-weight:bold;
+	height:50px;
+	padding:5px;
+	
 }
 #rec_header{
 
 	height:450px;
-	
-	width:99%;
+	background-color:rgb(31, 31, 31);
+	width:100%;
 	text-align:center;
 	font-size:1.0em;
 	color:white;
 	border-radius:5px;
-	padding:5px;
+
 	overflow:auto;
 
 
@@ -587,101 +615,22 @@ div.label1{
 	float:left;
 }
 
-@media (max-width:960px) {
-	#sideBar {
-
-		position:absolute;
-		height:100%;
-		width:180px !important;
-
-
-	}
-}
-@media(max-width:760px){
-	#bottomBar_left{
-		height:90%;
-		width:100%;
-		float:left;
-		box-shadow:0px 0px 5px 5px #000000;
-		margin:5px;
-
-
-	}
-	#bottomBar_right{
-		display:none;
-
-
-	}
-
-
-}
-
-@media(max-width:460px){
-	#sideBar{
-		display:inine;
-		position:relative;
-
-		width:100% !important;
-	}
-	#main{
-		top:0 !important;
-		margin-left:0;
-		width:100% !important;
-	}
-	/* Categories*/
-	.outer_wrapper #categories  {
-    	width:2580px; /* If you have more elements, increase the width accordingly */
-	}
-
-	/* Subcategory*/
-	.outer_wrapper_small #sub_categories{
-    	width:2190px; /* If you have more elements, increase the width accordingly */
-	}
-	/* Sub sub category*/
-	.outer_wrapper_smaller #sub_categories_sub{
-    	width:1400px; /* If you have more elements, increase the width accordingly */
-
-	}
-	.Categories{
-		width:192px;
-	}
-	.SubCategories{
-		width:192px;
-	}
-	.SubSubCategories{
-		width:192px;
-	}
-	#savedItems{
-
-		width:99%;
-
-	}
-
-	#background-color: #FFD530;{
-
-		width:99%;
-
-	}
-
-}
-
 
 </style>
 
 </head>
 
-<body onload="loadPage();" class="blend2">
+<body onload="loadPage();">
 
 
 <!-- MAIN -->
-<div id="main" >
+<div id="main" class="blend2">
 
 	<!--OUTER WRAPPER-->
 	<div class="outer_wrapper ">
 
 		<!-- CATEGORIES InsertSelected("categories","Categories","C",cat); -->
-		<div id="categories" class="inner_wrapper rCard">
-			<div class="Categories" onclick='loadSubCategory("Christmas")' id="C_1">Christmas</div>
+		<div id="categories" class="inner_wrapper">
 			<div class="Categories" onclick='loadSubCategory("Home and Garden")' id="C_2">Home and Garden</div>
 			<div class="Categories" onclick='loadSubCategory("Women")' id="C_3">Women</div>
 			<div class="Categories" onclick='loadSubCategory("Men")' id="C_4">Men</div>
@@ -689,8 +638,6 @@ div.label1{
 			<div class="Categories" onclick='loadSubCategory("Girls")'  id="C_6">Girls</div>
 			<div class="Categories" onclick='loadSubCategory("Baby")'  id="C_7">Baby</div>
 			<div class="Categories" onclick='loadSubCategory("School")'  id="C_8">School</div>
-			<div class="Categories" onclick='loadSubCategory("Shoes")'   id="C_9">Shoes</div>
-			<div class="Categories" onclick='loadSubCategory("Fancy Dress")'  id="C_10">Fancy Dress</div>
 			<div class="Categories" onclick='loadSubCategory("Sale")'  id="C_12">Sale</div>
 		</div>
 		<!-- /CATEGORIES-->
@@ -749,39 +696,31 @@ div.label1{
 
 		<!-- /INNER -->
 	</div>
-	<!-- /BOTTOMBAR -->
-<div id="sideBar" >
-	<div id="outfit_header">
-		<div class="outfit">Outfit 1<span></span><span></span></div>
-		<div class="outfit">Outfit 2</div>
-		<div class="outfit">Outfit 3</div>
-		<div class="outfit">Outfit 4</div>
-		<div class="outfit">Outfit 5</div>
-		<div class="outfit">Outfit 6</div>
-		<div class="outfit">Outfit 7</div>
-		<div class="outfit">Outfit 8</div>
-		<div class="outfit">Outfit 9</div>
-		<div class="outfit">Outfit 10</div>
-		<div class="outfit">Outfit 11</div>
-		<div class="outfit">Outfit 12</div>
-		<div class="outfit">Outfit 7</div>
-		<div class="outfit">Outfit 8</div>
-		<div class="outfit">Outfit 9</div>
-		<div class="outfit">Outfit 10</div>
-		<div class="outfit">Outfit 11</div>
-		<div class="outfit">Outfit 12</div>
-		
-	</div>
-	<br />
-	<div id="rec_header">
-		<div class="recommendBox"></div>
-		<div class="recommendBox"></div>
-	</div>
-</div>
-<!-- /SIDE BAR -->
+
 
 
 
 </body>
+	<!-- /BOTTOMBAR -->
+	
+<div id="sideBar" >
+	<div id="outfit_header">
+		<div class="side_title">Outfits</div>
+		<div class="outfit">Random Outfit </div>
+		<div class="outfit">Mums Outfit</div>
+		<div class="outfit">Christmas Outfit </div>
+		<div class="outfit">New Years Do</div>
+		<div class="outfit">Sisters Wedding</div>
+		
+		
+	</div>
+	<br />
+	<div id="rec_header">
+		<div class="side_title">Recommendations</div>
+	</div>
+</div>
+
+
+<!-- /SIDE BAR -->
 
 </html>
