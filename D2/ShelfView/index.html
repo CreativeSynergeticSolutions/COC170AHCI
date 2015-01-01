@@ -139,8 +139,39 @@ function loadSelection(index){
 
 <style>
 
+#basketItems{
+	width:90%;
+	color:white;
+	
+	margin-left:auto;
+	margin-right:auto;
+}
+#basketItems th{
+	border:2px solid rgb(44,44,44);
+	border-top:none;
+	text-align:center;
+	font-size:20pt;
+}
+
+#basketItems td{
+	border:2px solid rgb(44,44,44);
+	border-bottom:none;
+	border-top:none;
+	text-align:center;
+	height:30px;
+	font-size:14pt;
+}
+
 #itemsBar{
 	float:left;
+}
+#basketContainer{
+	
+	height:100%;
+	
+	float:left;
+	width:80%;
+	overflow:scroll;
 }
 
 .addBasket{
@@ -179,7 +210,7 @@ function loadSelection(index){
 	border-width: 0px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
-	border-radius: 4px;
+	border-radimargin-top:autus: 4px;
 	height:50px;
 	padding-left:0px;
 	padding-right:0px;
@@ -403,7 +434,7 @@ div.label1{
 	border-radius:4px;
 
 }
-#bottomBar .inner{
+#inner{
 	
 	height:100%;
 	
@@ -421,18 +452,19 @@ div.label1{
 	float:right;
 
 	height:100%;
-	
 	display: table;
-
+	overflow:auto;
 	
 
 }
 #innerButtons{
 	display: table-cell;
     vertical-align: middle;
+	
+	
 }
 .recommendBox{
-	background-color:rgba(120,34,25,1);
+	background-color:white;
 	color:#3c3432;
 	font-size:1.4em;
 	border-width: 0px;
@@ -695,17 +727,38 @@ height:100%;
 <!-- SIDE BAR -->
 
 	<!-- BOTTOMBAR -->
+	
 	<div id="bottomBar">
 		<!-- INNER -->
-		<div class="inner">
-
-					<div class="side_title" style="font-size:18pt">SELECTED ITEMS</div>
-
+		
+		<div id="inner">
+			<div class="side_title">Selected Items</div>
+					<div id="basketContainer">
+					<br />
+						<table id="basketItems">
+						<tr>
+							
+							<th>Name of Product</th>
+							<th>Price</th>
+							<th>Product Code</th>
+							<th></th>
+						</tr>
+						<tr>
+							
+							<td>Leggings</td>
+							<td>&pound 60</td>
+							<td>023838123</td>
+							<td><input type="checkbox"/></td>
+							
+						</tr>
+						</table>
+					</div>
 					<div id="basketBar">
+						
 						<div id="innerButtons">
-							<button class="buy">View Basket</button>
+							<button class="buy">Add To Basket</button>
 							<br />
-							<button class="clear">Clear all Items</button>
+							<button class="clear">Clear All Items</button>
 						</div>
 					</div>
 
@@ -728,12 +781,18 @@ height:100%;
 		<div class="outfit">Christmas Outfit </div>
 		<div class="outfit">New Years Do</div>
 		<div class="outfit">Sisters Wedding</div>
-		
-		
+		<div class="outfit">Work do</div>
+		<div class="outfit">New Job</div>
+		<div class="outfit">Holiday</div>
+		<div class="outfit">Dnacing outfit YAY</div>
 	</div>
 	<br />
 	<div id="rec_header">
 		<div class="side_title">Recommendations</div>
+		<div class="recommendBox"><img src=''/></div>
+		<div class="recommendBox"><img src=''/></div>
+		<div class="recommendBox"><img src=''/></div>
+		<div class="recommendBox"><img src=''/></div>
 	</div>
 </div>
 
