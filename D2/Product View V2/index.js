@@ -2,10 +2,15 @@ var imgs = ["DressFront.png", "DressBack.png", "DressPattern.png"];
 
 $(document).ready(function(){
 	
+	document.getElementById("basketRadio").checked = true;
+		
 	setupImageDisplay();
 	setupProductDetails();
 	setupRecommended();
 	setupOptions();
+	
+	$("<style type='text/css'> #optionsWrapper * {	transition: 1s;	}</style>").appendTo("head");
+
 		
 });
 
@@ -128,6 +133,8 @@ function setupOptions() {
 	
 	$("#closeOptionsBtn").click(function(){
 		
+		$('#basketSectionLabel input').prop('checked', true);
+		
 		document.getElementById("optionsCheck").disabled = false;
 		
 		$("#optionSectionLabel").css("cursor", "pointer");
@@ -135,7 +142,7 @@ function setupOptions() {
 	});
 	
 	
-	$('#basketSectionLabel input').prop('checked', true);
+	
 	
 	$("#basketSectionLabel input").change(function(){
 				
@@ -144,10 +151,14 @@ function setupOptions() {
 			$("#basketSectionLabel").css("cursor", "default");
 			document.getElementById("basketRadio").disabled = true;
 			document.getElementById("outfitRadio").disabled = false;
-						
+			
+			$("#basketContainer").addClass("basketContainerActive");
+			
 		}
 		
 	});
+	
+	$("#basketContainer").addClass("basketContainerActive");
 	
 	$("#outfitsSectionLabel input").change(function(){
 				
@@ -156,7 +167,9 @@ function setupOptions() {
 			$("#outfitsSectionLabel").css("cursor", "default");
 			document.getElementById("outfitRadio").disabled = true;
 			document.getElementById("basketRadio").disabled = false;
-						
+			
+			$("#basketContainer").removeClass("basketContainerActive");
+			
 		}
 		
 	});

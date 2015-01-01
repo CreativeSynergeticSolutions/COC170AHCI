@@ -1045,11 +1045,7 @@ body {
 	
 }
 
-#optionsWrapper *{
-	
-	transition: 1s;	
-	
-}
+
 
 #optionSectionLabel input:checked~ #optionsWrapper {
 	
@@ -1246,7 +1242,7 @@ label[name="optionsLabels"] {
 	
 	border: 3px solid #FFCC00;
 	
-	transition: height 1s ease 1s;
+	//transition: height 1s ease 1s;
 		
 }
 
@@ -1418,6 +1414,12 @@ label[name="optionsLabels"] {
 	border-radius: 10px;
 	
 	cursor: pointer;
+	
+}
+
+.basketContainerActive:active {
+	
+	background-color: rgba(255, 204, 0, 0.7) !important;
 	
 }
 
