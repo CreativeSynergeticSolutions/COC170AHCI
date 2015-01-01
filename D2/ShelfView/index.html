@@ -8,13 +8,16 @@
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-
+	
+	<link rel="stylesheet" href="vendor/ahci-icon-font/css/ahci.css"
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
 	
 	<link rel="stylesheet" href="../Product View/index.css">
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	
+	
 
 
 <script type="text/javascript" src='categories.js'>
@@ -122,7 +125,7 @@ function loadSelection(index){
 		output+="<div class='itemContainer'>";
 		output+="<div class='clothesInfo' >"+name+"</div>";
 		output+="<div class='clothesInfo' >"+price.replace(/\£/g, "&pound")+"</div>";
-		output+="<br /><br />";
+		output+="<div class='viewProduct' >VIEW PRODUCT</div>";
 		output+="<div class='addBasket' >ADD TO BASKET</div>";
 		output+="</div>";
 		output+="</div>";
@@ -139,13 +142,41 @@ function loadSelection(index){
 
 <style>
 
+
+
+.info{
+	color:white;
+}
+
 #basketItems{
-	width:90%;
+	width:98%;
 	color:white;
 	
 	margin-left:auto;
 	margin-right:auto;
+	
+		
 }
+tbody {
+ 
+ overflow: auto;
+}
+
+#basketItems span{
+	font-size:8pt;
+	background-color:rgba(255,213,49,1);
+	color:#3c3432;
+	border-width: 0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radimargin-top:autus: 4px;
+	height:50px;
+	padding:4px;
+	text-align:center;
+	width: 200px;
+	margin-top: 5px;
+}
+
 #basketItems th{
 	border:2px solid rgb(44,44,44);
 	border-top:none;
@@ -167,23 +198,36 @@ function loadSelection(index){
 }
 #basketContainer{
 	
-	height:100%;
+	height:80%;
 	
 	float:left;
 	width:80%;
-	overflow:scroll;
+	
 }
 
 .addBasket{
 	background-color:black;
-	font-size:18pt;
+	font-size:12pt;
 	border-radius:2px;
 	padding:2px;
 	width:100%;
 	font-weight:bold;
 	color:white;
 	border-radius:5px;
-	height:40px;
+	height:25px;
+
+}
+
+.viewProduct{
+	background-color:rgba(120,34,25,1);
+	font-size:12pt;
+	border-radius:2px;
+	padding:2px;
+	width:100%;
+	font-weight:bold;
+	color:white;
+	border-radius:5px;
+	height:25px;
 
 }
 .itemContainer{
@@ -200,7 +244,6 @@ function loadSelection(index){
 	padding-left:0px;
 	padding-right:0px;
 	text-align:center;
-	margin-top: 10px;
 	padding:auto;
 }
 .buy{
@@ -308,7 +351,7 @@ function loadSelection(index){
 	border:1px solid #ddd;
 	box-shadow:0px 0px 3px 3px #ffffff;
 	margin-top:20px;
-	height:90%;
+	height:80%;
 	margin-left:10px;
 	margin-right:20px;
 	float:left;
@@ -359,7 +402,7 @@ function loadSelection(index){
     overflow: scroll;
     margin-top:5px;
     width:100%;
-    height:710px;
+    height:760px;
 	margin-left:250px;
 
 
@@ -440,12 +483,12 @@ div.label1{
 	
 	text-align:center;
 	border-radius:2px;
-	overflow:auto;
+	
 	
 }
 #basketBar{
 
-	background-color:rgb(31,31,31);
+	
 	width:20%;
 	font-size:12pt;
 	
@@ -453,7 +496,7 @@ div.label1{
 
 	height:100%;
 	display: table;
-	overflow:auto;
+	
 	
 
 }
@@ -477,6 +520,10 @@ div.label1{
 	text-align:center;
 	width: 99%;
 	margin-top: 5px;
+}
+.recommendBox img{
+	height:100%;
+	width:100%;
 }
 
 .bottomBarLeft{
@@ -732,15 +779,17 @@ height:100%;
 		<!-- INNER -->
 		
 		<div id="inner">
-			<div class="side_title">Selected Items</div>
+			
 					<div id="basketContainer">
+					
 					<br />
 						<table id="basketItems">
 						<tr>
 							
-							<th>Name of Product</th>
+							<th>Product</th>
 							<th>Price</th>
-							<th>Product Code</th>
+							<th>Code</th>
+
 							<th></th>
 						</tr>
 						<tr>
@@ -748,7 +797,59 @@ height:100%;
 							<td>Leggings</td>
 							<td>&pound 60</td>
 							<td>023838123</td>
-							<td><input type="checkbox"/></td>
+
+							<td><div class='icon-trash-empty'></div></td>
+							
+						</tr>
+						<tr>
+							
+							<td>Jeans</td>
+							<td>&pound 60</td>
+							<td>023838123</td>
+							<td><div class='icon-trash-empty'></div></td>
+							
+						</tr>
+						<tr>
+							
+							<td>Trousers</td>
+							<td>&pound 60</td>
+							<td>023838123</td>
+							<td><div class='icon-trash-empty'></div></td>
+							
+						</tr>
+						<tr>
+							
+							<td>Socks</td>
+							<td>&pound 60</td>
+							<td>023838123</td>
+							<td><div class='icon-trash-empty'></div></td>
+							
+						</tr>
+						<tr>
+							
+							<td>Leggings</td>
+							<td>&pound 60</td>
+							<td>023838123</td>
+
+							<td><div class='icon-trash-empty'></div></td>
+							
+						</tr>
+						<tr>
+							
+							<td>Leggings</td>
+							<td>&pound 60</td>
+							<td>023838123</td>
+
+							<td><div class='icon-trash-empty'></div></td>
+							
+						</tr>
+						<tr>
+							
+							<td>Leggings</td>
+							<td>&pound 60</td>
+							<td>023838123</td>
+
+							<td><div class='icon-trash-empty'></div></td>
 							
 						</tr>
 						</table>
@@ -789,10 +890,10 @@ height:100%;
 	<br />
 	<div id="rec_header">
 		<div class="side_title">Recommendations</div>
-		<div class="recommendBox"><img src=''/></div>
-		<div class="recommendBox"><img src=''/></div>
-		<div class="recommendBox"><img src=''/></div>
-		<div class="recommendBox"><img src=''/></div>
+		<div class="recommendBox"><img src='../RESOURCES/images/stock/womens/bottom/Acid Wash Jeggings/front.png'/></div>
+		<div class="recommendBox"><img src='../RESOURCES/images/stock/womens/bottom/Jeggings/front.png'/></div>
+		<div class="recommendBox"><img src='../RESOURCES/images/stock/womens/bottom/Skinny%20Jeans/front.png'/></div>
+		<div class="recommendBox"><img src='../RESOURCES/images/stock/womens/bottom/Tunic Dress/back.png'/></div>
 	</div>
 </div>
 
