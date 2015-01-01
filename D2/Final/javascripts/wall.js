@@ -65,7 +65,7 @@ wall.prototype.addOutfitItem = function (outfitName, item, quantity, size, colou
             "colour": colour
         },
         outfits = this.getOutfits(),
-        outfitIndex = this.getOutfitIndex(outfitName);
+        outfitIndex = this.getOutfitIndex(outfitName),
         outfit = outfits[outfitIndex];
     if(outfit===null){
         this.addOutfit(outfitName);
@@ -73,12 +73,13 @@ wall.prototype.addOutfitItem = function (outfitName, item, quantity, size, colou
     outfit.items.push(entry);
     this.saveObjectToStorage('outfits',outfits);
 };
-wall.prototype.removeOutfitItem = function (item) {
-    this.wallLog('Removing '+item.name+' from an outfit.');
-    var outfits = this.getOutfits();
-    for(var i = 0; i < outfits.length; i++) {
-        if(outfits[i].name == item.name){
-            outfits.splice(i, 1);
+wall.prototype.removeOutfitItem = function (outfitName, itemName) {
+    this.wallLog('Removing '+itemName+' from '+outfitName);
+    var outfits = this.getOutfits(),
+        outfitIndex = this.getOutfitIndex(outfitName);
+    for(var i = 0; i < outfits[outfitIndex].items.length; i++) {
+        if(outfits[outfitIndex].items[i].item.name == itemName){
+            outfits[outfitIndex].items.splice(i, 1);
             break;
         }
     }
