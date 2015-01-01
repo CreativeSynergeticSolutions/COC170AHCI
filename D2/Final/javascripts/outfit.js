@@ -83,13 +83,16 @@ function makeBasketItem(item) {
         itemSize = document.createElement('div'),
         itemColour = document.createElement('div'),
         itemQuantity = document.createElement('div'),
-        itemRemove = document.createElement('div')
+        itemRemove = document.createElement('div'),
+        infoIcon = document.createElement('i'),
         removeIcon = document.createElement('i');
     itemEle.className = 'basket-item';
     itemEle.setAttribute("data-item-id",item.id);
+    infoIcon.className = 'icon-info-circled';
     itemName.className = 'basket-item__name btn-link';
     itemName.setAttribute("data-href","product.html?productCode="+item.item.productCode);
-    itemName.innerHTML = item.item.name;
+    itemName.appendChild(infoIcon);
+    itemName.innerHTML += " "+item.item.name;
     itemSize.className = 'basket-item__size';
     itemSize.innerHTML = "(" + item.size + ")";
     itemColour.className = 'basket-item__colour';
@@ -97,8 +100,7 @@ function makeBasketItem(item) {
     itemQuantity.className = 'basket-item__quantity';
     itemQuantity.innerHTML = item.quantity;
     itemRemove.className = 'basket-item__remove';
-    removeIcon.className = "icon-cancel";
-
+    removeIcon.className = 'icon-cancel';
     itemRemove.appendChild(removeIcon);
 
     itemEle.appendChild(itemName);
@@ -126,17 +128,21 @@ function makeOutfitListItem(outfit, selected) {
         toolsEle = document.createElement('span'),
         eyeIcon = document.createElement('i'),
         basketIcon = document.createElement('i'),
+        removeIcon = document.createElement('i'),
         itemClasses = "outfit-item " + ((selected) ? "outfit-selected" : "");
     itemEle.className = itemClasses;
     nameEle.className = "left outfit-name";
     toolsEle.className = "right outfit-tools";
     eyeIcon.className = "icon-eye view-outfit";
     basketIcon.className = "icon-basket buy-outfit";
+    removeIcon.className = "icon-cancel remove-outfit";
     nameEle.innerHTML = outfit.name;
     itemEle.appendChild(nameEle);
     toolsEle.appendChild(eyeIcon);
     toolsEle.innerHTML += " | ";
     toolsEle.appendChild(basketIcon);
+    toolsEle.innerHTML += " | ";
+    toolsEle.appendChild(removeIcon);
     itemEle.appendChild(toolsEle);
     return itemEle;
 }
@@ -210,11 +216,10 @@ window.onload = function () {
             $(this).parent().removeClass('saving').removeClass('saved');
         }
     });
-    $('.add-item').on('click', function (e) {
-        console.log('HEY');
+    $(document.body).on('click', '.add-item', function (e) {
         e.stopPropagation();
     });
-    $('.buy-item').on('click', function (e) {
+    $(document.body).on('click', '.buy-item', function (e) {
         var itemName = $(this).parent().data('itemname');
         var outfit = wall.getCurrentOutfit();
         for(var i=0; i<outfit.items.length; i++){
@@ -227,10 +232,10 @@ window.onload = function () {
         }
         e.stopPropagation();
     });
-    $('.view-outfit').on('click', function () {
+    $(document.body).on('click', '.view-outfit', function () {
 
     });
-    $('.buy-outfit').on('click', function () {
+    $(document.body).on('click', '.buy-outfit', function () {
         var outfit = wall.getCurrentOutfit();
         for(var i=0; i<outfit.items.length; i++){
             var item = outfit.items[i];
@@ -238,15 +243,20 @@ window.onload = function () {
         }
         loadBasketList();
     });
-    $('.outfit-item').on('click', function () {
-        console.log("CHANGING");
+    $(document.body).on('click', '.outfit-item', function () {
         $('.outfit-selected').removeClass('outfit-selected');
         $(this).addClass('outfit-selected');
         var outfitName = $.trim($('.outfit-selected>.outfit-name').text());
         wall.setCurrentOutfit(outfitName);
         loadOutfit();
     });
-    $('.basket-item__remove').on('click', function () {
+    $(document.body).on('click', '.remove-outfit', function () {
+        var outfitName = $.trim($(this).parent().parent().find('.outfit-name').text());
+        wall.removeOutfit(outfitName);
+        loadOutfitList();
+        loadOutfit();
+    });
+    $(document.body).on('click', '.basket-item__remove', function () {
         var toRemove = $(this).parent().data('item-id');
         wall.removeItemFromBasket(toRemove);
         loadBasketList();
@@ -280,4 +290,8 @@ window.onload = function () {
         loadOutfitList();
         $('.current-outfit-name-input').removeClass('saving').addClass('saved');
     });
+    function resizeInput() {
+        $(this).attr('size', $(this).val().length);
+    }
+    $('.current-outfit-name').keyup(resizeInput).each(resizeInput);
 };
