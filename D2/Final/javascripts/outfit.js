@@ -164,12 +164,6 @@ function initialLoad() {
 window.onload = function () {
     $('.main-area').hide().fadeIn(500);
     initialLoad();
-    $('.btn-link').click(function (e) {
-        newLocation = $(this).data('href');
-        $('.main-area').fadeOut(500, function () {
-            window.location = newLocation;
-        });
-    });
     $('.outfit-btn').click(function(){
         var added = false;
         if(!$('.outfit-area').hasClass('active')){

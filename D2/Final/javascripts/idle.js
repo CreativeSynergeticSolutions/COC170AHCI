@@ -10,6 +10,7 @@ window.onload = function () {
             itemImg = document.createElement('img'),
             itemName = document.createElement('div'),
             itemPrice = document.createElement('div');
+        itemEle.setAttribute("data-href","product.html?productCode="+item.productCode);
         itemImgEle.className = "item-img";
         itemName.className = "item-name";
         itemPrice.className = "item-price";
@@ -24,9 +25,11 @@ window.onload = function () {
     }
     function animateInOut (item, interval){
        setTimeout(function () {
-            item.animate({opacity: 0}, 5000, function () {
-                item.html(getRandomItemElement().innerHTML);
-                item.animate({opacity: 1}, 5000, function () {
+            item.animate({opacity: 0}, 2000, function () {
+                var randomElement = getRandomItemElement();
+                item.html(randomElement.innerHTML);
+                item.attr('data-href',randomElement.getAttribute('data-href'));
+                item.animate({opacity: 1}, 2000, function () {
                     var intervalNext = getRandomNumber(3000,15000);
                     animateInOut(item, intervalNext);
                 });
@@ -35,8 +38,10 @@ window.onload = function () {
     }
     $('.item').each(function () {
         var interval = getRandomNumber(3000,15000),
-            item = $(this);
-        item.html(getRandomItemElement().innerHTML);
+            item = $(this),
+            randomElement = getRandomItemElement();
+        item.html(randomElement.innerHTML);
+        item.attr('data-href',randomElement.getAttribute('data-href'));
         animateInOut(item, interval);
     });
 };
