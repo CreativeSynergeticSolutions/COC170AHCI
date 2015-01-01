@@ -17,6 +17,7 @@ a {
 }
 
 .basket, .outfits, .current-items {
+    background-color: #1F1F1F;
     display: none;
     position: absolute;
     bottom: 42px;
@@ -24,6 +25,18 @@ a {
     overflow: hidden;
     transform: translateX(-50%);
     width: 90%;
+}
+
+.basket {
+    max-height: 60vh;
+}
+
+.outfits {
+    max-height: 60vh;
+}
+
+.current-items {
+    max-height: 80vh;
 }
 
 .basket-item,
@@ -42,7 +55,7 @@ a {
 
 .basket-item {
     line-height: 1.5em;
-    padding: 8% 5%;
+    padding: 5% 5%;
     vertical-align:middle;
 }
 
@@ -80,8 +93,15 @@ a {
     width: 10%;
 }
 
+.outfit-name {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    position: relative;
+    top: -0.2em;
+}
+
 .outfit-item .remove-outfit {
-    color: #B71C1C;   
+    color: #B71C1C;
 }
 .outfit-item,
 .current-item {
@@ -186,8 +206,7 @@ a {
 }
 
 .outfit-management-area {
-    bottom: 0%;
-    height: 13%;
+    bottom: -8%;
     left: 50%;
     position: absolute;
     text-align: center;
@@ -224,27 +243,36 @@ a {
    color: #2C2C2C;
 }
 
-.outfit-management-area .current-items-area{
+.outfit-management-area .add-outfit-btn {
+    display: inline-block;
+    width: 40%;
+}
+
+.outfit-management-area .current-items-area {
+    clear: both;
+    left: 10%;
     position: absolute;
-    width: 100%;
+    width: 90%;
 }
 
 .outfit-management-area .shelf-swap-btn {
+    clear: both;
     margin: 0 auto;
 }
 
 .outfit-management-area .current-outfit-name-input {
     display: inline-block;
-    margin-top: 3em;
+    margin-top: 3.5em;
     position: relative;
+    top: 0.3em;
+    width: 50%;
 }
 
 .outfit-management-area .current-outfit-name-input:after {
-    float: right;
     font-family: 'ahci';
     font-size: 1.25em;
     height: 1.25em;
-    right: 0;
+    right: -0.5em;
     line-height: 1.25em;
     position: absolute;
     text-align: center;
@@ -377,11 +405,11 @@ a {
 }
 
 #body-area {
-    height: 28%;
+    height: 35%;
 }
 
 #bottom-area {
-    height: 42%;
+    height: 35%;
 }
 
 #feet-area {
@@ -396,4 +424,38 @@ a {
     position: absolute;
     right: 35%;
     z-index: 1;
+}
+
+.notification-area {
+    top: 5%;
+    position: absolute;
+    right: 5%;
+    width: 20%;
+}
+
+.notification {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+    display: none;
+    padding: 0.5em;
+}
+
+.notification .icon-cancel {
+    color: #B71C1C;
+}
+
+::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: #1F1F1F;
 }

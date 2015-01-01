@@ -167,6 +167,23 @@ function initialLoad() {
     wall.setCurrentOutfit(outfitName);
     loadOutfit();
 }
+
+function addNotification (icon,text) {
+    if($('.notification').length > 4) {
+        $('.notification:not(:animated)').first().fadeOut('fast', function () {
+            $('.notification').first().remove();
+        });
+    }
+    var notificationId = parseInt($('.notification').last().data('id'))+1 || 0;
+    console.log(notificationId);
+    $('.notification-area').append('<div class="notification notification-'+notificationId+'" data-id="'+notificationId+'"><i class="icon-'+icon+'"></i> '+text+'</div>');
+    $('.notification-'+notificationId).fadeIn({duration: 500, queue: false}).css('display','none').slideDown(500);
+    setTimeout(function () {
+        $('.notification-'+notificationId).fadeOut({duration: 500, queue: false}).slideUp(500, function () {
+            $('.notification-'+notificationId).remove();
+        });
+    }, 3000);
+}
 window.onload = function () {
     $('.main-area').hide().fadeIn(500);
     initialLoad();
@@ -175,10 +192,12 @@ window.onload = function () {
         if(!$('.outfit-area').hasClass('active')){
             $('.outfit-area').addClass('active');
             added = true;
+            $('.outfits').css('overflow','auto');
         }
         $('.outfits').slideToggle("fast",function(){
             if(!added){
                 $('.outfit-area').removeClass('active');
+                $('.outfits').css('overflow','hidden');
             }
         });
     });
@@ -187,10 +206,12 @@ window.onload = function () {
         if(!$('.basket-area').hasClass('active')){
             $('.basket-area').addClass('active');
             added = true;
+            $('.basket').css('overflow','auto');
         }
         $('.basket').slideToggle("fast",function(){
             if(!added){
                 $('.basket-area').removeClass('active');
+                $('.basket').css('overflow','hidden');
             }
         });
     });
@@ -199,22 +220,14 @@ window.onload = function () {
         if(!$('.current-items-area').hasClass('active')){
             $('.current-items-area').addClass('active');
             added = true;
+            $('.current-items').css('overflow','auto');
         }
         $('.current-items').slideToggle("fast",function(){
             if(!added){
                 $('.current-items-area').removeClass('active');
+                $('.current-items').css('overflow','hidden');
             }
         });
-    });
-    $('.outfit-name').focus(function () {
-        $(this).parent().removeClass('saved').addClass('saving');
-    });
-    $('.outfit-name').focusout(function () {
-        if($(this).val()!==""){
-            $(this).parent().removeClass('saving').addClass('saved');
-        } else {
-            $(this).parent().removeClass('saving').removeClass('saved');
-        }
     });
     $(document.body).on('click', '.add-item', function (e) {
         e.stopPropagation();
@@ -230,18 +243,22 @@ window.onload = function () {
                 break;
             }
         }
+        addNotification('basket',item.item.name+' added to basket.');
         e.stopPropagation();
     });
     $(document.body).on('click', '.view-outfit', function () {
 
     });
-    $(document.body).on('click', '.buy-outfit', function () {
-        var outfit = wall.getCurrentOutfit();
+    $(document.body).on('click', '.buy-outfit', function (e) {
+        var outfitName = $.trim($(this).parent().parent().find('.outfit-name').text()),
+            outfit = wall.getOutfit(outfitName);
         for(var i=0; i<outfit.items.length; i++){
             var item = outfit.items[i];
             wall.addToBasket(item.item, item.quantity, item.size, item.colour);
         }
         loadBasketList();
+        addNotification('basket','Outfit "'+outfitName+'" added to basket.');
+        e.stopPropagation();
     });
     $(document.body).on('click', '.outfit-item', function () {
         $('.outfit-selected').removeClass('outfit-selected');
@@ -249,17 +266,31 @@ window.onload = function () {
         var outfitName = $.trim($('.outfit-selected>.outfit-name').text());
         wall.setCurrentOutfit(outfitName);
         loadOutfit();
+        addNotification('child','Outfit changed to "'+outfitName+'".');
     });
-    $(document.body).on('click', '.remove-outfit', function () {
+    $(document.body).on('click', '.remove-outfit', function (e) {
         var outfitName = $.trim($(this).parent().parent().find('.outfit-name').text());
         wall.removeOutfit(outfitName);
         loadOutfitList();
         loadOutfit();
+        addNotification('cancel','Outfit "'+outfitName+'" deleted.');
+        e.stopPropagation();
     });
     $(document.body).on('click', '.basket-item__remove', function () {
         var toRemove = $(this).parent().data('item-id');
+        var itemName = $.trim($(this).parent().find('.basket-item__name').text());
         wall.removeItemFromBasket(toRemove);
         loadBasketList();
+        addNotification('cancel',itemName+' removed from basket.');
+    });
+    $(document.body).on('click', '.add-outfit-btn', function () {
+        var outfits = wall.getOutfits(),
+            outfitName = 'Outfit #'+(outfits.length+1);
+        wall.addOutfit(outfitName);
+        wall.setCurrentOutfit(outfitName);
+        loadOutfit();
+        loadOutfitList();
+        addNotification('heart','Outfit "'+outfitName+'" added.');
     });
     $('.outfit-trash-area').droppable({
         accept: '.item',
@@ -270,8 +301,14 @@ window.onload = function () {
         },
         drop: function (event, ui) {
             $('.outfit-trash-area i').removeClass('icon-trash').addClass('icon-trash-empty');
-            //wall.removeFromOutfit({'itemName':$(this).parent().data('itemname')});
+            var area = $('#'+$(ui.draggable[0]).parent()[0].id);
+            var itemName = $(ui.draggable[0]).data('itemname');
+            wall.removeOutfitItem(wall.getCurrentOutfit().name,itemName);
             ui.draggable[0].remove();
+            console.log(area);
+            if(area.children().length === 1) {
+                area.find('.add-area').show();
+            }
         },
         out: function (event, ui) {
             $('.outfit-trash-area i').removeClass('icon-trash').addClass('icon-trash-empty');
@@ -289,9 +326,10 @@ window.onload = function () {
         wall.setCurrentOutfit(newOutfit.name);
         loadOutfitList();
         $('.current-outfit-name-input').removeClass('saving').addClass('saved');
+        addNotification('pencil','Outfit renamed to "'+newOutfit.name+'".');
     });
     function resizeInput() {
         $(this).attr('size', $(this).val().length);
     }
-    $('.current-outfit-name').keyup(resizeInput).each(resizeInput);
+    //$('.current-outfit-name').keyup(resizeInput).each(resizeInput);
 };

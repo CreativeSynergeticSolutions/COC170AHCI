@@ -92,3 +92,13 @@
     border-color: #e5e5e5;
     cursor: pointer;
 }
+
+::selection {
+  background: none;
+}
+::-moz-selection {
+  background: none;
+}
+::-webkit-selection {
+  background: none;
+}
