@@ -533,8 +533,8 @@ var items= [
 		"price": "£10.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Acid Wash Jeggings/front.png",
-				"back": "images/stock/womens/bottom/Acid Wash Jeggings/back.png"
+				"front": "images/stock/womens/bottom/Acid%20Wash%20Jeggings/front.png",
+				"back": "images/stock/womens/bottom/Acid%20Wash%20Jeggings/back.png"
 			}
 		],
 		"colour": "Navy",
@@ -589,8 +589,8 @@ var items= [
 		"price": "£8.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Skinny Jeans/front.png",
-				"back": "images/stock/womens/bottom/Skinny Jeans/back.png"
+				"front": "images/stock/womens/bottom/Skinny%20Jeans/front.png",
+				"back": "images/stock/womens/bottom/Skinny%20Jeans/back.png"
 			}
 		],
 		"colour": "Navy",
@@ -619,8 +619,8 @@ var items= [
 		"price": "£12.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Floral Chiffon Wrap Blouse/front.png",
-				"back": "images/stock/womens/bottom/Floral Chiffon Wrap Blouse/back.png"
+				"front": "images/stock/womens/bottom/Floral%20Chiffon%20Wrap%20Blouse/front.png",
+				"back": "images/stock/womens/bottom/Floral%20Chiffon%20Wrap%20Blouse/back.png"
 			}
 		],
 		"colour": "Multi",
@@ -649,9 +649,9 @@ var items= [
 		"price": "£14.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Crochet Shoulder Blouse/front.png",
-				"back": "images/stock/womens/bottom/Crochet Shoulder Blouse/back.png",
-				"close": "images/stock/womens/bottom/Crochet Shoulder Blouse/close.png"
+				"front": "images/stock/womens/bottom/Crochet%20Shoulder%20Blouse/front.png",
+				"back": "images/stock/womens/bottom/Crochet%20Shoulder%20Blouse/back.png",
+				"close": "images/stock/womens/bottom/Crochet%20Shoulder%20Blouse/close.png"
 			}
 		],
 		"colour": "Cream",
@@ -705,13 +705,13 @@ var items= [
 	{
 		"name": "Butterfly Sweater",
 		"mainCategory": "Womens",
-		"subCategory": "Jumpers/Cardigan",
+		"subCategory": "Jumpers & Cardigans",
 		"type": "top",
 		"price": "£10.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Butterfly Sweater/front.png",
-				"back": "images/stock/womens/bottom/Butterfly Sweater/back.png"
+				"front": "images/stock/womens/bottom/Butterfly%20Sweater/front.png",
+				"back": "images/stock/womens/bottom/Butterfly%20Sweater/back.png"
 			}
 		],
 		"colour": "Multi",
@@ -736,8 +736,8 @@ var items= [
 		"price": "£8.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Tunic Dress/front.png",
-				"back": "images/stock/womens/bottom/Tunic Dress/back.png"
+				"front": "images/stock/womens/bottom/Tunic%20Dress/front.png",
+				"back": "images/stock/womens/bottom/Tunic%20Dress/back.png"
 			}
 		],
 		"colour": "Black",
@@ -766,8 +766,8 @@ var items= [
 		"price": "£14.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Longline Cardigan/front.png",
-				"back": "images/stock/womens/bottom/Longline Cardigan/back.png"
+				"front": "images/stock/womens/bottom/Longline%20Cardigan/front.png",
+				"back": "images/stock/womens/bottom/Longline%20Cardigan/back.png"
 			}
 		],
 		"colour": "Navy",
@@ -800,7 +800,7 @@ var items= [
 		"price": "£5.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Tube Skirt/front.png"
+				"front": "images/stock/womens/bottom/Tube%20Skirt/front.png"
 			}
 		],
 		"colour": "Black",
@@ -829,7 +829,7 @@ var items= [
 		"price": "£6.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Aztec Print Shorts/front.png"
+				"front": "images/stock/womens/bottom/Aztec%20Print%20Shorts/front.png"
 			}
 		],
 		"colour": "Multi",
