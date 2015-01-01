@@ -20,9 +20,6 @@
 <script type="text/javascript" src='categories.js'>
 </script>
 
-<script type="text/javascript" src='../RESOURCES/javascripts/fetchItems.js'>
-</script>
-
 <script type="text/javascript">
 
 
@@ -47,7 +44,7 @@ function loadSubCategory(category){
 	//Reload New Div HTML content
 	document.getElementById("sub_categories").innerHTML=output;
 	loadSubSubCategory("");
-	loadSelection("");
+	
 
 }
 
@@ -73,7 +70,10 @@ function loadSubSubCategory(subCategory){
 			//Concatenate "_"
 			var id="subsubc_"+array[i];
 			//Load Next div  with id,className and Test Text
-			output+="<div class='SubSubCategories' onclick=loadSelection('"+array[i]+"') id='"+id+"'>"+array[i]+"</div>";
+			output+='<div class="SubSubCategories" ';
+			output+='onclick="loadSelection('+i+')" >';
+			output+=array[i];
+			output+='</div>';
 
 		}
 	}
@@ -81,22 +81,23 @@ function loadSubSubCategory(subCategory){
 	//Reload New Div HTML content
 	document.getElementById("sub_categories_sub").innerHTML=output;
 }
-function loadSelection(category){
+function loadSelection(index){
 	var output="";
 	
-	currentSelection=category;
+	var finder=SUB_CAT[currentCategory+"_"+currentSubCategory];
+	
+	currentSelection=finder[index];
 	var array=new Array();
 	
-	if(category=="Women"){
+	if(currentCategory=="Women"){
 		
 		for (var i=0;i<items.length;i++){
 			var sub=items[i]["subCategory"];
-			var name=items[i]["name"];
-			var main=items[i]["mainCategory"];
-			var price=items[i]["price"];
-			var img=items[i]["images"]["front"];
 			
-			if(main=="Womens" && sub==currentSubCategory){
+			
+			var main=items[i]["mainCategory"];
+		
+			if(main=="Womens" && sub==currentSelection ){
 				array.push(i);
 			}
 		}
@@ -105,18 +106,22 @@ function loadSelection(category){
 	
 	for (var i=0;i<array.length;i++){
 		//Concatenate "_"
+		var index=array[i];
+		var sub=items[index]["subCategory"];
+		var name=items[index]["name"];
+		var main=items[index]["mainCategory"];
+		var price=items[index]["price"];
+		var img="../RESOURCES/"+items[index]["images"][0]["front"];
+		
 		var id="sel_"+i.toString();
 
 		//Load Next div  with id,className and Test Text
 		output+="<div class='SubCategorySelection' >";
-		output+="<img id='"+id+"' src='"+array[i]+"'  />";
+		output+="<img id='"+id+"' src='"+img+"'  />";
 		output+="<br /><br />";
-		
-		
-
 		output+="<div class='itemContainer'>";
-		output+="<div class='clothesInfo' >Item: <div id='name'></div></div>";
-		output+="<div class='clothesInfo' >Price: &pound<div id='price'></div></div>";
+		output+="<div class='clothesInfo' >"+name+"</div>";
+		output+="<div class='clothesInfo' >"+price.replace(/\£/g, "&pound")+"</div>";
 		output+="<br /><br />";
 		output+="<div class='addBasket' >ADD TO BASKET</div>";
 		output+="</div>";
@@ -133,6 +138,10 @@ function loadSelection(category){
 </script>
 
 <style>
+
+#itemsBar{
+	float:left;
+}
 
 .addBasket{
 	background-color:black;
@@ -202,7 +211,7 @@ function loadSelection(category){
 	text-align:center;
 	font-size:120%;
 	font-variant:capitalize;
-	width:200px;
+	width:300px;
 	
 	height:85%;
 	margin-top:5px;
@@ -211,7 +220,7 @@ function loadSelection(category){
 	float:left;
 	color:white;
 	border-radius:5px;
-	opacity:0.8;
+	
 
 
 }
@@ -225,7 +234,7 @@ function loadSelection(category){
  	background-color:#1F1F1F;
 	text-align:center;
 	font-size:1.1em;
-	width:200px;
+	width:300px;
 
 	height:90%;
 	margin-top:2px;
@@ -247,7 +256,6 @@ function loadSelection(category){
 	text-align:center;
 	font-size:1.1em;
 	width:300px;
-
 	height:90%;
 	margin-top:2px;
 	margin-bottom:2px;
@@ -264,8 +272,8 @@ function loadSelection(category){
 .SubCategorySelection{
 	text-align:center;
 	font-size:0.6em;
-	width:400px;
-	height:500px;
+	width:450px;
+	
 	border:1px solid #ddd;
 	box-shadow:0px 0px 3px 3px #ffffff;
 	margin-top:20px;
@@ -310,6 +318,9 @@ function loadSelection(category){
     overflow: scroll;
     width:100%;
     height:60px;
+	margin-left:250px;
+	font-size:1.5em;
+	font-variant:capitalize;
 
 
 }
@@ -317,8 +328,8 @@ function loadSelection(category){
     overflow: scroll;
     margin-top:5px;
     width:100%;
-    height:700px;
-
+    height:710px;
+	margin-left:250px;
 
 
     /*box-shadow:1px 1px 1px 1px #000000;*/
@@ -328,7 +339,8 @@ function loadSelection(category){
 
     width:100%;
     height:50px;
-
+	margin-left:250px;
+	font-size:1.3em;
 
 }
 .outer_wrapper_smaller {
@@ -336,7 +348,8 @@ function loadSelection(category){
 
     width:100%;
     height:40px;
-
+	margin-left:250px;
+	font-size:1.3em;
 
 }
 
@@ -357,64 +370,66 @@ div.label1{
 
 /* Categories*/
 #categories {
-    width:100%; /* If you have more elements, increase the width accordingly */
-	margin-left:250px;
+    width:3000px; /* If you have more elements, increase the width accordingly */
+	
 	
 }
 
 /* Subcategory*/
 .outer_wrapper_small #sub_categories{
-    width:2560px; /* If you have more elements, increase the width accordingly */
-	margin-left:250px;
+    width:5000px; /* If you have more elements, increase the width accordingly */
 }
 /* Sub sub category*/
 .outer_wrapper_smaller #sub_categories_sub{
-    width:2140px; /* If you have more elements, increase the width accordingly */
-	margin-left:250px;
+    width:5000px; /* If you have more elements, increase the width accordingly */
+	
 
 }
 
 /* Subcategory Selection 1*/
 .outer_wrapper_large #selection  {
     width:8000px; /* If you have more elements, increase the width accordingly */
-	margin-left:250px;
+
 
 }
 #bottomBar{
-	height:150px;
-	width:98%;
+	height:270px;
+	width:87%;
 	position:fixed;
-	bottom:0;
-	left:10px;
+	bottom:40px;
+	left:250px;
 	border: 1px solid;
-	border-color:white;
 	
-	
-
+	border-radius:4px;
 
 }
 #bottomBar .inner{
 	
 	height:100%;
-	background-color:rgb(44, 44, 44);
+	
 	text-align:center;
 	border-radius:2px;
 	overflow:auto;
 	
-
-
 }
 #basketBar{
 
-
+	background-color:rgb(31,31,31);
 	width:20%;
 	font-size:12pt;
-	margin-top:10px;
-	font-weight:bold;
+	
 	float:right;
 
+	height:100%;
+	
+	display: table;
 
+	
 
+}
+#innerButtons{
+	display: table-cell;
+    vertical-align: middle;
 }
 .recommendBox{
 	background-color:rgba(120,34,25,1);
@@ -462,7 +477,7 @@ div.label1{
 #sideBar {
 
 	position:fixed;
-	margin-top:5px;
+	margin-top:50px;
 	margin-right:20px;
 	top:0;
 	left:10px;
@@ -527,7 +542,7 @@ height:100%;
 
 }
 #outfit_header{
-	height:450px;
+	height:500px;
 	width:100%;
 	text-align:center;
 	font-size:1.0em;
@@ -556,18 +571,18 @@ height:100%;
 .side_title{
 	background-color:rgb(255, 204, 0);
 	color:black;
-	font-size:1.2em;
+	
 	text-align:center;
-	width: 105%;
+	width: 100%;
 	font-size:15pt;
 	font-weight:bold;
-	height:50px;
-	padding:5px;
+	
+	
 	
 }
 #rec_header{
 
-	height:450px;
+	height:500px;
 	background-color:rgb(31, 31, 31);
 	width:100%;
 	text-align:center;
@@ -684,12 +699,14 @@ height:100%;
 		<!-- INNER -->
 		<div class="inner">
 
-					
+					<div class="side_title" style="font-size:18pt">SELECTED ITEMS</div>
 
 					<div id="basketBar">
-							<button class="buy">BUY</button>
+						<div id="innerButtons">
+							<button class="buy">View Basket</button>
 							<br />
-							<button class="clear">CLEAR</button>
+							<button class="clear">Clear all Items</button>
+						</div>
 					</div>
 
 		</div>
