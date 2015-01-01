@@ -8,7 +8,6 @@ var pageTimeout = null;
 function setPageTimeout() {
     var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
     if(page != 'idle.html') {
-        console.log("setting page timeout");
         pageTimeout = setTimeout(function () {
             $('body').fadeOut(500, function () {
                 window.location = "idle.html";

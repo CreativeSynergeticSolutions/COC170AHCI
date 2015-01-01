@@ -33,9 +33,9 @@ function loadOutfit () {
     });
     $('.add-area').show();
     if(outfit!=null){
-        $('.outfit-name').val(outfit.name);
+        $('.current-outfit-name').val(outfit.name);
     } else {
-        $('.outfit-name').val('');
+        $('.current-outfit-name').val('');
     }
     if(outfit!=null&&outfit.items.length>0){
         $('.outfit-trash-area').show();
@@ -267,5 +267,17 @@ window.onload = function () {
             $('.outfit-trash-area i').removeClass('icon-trash').addClass('icon-trash-empty');
             $(ui.draggable[0]).find('.add-item').fadeIn("fast", function () {});
         }
+    });
+    $('.current-outfit-name').on('focus', function () {
+        $('.current-outfit-name-input').removeClass('saved').addClass('saving');
+    });
+    $('.current-outfit-name').on('focusout', function () {
+        var newOutfit = wall.getCurrentOutfit(),
+            oldName = newOutfit.name;
+        newOutfit.name = $.trim($(this).val());
+        wall.updateOutfit(oldName, newOutfit);
+        wall.setCurrentOutfit(newOutfit.name);
+        loadOutfitList();
+        $('.current-outfit-name-input').removeClass('saving').addClass('saved');
     });
 };
