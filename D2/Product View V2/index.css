@@ -120,6 +120,24 @@ body {
 	
 }
 
+.cardTitle {
+	
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 70px;
+	vertical-align: middle;
+	
+	background-color: #FFCC00;
+	
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	
+	transition: 1s;
+	
+}
+
 .titleLine {
 	
 	position: absolute;
@@ -144,13 +162,13 @@ body {
 #imagesListContainer {
 	
 	position: absolute;
-	bottom: 100px;
+	bottom: 60px;
 	left:10%;
 	height: 120px;
 	width: 80%;
 	
-	perspective: 50em;
-	perspective-origin: top;
+	//perspective: 50em;
+	//perspective-origin: top;
 	
 }
 
@@ -164,8 +182,8 @@ body {
 	background-color: #000;
 	border: 1px solid #FFF;
 	
-	transform: rotateX(40deg);
-	transform-origin: center bottom;
+	//transform: rotateX(40deg);
+	//transform-origin: center bottom;
 	
 }
 
@@ -174,15 +192,15 @@ body {
 	box-sizing: border-box;
 	
 	position: absolute;
+	padding: 0px;
 	margin: 0px;
-	padding: 10px;
-	height: 100%;
+	height: 120px;
 	width: 100%;
 	
 	text-align: center;
 	
-	perspective: 50em;
-	perspective-origin: top;
+	//perspective: 50em;
+	//perspective-origin: top;
 	
 }
 
@@ -190,7 +208,7 @@ body {
 	
 	display: inline-block;
 	margin: 0px 20px;
-	height: 100px;
+	height: 110px;
 	width: 100px;
 	
 	background-color: white;
@@ -199,18 +217,18 @@ body {
 	background-repeat: no-repeat;
 	background-position: center center;
 	
-	transition: .1s;
+	//transition: .1s;
 	
-	transform: rotateX(40deg);
-	transform-origin: center bottom;
+	//transform: rotateX(40deg);
+	//transform-origin: center bottom;
 	
 		
 }
 
 .imgBtns:active {
 	
-	
-	transform: rotateX(0deg);
+	box-shadow: 0px 0px 10px 3px rgba(255, 204, 0, 0.5);
+	//transform: rotateX(0deg);
 	
 }
 
@@ -375,34 +393,34 @@ body {
 #buttonsWrapper {
 	
 	top: 700px;
-	left: 80px;
+	left: 0px;
 	height: 100px;
-	width: 300px;
+	width: 350px;
 	
-	perspective: 100em;
-	perspective-origin: 0% -320%;
+	//perspective: 100em;
+	//perspective-origin: 0% -320%;
 	
 }
 
 #buttonsContainer {
 	
-	bottom: 0px;
-	left: 0px;
+	bottom: 10px;
+	left: 30px;
 	
 	height: 80px;
-	width: 450px;
+	width: 400px;
 	
-	transform: rotateY(50deg) rotateX(30deg);
-	transform-origin: left bottom;
+	//transform: rotateY(50deg) rotateX(30deg);
+	//transform-origin: left bottom;
 	
 }
 
 #backButton {
 	
 	bottom: 0px;
-	left: 20px;
+	left: 10px;
 	height: 80px;
-	width: 200px;
+	width: 160px;
 	
 	font-size: 30px;
 	text-align: center;
@@ -416,9 +434,9 @@ body {
 #homeButton {
 	
 	bottom: 0px;
-	left: 230px;
+	left: 180px;
 	height: 80px;
-	width: 200px;
+	width: 160px;
 	
 	font-size: 30px;
 	text-align: center;
@@ -430,7 +448,7 @@ body {
 	
 	z-index: 10;
 	
-	transform: rotate(0deg);
+	//transform: rotate(0deg);
 		
 }
 
@@ -440,11 +458,11 @@ body {
 #productSectionWrapper {
 	
 	position: absolute;
-	height: 640px;
-	width: 330px;
+	height: 680px;
+	width: 380px;
 	
-	perspective: 100em;
-	perspective-origin: right;
+	//perspective: 100em;
+	//perspective-origin: right;
 	
 	transition: 1s;
 		
@@ -466,16 +484,16 @@ body {
 		
 	position: absolute;
 	top: 40px;
-	left: 40px;
+	left: 30px;
 	height: 640px;
-	width: 430px;
+	width: 350px;
 	
 	border: 1px solid white;
 	
 	background-color: none;
 	
-	transform: rotateY(50deg);
-	transform-origin: left center;
+	//transform: rotateY(50deg);
+	//transform-origin: left center;
 	
 	transition: 1s;
 	
@@ -492,7 +510,7 @@ body {
 	
 	border: none;
 	
-	transform: rotateY(0deg);
+	//transform: rotateY(0deg);
 	
 }
 
@@ -504,18 +522,9 @@ body {
 	top: 10px;
 	left: 10px;
 	height: 70px;
-	width: 410px;
+	width: 330px;
 	
-	color: white;
-	font-size: 35px;
-	font-weight: bold;
-	text-align: center;
 	line-height: 70px;
-	vertical-align: middle;
-	
-	background-color: #000;
-	
-	transition: 1s;
 	
 }
 
@@ -526,7 +535,9 @@ body {
 	left: 0px;
 	width: 100%;
 	
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(255, 204, 0, 0.8);
+	
+	border-radius: 0px !important;
 	
 }
 
@@ -545,7 +556,7 @@ body {
 	top: 81px;
 	left: 10px;
 	height: 550px;
-	width: 410px;
+	width: 330px;
 	
 	color: white;
 	font-size: 20px;
@@ -722,10 +733,10 @@ body {
 	position: absolute;
 	right: 0px;
 	height: 450px;
-	width: 330px;
+	width: 380px;
 	
-	perspective: 100em;
-	perspective-origin: left;
+	//perspective: 100em;
+	//perspective-origin: left;
 	
 	transition: 1s;
 	
@@ -752,16 +763,16 @@ body {
 	
 	position: absolute;
 	top: 40px;
-	right: 40px;
+	right: 30px;
 	height: 400px;
-	width: 430px;
+	width: 350px;
 	
 	border: 1px solid white;
 	
 	background-color: none;
 	
-	transform: rotateY(-50deg);
-	transform-origin: right center;
+	//transform: rotateY(-50deg);
+	//transform-origin: right center;
 	
 	transition: 1s;
 	
@@ -778,7 +789,7 @@ body {
 	
 	border: none;
 	
-	transform: rotateY(0deg);
+	//transform: rotateY(0deg);
 	
 }
 
@@ -790,18 +801,9 @@ body {
 	top: 10px;
 	right: 10px;
 	height: 70px;
-	width: 410px;
+	width: 330px;
 	
-	color: white;
-	font-size: 35px;
-	font-weight: bold;
-	text-align: center;
 	line-height: 70px;
-	vertical-align: middle;
-	
-	background-color: #000;
-	
-	transition: 1s;
 	
 }
 
@@ -812,7 +814,9 @@ body {
 	left: 0px;
 	width: 100%;
 	
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(255, 204, 0, 0.8);
+	
+	border-radius: 0px !important;
 	
 }
 
@@ -830,7 +834,7 @@ body {
 	top: 81px;
 	right: 10px;
 	height: 310px;
-	width: 410px;
+	width: 330px;
 	
 	background-color: #000;
 	
@@ -858,9 +862,9 @@ body {
 	top: 0px;
 	left: 0px;
 	height: 310px;
-	width: 410px;
+	width: 330px;
 	
-	text-align: left;
+	text-align: center;	
 	
 	overflow: hidden;
 	
@@ -876,8 +880,6 @@ body {
 	height: 100%;
 	width: 1050px;
 	
-	text-align: center;
-	
 	overflow-y: scroll;
 	
 }
@@ -887,17 +889,17 @@ body {
 	display: inline-block;
 	position: relative;
 	
-	margin: 10px 5px;
+	margin: 10px 10px;
 	
 	height: 290px;
-	width: 190px;
+	width: 140px;
 		
 }
 
 #recommendedSectionLabel input:checked~ #recommendedWrapper #recommndedContent 
 #recommndedList .rCard{
 	
-	margin: 10px 16px;
+	margin: 10px 13px;
 	height: 400px;
 	width: 300px;
 	
@@ -912,7 +914,7 @@ body {
 	margin-left: 0px;
 	
 	height: 290px;
-	width: 190px;
+	width: 140px;
 	
 	background-image: url(recommendedImages/R1.png);
 	
@@ -1028,13 +1030,13 @@ body {
 #optionsWrapper{
 	
 	position: absolute;
-	top: 500px;
+	top: 460px;
 	right: 0px;
-	height: 300px;
-	width: 330px;
+	height: 350px;
+	width: 380px;
 	
-	perspective: 100em;
-	perspective-origin: 0% -100%;
+	//perspective: 100em;
+	//perspective-origin: 0% -100%;
 	
 	transition: 1s;
 	
@@ -1058,23 +1060,23 @@ body {
 	
 	z-index: 10;
 	
-	transform: rotate(0deg);
+	//transform: rotate(0deg);
 	
 }
 
 #optionSectionContainer {
 	
 	position: absolute;
-	right: 80px;
-	height: 300px;
-	width: 430px;
+	right: 30px;
+	height: 350px;
+	width: 350px;
 	
 	border: 1px solid white;
 	
 	background-color: none;
 	
-	transform: rotateY(-50deg) rotateX(20deg);
-	transform-origin: right center;
+	//transform: rotateY(-50deg) rotateX(20deg);
+	//transform-origin: right center;
 	
 	transition: 1s;
 	
@@ -1091,7 +1093,7 @@ body {
 	
 	border: none;
 	
-	transform: rotateY(0deg);
+	//transform: rotateY(0deg);
 	
 }
 
@@ -1103,18 +1105,9 @@ body {
 	top: 10px;
 	right: 10px;
 	height: 70px;
-	width: 410px;
+	width: 330px;
 	
-	color: white;
-	font-size: 35px;
-	font-weight: bold;
-	text-align: center;
 	line-height: 70px;
-	vertical-align: middle;
-	
-	background-color: #000;
-	
-	transition: 1s;
 	
 }
 
@@ -1125,7 +1118,9 @@ body {
 	left: 0px;
 	width: 100%;
 	
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(255, 204, 0, 0.8);
+	
+	border-radius: 0px !important;
 	
 }
 
@@ -1142,8 +1137,8 @@ body {
 	position: absolute;
 	top: 81px;
 	right: 10px;
-	height: 210px;
-	width: 410px;
+	height: 260px;
+	width: 330px;
 	
 	background-color: #000;
 	
@@ -1155,7 +1150,7 @@ body {
 
 #optionSectionLabel input:checked~ #optionsWrapper #optionsContent {
 	
-	top: 121px;
+	top: 123px;
 	right: 50px;
 	height: 900px;
 	width: 1180px;
@@ -1228,10 +1223,10 @@ label[name="optionsLabels"] {
 #basketSection {
 	
 	position: absolute;
-	top: 0px;
+	top: 25px;
 	left: 0px;
 	height: 210px;
-	width: 410px;
+	width: 330px;
 	
 	background-color: #000;
 	border: 0px solid #000;
@@ -1416,7 +1411,7 @@ label[name="optionsLabels"] {
 	bottom: 5px;
 	left: 5px;
 	height: 200px;
-	width: 400px;
+	width: 320px;
 	
 	background-color: #000;
 	border: 3px solid #FFCC00;
@@ -1443,8 +1438,9 @@ label[name="optionsLabels"] {
 	
 	position: absolute;
 	top: 10px;
-	width: 100px;
 	height: 80px;
+	width: 90px;
+	
 	
 	color: #FFCC00;
 	font-size: 40px;
@@ -1489,7 +1485,7 @@ label[name="optionsLabels"] {
 
 #basketSizeVal {
 	
-	left: 150px;
+	left: 112.5px;
 	
 }
 
@@ -1502,7 +1498,7 @@ label[name="optionsLabels"] {
 
 #basketQuantityVal {
 	
-	left: 285px;
+	left: 210px;
 	
 }
 
