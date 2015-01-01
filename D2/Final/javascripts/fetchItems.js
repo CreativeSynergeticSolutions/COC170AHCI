@@ -1,9 +1,12 @@
 var items = {};
-$.getJSON("data/items.json")
-.error(function () {
+$.ajax({
+    async: false,
+    url: "data/items.json"
+})
+.fail(function () {
     console.log("Error in JSON");
 })
-.complete(function () {
+.always(function () {
     items = (typeof items === undefined ? {} : items);
     items.getItemByCode = function (code) {
         var result = null;
@@ -37,7 +40,7 @@ $.getJSON("data/items.json")
         return (pairs.hasOwnProperty("productCode") ? pairs.productCode : null);
     };
 })
-.success(function (data) {
+.done(function (data) {
     items = data.items;
 });
 console.log(items);
