@@ -27,6 +27,7 @@ html {
     height: 48px;
     min-width: 88px;
     padding: 0 4px;
+    white-space: nowrap;
 }
 
 .btn-touchable > .btn {

@@ -120,6 +120,17 @@ function loadBasketList() {
     } else {
         basketEle.appendChild(makeEmptyEle('Your basket is empty.','basket-item empty-item'));
     }
+    $('.basket-btn .btn .itemCount').remove();
+    $('.basket-btn .btn .priceCount').remove();
+    if(basket.length > 0) {
+        $('.basket-btn .btn .inner').append('<span class="itemCount"> | '+basket.length+' items | </span>');
+        var price = 0;
+        for(var i=0; i< basket.length; i++){
+            var itemPrice = basket[i].item.price;
+            price += parseInt(itemPrice.slice(1,itemPrice.length));
+        }
+        $('.basket-btn .btn .inner').append('<span class="priceCount">&pound;'+price+'</span>');
+    }
 }
 function makeOutfitListItem(outfit, selected) {
     var selected = selected || false,
