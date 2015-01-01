@@ -95,7 +95,8 @@ wall.prototype.addOutfit = function (outfitName) {
     if(outfits===null){
         outfits = [];
     }
-    outfits.push({"name":outfitName, items:[]});
+    var outfitid = (outfits.length==0) ? 0 : outfits[outfits.length-1].id+1;
+    outfits.push({"id": outfitid, "name":outfitName, items:[]});
     this.saveObjectToStorage('outfits',outfits);
 };
 wall.prototype.removeOutfit = function (outfitName) {
@@ -137,7 +138,13 @@ wall.prototype.getCurrentOutfit = function () {
 }
 wall.prototype.setCurrentOutfit = function (outfitName) {
     this.saveObjectToStorage('currentOutfit', this.getOutfit(outfitName));
-}
+};
+wall.prototype.updateOutfit = function (outfitName, outfit) {
+    var outfits = this.getOutfits(),
+        outfitIndex = this.getOutfitIndex(outfitName);
+    outfits[outfitIndex] = outfit;
+    this.saveObjectToStorage('outfits',outfits);
+};
 /*
 **  Basket Interfaces
 */

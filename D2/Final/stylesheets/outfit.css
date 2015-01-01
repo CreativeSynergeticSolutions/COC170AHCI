@@ -236,21 +236,23 @@ a {
     transform: translateX(-50%);
 }
 
-.outfit-management-area .outfit-name-span:after {
+.outfit-management-area .current-outfit-name-input:after {
     font-family: 'ahci';
     font-size: 1.25em;
     height: 1.25em;
+    left: 0.5em;
     line-height: 1.25em;
-    margin-left: 1%;
+    position: relative;
     text-align: center;
+    top: 0.4em;
     width: 1.25em;
 }
 
-.outfit-management-area .outfit-name-span.saved:after {
+.outfit-management-area .current-outfit-name-input.saved:after {
     content: '\e80b';
 }
 
-.outfit-management-area .outfit-name-span.saving:after {
+.outfit-management-area .current-outfit-name-input.saving:after {
     -webkit-animation: saving 1s linear 0s infinite forwards; /* Chrome, Safari, Opera */
     animation: saving 1s linear 0s infinite forwards;
     content: '\e85c';
