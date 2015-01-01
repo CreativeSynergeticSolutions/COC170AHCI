@@ -459,3 +459,9 @@ a {
 {
   background: #1F1F1F;
 }
+
+.checkout-area {
+    bottom: 5%;
+    position: absolute;
+    right: 18%;
+}
