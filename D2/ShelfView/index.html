@@ -25,7 +25,7 @@
 
 <script type="text/javascript">
 
-
+var basket=new Array();
 
 
 function loadSubCategory(category){
@@ -58,6 +58,50 @@ function loadPage(){
 	//loadSubCategory("Christmas");
 	//loadSubSubCategory("Women");
 	//loadSelection("Women");
+}
+
+
+
+function addToBasket(index){
+	var price=items[index]["price"];
+	var code=items[index]["productCode"];
+	var name=items[index]["name"];
+	
+	var item=new Array();
+	item["price"]=price;
+	item["code"]=code;
+	item["name"]=name;
+	item["index"]=index;
+	
+	basket.push(item);
+	loadBasket();
+	
+	
+}
+function loadBasket(){
+	var output="<tr><th>Product</th> <th>Price</th><th>Code</th><th></th></tr>";
+	
+	for (var i=0;i<basket.length;i++){
+		output+="<tr>";
+		output+=("<td>"+basket[i]["name"]+"</td>");
+		output+=("<td>"+basket[i]["price"]/+"</td>");
+		output+=("<td>"+basket[i]["code"]+"</td>");
+		output+="<td><div id='"+i+"' onclick='deleteItem(this.id)' class='icon-trash-empty'></div></td>";
+		output+="</tr>";
+	}
+	$("#basketItems").html(output);
+}
+function clearBasket(){
+	var output="<tr><th>Product</th> <th>Price</th><th>Code</th<th></th></tr>";
+	$("#basketItems").html(output);
+}
+function deleteItem(id){
+	for (var i=0;i<basket.length;i++){
+		if(i==id){
+			basket.splice(i,1);
+		}
+	}
+	loadBasket();
 }
 
 function loadSubSubCategory(subCategory){
@@ -126,7 +170,7 @@ function loadSelection(index){
 		output+="<div class='clothesInfo' >"+name+"</div>";
 		output+="<div class='clothesInfo' >"+price.replace(/\£/g, "&pound")+"</div>";
 		output+="<div class='viewProduct' >VIEW PRODUCT</div>";
-		output+="<div class='addBasket' >ADD TO BASKET</div>";
+		output+="<div class='addBasket' onclick='addToBasket("+index+")' >ADD TO BASKET</div>";
 		output+="</div>";
 		output+="</div>";
 		
@@ -784,74 +828,7 @@ height:100%;
 					
 					<br />
 						<table id="basketItems">
-						<tr>
-							
-							<th>Product</th>
-							<th>Price</th>
-							<th>Code</th>
-
-							<th></th>
-						</tr>
-						<tr>
-							
-							<td>Leggings</td>
-							<td>&pound 60</td>
-							<td>023838123</td>
-
-							<td><div class='icon-trash-empty'></div></td>
-							
-						</tr>
-						<tr>
-							
-							<td>Jeans</td>
-							<td>&pound 60</td>
-							<td>023838123</td>
-							<td><div class='icon-trash-empty'></div></td>
-							
-						</tr>
-						<tr>
-							
-							<td>Trousers</td>
-							<td>&pound 60</td>
-							<td>023838123</td>
-							<td><div class='icon-trash-empty'></div></td>
-							
-						</tr>
-						<tr>
-							
-							<td>Socks</td>
-							<td>&pound 60</td>
-							<td>023838123</td>
-							<td><div class='icon-trash-empty'></div></td>
-							
-						</tr>
-						<tr>
-							
-							<td>Leggings</td>
-							<td>&pound 60</td>
-							<td>023838123</td>
-
-							<td><div class='icon-trash-empty'></div></td>
-							
-						</tr>
-						<tr>
-							
-							<td>Leggings</td>
-							<td>&pound 60</td>
-							<td>023838123</td>
-
-							<td><div class='icon-trash-empty'></div></td>
-							
-						</tr>
-						<tr>
-							
-							<td>Leggings</td>
-							<td>&pound 60</td>
-							<td>023838123</td>
-
-							<td><div class='icon-trash-empty'></div></td>
-							
-						</tr>
+						
 						</table>
 					</div>
 					<div id="basketBar">
