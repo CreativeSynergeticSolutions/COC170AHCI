@@ -8,11 +8,14 @@ $.ajax({
 })
 .always(function () {
     items = (typeof items === undefined ? {} : items);
+})
+.done(function (data) {
+    items = data.items;
     items.getItemByCode = function (code) {
         var result = null;
-        for(var i=0; i<this.length; i++){
-            if (this[i].productCode==code) {
-                result = this[i];
+        for(var i=0; i<items.length; i++){
+            if (items[i].productCode==code) {
+                result = items[i];
                 break;
             }
         }
@@ -27,7 +30,6 @@ $.ajax({
             var parts = wSearch[pair].split("="),
                 part1 = parts[0],
                 part2 = null;
-            console.log(parts);
             if(parts.length>1){
                 part2 = parts[1];
             }
@@ -35,12 +37,9 @@ $.ajax({
         }
         return keyValuePairs;
     };
-    items.getCodeFromSearch = function (code) {
+    items.getCodeFromSearch = function () {
         var pairs = this.getSearchPairs();
         return (pairs.hasOwnProperty("productCode") ? pairs.productCode : null);
     };
-})
-.done(function (data) {
-    items = data.items;
 });
 console.log(items);
