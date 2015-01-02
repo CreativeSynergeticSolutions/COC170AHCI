@@ -1,4 +1,4 @@
-var item = {
+var currentProduct = {
             name: "Crochet Shoulder Blouse",
             mainCategory: "Womens",
             subCategory: "Blouse",
@@ -13,6 +13,10 @@ var item = {
                 {
 					name:"Cream",
 					class:"cream"
+				},
+				{
+					name:"Red",
+					class:"red"
 				}
             ],
             description: [
@@ -43,10 +47,15 @@ var item = {
 
 var productImages = [];
 
+var currentColor = null;
+var currentSize = "";
+var currentQuantity = 1;
+
 $(document).ready(function(){
 	
 	document.getElementById("basketRadio").checked = true;
-		
+	
+	setupHeader();
 	setupImageDisplay();
 	setupProductDetails();
 	setupRecommended();
@@ -57,9 +66,17 @@ $(document).ready(function(){
 		
 });
 
+function setupHeader() {
+	
+	$("#productTitle").text(currentProduct.name);
+	$("#productCode").text(currentProduct.productCode);
+	$("#productPrice").text(currentProduct.price);
+	
+}
+
 function setupImageDisplay() {
 		
-	for(var key in item.images) productImages.push(item.images[key]);
+	for(var key in currentProduct.images) productImages.push(currentProduct.images[key]);
 	
 	console.log(productImages);
 	
@@ -189,7 +206,8 @@ function setupOptions() {
 	});
 	
 	
-	
+	$("#basketSectionLabel").css("cursor", "default");
+	document.getElementById("basketRadio").disabled = true;
 	
 	$("#basketSectionLabel input").change(function(){
 				
@@ -221,13 +239,55 @@ function setupOptions() {
 		
 	});
 	
-	$("#basketSectionLabel").css("cursor", "default");
-	document.getElementById("basketRadio").disabled = true;
+		
+	for(var cIndex in currentProduct.colours){
+		
+		$("#colourList").append("<li class='" + currentProduct.colours[cIndex].class + "PC' data-colourobj="+ cIndex + " ></li>");
+		
+	}
+	
+	$("#colourList li").each(function(){
+		
+		$(this).click(function(){
+			
+			var cIndex = $(this).attr("data-colourobj");
+			
+			console.log(cIndex);
+			
+			currentColor = currentProduct.colours[cIndex];
+			
+			$("#basketColorVal").removeClass();
+			$("#basketColorVal").addClass(currentColor.class + "PC");
+			
+		});
+		
+	});
+	
+	$("#colourList li").first().click();
 	
 	
+	for(var sIndex in currentProduct.sizes){
+		
+		$("#sizeList").append("<li><span>" + currentProduct.sizes[sIndex] + "</span></li>");
+		
+	}
 	
-	//$("#optionSectionLabel").click();
-	//$("#outfitsSectionLabel").click();
+	$("#sizeList li").each(function(){
+		
+		$(this).click(function(){
+			
+			var sizeValue = $(this).text();
+			
+			currentSize = sizeValue;
+			
+			$("#basketSizeVal").text(currentSize);
+						
+		});
+		
+	});
+	
+	$("#sizeList li").first().click();
+	
 	
 	
 }
