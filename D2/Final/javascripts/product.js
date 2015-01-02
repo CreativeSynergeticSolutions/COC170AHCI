@@ -53,6 +53,15 @@ var currentQuantity = 1;
 
 $(document).ready(function(){
 	
+	var retrievedCode = items.getCodeFromSearch().productCode;
+	
+	console.log("Code is this: " + retrievedCode);
+	
+	if (retrievedCode != null) currentProduct = items.getItemByCode(retrievedCode);
+	
+	console.log(currentProduct);
+	
+	
 	document.getElementById("basketRadio").checked = true;
 	
 	setupHeader();
