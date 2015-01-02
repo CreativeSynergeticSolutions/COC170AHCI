@@ -179,10 +179,9 @@ body {
 	
 	display: inline-block;
 	
-	position: absolute;
-	padding: 0px 10px;
+	padding: 5px 10px 0px 10px;
 	
-	font-size: 40px;
+	font-size: 30px;
 	background-color: #FFCC00;
 	
 }
@@ -191,6 +190,9 @@ body {
 	
 	min-height: 50px;
 	width: 100%;
+	
+	font-weight: bold;
+	text-decoration: underline;
 	
 }
 
@@ -205,7 +207,7 @@ body {
 #productPrice {
 	
 	margin-top: 2px;
-	margin-left: 2px;
+	margin-left: -3px;
 	height: 50px;
 	width: 158px;
 	
@@ -1445,7 +1447,7 @@ label[name="optionsLabels"] {
 	height: 200px;
 	width: 200px;
 	
-	background-image: url(images/Dial.png);
+	background-image: url(../images/Dial.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: top center;
@@ -1530,8 +1532,6 @@ label[name="optionsLabels"] {
 #basketColorVal {
 	
 	left: 15px;
-	
-	background-color: black;
 	
 }
 
@@ -1703,10 +1703,13 @@ label[name="optionsLabels"] {
 	position: absolute;
 	margin: 0px;
 	padding: 0px;
-	height: 395px;
+	height: 416px;
 	width: 900px;
 	
-	overflow: hidden;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	
+	white-space: nowrap;
 	
 }
 
@@ -1718,17 +1721,35 @@ label[name="optionsLabels"] {
 	height: 250px;
 	width: 250px;
 	
-	background-color: lightgrey;
+	background-color: #2C2C2C;
 	
 }
 
-#outfitsList:first-child {
+#outfitsList li span{
+	
+	box-sizing: border-box;
+	
+	display: table-cell;
+	padding: 5px;
+	height: 250px;
+	width: 250px;
+	
+	color: #FFCC00;
+	font-size: 40px;
+	text-align: center;
+	vertical-align: middle;
+	
+	overflow: hidden;
+		
+}
+
+#outfitsList li:first-child {
 	
 	margin-left: 310px;
 	
 }
 
-#outfitsList:first-child {
+#outfitsList li:last-child {
 	
 	margin-right: 30px;
 	
