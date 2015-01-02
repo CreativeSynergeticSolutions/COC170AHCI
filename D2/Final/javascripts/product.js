@@ -53,7 +53,7 @@ var currentQuantity = 1;
 
 $(document).ready(function(){
 	
-	var retrievedCode = items.getCodeFromSearch().productCode;
+	var retrievedCode = items.getCodeFromSearch();
 	
 	console.log("Code is this: " + retrievedCode);
 	
