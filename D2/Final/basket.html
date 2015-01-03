@@ -19,19 +19,23 @@
 	<!--<div id="details">
 	</div>-->
 	<div id="options">
-		<button>
+		<button id="reserve"><!--load modal-->
 			Reserve
 		</button>
-		<button>
-			Home
-		</button>
-		<button>
-			Outfit
-		</button>
-		<button>
+		<form action="shelf.html">
+			<button type="submit">
+				Shelf  View
+			</button>
+		</form>
+		<form action="outfit.html">
+			<button>
+				Outfit
+			</button>
+		</form>
+		<button><!--are we including this?-->
 			Share
 		</button>
-		<button class="cancel">
+		<button class="cancel"><!--javascript to clear and return to shelf view-->
 			Cancel Order
 		</button>
 	</div>
