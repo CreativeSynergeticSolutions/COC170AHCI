@@ -59,11 +59,7 @@
                     "type": "paragraph"
                 },
                 {
-                    "content": "Twin back pockets",
-                    "type": "bullet"
-                },
-                {
-                    "content": "Elasticated waistband",
+                    "content": ["Twin back pockets","Elasticated waistband"],
                     "type": "bullet"
                 }
             ],
@@ -100,11 +96,7 @@
                     "type": "paragraph"
                 },
                 {
-                    "content": "Zip and button fly fastening",
-                    "type": "bullet"
-                },
-                {
-                    "content": "Twin front and back pockets",
+                    "content": []"Zip and button fly fastening","Twin front and back pockets"]
                     "type": "bullet"
                 }
             ],
@@ -141,11 +133,7 @@
                     "type": "paragraph"
                 },
                 {
-                    "content": "Elasticated waistband",
-                    "type": "bullet"
-                },
-                {
-                    "content": "Long sleeve",
+                    "content": []"Elasticated waistband","Long sleeve"],
                     "type": "bullet"
                 }
             ],
@@ -183,11 +171,7 @@
                     "type": "paragraph"
                 },
                 {
-                    "content": "Button through fastening",
-                    "type": "bullet"
-                },
-                {
-                    "content": "Long sleeve",
+                    "content": []"Button through fastening","Long sleeve"]
                     "type": "bullet"
                 }
             ],
@@ -224,11 +208,7 @@
                     "type": "paragraph"
                 },
                 {
-                    "content": "Dipped hem",
-                    "type": "bullet"
-                },
-                {
-                    "content": "V-neck",
+                    "content": ["Dipped hem", "V-neck"],
                     "type": "bullet"
                 }
             ],
@@ -265,7 +245,7 @@
                     "type": "paragraph"
                 },
                 {
-                    "content": "Long sleeve",
+                    "content": ["Long sleeve"],
                     "type": "bullet"
                 }
             ],
@@ -302,11 +282,7 @@
                     "type": "paragraph"
                 },
                 {
-                    "content": "Cropped sleeve",
-                    "type": "bullet"
-                },
-                {
-                    "content": "Length: 33½ Inches / 85cm",
+                    "content": ["Cropped sleeve","Length: 33½ Inches / 85cm"],
                     "type": "bullet"
                 }
             ],
@@ -343,15 +319,7 @@
                     "type": "paragraph"
                 },
                 {
-                    "content": "Twin front pockets",
-                    "type": "bullet"
-                },
-                {
-                    "content": "Long sleeve",
-                    "type": "bullet"
-                },
-                {
-                    "content": "Open front",
+                    "content": ["Twin front pockets","Long sleeve","Open front"],
                     "type": "bullet"
                 }
             ],
@@ -387,11 +355,7 @@
                     "type": "paragraph"
                 },
                 {
-                    "content": "Elasticated waistband",
-                    "type": "bullet"
-                },
-                {
-                    "content": "Length: 14½ Inches / 37cm",
+                    "content": ["Elasticated waistband","Length: 14½ Inches / 37cm"],
                     "type": "bullet"
                 }
             ],
@@ -427,7 +391,7 @@
                     "type": "paragraph"
                 },
                 {
-                    "content": "Elasticated waistband",
+                    "content": ["Elasticated waistband"],
                     "type": "bullet"
                 }
             ],
