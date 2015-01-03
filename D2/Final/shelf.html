@@ -1,12 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Shelves</title>
-    <link rel="stylesheet" href="stylesheets/reset.css">
-    <link rel="stylesheet" href="stylesheets/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="./vendor/ahci-icon-font/css/ahci.css">
+<link rel="stylesheet" href="./stylesheets/shelf.css">
+
+
+
+<script type="text/javascript" src='./javascripts/fetchItems.js'>
+</script>
+
+<script type="text/javascript" src='./javascripts/categories.js'>
+</script>	
+	
+
+<script type="text/javascript" src='./javascripts/shelf.js'>
+</script>
+
+
+
 </head>
-<body>
-    SHELVES
+
+<body onload="loadPage();">
+
+
+<!-- MAIN -->
+<div id="main" class="blend2">
+
+	<!--OUTER WRAPPER-->
+	<div class="outer_wrapper ">
+
+		<!-- CATEGORIES InsertSelected("categories","Categories","C",cat); -->
+		<div id="categories" class="inner_wrapper">
+			<div class="Categories" onclick='loadSubCategory("Home and Garden")' id="C_2">Home and Garden</div>
+			<div class="Categories" onclick='loadSubCategory("Women")' id="C_3">Women</div>
+			<div class="Categories" onclick='loadSubCategory("Men")' id="C_4">Men</div>
+			<div class="Categories" onclick='loadSubCategory("Boys")' id="C_5">Boys</div>
+			<div class="Categories" onclick='loadSubCategory("Girls")'  id="C_6">Girls</div>
+			<div class="Categories" onclick='loadSubCategory("Baby")'  id="C_7">Baby</div>
+			<div class="Categories" onclick='loadSubCategory("School")'  id="C_8">School</div>
+			<div class="Categories" onclick='loadSubCategory("Sale")'  id="C_12">Sale</div>
+		</div>
+		<!-- /CATEGORIES-->
+	</div>
+	<!--/OUTER WRAPPER-->
+
+	<!--<span class="mini_text">inner categories > </span>-->
+	<!-- OUTER WRAPPER SMALL-->
+	<div class="outer_wrapper_small" >
+		<!-- SUB CATEGORY -->
+		<div id="sub_categories" class="inner_wrapper">
+
+		</div>
+		<!-- /SUB CATEGORY -->
+	</div>
+	<!--<span class="mini_text">sub inner categories > </span>-->
+		<!-- OUTER WRAPPER SMALLER-->
+	<div class="outer_wrapper_smaller" >
+		<!-- SUB CATEGORY -->
+		<div id="sub_categories_sub" class="inner_wrapper">
+
+		</div>
+		<!-- /SUB CATEGORY SUB-->
+	</div>
+	<!-- /OUTER WRAPPER SMALLER -->
+
+	<!-- OUTER WRAPPER LARGE -->
+	<div class="outer_wrapper_large" >
+		<!-- SUB CATEGORY SELECTION -->
+		<div id="selection" class="inner_wrapper">
+
+		</div>
+		<!-- /SUB CATEGORY SELECTION -->
+	</div>
+	<!-- /OUTER WRAPPER LARGE -->
+
+</div>
+<!-- /MAIN -->
+
+<!-- SIDE BAR -->
+
+	<!-- BOTTOMBAR -->
+	
+	<div id="bottomBar">
+		<!-- INNER -->
+		
+		<div id="inner">
+			
+					<div id="basketContainer">
+					
+					<br />
+						<table id="basketItems">
+						
+						</table>
+					</div>
+					<div id="basketBar">
+						
+						<div id="innerButtons">
+							<button class="buy">Add To Basket</button>
+							<br />
+							<button class="clear" onclick="clearSelectedProducts()">Clear All Items</button>
+						</div>
+					</div>
+
+		</div>
+
+		<!-- /INNER -->
+	</div>
+
+
+
+
 </body>
+	<!-- /BOTTOMBAR -->
+	
+<div id="sideBar" >
+	<div id="outfit_header">
+		
+	</div>
+	<br />
+	<div id="rec_header">
+	
+	</div>
+</div>
+
+
+<!-- /SIDE BAR -->
+
 </html>
