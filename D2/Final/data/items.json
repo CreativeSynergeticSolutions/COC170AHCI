@@ -1,7 +1,7 @@
 {
     "items": [
         {
-            "name": "Acid Wash Jeggings",
+            "name": "Acid Wash Leggings",
             "mainCategory": "Womens",
             "subCategory": "Jeans",
             "type": "bottom",
@@ -38,7 +38,7 @@
 			"recommendations":["4869167","4868138"]
         },
         {
-            "name": "Jeggings",
+            "name": "Leggings",
             "mainCategory": "Womens",
             "subCategory": "Jeans",
             "type": "bottom",
