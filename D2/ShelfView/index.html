@@ -27,6 +27,26 @@
 
 var basket=new Array();
 
+window.onload=function(){
+	
+	loadRecommendations();
+
+}
+
+
+function randomN(){
+	var arr = []
+	while(arr.length < 5){
+  		var randomnumber=Math.ceil(Math.random()*10)
+  		var found=false;
+  		for(var i=0;i<arr.length;i++){
+    		if(arr[i]==randomnumber){found=true;break}
+  		}
+  		if(!found)arr[arr.length]=randomnumber;
+		}
+		return arr;
+	}
+
 
 function loadSubCategory(category){
 	//Run text through loop (output)
@@ -78,8 +98,30 @@ function addToBasket(index){
 	
 	
 }
+
+
+function loadRecommendations(){
+	var output='<div class="side_title">Recommendations</div>';
+	
+	var randomNumbers=randomN();
+	console.log(randomNumbers);
+	
+	for (var i=0;i<randomNumbers.length;i++){
+		var index=randomNumbers[i];
+		var img="../RESOURCES/"+items[index]["images"][0]["front"];
+		//var img=items[index]["images"][0]["front"];
+		output+='<div class="recommendBox"><img src="'+img+'"/></div>';
+		
+	}
+	$("#rec_header").html(output);
+	
+}
 function loadBasket(){
-	var output="<tr><th>Product</th> <th>Price</th><th>Code</th><th></th></tr>";
+	var output="";
+	if(basket.length>0){
+		output="<tr><th>Product</th> <th>Price</th><th>Code</th><th></th></tr>";
+	}
+	
 	
 	for (var i=0;i<basket.length;i++){
 		output+="<tr>";
@@ -126,7 +168,7 @@ function loadSubSubCategory(subCategory){
 	}
 	currentSubCategory=subCategory;
 	//Reload New Div HTML content
-	document.getElementById("sub_categories_sub").innerHTML=output;
+	$("#sub_categories_sub").html(output);
 }
 function loadSelection(index){
 	var output="";
@@ -140,8 +182,6 @@ function loadSelection(index){
 		
 		for (var i=0;i<items.length;i++){
 			var sub=items[i]["subCategory"];
-			
-			
 			var main=items[i]["mainCategory"];
 		
 			if(main=="Womens" && sub==currentSelection ){
@@ -159,6 +199,7 @@ function loadSelection(index){
 		var main=items[index]["mainCategory"];
 		var price=items[index]["price"];
 		var img="../RESOURCES/"+items[index]["images"][0]["front"];
+		//var img=items[index]["images"][0]["front"];
 		
 		var id="sel_"+i.toString();
 
@@ -499,7 +540,7 @@ div.label1{
 }
 /* Sub sub category*/
 .outer_wrapper_smaller #sub_categories_sub{
-    width:5000px; /* If you have more elements, increase the width accordingly */
+    width:6000px; /* If you have more elements, increase the width accordingly */
 	
 
 }
@@ -866,11 +907,7 @@ height:100%;
 	</div>
 	<br />
 	<div id="rec_header">
-		<div class="side_title">Recommendations</div>
-		<div class="recommendBox"><img src='../RESOURCES/images/stock/womens/bottom/Acid Wash Jeggings/front.png'/></div>
-		<div class="recommendBox"><img src='../RESOURCES/images/stock/womens/bottom/Jeggings/front.png'/></div>
-		<div class="recommendBox"><img src='../RESOURCES/images/stock/womens/bottom/Skinny%20Jeans/front.png'/></div>
-		<div class="recommendBox"><img src='../RESOURCES/images/stock/womens/bottom/Tunic Dress/back.png'/></div>
+	
 	</div>
 </div>
 

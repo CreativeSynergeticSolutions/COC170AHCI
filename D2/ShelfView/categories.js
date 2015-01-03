@@ -20,7 +20,6 @@ var CAT={
 	"Women":[
 		"Clothing",
 		"Footwear",
-		"Christmas",
 		"Collections",
 		"Latest Trends",
 		"Shop By Fit",
@@ -32,17 +31,14 @@ var CAT={
 		"Help to Buy",
 		"Underwear and Lingerie",
 		"Nightwear and Slippers",
-		
 		"Offers"
 	],
 	"Men":[
 		"Clothing",
 		"Footwear",
-		"Christmas",
 		"Brands",
 		"Collections",
 		"Offers",
-		
 		"Personal Grooming"
 	],
 	"Boys":[
@@ -50,7 +46,6 @@ var CAT={
 		"Footwear",
 		"School",
 		"Collections",
-		"Christmas",
 		"Shop by",
 		"Character",
 		"Kids Home",
@@ -533,8 +528,8 @@ var items= [
 		"price": "£10.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Acid%20Wash%20Jeggings/front.png",
-				"back": "images/stock/womens/bottom/Acid%20Wash%20Jeggings/back.png"
+				"front": "images/stock/womens/bottom/Acid Wash Jeggings/front.png",
+				"back": "images/stock/womens/bottom/Acid Wash Jeggings/back.png"
 			}
 		],
 		"colour": "Navy",
@@ -589,8 +584,8 @@ var items= [
 		"price": "£8.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Skinny%20Jeans/front.png",
-				"back": "images/stock/womens/bottom/Skinny%20Jeans/back.png"
+				"front": "images/stock/womens/bottom/Skinny Jeans/front.png",
+				"back": "images/stock/womens/bottom/Skinny Jeans/back.png"
 			}
 		],
 		"colour": "Navy",
@@ -619,8 +614,8 @@ var items= [
 		"price": "£12.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Floral%20Chiffon%20Wrap%20Blouse/front.png",
-				"back": "images/stock/womens/bottom/Floral%20Chiffon%20Wrap%20Blouse/back.png"
+				"front": "images/stock/womens/body/Floral Chiffon Wrap Blouse/front.png",
+				"back": "images/stock/womens/body/Floral Chiffon Wrap Blouse/back.png"
 			}
 		],
 		"colour": "Multi",
@@ -644,14 +639,14 @@ var items= [
 	{
 		"name": "Crochet Shoulder Blouse",
 		"mainCategory": "Womens",
-		"subCategory": "Blouse",
+		"subCategory": "Blouse & Shirts",
 		"type": "top",
 		"price": "£14.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Crochet%20Shoulder%20Blouse/front.png",
-				"back": "images/stock/womens/bottom/Crochet%20Shoulder%20Blouse/back.png",
-				"close": "images/stock/womens/bottom/Crochet%20Shoulder%20Blouse/close.png"
+				"front": "images/stock/womens/body/Crochet Shoulder Blouse/front.png",
+				"back": "images/stock/womens/body/Crochet Shoulder Blouse/back.png",
+				"close": "images/stock/womens/body/Crochet Shoulder Blouse/close.png"
 			}
 		],
 		"colour": "Cream",
@@ -680,8 +675,8 @@ var items= [
 		"price": "£10.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Turn-up Sleeve Blouse/front.png",
-				"back": "images/stock/womens/bottom/Turn-up Sleeve Blouse/back.png"
+				"front": "images/stock/womens/body/Turn-up Sleeve Blouse/front.png",
+				"back": "images/stock/womens/body/Turn-up Sleeve Blouse/back.png"
 			}
 		],
 		"colour": "Red",
@@ -710,8 +705,8 @@ var items= [
 		"price": "£10.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Butterfly%20Sweater/front.png",
-				"back": "images/stock/womens/bottom/Butterfly%20Sweater/back.png"
+				"front": "images/stock/womens/body/Butterfly Sweater/front.png",
+				"back": "images/stock/womens/body/Butterfly Sweater/back.png"
 			}
 		],
 		"colour": "Multi",
@@ -736,8 +731,8 @@ var items= [
 		"price": "£8.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Tunic%20Dress/front.png",
-				"back": "images/stock/womens/bottom/Tunic%20Dress/back.png"
+				"front": "images/stock/womens/body/Tunic Dress/front.png",
+				"back": "images/stock/womens/body/Tunic Dress/back.png"
 			}
 		],
 		"colour": "Black",
@@ -766,8 +761,8 @@ var items= [
 		"price": "£14.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Longline%20Cardigan/front.png",
-				"back": "images/stock/womens/bottom/Longline%20Cardigan/back.png"
+				"front": "images/stock/womens/body/Longline Cardigan/front.png",
+				"back": "images/stock/womens/body/Longline Cardigan/back.png"
 			}
 		],
 		"colour": "Navy",
@@ -795,12 +790,12 @@ var items= [
 	{
 		"name": "Tube Skirt",
 		"mainCategory": "Womens",
-		"subCategory": "Skirt",
+		"subCategory": "Skirts",
 		"type": "bottom",
 		"price": "£5.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Tube%20Skirt/front.png"
+				"front": "images/stock/womens/bottom/Tube Skirt/front.png"
 			}
 		],
 		"colour": "Black",
@@ -829,7 +824,7 @@ var items= [
 		"price": "£6.00",
 		"images": [
 			{
-				"front": "images/stock/womens/bottom/Aztec%20Print%20Shorts/front.png"
+				"front": "images/stock/womens/bottom/Aztec Print Shorts/front.png"
 			}
 		],
 		"colour": "Multi",
