@@ -111,9 +111,9 @@ body{
 .price{
 	float:right;
 	margin-right:1%;
-}
-.price{
-	margin-top:5%;
+	position: relative;
+    top: 50%;
+	transform: translate(0, -50%);
 }
 button{
 	width:100%;
@@ -182,8 +182,13 @@ button:first-child{
 	color:#fff;
 }
 .info>div, .delete>div{
-	margin-top:50%;
+	position: relative;
+    top: 50%;
+    left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
 }
+
 /* .info:hover,.info:active{
 	color: rgba(255,213,49,1);
 	background-color:#000;
