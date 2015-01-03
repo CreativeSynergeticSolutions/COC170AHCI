@@ -5,10 +5,10 @@ function loadBasketList() {
     console.log(basket);
 	console.log(items);
     if(basket!=null&&basket.length>0){
-        for(var i = 0; i < basket.length; i++){
+        /* for(var i = 0; i < basket.length; i++){
             var item = basket[i];
             document.getElementById('basket').appendChild(makeBasketItem(item.name));
-        }
+        } */
     } else {
         //document.getElementById('basket').appendChild(makeBasketItem('Your Basket is Empty'));
 		console.log("empty basket")
@@ -73,100 +73,6 @@ function displayItems(){
 
 window.onload = function () {
 	loadBasketList();
-	basket = [
-		{
-			"items":{
-				"name": "Acid Wash Jeggings",
-				"mainCategory": "Womens",
-				"subCategory": "Jeans",
-				"type": "bottom",
-				"price": "£10.00",
-				"images": {
-					"front": "images/stock/womens/bottom/Acid Wash Jeggings/front.png",
-					"back": "images/stock/womens/bottom/Acid Wash Jeggings/back.png"
-				},
-				"colours": [
-					{
-						"name":"Navy",
-						"class":"navy"
-					}
-				],
-				"description": [
-					{
-						"content": "We’re all for that grunge, messy hair look this season and with these acid wash jeggings you’re sure to be half way there. The perfect pick for an edgy new staple that will transform every look into a style statement instantly, you’re sure to adore these.",
-						"type": "paragraph"
-					},
-					{
-						"content": "Elasticated waistband",
-						"type": "bullet"
-					}
-				],
-				"fabric": "70% Cotton, 25% Polyester, 5% Elastane",
-				"productCode": "4929029",
-				"sizes": [
-					"8",
-					"10",
-					"12",
-					"14",
-					"16"
-				],
-				"recommendations":["4869167","4868138"]
-			},
-			"quantity":3,
-			"colour":{
-				"name":"Navy",
-				"class":"navy"
-			},
-			"size":"8"
-		},
-		{
-			"items":{
-				"name": "Acid Wash Jeggings",
-				"mainCategory": "Womens",
-				"subCategory": "Jeans",
-				"type": "bottom",
-				"price": "£10.00",
-				"images": {
-					"front": "images/stock/womens/bottom/Acid Wash Jeggings/front.png",
-					"back": "images/stock/womens/bottom/Acid Wash Jeggings/back.png"
-				},
-				"colours": [
-					{
-						"name":"Navy",
-						"class":"navy"
-					}
-				],
-				"description": [
-					{
-						"content": "We’re all for that grunge, messy hair look this season and with these acid wash jeggings you’re sure to be half way there. The perfect pick for an edgy new staple that will transform every look into a style statement instantly, you’re sure to adore these.",
-						"type": "paragraph"
-					},
-					{
-						"content": "Elasticated waistband",
-						"type": "bullet"
-					}
-				],
-				"fabric": "70% Cotton, 25% Polyester, 5% Elastane",
-				"productCode": "4929029",
-				"sizes": [
-					"8",
-					"10",
-					"12",
-					"14",
-					"16"
-				],
-				"recommendations":["4869167","4868138"]
-			},
-			"quantity":1,
-			"colour":{
-				"name":"Navy",
-				"class":"navy"
-			},
-			"size":"14"
-		}
-	];
-
-
 	displayItems();
 	$("#items").css('left','0');
 	$("#total").css('left','0');
