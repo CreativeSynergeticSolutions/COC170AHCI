@@ -81,12 +81,10 @@ window.onload = function () {
 				"subCategory": "Jeans",
 				"type": "bottom",
 				"price": "£10.00",
-				"images": [
-					{
-						"front": "images/stock/womens/bottom/Acid Wash Jeggings/front.png",
-						"back": "images/stock/womens/bottom/Acid Wash Jeggings/back.png"
-					}
-				],
+				"images": {
+					"front": "images/stock/womens/bottom/Acid Wash Jeggings/front.png",
+					"back": "images/stock/womens/bottom/Acid Wash Jeggings/back.png"
+				},
 				"colours": [
 					{
 						"name":"Navy",
@@ -128,12 +126,10 @@ window.onload = function () {
 				"subCategory": "Jeans",
 				"type": "bottom",
 				"price": "£10.00",
-				"images": [
-					{
-						"front": "images/stock/womens/bottom/Acid Wash Jeggings/front.png",
-						"back": "images/stock/womens/bottom/Acid Wash Jeggings/back.png"
-					}
-				],
+				"images": {
+					"front": "images/stock/womens/bottom/Acid Wash Jeggings/front.png",
+					"back": "images/stock/womens/bottom/Acid Wash Jeggings/back.png"
+				},
 				"colours": [
 					{
 						"name":"Navy",
