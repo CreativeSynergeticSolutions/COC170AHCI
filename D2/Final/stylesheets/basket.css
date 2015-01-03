@@ -115,6 +115,20 @@ body{
     top: 50%;
 	transform: translate(0, -50%);
 }
+#reserve{
+	margin-top:22.5vh;
+}
+form{
+	margin:0;
+	width:100%;
+	height:10%;
+	margin-bottom:5%;
+}
+form>button{
+	width:100%;
+	height:100%;
+	margin:0;
+}
 button{
 	width:100%;
 	height:10%;
@@ -128,23 +142,24 @@ button{
 	transition: 0.5s;
 	-webkit-transition: 0.5s;
 	cursor:pointer;
-}
-button:not(:last-child){
 	margin-bottom:5%;
 }
+/* button:not(:last-child){
+	margin-bottom:5%;
+} */
 button:hover,button:active, .info:hover,.info:active{
 	background-color:#000;
 	color:rgba(255,213,49,1)!important;
 	transition: 0.5s;
 	-webkit-transition: 0.5s;
 }
-button:first-child{
+/* button:first-child{
 	margin-top:22.5vh;
-}
+} */
 .cancel{
 	background-color:rgba(120,34,25,1);
 	color:#fff;
-	/*margin-bottom:40vh;*//*for scrolling*/
+	margin-bottom:0;
 }
 .cancel:hover, .cancel:active , #container .closebar:hover, #container .closebar:active, .delete:hover, .delete:active{
 	color:rgba(120,34,25,1)!important;
