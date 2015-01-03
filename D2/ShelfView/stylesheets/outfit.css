@@ -1,0 +1,467 @@
+a {
+    color: #000000;
+}
+.outfit-area,
+.basket-area {
+    bottom: 20%;
+    position: absolute;
+    width: 25%;
+}
+
+.outfit-area {
+    left: 10%;
+}
+
+.basket-area {
+    right: 10%;
+}
+
+.basket, .outfits, .current-items {
+    background-color: #1F1F1F;
+    display: none;
+    position: absolute;
+    bottom: 42px;
+    left: 50%;
+    overflow: hidden;
+    transform: translateX(-50%);
+    width: 90%;
+}
+
+.basket {
+    max-height: 60vh;
+}
+
+.outfits {
+    max-height: 60vh;
+}
+
+.current-items {
+    max-height: 80vh;
+}
+
+.basket-item,
+.outfit-item,
+.current-item {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    opacity: 0.9;
+    overflow: hidden;
+    vertical-align:middle;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.basket-item {
+    line-height: 1.5em;
+    padding: 5% 5%;
+    vertical-align:middle;
+}
+
+.basket-item__name {
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 65%;
+}
+
+.basket-item__size {
+    float: left;
+    font-size: 0.8em;
+    overflow: hidden;
+    width: 10%;
+}
+
+.basket-item__quantity {
+    float: right;
+    text-align: center;
+    width: 15%;
+}
+
+.basket-item__quantity:before {
+    content: 'x';
+}
+
+.basket-item__remove {
+    color: #B71C1C;
+    float: right;
+    font-size: 1.5em;
+    overflow: hidden;
+    text-align: center;
+    width: 10%;
+}
+
+.outfit-name {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    position: relative;
+    top: -0.2em;
+}
+
+.outfit-item .remove-outfit {
+    color: #B71C1C;
+}
+.outfit-item,
+.current-item {
+    padding: 5% 5%;
+}
+
+.basket-item>.left,
+.outfit-item>.left {
+    float: left;
+    text-overflow: ellipsis;
+    transform: translateY(20%);
+    overflow: hidden;
+    width: 65%;
+    white-space: nowrap;
+}
+
+.basket-item>.right,
+.outfit-item>.right {
+    float: right;
+    font-size: 1.25em;
+    text-align: center;
+    width: 35%;
+}
+
+.basket-item:not(:last-of-type),
+.outfit-item:not(:last-of-type),
+.current-item:not(:last-of-type) {
+    border-bottom: 2px solid #1F1F1F;
+}
+
+.basket-item:hover,
+.outfit-item:hover,
+.current-item:hover {
+    background-color: #1F1F1F;
+}
+
+.basket-btn,
+.outfit-btn {
+    bottom: 0;
+    position: absolute;
+    transform: translateX(50%);
+    transition: width 5s;
+    right: 50%;
+}
+
+.basket-area .basket-btn>.btn>.inner:before,
+.outfit-area .outfit-btn>.btn>.inner:before,
+.current-items-area .current-items-btn>.btn>.inner:before {
+    font-family: 'ahci';
+    float: right;
+}
+
+.basket-area .basket-btn>.btn>.inner:after,
+.outfit-area .outfit-btn>.btn>.inner:after,
+.current-items-area .current-items-btn>.btn>.inner:after {
+    font-family: 'ahci';
+    float: left;
+}
+
+.basket-area>.btn-touchable:hover>.btn>.inner:before,
+.outfit-area>.btn-touchable:hover>.btn>.inner:before,
+.current-items-area>.btn-touchable:hover>.btn>.inner:before {
+    content:'\e83b';
+}
+
+.basket-area.active .basket-btn>.btn>.inner:before,
+.outfit-area.active .outfit-btn>.btn>.inner:before,
+.current-items-area.active .current-items-btn>.btn>.inner:before {
+    content:'\e838';
+}
+
+.basket-area>.btn-touchable:hover>.btn>.inner:after,
+.outfit-area>.btn-touchable:hover>.btn>.inner:after,
+.current-items-area>.btn-touchable:hover>.btn>.inner:after {
+    content:'\e83b';
+}
+
+.basket-area.active .basket-btn>.btn>.inner:after,
+.outfit-area.active .outfit-btn>.btn>.inner:after,
+.current-items-area.active .current-items-btn>.btn>.inner:after {
+    content:'\e838';
+}
+
+.basket-area>.btn-touchable:hover,
+.basket-area.active .btn-touchable,
+.outfit-area>.btn-touchable:hover,
+.outfit-area.active .btn-touchable,
+.items-area>.btn-touchable:hover,
+.items-area.active .btn-touchable {
+    box-sizing: border-box;
+    min-width: 100%;
+}
+
+.basket-area>.btn-touchable:hover > .btn,
+.basket-area.active .btn-touchable>.btn,
+.outfit-area>.btn-touchable:hover > .btn,
+.outfit-area.active .btn-touchable>.btn,
+.current-items-area>.btn-touchable:hover > .btn,
+.current-items-area.active .btn-touchable>.btn {
+    box-sizing: border-box;
+    min-width: 100%;
+}
+
+.outfit-management-area {
+    bottom: -8%;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translateX(-50%);
+    width: 30%;
+}
+
+.outfit-management-area input {
+    background-color: transparent;
+    border-style: none none dotted none;
+    font-size: 1.25em;
+    margin: 0 auto;
+    outline: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+    min-width: 25%;
+    max-width: 90%;
+}
+
+.outfit-management-area input::-webkit-input-placeholder {
+   color: #2C2C2C;
+}
+
+.outfit-management-area input:-moz-placeholder { /* Firefox 18- */
+   color: #2C2C2C;
+}
+
+.outfit-management-area input::-moz-placeholder {  /* Firefox 19+ */
+   color: #2C2C2C;
+}
+
+.outfit-management-area input:-ms-input-placeholder {
+   color: #2C2C2C;
+}
+
+.outfit-management-area .add-outfit-btn {
+    display: inline-block;
+    width: 40%;
+}
+
+.outfit-management-area .current-items-area {
+    clear: both;
+    left: 10%;
+    position: absolute;
+    width: 90%;
+}
+
+.outfit-management-area .shelf-swap-btn {
+    clear: both;
+    margin: 0 auto;
+}
+
+.outfit-management-area .current-outfit-name-input {
+    display: inline-block;
+    margin-top: 3.5em;
+    position: relative;
+    top: 0.3em;
+    width: 50%;
+}
+
+.outfit-management-area .current-outfit-name-input:after {
+    font-family: 'ahci';
+    font-size: 1.25em;
+    height: 1.25em;
+    right: -0.5em;
+    line-height: 1.25em;
+    position: absolute;
+    text-align: center;
+    width: 1.25em;
+}
+
+.outfit-management-area .current-outfit-name-input.saved:after {
+    content: '\e80b';
+}
+
+.outfit-management-area .current-outfit-name-input.saving:after {
+    -webkit-animation: saving 1s linear 0s infinite forwards; /* Chrome, Safari, Opera */
+    animation: saving 1s linear 0s infinite forwards;
+    content: '\e85c';
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes saving {
+    from {
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* Standard syntax */
+@keyframes saving {
+    from {
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.main-outfit-area {
+    height: 85%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: 50%;
+    z-index: -1;
+}
+
+.main-outfit-area > * {
+    position: relative;
+}
+
+.main-outfit-area > * > .item {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 33%;
+    z-index: 2;
+}
+
+.main-outfit-area > * > .item:hover {
+    cursor: pointer;
+}
+
+.main-outfit-area > * .add-item {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline;
+    font-size: 1em;
+    left: 0.5em;
+    padding: 0 0 1% 0;
+    position: relative;
+    top: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main-outfit-area > * .buy-item {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline;
+    font-size: 1em;
+    left: -0.9em;
+    padding: 0 0 1% 0;
+    position: relative;
+    top: 2em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main-outfit-area > * > .main-item {
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.main-outfit-area .add-area {
+    cursor: pointer;
+    font-size: 2em;
+    height: 2em;
+    left: 50%;
+    opacity: 0.4;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    vertical-align: -0.2em;
+}
+
+.main-outfit-area .add-area:hover {
+    opacity: 1;
+}
+
+.main-outfit-area .add-area i {
+    font-size: 2em;
+    vertical-align: -0.2em;
+}
+
+#head-area {
+    height: 15%;
+}
+
+#body-area {
+    height: 35%;
+}
+
+#bottom-area {
+    height: 35%;
+}
+
+#feet-area {
+    height: 15%;
+}
+
+.outfit-trash-area {
+    bottom: 40%;
+    color: #B71C1C;
+    display: none;
+    font-size: 3em;
+    position: absolute;
+    right: 35%;
+    z-index: 1;
+}
+
+.notification-area {
+    top: 5%;
+    position: absolute;
+    right: 5%;
+    width: 20%;
+}
+
+.notification {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+    display: none;
+    padding: 0.5em;
+}
+
+.notification .icon-cancel {
+    color: #B71C1C;
+}
+
+::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: #1F1F1F;
+}
+
+.checkout-area {
+    bottom: 5%;
+    position: absolute;
+    right: 18%;
+}
