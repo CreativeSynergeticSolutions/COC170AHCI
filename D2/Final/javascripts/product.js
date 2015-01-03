@@ -1,48 +1,32 @@
+var wall = new wall();
+
 var currentProduct = {
-            name: "Crochet Shoulder Blouse",
-            mainCategory: "Womens",
-            subCategory: "Blouse",
-            type: "body",
-            price: "£14.00",
+            name: "No Product Selected",
+            mainCategory: "N/A",
+            subCategory: "N/A",
+            type: "N/A",
+            price: "£00.00",
             images: {
-                front: "images/stock/womens/body/Crochet Shoulder Blouse/front.png",
-                back: "images/stock/womens/body/Crochet Shoulder Blouse/back.png",
-                close: "images/stock/womens/body/Crochet Shoulder Blouse/close.png"
+                front: "images/stock/womens/body/Crochet Shoulder Blouse/front.png"
             },
             colours: [
                 {
 					name:"Cream",
 					class:"cream"
-				},
-				{
-					name:"Red",
-					class:"red"
 				}
             ],
             description: [
                 {
-                    content: "Invest in this gently unique crochet shoulder blouse this season. This lovely piece will add a delightful touch to every look and will work in perfect harmony with your formal outfits. Team with one of our camisole vests to complete the look.",
+                    content: "No Product Selected",
                     type: "paragraph"
-                },
-                {
-                    content: "Button through fastening",
-                    type: "bullet"
-                },
-                {
-                    content: "Long sleeve",
-                    type: "bullet"
                 }
             ],
-            fabric: "Main body: 100% Polyester Trim: 100% Cotton",
-            productCode: "4931794",
+            fabric: "No Product Selected",
+            productCode: "00000000",
             sizes: [
-                "8",
-                "10",
-                "12",
-                "14",
-                "16"
+                "0"
             ],
-			recommendations:["4943984","4929704"]
+			recommendations:["00000000","00000000"]
         };
 
 var productImages = [];
@@ -51,16 +35,28 @@ var currentColor = null;
 var currentSize = "";
 var currentQuantity = 1;
 
+var currentOutfits = [];
+
+var recommendedProducts = [];
+
 $(document).ready(function(){
 	
 	var retrievedCode = items.getCodeFromSearch();
 	
-	console.log("Code is this: " + retrievedCode);
+	//console.log("Code is this: " + retrievedCode);
 	
 	if (retrievedCode != null) currentProduct = items.getItemByCode(retrievedCode);
 	
 	console.log(currentProduct);
 	
+	//wall.addToBasket(item, quantity, size, colour);
+	
+	//wall.getOutfits();
+	//wall.getCurrentOutfit();  - add to current outfit
+	//wall.addOutfitItem(outfitName, item, quantity, size, colour);
+	//wall.addOutfit(name);
+	
+	//{id:int, name: string, items: array of item objects}
 	
 	document.getElementById("basketRadio").checked = true;
 	
@@ -71,8 +67,7 @@ $(document).ready(function(){
 	setupOptions();
 	
 	$("<style type='text/css'> #optionsWrapper * {	transition: 1s;	}</style>").appendTo("head");
-
-		
+	
 });
 
 function setupHeader() {
@@ -126,7 +121,7 @@ function setupImageDisplay() {
 		$("#displayImg").panzoom("disable");
 		
 	});
-		
+	
 	$(".imgBtns").first().click();
 	
 
@@ -166,6 +161,30 @@ function setupProductDetails() {
 		
 	});
 	
+	var productDescriptionHTML = "";
+	
+	for(var key in currentProduct.description){
+		
+		if (currentProduct.description[key].type == "paragraph") 
+				productDescriptionHTML += currentProduct.description[key].content;
+		else if(currentProduct.description[key].type == "bullet") {
+			
+			var bulletArray = currentProduct.description[key].content;
+			
+			productDescriptionHTML += "<ul>";
+			
+			for(var baIndex in bulletArray) productDescriptionHTML += "<li>" + bulletArray[baIndex] + "</li>";
+			
+			productDescriptionHTML += "</ul>";
+			
+		}
+		
+		productDescriptionHTML += "<br />";
+		
+	}
+	
+	$("#productDetails").append(productDescriptionHTML);
+	
 }
 
 function setupRecommended() {
@@ -176,6 +195,8 @@ function setupRecommended() {
 			
 			$("#recommendedSectionLabel").css("cursor", "default");
 			document.getElementById("recommendedCheck").disabled = true;
+			
+			$(".rCard").css("pointer-events", "auto");
 						
 		}
 		
@@ -187,7 +208,39 @@ function setupRecommended() {
 		
 		$("#recommendedSectionLabel").css("cursor", "pointer");
 		
+		$(".rCard").css("pointer-events", "none");
+		
 	});
+	
+	
+	for(var rIndex in currentProduct.recommendations)
+			recommendedProducts.push(items.getItemByCode(currentProduct.recommendations[rIndex]));
+		
+	for(var rpIndex in recommendedProducts) {
+		
+		var cardHTML = "<div class='rCard' data-rcode=" + recommendedProducts[rpIndex].productCode + ">\
+							<div class='rCardName'>" + recommendedProducts[rpIndex].name + "</div>\
+							<div class='rCardPrice'>" + recommendedProducts[rpIndex].price + "</div>\
+							<div class='rCardImg' style='background-image: url(" + recommendedProducts[rpIndex].images["front"].split(" ").join("%20") + ");'></div>\
+						</div>";
+		
+		$("#recommndedList").append(cardHTML);
+		
+	}
+	
+	$(".rCard").each(function(){
+		
+		$(this).click(function(){
+			
+			var rCode= $(this).attr("data-rcode");
+			
+			window.location = "product.html?productCode=" + rCode;
+			
+		});
+		
+	});
+	
+	$(".rCard").css("pointer-events", "none");
 	
 }
 
@@ -199,7 +252,9 @@ function setupOptions() {
 			
 			$("#optionSectionLabel").css("cursor", "default");
 			document.getElementById("optionsCheck").disabled = true;
-						
+			
+			document.getElementById("basketContainer").disabled = false;
+			
 		}
 		
 	});
@@ -224,6 +279,7 @@ function setupOptions() {
 			
 			$("#basketSectionLabel").css("cursor", "default");
 			document.getElementById("basketRadio").disabled = true;
+			document.getElementById("basketContainer").disabled = false;
 			document.getElementById("outfitRadio").disabled = false;
 			
 			$("#basketContainer").addClass("basketContainerActive");
@@ -240,6 +296,7 @@ function setupOptions() {
 			
 			$("#outfitsSectionLabel").css("cursor", "default");
 			document.getElementById("outfitRadio").disabled = true;
+			document.getElementById("basketContainer").disabled = true;
 			document.getElementById("basketRadio").disabled = false;
 			
 			$("#basketContainer").removeClass("basketContainerActive");
@@ -247,6 +304,14 @@ function setupOptions() {
 		}
 		
 	});
+	
+	$("#basketContainer").click(function(){
+		
+		wall.addToBasket(currentProduct, currentQuantity, currentSize, currentColor);
+		alert("Added To Basket");
+		
+	});
+	document.getElementById("basketContainer").disabled = true;
 	
 		
 	for(var cIndex in currentProduct.colours){
@@ -298,6 +363,48 @@ function setupOptions() {
 	$("#sizeList li").first().click();
 	
 	
+	currentOutfits = wall.getOutfits().reverse();
+	
+	console.log("current outfits: \n" + currentOutfits);
+	
+	for(var coKey in currentOutfits)
+			$("#outfitsList").append("<li data-coindex=" + coKey + " ><span>" + currentOutfits[coKey].name + "</span></li>");
+	
+	
+	$("#outfitsList li").each(function(){
+		
+		$(this).click(function(){
+			
+			var coIndex = $(this).attr("data-coindex");
+			
+			wall.addOutfitItem(currentOutfits[coIndex].name, currentProduct, currentQuantity, currentSize, currentColor);
+			
+			alert("added to outfit: " + currentOutfits[coIndex].name);
+			
+		});
+		
+	});
+	
+	$("#outfitsNewButton").click(function(){
+		
+		var newOutfitName = $("#newOutfitName").val();
+		
+		wall.addOutfit(newOutfitName);
+		
+		wall.addOutfitItem(newOutfitName, currentProduct, currentQuantity, currentSize, currentColor);
+		
+		wall.setCurrentOutfit(newOutfitName);
+		
+		currentOutfits = wall.getOutfits().reverse();
+		
+		$("#outfitsList").empty();
+		
+		for(var coKey in currentOutfits)
+			$("#outfitsList").append("<li data-coindex=" + coKey + " ><span>" + currentOutfits[coKey].name + "</span></li>");
+		
+		$("#newOutfitName").val("");
+		
+	});
 	
 }
 

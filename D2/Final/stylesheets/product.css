@@ -544,9 +544,7 @@ body {
 	left: 30px;
 	height: 640px;
 	width: 350px;
-	
-	border: 1px solid white;
-	
+		
 	background-color: none;
 	
 	//transform: rotateY(50deg);
@@ -629,6 +627,7 @@ body {
 
 #productSectionLabel input:checked~ #productSectionWrapper #productDetails {
 	
+	padding-right: 150px;
 	top: 121px;
 	left: 50px;
 	height: 900px;
@@ -636,7 +635,7 @@ body {
 	
 	font-size: 25px;
 	
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.7);
 	
 	overflow-y: scroll;
 		
@@ -716,7 +715,7 @@ body {
 #productDetailsOtherContainerB  {
 	
 	height: 600px;
-	width: 300px;
+	width: 150px;
 	
 }
 
@@ -724,7 +723,7 @@ body {
 	
 	position: absolute;
 	top: 10px;
-	left: 250px;
+	left: 150px;
 	
 	height: 500px;
 	width: 91px;
@@ -747,7 +746,7 @@ body {
 #productDetailsOtherContainerB
 #socialIconsImg {
 	
-	left: 40px;
+	left: 10px;
 	
 	opacity: 1;
 	
@@ -758,7 +757,7 @@ body {
 #closeProductDetailsBtn {
 	
 	position: absolute;
-	top: 50px;
+	top: 350px;
 	right: -100px;
 	
 	opacity: 0;
@@ -770,11 +769,9 @@ body {
 }
 
 #productSectionLabel input:checked~ #productSectionWrapper  
-#productDetails 
-#productDetailsOtherContainerB
 #closeProductDetailsBtn {
 	
-	right: 10px;
+	right: 60px;
 	
 	opacity: 1;
 	
@@ -823,9 +820,7 @@ body {
 	right: 30px;
 	height: 400px;
 	width: 350px;
-	
-	border: 1px solid white;
-	
+		
 	background-color: none;
 	
 	//transform: rotateY(-50deg);
@@ -950,6 +945,8 @@ body {
 	
 	height: 290px;
 	width: 140px;
+	
+	cursor: pointer;
 		
 }
 
@@ -1123,9 +1120,7 @@ body {
 	right: 30px;
 	height: 350px;
 	width: 350px;
-	
-	border: 1px solid white;
-	
+		
 	background-color: none;
 	
 	//transform: rotateY(-50deg) rotateX(20deg);
@@ -1478,6 +1473,8 @@ label[name="optionsLabels"] {
 	
 	background-color: rgba(255, 204, 0, 0.7) !important;
 	
+	transition: 0.5s !important;
+	
 }
 
 #optionSectionLabel input:checked~ #optionsWrapper 
@@ -1653,7 +1650,7 @@ label[name="optionsLabels"] {
 	box-sizing: border-box;
 	
 	position: absolute;
-	padding-top: 47px;
+	padding-top: 10px;
 	padding-left: 10px;
 	height: 395px;
 	width: 320px;
@@ -1664,9 +1661,27 @@ label[name="optionsLabels"] {
 	
 }
 
-#outfitsNewButton {
+#newOutfitName {
+	
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	margin-left: 4px;
+	height: 40px;
+	width: 280px;
+	
+	background-color: #DDDDDD;
+	font-size: 1.25em;
+	outline: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	
+	
+}
 
-	height: 300px;
+#outfitsNewButton {
+	
+	height: 250px;
 	width: 300px;
 	
 	display: table-cell;
