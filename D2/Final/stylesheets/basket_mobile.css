@@ -36,7 +36,6 @@
         bottom: 2%;
 	}
 	button{
-		width: 18.8vw;
 		padding:0;
 		font-size:90%;
 		margin-bottom:0;
@@ -50,8 +49,10 @@
 		margin:0px;
 		margin-right:1%;
 	}
+	button, form{
+		width: 23.4vw;
+	}
 	form{
-		width: 18.8vw;
 		padding:0;
 		margin-bottom:0;
 		height:10vh;
@@ -105,5 +106,11 @@
 		background-size: 0;
 		padding: 0;
 		color:#000;
+	}
+	.item >p {
+		width:25%;
+	}
+	#quantityContainer{
+		left:40%;
 	}
 }

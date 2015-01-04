@@ -317,3 +317,15 @@ button:hover,button:active, .info:hover,.info:active{
 	height:90%;
 	padding:5%;
 }
+#quantityImg{
+	position:relative;
+	float:left;
+}
+#quantityContainer{
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	float: left;
+	left: 45%;
+	/*margin-top: 0.5vh;*/
+}

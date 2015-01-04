@@ -1,4 +1,5 @@
 var wall = new wall();
+var dial = new Dial(150, "1.5em");
 var basket;
 function loadBasketList() {
     basket = wall.getBasket();
@@ -58,10 +59,16 @@ function displayItems(){
 		html += "<img src='"+basket[i].item.images.front+"'>";
 		html += "</div>";
 		html += "<p>"+basket[i].item.name+"</p>";
-		html += "<a class='dial'>"+basket[i].quantity+"</a>";
+		//html += "<a class='dial'>"+basket[i].quantity+"</a>";
+		
+		
 		html += "<p class='product'>Size: "+basket[i].size+"</p>";
 		html += "<p class='product'>Colour: "+basket[i].colour.name+"</p>";
 		html += "<p class='product'>Product Code: "+basket[i].item.productCode+"</p>";
+		
+		html += "<div id='quantityContainer'>";
+		html +=	"<div id='quantityImg' data-dialid="+i+"></div>";
+		html +=	"</div>";
 		html += "</div>";
 		//need quantity
 		total += parseInt((basket[i].item.price).substring(1,basket[i].item.price.length))*basket[i].quantity;
@@ -77,12 +84,32 @@ function removeAll(){
 		}
 	}
 }
-
+function Resize(){
+	var width = window.innerWidth;
+	var height = window.innerHeight;
+	var height_item = $("#item0").height();
+	dial = new Dial(height_item, "150%");
+	
+}
 window.onload = function () {
+	
 	loadBasketList();
 	displayItems();
 	$("#items").css('left','0');
 	$("#total").css('left','0');
 	$("#options").css('right','0');
-
+	for(i =0; i< basket.length; i++){
+		dial.addNewDial(i, function(dialData){
+			console.log("dialid is: " + dialData.dialid);
+			console.log("dialValue is: " + dialData.dialValue);
+			currentQuantity = dialData.dialValue;
+			$("#basketQuantityVal").text(currentQuantity);
+			
+		});
+		
+	}
+	Resize();
+}
+window.onresize = function(){
+	Resize();	
 }
