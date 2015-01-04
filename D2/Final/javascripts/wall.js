@@ -3,7 +3,7 @@
 */
 String.prototype.hashCode = function() {
   var hash = 0, i, chr, len;
-  if (this.length == 0) return hash;
+  if (this.length === 0) { return hash; }
   for (i = 0, len = this.length; i < len; i++) {
     chr   = this.charCodeAt(i);
     hash  = ((hash << 5) - hash) + chr;
@@ -18,7 +18,7 @@ String.prototype.hashCode = function() {
 var wall = function (options) {
     options = options || {};
     this.user = options.user || '';
-    this.userStorage = 'AHCI'+'-'+((this.user=='')?'local':this.user);
+    this.userStorage = 'AHCI'+'-'+((this.user==='')?'local':this.user);
     this.saveObjectToStorage = function (name, toSave) {
         this.wallLog('Saving '+name);
         this.wallLog('Getting existing '+name);
@@ -96,7 +96,7 @@ wall.prototype.addOutfit = function (outfitName) {
     if(outfits===null){
         outfits = [];
     }
-    var outfitid = (outfits.length==0) ? 0 : outfits[outfits.length-1].id+1;
+    var outfitid = (outfits.length===0) ? 0 : outfits[outfits.length-1].id+1;
     outfits.push({"id": outfitid, "name":outfitName, items:[]});
     this.saveObjectToStorage('outfits',outfits);
 };
@@ -136,7 +136,7 @@ wall.prototype.getOutfits = function () {
 };
 wall.prototype.getCurrentOutfit = function () {
     return this.getObjectFromStorage('currentOutfit');
-}
+};
 wall.prototype.setCurrentOutfit = function (outfitName) {
     this.saveObjectToStorage('currentOutfit', this.getOutfit(outfitName));
 };
@@ -162,7 +162,7 @@ wall.prototype.addToBasket = function (item, quantity, size, colour) {
         if(basket===null){
             basket = [];
         }
-        entry.id = (basket.length==0) ? 0 : basket[basket.length-1].id+1;
+        entry.id = (basket.length===0) ? 0 : basket[basket.length-1].id+1;
         basket.push(entry);
         this.saveObjectToStorage('basket',basket);
     } else {
