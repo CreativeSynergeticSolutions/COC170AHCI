@@ -68,6 +68,10 @@ $(document).ready(function(){
 	
 	$("<style type='text/css'> #optionsWrapper * {	transition: 1s;	}</style>").appendTo("head");
 	
+	
+	$("#backButton").click(function(){window.history.back();});
+	$("#homeButton").click(function(){window.location = "shelf.html";});
+	
 });
 
 function setupHeader() {
@@ -261,7 +265,9 @@ function setupOptions() {
 	
 	$("#closeOptionsBtn").click(function(){
 		
-		$('#basketSectionLabel input').prop('checked', true);
+		//$('#basketSectionLabel input').prop('checked', true);
+		
+		$('#basketSectionLabel input').click();
 		
 		document.getElementById("optionsCheck").disabled = false;
 		
