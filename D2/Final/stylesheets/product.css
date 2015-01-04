@@ -1433,20 +1433,14 @@ label[name="optionsLabels"] {
 
 	border: none;
 	
+	overflow: visible !important;
+	
 }
 
 #quantityImg {
 	
 	position: absolute;
 	top: 100px;
-	height: 200px;
-	width: 200px;
-	
-	background-image: url(../images/Dial.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: top center;
-	
 	
 }
 
