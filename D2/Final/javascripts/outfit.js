@@ -1,4 +1,5 @@
 var wall = new wall();
+var dial = new Dial(50,"0.8em");
 
 function makeEmptyEle(text, className){
     var emptyEle = document.createElement('div');
@@ -40,7 +41,7 @@ function loadOutfit () {
     if(outfit!=null&&outfit.items.length>0){
         $('.outfit-trash-area').show();
         for(var i = 0; i < outfit.items.length; i++){
-            var item = outfit.items[i].item;
+            var item = outfit.items[i].item,
                 itemEle = document.createElement('div'),
                 addEle = document.createElement('div'),
                 buyEle = document.createElement('div'),
@@ -98,7 +99,7 @@ function makeBasketItem(item) {
     itemColour.className = 'basket-item__colour';
     itemColour.className = item.colour.class;
     itemQuantity.className = 'basket-item__quantity';
-    itemQuantity.innerHTML = item.quantity;
+    itemQuantity.innerHTML = '<div class="basket-dial" data-dialid="'+item.id+'" data-quantity="'+item.quantity+'"></div>';
     itemRemove.className = 'basket-item__remove';
     removeIcon.className = 'icon-cancel';
     itemRemove.appendChild(removeIcon);
@@ -142,6 +143,10 @@ function loadBasketList() {
         $('.basket-btn .btn .inner').append('<span class="itemCount"> | '+ itemInBasket + ((itemInBasket > 1) ? ' items' : ' item') +' | </span>');
         $('.basket-btn .btn .inner').append('<span class="priceCount">&pound;'+getBasketTotal(basket)+'</span>');
     }
+    $('.basket-dial').each(function () {
+        var dialid = parseInt($(this).data('dialid'));
+        dial.addNewDial(dialid);
+    });
 }
 function makeOutfitListItem(outfit, selected) {
     var selected = selected || false,

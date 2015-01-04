@@ -5,15 +5,16 @@ a {
 .basket-area {
     bottom: 20%;
     position: absolute;
-    width: 25%;
 }
 
 .outfit-area {
     left: 10%;
+    width: 25%;
 }
 
 .basket-area {
-    right: 10%;
+    right: 5%;
+    width: 30%;
 }
 
 .basket, .outfits, .current-items {
@@ -65,7 +66,7 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 65%;
+    width: 60%;
 }
 
 .basket-item__size {
@@ -78,11 +79,7 @@ a {
 .basket-item__quantity {
     float: right;
     text-align: center;
-    width: 15%;
-}
-
-.basket-item__quantity:before {
-    content: 'x';
+    width: 20%;
 }
 
 .basket-item__remove {
@@ -539,4 +536,20 @@ a {
         position: relative;
         top: -48px;
     }
+}
+
+/*
+*    Dial Corrections
+*/
+.dialImage {
+    position: relative;
+    top: -0.65em;
+}
+
+.basket-item > *:not(.dialImage) {
+    position: relative;
+    top: 1em;
+}
+.basket-item .basket-item__remove {
+    top: 0.6em;
 }
