@@ -30,6 +30,7 @@ function loadModal(index){
 	$("#containerInner").css("left","12.5%");
 }
 function deleteItem(index){
+	wall.removeItemFromBasket(document.getElementById("item"+index).getAttribute("data"));
 	$("#item"+index).remove();
 	var current = ($("#total").text()).substring(9,($("#total").text()).length);
 	console.log(current);
@@ -49,7 +50,7 @@ function displayItems(){
 	var html = "";
 	var total = 0;
 	for(var i = 0; i < basket.length;i++){
-		html += "<div class='item' id='item"+i+"'>";
+		html += "<div class='item' id='item"+i+"' data='"+ basket[i].id +"' >";
 		html += "<div class='delete' onclick='deleteItem("+i+")'><div><span title='Delete Item'><i class='icon-trash-empty'></i></span></div></div>";
 		html += "<div class='info' onclick='loadModal("+i+")'><div><span title='Product info'><i class='icon-info'></i></span></div></div>";
 		html += "<div class='price'>"+basket[i].item.price+"</div>";
