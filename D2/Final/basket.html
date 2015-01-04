@@ -12,6 +12,9 @@
     <script type="text/javascript" src="vendor/jquery-ui/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="javascripts/fetchItems.js"></script>
     <script type="text/javascript" src="javascripts/wall.js"></script>
+    <script type="text/javascript" src="javascripts/util.js"></script>
+    <script type="text/javascript" src="javascripts/propeller.min.js"></script>
+    <script type="text/javascript" src="javascripts/dial.js"></script>
     <script type="text/javascript" src="javascripts/basket.js"></script>
 	
 </head>
@@ -32,11 +35,8 @@
 				Outfit
 			</button>
 		</form>
-		<button><!--are we including this?-->
-			Share
-		</button>
-		<button class="cancel"><!--javascript to clear and return to shelf view-->
-			Cancel Order
+		<button class="cancel" onclick="removeAll();"><!--javascript to clear and return to shelf view-->
+			Remove All Items
 		</button>
 	</div>
 	<div id="items">

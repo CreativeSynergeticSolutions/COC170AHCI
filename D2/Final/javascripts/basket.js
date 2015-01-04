@@ -69,7 +69,14 @@ function displayItems(){
 	$('#items').html(html);
 	$('#total').html("Total: &#163 "+add00(total))
 }
-
+function removeAll(){
+	console.log(basket.length);
+	for(i=0; i<basket.length; i++){
+		if($('#item'+i).length){
+			deleteItem(i);
+		}
+	}
+}
 
 window.onload = function () {
 	loadBasketList();
