@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 .main-area {
@@ -24,6 +24,14 @@ body {
     position: fixed;
     top: 10%;
     width: 90%;
+}
+@media only screen and (max-width: 600px) {
+    .main-area {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
 }
 
 .btn-touchable {

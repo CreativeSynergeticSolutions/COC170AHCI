@@ -25,6 +25,7 @@ a {
     overflow: hidden;
     transform: translateX(-50%);
     width: 90%;
+    z-index: 6;
 }
 
 .basket {
@@ -464,4 +465,78 @@ a {
     bottom: 5%;
     position: absolute;
     right: 18%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .outfit-area,
+    .basket-area,
+    .outfit-management-area,
+    .current-items-area,
+    .notification-area,
+    .checkout-area {
+        left: 0 !important;
+        width: 100% !important;
+    }
+    .checkout-area .btn,
+    .shelf-swap-btn .btn {
+        left: -1%;
+    }
+
+    .current-items-area .btn {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .current-items-area .btn:hover {
+        margin-left: 49%;
+        transform: translateX(-50%);
+    }
+
+    .outfit-area .btn-touchable,
+    .outfit-area .btn,
+    .basket-area .btn-touchable,
+    .basket-area .btn,
+    .checkout-area .btn-touchable,
+    .checkout-area .btn,
+    .current-items-area .btn-touchable,
+    .current-items-area .btn,
+    .shelf-swap-btn,
+    .shelf-swap-btn .btn{
+        width: 100%;
+    }
+    .current-items-area {
+        bottom: 48px;
+        width: 100% !important;
+    }
+    .outfit-management-area {
+        left: 50% !important;
+        text-align: center;
+    }
+    .outfit-management-area {
+        bottom: 144px;
+        left: 50%;
+    }
+    .outfit-area {
+        bottom: 96px;
+    }
+    .basket-area {
+        bottom: 48px;
+    }
+    .checkout-area {
+        bottom: 0;
+        text-align: center;
+    }
+    .main-outfit-area {
+        box-sizing: border-box;
+        padding-bottom: 220px;
+        text-align: center;
+    }
+    .current-outfit-name-input {
+        top: -38px !important;
+    }
+    .add-outfit-btn {
+        position: relative;
+        top: -48px;
+    }
 }

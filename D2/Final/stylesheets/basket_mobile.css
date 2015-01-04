@@ -32,6 +32,8 @@
 		width:98vw;
 		margin: 1%;
 		height:10vh;
+        position: absolute;
+        bottom: 2%;
 	}
 	button{
 		width: 18.8vw;
@@ -69,7 +71,7 @@
 	#items{
 		width:98vw;
 		height: 80vh;
-		margin-right:0; 
+		margin-right:0;
 	}
 	.item{
 		width:98%;
