@@ -109,6 +109,21 @@ function makeBasketItem(item) {
     itemEle.appendChild(itemQuantity);
     return itemEle;
 }
+function getNumberOfItemInBasket (basket) {
+    var number = 0;
+    for(var item in basket) {
+        number += basket[item].quantity;
+    }
+    return number;
+}
+function getBasketTotal (basket) {
+    var number = 0;
+    for(var item in basket) {
+        var itemPrice = basket[item].item.price;
+        number += basket[item].quantity * itemPrice.slice(1,itemPrice.length);
+    }
+    return number;
+}
 function loadBasketList() {
     var basket = wall.getBasket(),
         basketEle = document.getElementById('basket');
@@ -123,13 +138,9 @@ function loadBasketList() {
     $('.basket-btn .btn .itemCount').remove();
     $('.basket-btn .btn .priceCount').remove();
     if(basket.length > 0) {
-        $('.basket-btn .btn .inner').append('<span class="itemCount"> | '+basket.length+' items | </span>');
-        var price = 0;
-        for(var i=0; i< basket.length; i++){
-            var itemPrice = basket[i].item.price;
-            price += parseInt(itemPrice.slice(1,itemPrice.length));
-        }
-        $('.basket-btn .btn .inner').append('<span class="priceCount">&pound;'+price+'</span>');
+        var itemInBasket = getNumberOfItemInBasket(basket);
+        $('.basket-btn .btn .inner').append('<span class="itemCount"> | '+ itemInBasket + ((itemInBasket > 1) ? ' items' : ' item') +' | </span>');
+        $('.basket-btn .btn .inner').append('<span class="priceCount">&pound;'+getBasketTotal(basket)+'</span>');
     }
 }
 function makeOutfitListItem(outfit, selected) {
