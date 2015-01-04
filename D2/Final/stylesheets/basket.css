@@ -161,7 +161,7 @@ button:hover,button:active, .info:hover,.info:active{
 	color:#fff;
 	margin-bottom:0;
 }
-.cancel:hover, .cancel:active , #container .closebar:hover, #container .closebar:active, .delete:hover, .delete:active{
+.cancel:hover, .cancel:active , .container .closebar:hover, .container .closebar:active, .delete:hover, .delete:active{
 	color:rgba(120,34,25,1)!important;
 	background-color:#fff;
 }
@@ -209,7 +209,7 @@ button:hover,button:active, .info:hover,.info:active{
 	background-color:#000;
 	transition: 0.5s;
 } */
-#container{
+.container{
 	position:absolute;
 	top:0;
 	left:0;
@@ -218,8 +218,9 @@ button:hover,button:active, .info:hover,.info:active{
 	background-color: rgba(0,0,0,0.8);
 	transition:0.5s;
 	display:none;
+	z-index: 110;
 }
-#container>div{
+.container>div{
 	width:75%;
 	height:75%;
 	position:relative;
@@ -232,7 +233,7 @@ button:hover,button:active, .info:hover,.info:active{
 	color:#fff;
 	font-size:200%;
 }
-#container .topbar{
+.container .topbar{
 	height:10%;
 	width:90%;
 	background-color:rgba(255,213,49,1);
@@ -241,15 +242,37 @@ button:hover,button:active, .info:hover,.info:active{
 	border-top-left-radius: 4px;
 	
 }
-#container .topbar>div{
+.container .topbar>div{
 	position:relative;
 	top: 25%;
 	color:#000;
 }
-#container .topbar>div>i{
+.container .topbar>div>i{
 	float:left;
 }
-#container .closebar{
+.topbarextended{
+	width:100%!important;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-right-radius: 4px;
+	text-align:center;
+	height:20%!important;
+	
+}
+.topbarextended p{
+	position: relative;
+	font-size:100%;
+}
+#container2>div{
+	height:40%;
+}
+
+.close{
+	width:98%;
+	height:73%;
+	margin:1%!important;
+}
+.container .closebar{
 	width:10%;
 	height:100%;
 	background-color:rgba(120,34,25,1);
@@ -264,7 +287,7 @@ button:hover,button:active, .info:hover,.info:active{
 	transition:0.5s;
 	cursor:pointer;
 }
-#container .goToItem{
+.container .goToItem{
 	width:10%;
 	height:100%;
 	background-color:#3c3432;
@@ -273,21 +296,21 @@ button:hover,button:active, .info:hover,.info:active{
 	cursor:pointer;
 	float:right;
 }
-#container .goToItem:hover, #container .goToItem:active{
+.container .goToItem:hover, .container .goToItem:active{
 	background-color:#fff;
 	color:#3c3432;
 	transition:0.5s;
 }
-#container .closebar>div, #container .goToItem>div{
+.container .closebar>div, .container .goToItem>div{
 	position:relative;
 	top: 50%;
 	text-align:center;
 }
-#container .goToItem>div>div{
+.container .goToItem>div>div{
 	width:50%;
 	float:left;
 }
-#container #inputText{
+.container #inputText{
 	width: 80%;
 	float:left;
 	margin:0;
@@ -295,24 +318,24 @@ button:hover,button:active, .info:hover,.info:active{
 	white-space: nowrap;
 	overflow: hidden;
 }
-#container #image{
+.container #image{
 	height:90%;
 	width:25%;
 	float:left;
 }
-#container #image>img{
+.container #image>img{
 	margin-top:35%;
 	height:50%;
 	width:auto;
 }
-#container #description{
+.container #description{
 	float:right;
 	width:55%;
 	height:90%;
 	color:#fff;
 	font-size:100%;
 }
-#container #description>div{
+.container #description>div{
 	width:90%;
 	height:90%;
 	padding:5%;

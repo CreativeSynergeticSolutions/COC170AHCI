@@ -75,6 +75,7 @@ function displayItems(){
 		html += "</div>";
 		//need quantity
 		total += parseInt((basket[i].item.price).substring(1,basket[i].item.price.length))*basket[i].quantity;
+		
 	}
 	$('#items').html(html);
 	$('#total').html("Total: &#163 "+add00(total))
@@ -94,6 +95,13 @@ function Resize(){
 	dial = new Dial(height_item, "150%");
 	
 }
+function loadContainer2(){
+	$("#container2").css('display','block');
+}
+function closeAll(){
+	removeAll();
+	window.location.href = 'idle.html'
+}
 window.onload = function () {
 	
 	loadBasketList();
@@ -109,7 +117,7 @@ window.onload = function () {
 			$("#basketQuantityVal").text(currentQuantity);
 			
 		});
-		
+		dial.setDialValue(i, basket[i].quantity);
 	}
 	Resize();
 }

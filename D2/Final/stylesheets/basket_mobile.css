@@ -102,6 +102,12 @@
 	#container{
 		font-size:50%!important;
 	}
+	
+}
+@media (max-width: 1000px) {
+	.topbarextended p{
+		font-size:50%;
+	}
 }
 @media (max-width: 750px) {
 	#image{
@@ -122,6 +128,7 @@
 	}
 }
 @media (max-width: 600px) {
+	
 	body{
 		font-size:75%;
 	}

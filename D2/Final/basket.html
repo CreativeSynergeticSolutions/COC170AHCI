@@ -22,7 +22,7 @@
 	<!--<div id="details">
 	</div>-->
 	<div id="options">
-		<button id="reserve"><!--load modal-->
+		<button id="reserve" onclick="loadContainer2();"><!--load modal-->
 			Reserve
 		</button>
 		<form action="shelf.html">
@@ -43,7 +43,7 @@
 	</div>
 	<div id="total">
 	</div>
-	<div id="container">
+	<div id="container" class="container">
 		<div>
 			<div class="closebar" onclick="$('#container').css('display','none');">
 				<div>
@@ -82,6 +82,19 @@
 			<div id='image'>
 			
 			</div>
+		</div>
+	</div>
+	<div id="container2" class="container" >
+		<div>
+			<div class="topbar topbarextended">
+				<div>
+					<p>Items Reserved, please go to the collection point.<p>
+				</div>
+				
+			</div>
+			<button class="cancel close " onclick="closeAll();">
+				Close
+			</button>
 		</div>
 	</div>
 </body>
