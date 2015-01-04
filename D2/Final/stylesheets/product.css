@@ -1250,53 +1250,6 @@ label[name="optionsLabels"] {
 }
 
 
-#wishListWrapper {
-	
-	position: absolute;
-	top: -410px;
-	right: 140px;
-	height: 400px;
-	width: 250px;
-	
-	opacity: 0;
-	
-	transition-delay: 0s;
-	
-}
-
-#optionSectionLabel input:checked~ #optionsWrapper 
-#optionsContent #wishListWrapper {
-	
-	top: 20px;
-	
-	opacity: 1;
-	
-	transition-delay: 1s;
-	
-}
-
-#wishListBtn {
-	
-	height: 400px;
-	width: 250px;
-	
-	display: table-cell;
-	font-size: 50px;
-	text-align: center;
-	line-height: 70px;
-	vertical-align: middle;
-	
-	opacity: 0.8;
-	
-}
-
-#wishListBtn:active {
-	
-	opacity: 1;
-	
-}
-
-
 #basketSection {
 	
 	position: absolute;
