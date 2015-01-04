@@ -41,6 +41,8 @@ var currentOutfits = [];
 
 var recommendedProducts = [];
 
+var currentImage = 0;
+
 $(document).ready(function(){
 	
 	var retrievedCode = items.getCodeFromSearch();
@@ -110,9 +112,64 @@ function setupImageDisplay() {
 		var index= $(this).attr("data-Img");
 		$(this).css("background-image", "url('" + productImages[index] + "')");
 		
-		$(this).click(function(){$("#displayImg").css("background-image", "url('" + productImages[index] + "')")});
+		$(this).click(function(){
+			
+			currentImage = index;
+			
+			$("#displayImg").css("background-image", "url('" + productImages[index] + "')");
+			
+			
+			$("#displayImgRightArrow").removeClass();
+			$("#displayImgLeftArrow").removeClass();
+			
+			if(currentImage == 0) $("#displayImgLeftArrow").addClass("disabledArrow");
+			if(currentImage == (productImages.length - 1)) $("#displayImgRightArrow").addClass("disabledArrow");
+			
+		});
 		
 	});
+	
+	
+	
+	$("#displayImgLeftArrow").click(function(){
+		
+		if(currentImage > 0){
+			
+			$("#displayImgRightArrow").removeClass();
+			$("#displayImgLeftArrow").removeClass();
+			
+			currentImage--;
+			
+			$("#displayImg").css("background-image", "url('" + productImages[currentImage] + "')");
+			
+		}
+		
+		if(currentImage == 0) $("#displayImgLeftArrow").addClass("disabledArrow");
+		
+	});
+	
+	$("#displayImgRightArrow").click(function(){
+				
+		if(currentImage < (productImages.length - 1)){
+			
+			$("#displayImgRightArrow").removeClass();
+			$("#displayImgLeftArrow").removeClass();
+			
+			currentImage++;
+			
+			$("#displayImg").css("background-image", "url('" + productImages[currentImage] + "')");
+			
+		}
+		
+		if(currentImage == (productImages.length - 1)) $("#displayImgRightArrow").addClass("disabledArrow");
+		
+		
+	});
+	
+	$("#displayImgLeftArrow").addClass("disabledArrow");
+	if(currentImage == (productImages.length - 1)) $("#displayImgRightArrow").addClass("disabledArrow");
+	
+	
 	
 	$("#displayImgLabel input").change(function(){
 		
@@ -154,6 +211,7 @@ function setupImageDisplay() {
 		});
 	});
 	$("#displayImg").panzoom("disable");
+	
 	
 }
 
@@ -200,7 +258,7 @@ function setupProductDetails() {
 		
 	}
 	
-	$("#productDetails").append(productDescriptionHTML);
+	$("#productDetailsContainer").append(productDescriptionHTML);
 	
 }
 
@@ -284,6 +342,9 @@ function setupOptions() {
 		document.getElementById("optionsCheck").disabled = false;
 		
 		$("#optionSectionLabel").css("cursor", "pointer");
+		
+		document.getElementById("basketRadio").disabled = true;
+		$("#basketContainer").css("pointer-events", "none");
 		
 	});
 	

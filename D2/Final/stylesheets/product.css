@@ -268,7 +268,7 @@ body {
 	height: 110px;
 	width: 100px;
 	
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.5);
 	
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -435,6 +435,19 @@ body {
 	transform: rotateY(40deg);
 	transform-origin: left center;
 	 
+}
+
+.disabledArrow {
+	
+	color: rgba(221, 221, 221, 0.5) !important;
+	
+}
+
+.disabledArrow:active {
+	
+	color: rgba(221, 221, 221, 0.9) !important;
+	text-shadow: none !important;
+	
 }
 
 
@@ -636,9 +649,23 @@ body {
 	font-size: 25px;
 	
 	background-color: rgba(0, 0, 0, 0.7);
+		
+}
+
+#productDetailsContainer {
+	
+	height: 100%;
+	width: 100%;
+	
+	transition: 1s;
+	
+}
+
+#productSectionLabel input:checked~ #productSectionWrapper 
+#productDetails #productDetailsContainer {
 	
 	overflow-y: scroll;
-		
+	
 }
 
 
@@ -659,7 +686,7 @@ body {
 }
 
 #productSectionLabel input:checked~ #productSectionWrapper  
-#productDetails 
+#productDetails #productDetailsContainer 
 #productDetailsOtherContainerA {
 	
 	margin: 10px;
@@ -688,7 +715,7 @@ body {
 }
 
 #productSectionLabel input:checked~ #productSectionWrapper  
-#productDetails 
+#productDetails #productDetailsContainer 
 #productDetailsOtherContainerA
 #deliveryIcons {
 	
@@ -711,7 +738,7 @@ body {
 }
 
 #productSectionLabel input:checked~ #productSectionWrapper  
-#productDetails
+#productDetails #productDetailsContainer 
 #productDetailsOtherContainerB  {
 	
 	height: 600px;
@@ -742,7 +769,7 @@ body {
 }
 
 #productSectionLabel input:checked~ #productSectionWrapper  
-#productDetails 
+#productDetails #productDetailsContainer 
 #productDetailsOtherContainerB
 #socialIconsImg {
 	
