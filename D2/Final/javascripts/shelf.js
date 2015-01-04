@@ -1,22 +1,32 @@
-
 var basket=new Array();
-
 var outfits=new Array();
-	outfits.push("New Year");
-	outfits.push("Kids Birthdays");
-	outfits.push("60th Birthday");
-	outfits.push("Sisters Wedding");
-	outfits.push("Cousins Wedding");
-	outfits.push("Funeral");
-	outfits.push("Daves Party");
-	outfits.push("Best Friends Wedding");
-	outfits.push("Jims going away");
-	outfits.push("Garden Party");
+
 
 window.onload=function(){
 	
+	
 	loadRecommendations();
 	loadOutfits();
+	loadSelectedProducts();
+
+}
+
+function loadStorage(){
+	
+	if(localStorage["savedItems"]!=null){
+		basket = JSON.parse(localStorage.getItem('savedItems'));
+	}
+	if(localStorage["outfits"]!=null){
+		outfits = JSON.parse(localStorage.getItem('outfits'));
+		
+	}
+}
+function saveToStorage(){
+	
+	
+	localStorage.setItem("savedItems",JSON.stringify(basket));
+	localStorage.setItem("outfits",JSON.stringify(outfits));
+	
 
 }
 
@@ -70,24 +80,31 @@ function loadPage(){
 
 
 function addToSelectedProducts(index){
+	
+	loadStorage();
 	var price=items[index]["price"];
 	var code=items[index]["productCode"];
 	var name=items[index]["name"];
 	
-	var item=new Array();
+	var item={};
 	item["price"]=price.replace(/\£/g, "&pound");
 	item["code"]=code;
 	item["name"]=name;
 	item["index"]=index;
 	
-	basket.push(item);
+	basket[basket.length]=item;
+	
+	saveToStorage();
 	loadSelectedProducts();
 	
 	
 }
 
 function loadOutfits(){
-
+	
+	//load from localStorage
+	loadStorage();
+	
 	var output='<div class="side_title">Outfits</div>';
 	
 	for (var i=0;i<outfits.length;i++){
@@ -104,11 +121,14 @@ function loadOutfits(){
 function deleteOutfit(ch){
 	var index=ch.substring(2,ch.length);
 	outfits.splice(index,1);
+	saveToStorage();
 	loadOutfits();
 }
 
 
 function loadRecommendations(){
+	
+	
 	var output='<div class="side_title">Recommendations</div>';
 	
 	var randomNumbers=randomN();
@@ -127,6 +147,9 @@ function loadRecommendations(){
 
 
 function loadSelectedProducts(){
+	//load from localStorage
+	loadStorage();
+	
 	var output="";
 	if(basket.length>0){
 		output="<tr><th>Product</th> <th>Price</th><th>Code</th><th></th></tr>";
@@ -145,7 +168,8 @@ function loadSelectedProducts(){
 }
 function clearSelectedProducts(){
 	
-	basket= new Array();
+	basket=new Array();
+	saveToStorage();
 	loadSelectedProducts();
 	
 }
@@ -155,6 +179,7 @@ function deleteItem(id){
 			basket.splice(i,1);
 		}
 	}
+	saveToStorage();
 	loadSelectedProducts();
 }
 
