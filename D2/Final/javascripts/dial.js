@@ -82,6 +82,45 @@ Dial.prototype.addNewDial = function(dialid, selectedDialFunction){
 										
 				}	});
 	
-	dialObject.dialsArray.push(newDial);
+	dialObject.dialsArray[dialid] = newDial;
 	
 };
+
+Dial.prototype.setDialValue = function(dialid, quantityValue){
+	
+	switch(quantityValue){
+		case 1:
+			if(quantityValue != this.dialsValueArray[dialid]) this.dialsArray[dialid].angle = 0;
+			this.dialsValueArray[dialid] = 1;
+			break;
+		case 2:
+			if(quantityValue != this.dialsValueArray[dialid]) this.dialsArray[dialid].angle = 45;
+			this.dialsValueArray[dialid] = 2;
+			break;
+		case 3:
+			if(quantityValue != this.dialsValueArray[dialid]) this.dialsArray[dialid].angle = 90;
+			this.dialsValueArray[dialid] = 3;
+			break;
+		case 4:
+			if(quantityValue != this.dialsValueArray[dialid]) this.dialsArray[dialid].angle = 135;
+			this.dialsValueArray[dialid] = 4;
+			break;
+		case 5:
+			if(quantityValue != this.dialsValueArray[dialid]) this.dialsArray[dialid].angle = 180;
+			this.dialsValueArray[dialid] = 5;
+			break;
+		default:
+			this.dialsArray[dialid].angle = 0;
+			this.dialsValueArray[dialid] = 1;
+			break;
+	}
+	
+};
+
+Dial.prototype.currentValues = function(){
+	
+	var dialsValueArray = this.dialsValueArray;
+	
+	for(var key in dialsValueArray) console.log("key is: " + key + ", with val: " + dialsValueArray[key]);
+	
+}
