@@ -271,15 +271,14 @@ function setupOptions() {
 			document.getElementById("optionsCheck").disabled = true;
 			
 			document.getElementById("basketContainer").disabled = false;
+			$("#basketContainer").css("pointer-events", "auto");
 			
 		}
 		
 	});
 	
 	$("#closeOptionsBtn").click(function(){
-		
-		//$('#basketSectionLabel input').prop('checked', true);
-		
+				
 		$('#basketSectionLabel input').click();
 		
 		document.getElementById("optionsCheck").disabled = false;
@@ -291,6 +290,7 @@ function setupOptions() {
 	
 	$("#basketSectionLabel").css("cursor", "default");
 	document.getElementById("basketRadio").disabled = true;
+	$("#basketContainer").css("pointer-events", "none");
 	
 	$("#basketSectionLabel input").change(function(){
 				
@@ -302,6 +302,8 @@ function setupOptions() {
 			document.getElementById("outfitRadio").disabled = false;
 			
 			$("#basketContainer").addClass("basketContainerActive");
+			
+			$("#basketContainer").css("pointer-events", "auto");
 			
 		}
 		
@@ -319,6 +321,8 @@ function setupOptions() {
 			document.getElementById("basketRadio").disabled = false;
 			
 			$("#basketContainer").removeClass("basketContainerActive");
+			
+			$("#basketContainer").css("pointer-events", "none");
 			
 		}
 		
