@@ -70,13 +70,14 @@ body {
 	height:400px;
 	width: 100px;
 	
-	background-color: rgba(50, 50, 50, 0.1);
+	background-color: rgba(255, 0, 0, 0.1);
 	
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	
 	border-radius: 10px;
 	
-	transition: 1s;
+	transition: 0.3s;
+	transition-delay: 0s !important;
 	
 	cursor: pointer;
 	
@@ -84,7 +85,7 @@ body {
 
 .closeOverlayButton:active {
 	
-	background-color: rgba(50, 50, 50, 0.9);
+	background-color: rgba(255, 0, 0, 0.9);
 	
 	border: 1px solid rgba(0, 0, 0, 0.9);
 	
@@ -99,23 +100,24 @@ body {
 	height:400px;
 	width: 100px;
 	
-	content:"m\A i\A n\A i\A m\A i\A s\A e";
+	content:"X";
 	white-space: pre;
-	color: rgba(255, 204, 0, 0.5);
+	color: rgba(255, 255, 255, 0.5);
 	text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.1);
 	font-family: 'Varela Round', sans-serif;
 	font-size: 50px;
 	text-align: center;
-	line-height: 45px;
+	line-height: 400px;
 	vertical-align: middle;
 	
-	transition: 0.1s;
+	transition: 0.3s !important;
+	transition-delay: 0s !important;
 	
 }
 
 .closeOverlayButton:active:before {
 	
-	color: rgba(255, 204, 0, 1);
+	color: rgba(255, 255, 255, 1);
 	text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
 	
 }
