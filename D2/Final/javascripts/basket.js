@@ -30,6 +30,9 @@ function loadModal(index){
 	console.log(item);
 	$("#containerInner").css("left","12.5%");
 }
+function LoadProduct(){
+	window.location.href = 'product.html?productCode='+$("#productCode").text();
+}
 function deleteItem(index){
 	wall.removeItemFromBasket(document.getElementById("item"+index).getAttribute("data"));
 	$("#item"+index).remove();
