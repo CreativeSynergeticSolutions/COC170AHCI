@@ -181,7 +181,16 @@ wall.prototype.removeItemFromBasket = function (id) {
         }
     }
     this.saveObjectToStorage('basket',basket);
-}
+};
+wall.prototype.updateBasketItemQuantity = function (id, quantity) {
+    var basket = this.getBasket();
+    for(var item in basket){
+        if(basket[item].id==id){
+            basket[item].quantity = quantity;
+            break;
+        }
+    }
+};
 wall.prototype.updateBasket = function (items) {
     this.wallLog('Updating basket');
     for(var i = 0; i < items.length; i++){
