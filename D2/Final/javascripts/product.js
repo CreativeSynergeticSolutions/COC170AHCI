@@ -1,5 +1,7 @@
 var wall = new wall();
 
+var dial = new Dial(200, "3em");
+
 var currentProduct = {
             name: "No Product Selected",
             mainCategory: "N/A",
@@ -71,6 +73,17 @@ $(document).ready(function(){
 	
 	$("#backButton").click(function(){window.history.back();});
 	$("#homeButton").click(function(){window.location = "shelf.html";});
+	
+	dial.addNewDial(1, function(dialData){
+		
+		console.log("dialid is: " + dialData.dialid);
+		console.log("dialValue is: " + dialData.dialValue);
+		
+		currentQuantity = dialData.dialValue;
+		
+		$("#basketQuantityVal").text(currentQuantity);
+		
+	});
 	
 });
 
