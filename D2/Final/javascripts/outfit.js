@@ -358,5 +358,9 @@ window.onload = function () {
     function resizeInput() {
         $(this).attr('size', $(this).val().length);
     }
+    $(".basket-dial").on('value-change', function (event, quantity){
+        var itemid = $(this).parent().parent().data('item-id');
+        wall.updateBasketItemQuantity(itemid, quantity);
+    });
     //$('.current-outfit-name').keyup(resizeInput).each(resizeInput);
 };
