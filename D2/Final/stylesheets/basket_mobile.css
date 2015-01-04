@@ -16,6 +16,9 @@
 		margin-bottom:0px;
 		height:15%!important;
 	}
+	#container{
+		font-size:75%!important;
+	}
 }
 @media (max-width: 900px) {
 	#total{
@@ -95,6 +98,27 @@
 	.item>.product{
 		font-size: 75%!important;
 		height: 20%;
+	}
+	#container{
+		font-size:50%!important;
+	}
+}
+@media (max-width: 750px) {
+	#image{
+		width: 80%!important;
+		margin: 0!important;
+		height: 30%!important;
+		
+	}
+	#image>img{
+		margin: 0!important;
+		height: 100%!important;
+		width:auto;
+		float:center;
+	}
+	#description{
+		width:80%!important;
+		height:50%!important;
 	}
 }
 @media (max-width: 600px) {
