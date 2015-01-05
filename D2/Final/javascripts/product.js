@@ -43,6 +43,8 @@ var recommendedProducts = [];
 
 var currentImage = 0;
 
+var mainPopUp = null;
+
 $(document).ready(function(){
 	
 	var retrievedCode = items.getCodeFromSearch();
@@ -392,7 +394,7 @@ function setupOptions() {
 	$("#basketContainer").click(function(){
 		
 		wall.addToBasket(currentProduct, currentQuantity, currentSize, currentColor);
-		alert("Added To Basket");
+		popupDialog("Product: " + currentProduct.name + "<br />Added To Basket");
 		
 	});
 	document.getElementById("basketContainer").disabled = true;
@@ -446,6 +448,9 @@ function setupOptions() {
 	
 	$("#sizeList li").first().click();
 	
+	$("#basketLinkButton").click(function(){window.location = "basket.html"});
+	
+	
 	
 	currentOutfits = wall.getOutfits().reverse();
 	
@@ -463,7 +468,7 @@ function setupOptions() {
 			
 			wall.addOutfitItem(currentOutfits[coIndex].name, currentProduct, currentQuantity, currentSize, currentColor);
 			
-			alert("added to outfit: " + currentOutfits[coIndex].name);
+			popupDialog("Product: " + currentProduct.name + "<br />Added to Outfit: " + currentOutfits[coIndex].name);
 			
 		});
 		
@@ -472,6 +477,14 @@ function setupOptions() {
 	$("#outfitsNewButton").click(function(){
 		
 		var newOutfitName = $("#newOutfitName").val();
+		
+		if(newOutfitName == ""){
+			
+			popupDialog("Please Enter an Outfit Name");
+			
+			return true;
+			
+		}
 		
 		wall.addOutfit(newOutfitName);
 		
@@ -488,7 +501,40 @@ function setupOptions() {
 		
 		$("#newOutfitName").val("");
 		
+		popupDialog("New Outfit Created: " + newOutfitName);
+		
 	});
+	
+	$("#currentOutfitButton").click(function(){
+		
+		var currentOutfitName = wall.getCurrentOutfit().name;
+				
+		wall.addOutfitItem(currentOutfitName, currentProduct, currentQuantity, currentSize, currentColor);
+				
+		popupDialog("Product: " + currentProduct.name + "<br />Added to Current Outfit: " + currentOutfitName);	
+		
+	});
+	
+	$("#outfitLinkButton").click(function(){window.location = "outfit.html"});
+	
+}
+
+function popupDialog(dialogMessage){
+	
+	if(mainPopUp != null) clearTimeout(mainPopUp);
+	
+	$("#popupBox").html(dialogMessage);
+	
+	$("#popupBox").addClass("popupBoxAppear");
+	
+	mainPopUp = setTimeout(function(){
+		
+		$("#popupBox").removeClass();
+		
+		mainPopUp = null;
+		
+		
+	}, 5000);
 	
 }
 
