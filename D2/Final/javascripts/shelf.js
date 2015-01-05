@@ -2,11 +2,13 @@ var shelfView=new wall();
 
 window.onload=function(){
 	
+	$("#backButton").click(function(){window.history.back();});
 	loadRecommendations();
 	loadOutfits();
 	loadSelectedProducts();
 
 }
+
 
 function randomN(){
 	var arr = []
@@ -52,6 +54,11 @@ function loadPage(){
 	//loadSubCategory("Christmas");
 	//loadSubSubCategory("Women");
 	//loadSelection("Women");
+}
+
+function addToBasket(index){
+	shelfView.addToBasket(items[index],1,items[index]["sizes"][0],items[index]["colours"][0]["name"]);
+	loadSelectedProducts();
 }
 
 function loadOutfits(){
@@ -111,8 +118,15 @@ function loadSelectedProducts(){
 	var total=0;
 	
 	for (var i=0;i<savedItems.length;i++){
+		var howMany=1;
+		var price=savedItems[i]["item"]["price"];
+		var amount=price.substring(1,price.length-1);
 		
-		total+=parseInt(savedItems[i]["item"]["price"]);
+		
+		if(savedItems[i]["quantity"]>0){
+			howMany=savedItems[i]["quantity"];
+		}
+		total+=parseInt(amount*howMany);
 		
 		var items="<div class='bottomBarLeft'>";
 		items+="<img src='"+savedItems[i]["item"]["images"]["front"]+"' class='productI' />";
@@ -134,7 +148,7 @@ function loadSelectedProducts(){
 		items+="</table>";
 		items+="</div><!--END OF BOTTOM BAR RIGHT -->";
 		
-		var quantity="<input type='number' value='"+savedItems[i]["quantity"]+"'/>";
+		var quantity="<input type='number' value='"+howMany+"'/>";
 		var deliveryOptions="<img src='images/DeliveryIcons.png' />";
 		var subtotal="<div>&pound 10</div>";
 		
@@ -217,8 +231,8 @@ function loadSelection(index){
 		output+="<div class='itemContainer'>";
 		output+="<div class='clothesInfo' >"+name+"</div>";
 		output+="<div class='clothesInfo' >"+price.replace(/\£/g, "&pound")+"</div>";
-		output+="<div class='viewProduct' >VIEW PRODUCT</div>";
-		output+="<div class='addBasket' >ADD</div>";
+		output+="<br/>";
+		output+="<div class='addBasket' onclick='addToBasket("+index+")' >Add To Basket</div>";
 		
 		output+="</div>";
 		output+="</div>";
