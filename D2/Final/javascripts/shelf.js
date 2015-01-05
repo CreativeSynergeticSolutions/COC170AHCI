@@ -1,35 +1,12 @@
-var basket=new Array();
-var outfits=new Array();
-
+var shelfView=new wall();
 
 window.onload=function(){
-	
 	
 	loadRecommendations();
 	loadOutfits();
 	loadSelectedProducts();
 
 }
-
-function loadStorage(){
-	
-	if(localStorage["savedItems"]!=null){
-		basket = JSON.parse(localStorage.getItem('savedItems'));
-	}
-	if(localStorage["outfits"]!=null){
-		outfits = JSON.parse(localStorage.getItem('outfits'));
-		
-	}
-}
-function saveToStorage(){
-	
-	
-	localStorage.setItem("savedItems",JSON.stringify(basket));
-	localStorage.setItem("outfits",JSON.stringify(outfits));
-	
-
-}
-
 
 function randomN(){
 	var arr = []
@@ -77,39 +54,15 @@ function loadPage(){
 	//loadSelection("Women");
 }
 
-
-
-function addToSelectedProducts(index){
-	
-	loadStorage();
-	var price=items[index]["price"];
-	var code=items[index]["productCode"];
-	var name=items[index]["name"];
-	
-	var item={};
-	item["price"]=price.replace(/\£/g, "&pound");
-	item["code"]=code;
-	item["name"]=name;
-	item["index"]=index;
-	
-	basket[basket.length]=item;
-	
-	saveToStorage();
-	loadSelectedProducts();
-	
-	
-}
-
 function loadOutfits(){
 	
-	//load from localStorage
-	loadStorage();
+	var outfits=shelfView.getOutfits();
 	
 	var output='<div class="side_title">Outfits</div>';
 	
 	for (var i=0;i<outfits.length;i++){
 		output+="<div class='outfit'>";
-		output+="<div class='outfitName'>"+outfits[i]+"</div>";
+		output+="<div class='outfitName'>"+outfits[i].name+"</div>";
 		output+="<div class='outfitBin' ><span id='o_"+i+"' class='icon-trash-empty' onclick='deleteOutfit(this.id)'></span></div>";
 		output+="</div>";
 	}
@@ -119,9 +72,10 @@ function loadOutfits(){
 }
 
 function deleteOutfit(ch){
+	var outfits=shelfView.getOutfits();
 	var index=ch.substring(2,ch.length);
-	outfits.splice(index,1);
-	saveToStorage();
+	var name=outfits[index]["name"];
+	shelfView.removeOutfit(name);
 	loadOutfits();
 }
 
@@ -148,40 +102,56 @@ function loadRecommendations(){
 
 function loadSelectedProducts(){
 	//load from localStorage
-	loadStorage();
+	var savedItems=shelfView.getBasket();
 	
 	var output="";
-	if(basket.length>0){
-		output="<tr><th>Product</th> <th>Price</th><th>Code</th><th></th></tr>";
+	if(savedItems.length>0){
+		output="<tr><th>Item Details</th> <th>Quantity</th><th>Delivery Options</th><th>Subtotal</th></tr>";
 	}
+	var total=0;
 	
-	
-	for (var i=0;i<basket.length;i++){
+	for (var i=0;i<savedItems.length;i++){
+		
+		total+=parseInt(savedItems[i]["item"]["price"]);
+		
+		var items="<div class='bottomBarLeft'>";
+		items+="<img src='"+savedItems[i]["item"]["images"]["front"]+"' class='productI' />";
+		items+="</div><!--END OF BOTTOM LEFT -->";
+		items+="<div class='bottomBarRight'>";
+		items+="<table id='ItemDetails'>";
+		items+="<tr>";
+		items+=("<td>"+savedItems[i]["item"]["name"]+"</td>");
+		items+="</tr>";
+		items+="<tr>";
+		items+=("<td>"+savedItems[i]["size"]+"</td>");
+		items+="</tr>";
+		items+="<tr>";
+		items+=("<td>"+savedItems[i]["colour"]+"</td>");
+		items+="</tr>";
+		items+="<tr>";
+		items+=("<td>"+savedItems[i]["item"]["price"]+"</td>");
+		items+="</tr>";
+		items+="</table>";
+		items+="</div><!--END OF BOTTOM BAR RIGHT -->";
+		
+		var quantity="<input type='number' value='"+savedItems[i]["quantity"]+"'/>";
+		var deliveryOptions="<img src='images/DeliveryIcons.png' />";
+		var subtotal="<div>&pound 10</div>";
+		
 		output+="<tr>";
-		output+=("<td>"+basket[i]["name"]+"</td>");
-		output+=("<td>"+basket[i]["price"]+"</td>");
-		output+=("<td>"+basket[i]["code"]+"</td>");
-		output+="<td><div id='"+i+"' onclick='deleteItem(this.id)' class='icon-trash-empty'></div></td>";
+		output+=("<td class='itemI'>"+items+"</td>");
+		output+=("<td class='quantityI'>"+quantity+"</td>");
+		output+=("<td class='deliveryI'>"+deliveryOptions+"</td>");
+		output+=("<td class='subtotalI'>"+subtotal+"</td>");
+		
 		output+="</tr>";
+	}
+	if(shelfView.getBasket().length>0){
+		output+="<tr><td class='basketFooter' colspan='3'>Basket Total</td><td>&pound "+total+"</td></tr>";
 	}
 	$("#basketItems").html(output);
 }
-function clearSelectedProducts(){
-	
-	basket=new Array();
-	saveToStorage();
-	loadSelectedProducts();
-	
-}
-function deleteItem(id){
-	for (var i=0;i<basket.length;i++){
-		if(i==id){
-			basket.splice(i,1);
-		}
-	}
-	saveToStorage();
-	loadSelectedProducts();
-}
+
 
 function loadSubSubCategory(subCategory){
 	var output="";
@@ -248,7 +218,8 @@ function loadSelection(index){
 		output+="<div class='clothesInfo' >"+name+"</div>";
 		output+="<div class='clothesInfo' >"+price.replace(/\£/g, "&pound")+"</div>";
 		output+="<div class='viewProduct' >VIEW PRODUCT</div>";
-		output+="<div class='addBasket' onclick='addToSelectedProducts("+index+")' >ADD TO BASKET</div>";
+		output+="<div class='addBasket' >ADD</div>";
+		
 		output+="</div>";
 		output+="</div>";
 		
