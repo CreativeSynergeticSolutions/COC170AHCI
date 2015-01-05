@@ -39,27 +39,22 @@ Dial.prototype.addNewDial = function(dialid, selectedDialFunction){
 						case 360:
 						case -360:
 							dialObject.dialsValueArray[dialid] = 1;
-                            $("*[data-dialid=" + dialid + "]").trigger('value-change', [1]);
 							break;
 						case 45:
 						case -315:
 							dialObject.dialsValueArray[dialid] = 2;
-                            $("*[data-dialid=" + dialid + "]").trigger('value-change', [2]);
 							break;
 						case 90:
 						case -270:
 							dialObject.dialsValueArray[dialid] = 3;
-                            $("*[data-dialid=" + dialid + "]").trigger('value-change', [3]);
 							break;
 						case 135:
 						case -225:
 							dialObject.dialsValueArray[dialid] = 4;
-                            $("*[data-dialid=" + dialid + "]").trigger('value-change', [4]);
 							break;
 						case 180:
 						case -180:
 							dialObject.dialsValueArray[dialid] = 5;
-                            $("*[data-dialid=" + dialid + "]").trigger('value-change', [5]);
 							break;
 						default:
 							overVal = true;
@@ -86,46 +81,58 @@ Dial.prototype.addNewDial = function(dialid, selectedDialFunction){
 					if(selectedDialFunction != null) selectedDialFunction({dialid: dialid, dialValue: dialObject.dialsValueArray[dialid]});
 
 				}	});
-		
+
 	dialObject.dialsArray[dialid] = newDial;
-	
+
 };
 
 Dial.prototype.setDialValue = function(dialid, quantityValue){
-	
+
 	switch(quantityValue){
 		case 1:
 			if(quantityValue != this.dialsValueArray[dialid]) this.dialsArray[dialid].angle = 0;
 			this.dialsValueArray[dialid] = 1;
+            $("*[data-dialid=" + dialid + "]").trigger('value-change', [1]);
+            console.log([1]);
 			break;
 		case 2:
 			if(quantityValue != this.dialsValueArray[dialid]) this.dialsArray[dialid].angle = 45;
 			this.dialsValueArray[dialid] = 2;
+            $("*[data-dialid=" + dialid + "]").trigger('value-change', [2]);
+            console.log([2]);
 			break;
 		case 3:
 			if(quantityValue != this.dialsValueArray[dialid]) this.dialsArray[dialid].angle = 90;
 			this.dialsValueArray[dialid] = 3;
+            $("*[data-dialid=" + dialid + "]").trigger('value-change', [3]);
+            console.log([3]);
 			break;
 		case 4:
 			if(quantityValue != this.dialsValueArray[dialid]) this.dialsArray[dialid].angle = 135;
 			this.dialsValueArray[dialid] = 4;
+            $("*[data-dialid=" + dialid + "]").trigger('value-change', [4]);
+            console.log([4]);
 			break;
 		case 5:
 			if(quantityValue != this.dialsValueArray[dialid]) this.dialsArray[dialid].angle = 180;
 			this.dialsValueArray[dialid] = 5;
+            $("*[data-dialid=" + dialid + "]").trigger('value-change', [5]);
+            console.log([5]);
 			break;
 		default:
 			this.dialsArray[dialid].angle = 0;
 			this.dialsValueArray[dialid] = 1;
+            $("*[data-dialid=" + dialid + "]").trigger('value-change', [1]);
+            console.log([1]);
 			break;
 	}
-	
+
 };
 
 Dial.prototype.currentValues = function(){
-	
+
 	var dialsValueArray = this.dialsValueArray;
-	
+
 	for(var key in dialsValueArray) console.log("key is: " + key + ", with val: " + dialsValueArray[key]);
-	
+
 }
