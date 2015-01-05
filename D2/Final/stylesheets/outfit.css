@@ -112,15 +112,17 @@ a {
     text-overflow: ellipsis;
     transform: translateY(20%);
     overflow: hidden;
-    width: 65%;
+    width: 54%;
     white-space: nowrap;
 }
 
 .basket-item>.right,
 .outfit-item>.right {
-    float: right;
+    float: left;
     font-size: 1.25em;
+    position: relative;
     text-align: center;
+    top: 0.1em;
     width: 35%;
 }
 
@@ -261,9 +263,10 @@ a {
 .outfit-management-area .current-outfit-name-input {
     display: inline-block;
     margin-top: 3.5em;
+    margin-right: 5%;
     position: relative;
     top: 0.3em;
-    width: 50%;
+    width: 45%;
 }
 
 .outfit-management-area .current-outfit-name-input:after {
@@ -347,8 +350,8 @@ a {
     color: #FFFFFF;
     cursor: pointer;
     display: inline;
-    font-size: 1em;
-    left: 0.5em;
+    font-size: 1.25em;
+    left: -0.1em;
     padding: 0 0 1% 0;
     position: relative;
     top: 0.5em;
@@ -361,8 +364,8 @@ a {
     color: #FFFFFF;
     cursor: pointer;
     display: inline;
-    font-size: 1em;
-    left: -0.9em;
+    font-size: 1.25em;
+    left: -1.5em;
     padding: 0 0 1% 0;
     position: relative;
     top: 2em;

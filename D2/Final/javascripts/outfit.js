@@ -12,7 +12,7 @@ function makeItemListItem (item) {
     var itemEle = document.createElement('div');
     itemEle.className = "current-item btn-link";
     itemEle.setAttribute("data-href","product.html?productCode="+item.item.productCode);
-    itemEle.innerHTML = item.item.name;
+    itemEle.innerHTML = "<i class='icon-info-circled'></i> "+item.item.name;
     return itemEle;
 }
 function loadItemList(outfit){
