@@ -405,6 +405,170 @@
                 "16"
             ],
 			"recommendations":["4977698"]
+        },
+        {
+            "name": "Boston Crew Hoody",
+            "mainCategory": "Mens",
+            "subCategory": "Sweatshirts & Hoodies",
+            "type": "top",
+            "price": "£20.00",
+            "images": {
+                "front": "images/stock/mens/body/Boston Crew Hoody/front.png",
+                "back": "images/stock/mens/body/Boston Crew Hoody/back.png",
+                "close": "images/stock/mens/body/Boston Crew Hoody/close.png"
+            },
+            "colours": [
+                {
+					"name":"Navy",
+					"class":"navy"
+				}
+            ],
+            "description": [
+                {
+                    "content": "Keep it cosy and casual with this cool Boston Crew hoody this season. This laidback piece is ideal for throwing on over your everyday outfits to keep you warm and is bound to be making a yearly appearance during winter. ",
+                    "type": "paragraph"
+                },
+                {
+                    "content": ["Twin front pockets"],
+                    "type": "bullet"
+                }
+            ],
+            "fabric": "83% Cotton, 17% Polyester",
+            "productCode": "4839442",
+            "sizes": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ],
+			"recommendations":[]
+        },
+        {
+            "name": "Jersey Hoodie",
+            "mainCategory": "Mens",
+            "subCategory": "Sweatshirts & Hoodies",
+            "type": "top",
+            "price": "£10.00",
+            "images": {
+                "front": "images/stock/mens/body/Jersey Hoodie/front.png",
+                "back": "images/stock/mens/body/Jersey Hoodie/back.png"
+            },
+            "colours": [
+                {
+					"name":"Grey",
+					"class":"grey"
+				}
+            ],
+            "description": [
+                {
+                    "content": "A great new staple for your casual wardrobe, this jersey hoodie is the ideal combination of comfort and style. Crafted using cotton rich fabric, this hoodie is sure to keep you comfy and snug whatever the weather.",
+                    "type": "paragraph"
+                },
+                {
+                    "content": ["Zip through fastening","Twin front pockets"],
+                    "type": "bullet"
+                }
+            ],
+            "fabric": "75% Cotton, 25% Polyester",
+            "productCode": "4776442",
+            "sizes": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL",
+                "XXL"
+            ],
+			"recommendations":[]
+        },
+        {
+            "name": "Bootcut Jeans",
+            "mainCategory": "Mens",
+            "subCategory": "Jeans",
+            "type": "bottom",
+            "price": "£10.00",
+            "images": {
+                "front": "images/stock/mens/bottom/Bootcut Jeans/front.png",
+                "back": "images/stock/mens/bottom/Bootcut Jeans/back.png"
+            },
+            "colours": [
+                {
+					"name":"Navy",
+					"class":"navy"
+				}
+            ],
+            "description": [
+                {
+                    "content": "Make a laidback addition to your collection with these bootcut jeans this season. With a versatile design, these trendy bottoms are sure to become the key to your looks and have you acing that rugged trend. ",
+                    "type": "paragraph"
+                },
+                {
+                    "content": ["Twin front and back pockets","Zip and button fly fastening"],
+                    "type": "bullet"
+                }
+            ],
+            "fabric": "100% Cotton",
+            "productCode": "4865571",
+            "sizes": [
+                "32 Short",
+                "32 Regular",
+                "32 Long",
+                "34 Short",
+                "34 Regular",
+                "34 Long",
+                "36 Short",
+                "36 Regular",
+                "36 Long",
+                "38 Short",
+                "38 Regular",
+                "38 Long"
+            ],
+			"recommendations":[]
+        },
+        {
+            "name": "Bootcut Dark Wash Jeans",
+            "mainCategory": "Mens",
+            "subCategory": "Jeans",
+            "type": "bottom",
+            "price": "£10.00",
+            "images": {
+                "front": "images/stock/mens/bottom/Bootcut Dark Wash Jeans/front.png"
+            },
+            "colours": [
+                {
+					"name":"Navy",
+					"class":"navy"
+				}
+            ],
+            "description": [
+                {
+                    "content": "Add a classic staple to your wardrobe with these bootcut dark wash jeans. These versatile bottoms are a great investment for a timeless pair of bottoms you’ll be turning to time and again. ",
+                    "type": "paragraph"
+                },
+                {
+                    "content": ["Twin front and back pockets","Zip and button fly fastening"],
+                    "type": "bullet"
+                }
+            ],
+            "fabric": "100% Cotton",
+            "productCode": "4865567",
+            "sizes": [
+                "32 Short",
+                "32 Regular",
+                "32 Long",
+                "34 Short",
+                "34 Regular",
+                "34 Long",
+                "36 Short",
+                "36 Regular",
+                "36 Long",
+                "38 Short",
+                "38 Regular",
+                "38 Long"
+            ],
+			"recommendations":[]
         }
     ]
 }
