@@ -117,7 +117,7 @@ function loadSelectedProducts(){
 	
 	var output="";
 	if(savedItems.length>0){
-		output="<tr>";
+		output="";
 	}
 	var total=0;
 	
@@ -153,11 +153,8 @@ function loadSelectedProducts(){
 		items+="</div><!--END OF BOTTOM BAR RIGHT -->";
 	
 		
-		output+=("<td class='itemI'>"+items+"</td>");
+		output+=("<div class='itemI'>"+items+"</div>");
 		
-	}
-	if(shelfView.getBasket().length>0){
-		output+="</tr><tr><td class='basketFooter' >"+total+"</td></tr>";
 	}
 	$("#basketItems").html(output);
 }
