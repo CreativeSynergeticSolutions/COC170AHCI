@@ -12,6 +12,7 @@ body {
 	height: 1024px;
 	width: 1280px;
 	
+<<<<<<< HEAD
 	//background: #858585; /* Old browsers */
 	//background: -moz-radial-gradient(center, ellipse cover, #858585 0%, #0D0D0D 100%); /* FF3.6+ */
 	//background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#858585), color-stop(100%,#0D0D0D)); /* Chrome,Safari4+ */
@@ -30,6 +31,25 @@ body {
     background: radial-gradient(ellipse at center,  #ffffff 0%,#3C3432 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3C3432',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
    
+=======
+	//background: #303030; /* Old browsers */
+	//background: -moz-radial-gradient(center, ellipse cover, #303030 0%, #000000 100%); /* FF3.6+ */
+	//background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#303030), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+	//background: -webkit-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+	//background: -o-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* Opera 12+ */
+	//background: -ms-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* IE10+ */
+	//background: radial-gradient(ellipse at center, #303030 0%,#000000 100%); /* W3C */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303030', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+	background: #858585; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #858585 0%, #0D0D0D 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#858585), color-stop(100%,#0D0D0D)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center, #858585 0%,#0D0D0D 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#0D0D0D',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+>>>>>>> FETCH_HEAD
 	
 }
 
@@ -71,14 +91,22 @@ body {
 	height:400px;
 	width: 100px;
 	
+<<<<<<< HEAD
 	background-color: rgba(255, 0, 0, 0.3);
+=======
+	background-color: rgba(50, 50, 50, 0.1);
+>>>>>>> FETCH_HEAD
 	
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	
 	border-radius: 10px;
 	
+<<<<<<< HEAD
 	transition: 0.3s;
 	transition-delay: 0s !important;
+=======
+	transition: 1s;
+>>>>>>> FETCH_HEAD
 	
 	cursor: pointer;
 	
@@ -86,7 +114,11 @@ body {
 
 .closeOverlayButton:active {
 	
+<<<<<<< HEAD
 	background-color: rgba(255, 0, 0, 0.9);
+=======
+	background-color: rgba(50, 50, 50, 0.9);
+>>>>>>> FETCH_HEAD
 	
 	border: 1px solid rgba(0, 0, 0, 0.9);
 	
@@ -101,24 +133,41 @@ body {
 	height:400px;
 	width: 100px;
 	
+<<<<<<< HEAD
 	content:"X";
 	white-space: pre;
 	color: rgba(255, 255, 255, 0.5);
+=======
+	content:"m\A i\A n\A i\A m\A i\A s\A e";
+	white-space: pre;
+	color: rgba(255, 204, 0, 0.5);
+>>>>>>> FETCH_HEAD
 	text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.1);
 	font-family: 'Varela Round', sans-serif;
 	font-size: 50px;
 	text-align: center;
+<<<<<<< HEAD
 	line-height: 400px;
 	vertical-align: middle;
 	
 	transition: 0.3s !important;
 	transition-delay: 0s !important;
+=======
+	line-height: 45px;
+	vertical-align: middle;
+	
+	transition: 0.1s;
+>>>>>>> FETCH_HEAD
 	
 }
 
 .closeOverlayButton:active:before {
 	
+<<<<<<< HEAD
 	color: rgba(255, 255, 255, 1);
+=======
+	color: rgba(255, 204, 0, 1);
+>>>>>>> FETCH_HEAD
 	text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
 	
 }
@@ -239,9 +288,14 @@ body {
 	height: 130px;
 	width: 100%;
 	
+<<<<<<< HEAD
 	background-color: rgba(0, 0, 0, 0.8);
 	
 	border-radius: 7px;
+=======
+	background-color: #000;
+	border: 1px solid #FFF;
+>>>>>>> FETCH_HEAD
 	
 	//transform: rotateX(40deg);
 	//transform-origin: center bottom;
@@ -409,6 +463,10 @@ body {
 #displayImgLeftArrow, #displayImgRightArrow {
 	
 	color: rgba(255, 210, 49, 0.5);
+<<<<<<< HEAD
+=======
+	font-family: 'Open Sans Condensed', sans-serif;
+>>>>>>> FETCH_HEAD
 	font-size: 200px;
 	
 	cursor: pointer;
@@ -605,7 +663,13 @@ body {
 	left: 50px;
 	left: 0px;
 	width: 100%;
+<<<<<<< HEAD
 		
+=======
+	
+	background-color: rgba(255, 204, 0, 0.8);
+	
+>>>>>>> FETCH_HEAD
 	border-radius: 0px !important;
 	
 }
@@ -633,9 +697,12 @@ body {
 	
 	background-color: #000;
 	
+<<<<<<< HEAD
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
 	
+=======
+>>>>>>> FETCH_HEAD
 	transition: 1s;
 	
 	overflow: hidden;
@@ -653,8 +720,11 @@ body {
 	font-size: 25px;
 	
 	background-color: rgba(0, 0, 0, 0.7);
+<<<<<<< HEAD
 	
 	border-radius: 0px;
+=======
+>>>>>>> FETCH_HEAD
 		
 }
 
@@ -898,7 +968,13 @@ body {
 	right: 50px;
 	left: 0px;
 	width: 100%;
+<<<<<<< HEAD
 		
+=======
+	
+	background-color: rgba(255, 204, 0, 0.8);
+	
+>>>>>>> FETCH_HEAD
 	border-radius: 0px !important;
 	
 }
@@ -921,9 +997,12 @@ body {
 	
 	background-color: #000;
 	
+<<<<<<< HEAD
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
 	
+=======
+>>>>>>> FETCH_HEAD
 	transition: 1s;
 	
 	overflow: hidden;
@@ -938,8 +1017,11 @@ body {
 	width: 1180px;
 		
 	background-color: rgba(0, 0, 0, 0.5);
+<<<<<<< HEAD
 	
 	border-radius: 0px;
+=======
+>>>>>>> FETCH_HEAD
 		
 }
 
@@ -983,8 +1065,11 @@ body {
 	width: 140px;
 	
 	cursor: pointer;
+<<<<<<< HEAD
 	
 	border-radius: 10px;
+=======
+>>>>>>> FETCH_HEAD
 		
 }
 
@@ -995,9 +1080,13 @@ body {
 	height: 400px;
 	width: 300px;
 	
+<<<<<<< HEAD
 	background-color: rgba(255, 204, 0, 0.5);;
 	
 	border: 1px solid rgba(255, 204, 0, 0.5);
+=======
+	border: 1px solid #FFF;
+>>>>>>> FETCH_HEAD
 	
 }
 
@@ -1012,13 +1101,20 @@ body {
 	
 	background-image: url(recommendedImages/R1.png);
 	
+<<<<<<< HEAD
 	background-color: rgba(221, 221, 221, 0.7);
+=======
+	background-color: #DDD;
+>>>>>>> FETCH_HEAD
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
 	
+<<<<<<< HEAD
 	border-radius: 7px;
 	
+=======
+>>>>>>> FETCH_HEAD
 	transition: 1s;
 	
 }
@@ -1026,7 +1122,10 @@ body {
 #recommendedSectionLabel input:checked~ #recommendedWrapper #recommndedContent 
 #recommndedList .rCard .rCardImg {
 	
+<<<<<<< HEAD
 	top: 5px;
+=======
+>>>>>>> FETCH_HEAD
 	left: 50%;
 	margin: 0px auto;
 	margin-left: -125px;
@@ -1034,8 +1133,11 @@ body {
 	height: 350px;
 	width: 250px;
 	
+<<<<<<< HEAD
 	background-color: rgb(221, 221, 221);
 	
+=======
+>>>>>>> FETCH_HEAD
 }
 
 .rCardName {
@@ -1078,7 +1180,11 @@ body {
 	color: white;
 	font-size: 25px;
 	text-align: right;
+<<<<<<< HEAD
 		
+=======
+	
+>>>>>>> FETCH_HEAD
 	overflow: hidden;
 	
 	opacity: 0;
@@ -1210,7 +1316,13 @@ body {
 	right: 50px;
 	left: 0px;
 	width: 100%;
+<<<<<<< HEAD
 		
+=======
+	
+	background-color: rgba(255, 204, 0, 0.8);
+	
+>>>>>>> FETCH_HEAD
 	border-radius: 0px !important;
 	
 }
@@ -1233,9 +1345,12 @@ body {
 	
 	background-color: #000;
 	
+<<<<<<< HEAD
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
 	
+=======
+>>>>>>> FETCH_HEAD
 	transition: 1s;
 	
 	overflow: hidden;
@@ -1251,8 +1366,11 @@ body {
 		
 	background-color: rgba(0, 0, 0, 0.5);
 	
+<<<<<<< HEAD
 	border-radius: 0px;
 	
+=======
+>>>>>>> FETCH_HEAD
 }
 
 label[name="optionsLabels"] {
@@ -1269,6 +1387,56 @@ label[name="optionsLabels"] {
 }
 
 
+<<<<<<< HEAD
+=======
+#wishListWrapper {
+	
+	position: absolute;
+	top: -410px;
+	right: 140px;
+	height: 400px;
+	width: 250px;
+	
+	opacity: 0;
+	
+	transition-delay: 0s;
+	
+}
+
+#optionSectionLabel input:checked~ #optionsWrapper 
+#optionsContent #wishListWrapper {
+	
+	top: 20px;
+	
+	opacity: 1;
+	
+	transition-delay: 1s;
+	
+}
+
+#wishListBtn {
+	
+	height: 400px;
+	width: 250px;
+	
+	display: table-cell;
+	font-size: 50px;
+	text-align: center;
+	line-height: 70px;
+	vertical-align: middle;
+	
+	opacity: 0.8;
+	
+}
+
+#wishListBtn:active {
+	
+	opacity: 1;
+	
+}
+
+
+>>>>>>> FETCH_HEAD
 #basketSection {
 	
 	position: absolute;
@@ -1289,9 +1457,15 @@ label[name="optionsLabels"] {
 #optionsContent #basketSection {
 	
 	top: 40px;
+<<<<<<< HEAD
 	left: 100px;
 	height: 800px;
 	width: 800px;
+=======
+	left: 50px;
+	height: 800px;
+	width: 700px;
+>>>>>>> FETCH_HEAD
 	
 	border: 3px solid #FFCC00;
 	
@@ -1303,7 +1477,11 @@ label[name="optionsLabels"] {
 #filterContainer {
 	
 	position: absolute;
+<<<<<<< HEAD
 	width: 800px;
+=======
+	width: 700px;
+>>>>>>> FETCH_HEAD
 	height: 0px;
 	
 	overflow: hidden;
@@ -1324,9 +1502,15 @@ label[name="optionsLabels"] {
 #colourFilterSection, #sizeFilterSection, #quantityFilterSection {
 	
 	position: absolute;
+<<<<<<< HEAD
 	top: 15px;
 	height: 480px;
 	width: 250px;
+=======
+	top: 10px;
+	height: 480px;
+	width: 200px;
+>>>>>>> FETCH_HEAD
 	
 }
 
@@ -1338,13 +1522,21 @@ label[name="optionsLabels"] {
 
 #sizeFilterSection {
 	
+<<<<<<< HEAD
 	left: 275px;
+=======
+	left: 252px;
+>>>>>>> FETCH_HEAD
 	
 }
 
 #quantityFilterSection {
 	
+<<<<<<< HEAD
 	left: 535px;
+=======
+	left: 482px;
+>>>>>>> FETCH_HEAD
 	
 }
 
@@ -1352,9 +1544,15 @@ label[name="optionsLabels"] {
 	
 	position: absolute;
 	height: 380px;
+<<<<<<< HEAD
 	width: 246px;
 	
 	border: 2px solid rgba(255, 204, 0, 0.5);
+=======
+	width: 196px;
+	
+	border: 2px solid #FFF;
+>>>>>>> FETCH_HEAD
 	border-radius: 10px;
 	
 	overflow: hidden;
@@ -1366,7 +1564,11 @@ label[name="optionsLabels"] {
 	position: absolute;
 	bottom: 0px;
 	height: 80px;
+<<<<<<< HEAD
 	width: 250px;
+=======
+	width: 200px;
+>>>>>>> FETCH_HEAD
 	
 	color: #FFCC00;
 	font-size: 25px;
@@ -1387,7 +1589,11 @@ label[name="optionsLabels"] {
 	padding: 0px 6px;
 	
 	height: 378px;
+<<<<<<< HEAD
 	width: 260px;
+=======
+	width: 210px;
+>>>>>>> FETCH_HEAD
 	
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -1398,7 +1604,11 @@ label[name="optionsLabels"] {
 	
 	margin: 20px 0px;
 	height: 80px;
+<<<<<<< HEAD
 	width: 226px;
+=======
+	width: 176px;
+>>>>>>> FETCH_HEAD
 		
 	border: 4px solid #FFF;
 	border-radius: 10px;
@@ -1415,7 +1625,11 @@ label[name="optionsLabels"] {
 	
 	display: table-cell;
 	height: 80px;
+<<<<<<< HEAD
 	width: 226px;
+=======
+	width: 176px;
+>>>>>>> FETCH_HEAD
 	
 	color: #FFF;
 	font-size: 34px;
@@ -1438,7 +1652,11 @@ label[name="optionsLabels"] {
 	
 }
 
+<<<<<<< HEAD
 #quantityDial {
+=======
+#quantityImg {
+>>>>>>> FETCH_HEAD
 	
 	position: absolute;
 	top: 100px;
@@ -1478,7 +1696,11 @@ label[name="optionsLabels"] {
 	bottom: -2px;
 	left: 0px;
 	height: 300px;
+<<<<<<< HEAD
 	width: 800px;
+=======
+	width: 700px;
+>>>>>>> FETCH_HEAD
 	
 	
 }
@@ -1514,7 +1736,11 @@ label[name="optionsLabels"] {
 	
 	top: 15px;
 	height: 150px;
+<<<<<<< HEAD
 	width: 250px;
+=======
+	width: 200px;
+>>>>>>> FETCH_HEAD
 	
 	font-size: 60px;
 	line-height: 150px;
@@ -1541,7 +1767,11 @@ label[name="optionsLabels"] {
 #optionSectionLabel input:checked~ #optionsWrapper 
 #optionsContent #basketSection #basketContainer #basketSizeVal {
 	
+<<<<<<< HEAD
 	left: 271px;
+=======
+	left: 250px;
+>>>>>>> FETCH_HEAD
 	
 }
 
@@ -1554,7 +1784,11 @@ label[name="optionsLabels"] {
 #optionSectionLabel input:checked~ #optionsWrapper 
 #optionsContent #basketSection #basketContainer #basketQuantityVal {
 	
+<<<<<<< HEAD
 	left: 527px;
+=======
+	left: 480px;
+>>>>>>> FETCH_HEAD
 	
 }
 
@@ -1590,7 +1824,11 @@ label[name="optionsLabels"] {
 	bottom: -410px;
 	right: 140px;
 	height: 400px;
+<<<<<<< HEAD
 	width: 106px;
+=======
+	width: 250px;
+>>>>>>> FETCH_HEAD
 	
 	border: 3px solid #FFCC00;
 	border-radius: 10px;
@@ -1606,7 +1844,11 @@ label[name="optionsLabels"] {
 #optionSectionLabel input:checked~ #optionsWrapper 
 #optionsContent #outfitsContainer {
 	
+<<<<<<< HEAD
 	bottom: 70px;
+=======
+	bottom: 40px;
+>>>>>>> FETCH_HEAD
 	
 	opacity: 0.8;
 	
@@ -1622,7 +1864,11 @@ label[name="optionsLabels"] {
 	top: 0px;
 	right: 0px;
 	height: 395px;
+<<<<<<< HEAD
 	width: 100px;
+=======
+	width: 250px;
+>>>>>>> FETCH_HEAD
 	
 	background-color: #FFCC00;
 	
@@ -1631,7 +1877,11 @@ label[name="optionsLabels"] {
 #outfitsMainText span{
 	
 	height: 395px;
+<<<<<<< HEAD
 	width: 100px;
+=======
+	width: 250px;
+>>>>>>> FETCH_HEAD
 	
 	display: table-cell;
 	font-size: 45px;

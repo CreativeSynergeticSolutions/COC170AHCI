@@ -3,7 +3,11 @@
 */
 String.prototype.hashCode = function() {
   var hash = 0, i, chr, len;
+<<<<<<< HEAD
   if (this.length === 0) { return hash; }
+=======
+  if (this.length == 0) return hash;
+>>>>>>> FETCH_HEAD
   for (i = 0, len = this.length; i < len; i++) {
     chr   = this.charCodeAt(i);
     hash  = ((hash << 5) - hash) + chr;
@@ -18,7 +22,11 @@ String.prototype.hashCode = function() {
 var wall = function (options) {
     options = options || {};
     this.user = options.user || '';
+<<<<<<< HEAD
     this.userStorage = 'AHCI'+'-'+((this.user==='')?'local':this.user);
+=======
+    this.userStorage = 'AHCI'+'-'+((this.user=='')?'local':this.user);
+>>>>>>> FETCH_HEAD
     this.saveObjectToStorage = function (name, toSave) {
         this.wallLog('Saving '+name);
         this.wallLog('Getting existing '+name);
@@ -96,7 +104,11 @@ wall.prototype.addOutfit = function (outfitName) {
     if(outfits===null){
         outfits = [];
     }
+<<<<<<< HEAD
     var outfitid = (outfits.length===0) ? 0 : outfits[outfits.length-1].id+1;
+=======
+    var outfitid = (outfits.length==0) ? 0 : outfits[outfits.length-1].id+1;
+>>>>>>> FETCH_HEAD
     outfits.push({"id": outfitid, "name":outfitName, items:[]});
     this.saveObjectToStorage('outfits',outfits);
 };
@@ -136,7 +148,11 @@ wall.prototype.getOutfits = function () {
 };
 wall.prototype.getCurrentOutfit = function () {
     return this.getObjectFromStorage('currentOutfit');
+<<<<<<< HEAD
 };
+=======
+}
+>>>>>>> FETCH_HEAD
 wall.prototype.setCurrentOutfit = function (outfitName) {
     this.saveObjectToStorage('currentOutfit', this.getOutfit(outfitName));
 };
@@ -162,7 +178,11 @@ wall.prototype.addToBasket = function (item, quantity, size, colour) {
         if(basket===null){
             basket = [];
         }
+<<<<<<< HEAD
         entry.id = (basket.length===0) ? 0 : basket[basket.length-1].id+1;
+=======
+        entry.id = (basket.length==0) ? 0 : basket[basket.length-1].id+1;
+>>>>>>> FETCH_HEAD
         basket.push(entry);
         this.saveObjectToStorage('basket',basket);
     } else {
@@ -181,6 +201,7 @@ wall.prototype.removeItemFromBasket = function (id) {
         }
     }
     this.saveObjectToStorage('basket',basket);
+<<<<<<< HEAD
 };
 wall.prototype.updateBasketItemQuantity = function (id, quantity) {
     var basket = this.getBasket();
@@ -191,6 +212,9 @@ wall.prototype.updateBasketItemQuantity = function (id, quantity) {
         }
     }
 };
+=======
+}
+>>>>>>> FETCH_HEAD
 wall.prototype.updateBasket = function (items) {
     this.wallLog('Updating basket');
     for(var i = 0; i < items.length; i++){
