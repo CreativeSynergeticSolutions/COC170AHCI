@@ -57,8 +57,12 @@ function loadPage(){
 }
 
 function addToBasket(index){
-	shelfView.addToBasket(items[index],1,items[index]["sizes"][0],items[index]["colours"][0]["name"]);
+	shelfView.addToBasket(items[index],1,items[index]["sizes"][0],items[index]["colours"][0]);
 	loadSelectedProducts();
+}
+
+function addToOutfit(index){
+	
 }
 
 function loadOutfits(){
@@ -113,7 +117,7 @@ function loadSelectedProducts(){
 	
 	var output="";
 	if(savedItems.length>0){
-		output="<tr><th>Item Details</th> <th>Quantity</th><th>Delivery Options</th><th>Subtotal</th></tr>";
+		output="<tr>";
 	}
 	var total=0;
 	
@@ -137,31 +141,23 @@ function loadSelectedProducts(){
 		items+=("<td>"+savedItems[i]["item"]["name"]+"</td>");
 		items+="</tr>";
 		items+="<tr>";
-		items+=("<td>"+savedItems[i]["size"]+"</td>");
+		items+=("<td>"+savedItems[i]["quantity"]+"</td>");
 		items+="</tr>";
 		items+="<tr>";
-		items+=("<td>"+savedItems[i]["colour"]+"</td>");
+		items+=("<td>"+savedItems[i]["colour"]["name"]+"</td>");
 		items+="</tr>";
 		items+="<tr>";
 		items+=("<td>"+savedItems[i]["item"]["price"]+"</td>");
 		items+="</tr>";
 		items+="</table>";
 		items+="</div><!--END OF BOTTOM BAR RIGHT -->";
+	
 		
-		
-		var deliveryOptions="<img src='images/DeliveryIcons.png' />";
-		var subtotal="<div>&pound 10</div>";
-		
-		output+="<tr>";
 		output+=("<td class='itemI'>"+items+"</td>");
-		output+=("<td class='quantityI'>"+howMany+"</td>");
-		output+=("<td class='deliveryI'>"+deliveryOptions+"</td>");
-		output+=("<td class='subtotalI'>"+subtotal+"</td>");
 		
-		output+="</tr>";
 	}
 	if(shelfView.getBasket().length>0){
-		output+="<tr><td class='basketFooter' colspan='3'>Basket Total</td><td>&pound "+total+"</td></tr>";
+		output+="</tr><tr><td class='basketFooter' >"+total+"</td></tr>";
 	}
 	$("#basketItems").html(output);
 }
@@ -233,7 +229,7 @@ function loadSelection(index){
 		output+="<div class='clothesInfo' >"+price.replace(/\£/g, "&pound")+"</div>";
 		output+="<br/>";
 		output+="<div class='addBasket' onclick='addToBasket("+index+")' >Add To Basket</div>";
-		
+		output+="<div class='addBasket' onclick='addToOufit("+index+")' >Add To Outfit</div>";
 		output+="</div>";
 		output+="</div>";
 		
