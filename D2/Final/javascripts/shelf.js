@@ -148,13 +148,13 @@ function loadSelectedProducts(){
 		items+="</table>";
 		items+="</div><!--END OF BOTTOM BAR RIGHT -->";
 		
-		var quantity="<input type='number' value='"+howMany+"'/>";
+		
 		var deliveryOptions="<img src='images/DeliveryIcons.png' />";
 		var subtotal="<div>&pound 10</div>";
 		
 		output+="<tr>";
 		output+=("<td class='itemI'>"+items+"</td>");
-		output+=("<td class='quantityI'>"+quantity+"</td>");
+		output+=("<td class='quantityI'>"+howMany+"</td>");
 		output+=("<td class='deliveryI'>"+deliveryOptions+"</td>");
 		output+=("<td class='subtotalI'>"+subtotal+"</td>");
 		

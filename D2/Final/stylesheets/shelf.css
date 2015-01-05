@@ -19,9 +19,9 @@
 	width:250px;
 }
 
-.quantityI input[type=number]{
+.quantityI{
 	text-align:center;
-	font-size:1.4em;
+	font-size:1.4em !important;
 	
 }
 .deliveryI{
@@ -382,11 +382,18 @@ div.label1{
 	margin-left:5px;
 	width:150px;
 	
+	
+}
+
+table#ItemDetails td{
+	background-color:rgb(31,31,31) !important;
 }
 table#ItemDetails{
 	width:100% !important;
-	border:collapse !important;
+	border:none;
+	color:white;
 	text-align:center !important;
+	
 }
 #topBar{
 
