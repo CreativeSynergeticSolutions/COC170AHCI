@@ -448,6 +448,9 @@ function setupOptions() {
 	
 	$("#sizeList li").first().click();
 	
+	$("#basketLinkButton").click(function(){window.location = "basket.html"});
+	
+	
 	
 	currentOutfits = wall.getOutfits().reverse();
 	
@@ -502,7 +505,17 @@ function setupOptions() {
 		
 	});
 	
-	$("#basketLinkButton").click(function(){window.location = "basket.html"});
+	$("#currentOutfitButton").click(function(){
+		
+		var currentOutfitName = wall.getCurrentOutfit().name;
+				
+		wall.addOutfitItem(currentOutfitName, currentProduct, currentQuantity, currentSize, currentColor);
+				
+		popupDialog("Product: " + currentProduct.name + "<br />Added to Current Outfit: " + currentOutfitName);	
+		
+	});
+	
+	$("#outfitLinkButton").click(function(){window.location = "outfit.html"});
 	
 }
 

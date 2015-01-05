@@ -30,6 +30,7 @@ body {
     background: radial-gradient(ellipse at center,  #ffffff 0%,#3C3432 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3C3432',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
    
+	overflow: hidden;
 	
 }
 
@@ -1664,6 +1665,7 @@ label[name="optionsLabels"] {
 	height: 400px;
 	width: 106px;
 	
+	background-color: #444;
 	border: 3px solid #FFCC00;
 	border-radius: 10px;
 	
@@ -1732,7 +1734,7 @@ label[name="optionsLabels"] {
 	
 	display: block;
 	margin-top: 5px;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	margin-left: 4px;
 	height: 40px;
 	width: 280px;
@@ -1748,7 +1750,7 @@ label[name="optionsLabels"] {
 
 #outfitsNewButton {
 	
-	height: 250px;
+	height: 300px;
 	width: 300px;
 	
 	display: table-cell;
@@ -1757,6 +1759,8 @@ label[name="optionsLabels"] {
 	vertical-align: middle;
 	
 	background-color: #FFCC00;
+	
+	border-radius: 10px;
 	
 	opacity: 0.8;
 	
@@ -1770,10 +1774,47 @@ label[name="optionsLabels"] {
 	
 }
 
+#currentOutfitButton {
+	
+	box-sizing: border-box;
+	
+	position: absolute;
+	padding-top: 20px;
+	top: 15px;
+	left: 330px;
+	height: 80px;
+	width: 370px;
+	
+	font-size: 35px;
+	text-align: center;
+	
+	border-radius: 10px;
+	
+}
+
+#outfitLinkButton {
+	
+	box-sizing: border-box;
+	
+	position: absolute;
+	padding-top: 20px;
+	top: 15px;
+	left: 710px;
+	height: 80px;
+	width: 160px;
+	
+	font-size: 35px;
+	text-align: center;
+	
+	border-radius: 10px;
+	
+}
+
 #outfitsListContainer {
 	
 	position: absolute;
-	height: 395px;
+	top: 100px;
+	height: 295px;
 	width: 900px;
 	
 	overflow: hidden;
@@ -1785,7 +1826,7 @@ label[name="optionsLabels"] {
 	position: absolute;
 	margin: 0px;
 	padding: 0px;
-	height: 416px;
+	height: 316px;
 	width: 900px;
 	
 	overflow-y: hidden;
@@ -1799,11 +1840,13 @@ label[name="optionsLabels"] {
 	
 	display: inline-block;
 	
-	margin: 72px 10px;
+	margin: 22px 10px;
 	height: 250px;
 	width: 250px;
 	
 	background-color: #2C2C2C;
+	
+	border-radius: 10px;
 	
 }
 
@@ -1827,7 +1870,7 @@ label[name="optionsLabels"] {
 
 #outfitsList li:first-child {
 	
-	margin-left: 310px;
+	margin-left: 330px;
 	
 }
 
