@@ -553,3 +553,17 @@ a {
 .basket-item .basket-item__remove {
     top: 0.6em;
 }
+
+/*
+* Hide Highlighting
+*/
+
+::selection {
+  background: none;
+}
+::-moz-selection {
+  background: none;
+}
+::-webkit-selection {
+  background: none;
+}
