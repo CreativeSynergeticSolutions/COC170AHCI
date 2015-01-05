@@ -1,6 +1,6 @@
 var wall = new wall();
 
-var dial = new Dial(200, "3em");
+var dial = new Dial(250, "4em");
 
 var currentProduct = {
             name: "No Product Selected",

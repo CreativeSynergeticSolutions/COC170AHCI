@@ -12,23 +12,24 @@ body {
 	height: 1024px;
 	width: 1280px;
 	
-	//background: #303030; /* Old browsers */
-	//background: -moz-radial-gradient(center, ellipse cover, #303030 0%, #000000 100%); /* FF3.6+ */
-	//background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#303030), color-stop(100%,#000000)); /* Chrome,Safari4+ */
-	//background: -webkit-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
-	//background: -o-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* Opera 12+ */
-	//background: -ms-radial-gradient(center, ellipse cover, #303030 0%,#000000 100%); /* IE10+ */
-	//background: radial-gradient(ellipse at center, #303030 0%,#000000 100%); /* W3C */
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303030', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	//background: #858585; /* Old browsers */
+	//background: -moz-radial-gradient(center, ellipse cover, #858585 0%, #0D0D0D 100%); /* FF3.6+ */
+	//background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#858585), color-stop(100%,#0D0D0D)); /* Chrome,Safari4+ */
+	//background: -webkit-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* Chrome10+,Safari5.1+ */
+	//background: -o-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* Opera 12+ */
+	//background: -ms-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* IE10+ */
+	//background: radial-gradient(ellipse at center, #858585 0%,#0D0D0D 100%); /* W3C */
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#0D0D0D',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	
-	background: #858585; /* Old browsers */
-	background: -moz-radial-gradient(center, ellipse cover, #858585 0%, #0D0D0D 100%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#858585), color-stop(100%,#0D0D0D)); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover, #858585 0%,#0D0D0D 100%); /* IE10+ */
-	background: radial-gradient(ellipse at center, #858585 0%,#0D0D0D 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#0D0D0D',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: #3C3432; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #3C3432 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(100%,#3C3432)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#3C3432 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  #ffffff 0%,#3C3432 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #ffffff 0%,#3C3432 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  #ffffff 0%,#3C3432 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3C3432',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+   
 	
 }
 
@@ -70,7 +71,7 @@ body {
 	height:400px;
 	width: 100px;
 	
-	background-color: rgba(255, 0, 0, 0.1);
+	background-color: rgba(255, 0, 0, 0.3);
 	
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	
@@ -238,8 +239,9 @@ body {
 	height: 130px;
 	width: 100%;
 	
-	background-color: #000;
-	border: 1px solid #FFF;
+	background-color: rgba(0, 0, 0, 0.8);
+	
+	border-radius: 7px;
 	
 	//transform: rotateX(40deg);
 	//transform-origin: center bottom;
@@ -407,7 +409,6 @@ body {
 #displayImgLeftArrow, #displayImgRightArrow {
 	
 	color: rgba(255, 210, 49, 0.5);
-	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 200px;
 	
 	cursor: pointer;
@@ -604,9 +605,7 @@ body {
 	left: 50px;
 	left: 0px;
 	width: 100%;
-	
-	background-color: rgba(255, 204, 0, 0.8);
-	
+		
 	border-radius: 0px !important;
 	
 }
@@ -634,6 +633,9 @@ body {
 	
 	background-color: #000;
 	
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	
 	transition: 1s;
 	
 	overflow: hidden;
@@ -651,6 +653,8 @@ body {
 	font-size: 25px;
 	
 	background-color: rgba(0, 0, 0, 0.7);
+	
+	border-radius: 0px;
 		
 }
 
@@ -894,9 +898,7 @@ body {
 	right: 50px;
 	left: 0px;
 	width: 100%;
-	
-	background-color: rgba(255, 204, 0, 0.8);
-	
+		
 	border-radius: 0px !important;
 	
 }
@@ -919,6 +921,9 @@ body {
 	
 	background-color: #000;
 	
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	
 	transition: 1s;
 	
 	overflow: hidden;
@@ -933,6 +938,8 @@ body {
 	width: 1180px;
 		
 	background-color: rgba(0, 0, 0, 0.5);
+	
+	border-radius: 0px;
 		
 }
 
@@ -976,6 +983,8 @@ body {
 	width: 140px;
 	
 	cursor: pointer;
+	
+	border-radius: 10px;
 		
 }
 
@@ -986,7 +995,9 @@ body {
 	height: 400px;
 	width: 300px;
 	
-	border: 1px solid #FFF;
+	background-color: rgba(255, 204, 0, 0.5);;
+	
+	border: 1px solid rgba(255, 204, 0, 0.5);
 	
 }
 
@@ -1001,10 +1012,12 @@ body {
 	
 	background-image: url(recommendedImages/R1.png);
 	
-	background-color: #DDD;
+	background-color: rgba(221, 221, 221, 0.7);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
+	
+	border-radius: 7px;
 	
 	transition: 1s;
 	
@@ -1013,12 +1026,15 @@ body {
 #recommendedSectionLabel input:checked~ #recommendedWrapper #recommndedContent 
 #recommndedList .rCard .rCardImg {
 	
+	top: 5px;
 	left: 50%;
 	margin: 0px auto;
 	margin-left: -125px;
 	
 	height: 350px;
 	width: 250px;
+	
+	background-color: rgb(221, 221, 221);
 	
 }
 
@@ -1062,7 +1078,7 @@ body {
 	color: white;
 	font-size: 25px;
 	text-align: right;
-	
+		
 	overflow: hidden;
 	
 	opacity: 0;
@@ -1194,9 +1210,7 @@ body {
 	right: 50px;
 	left: 0px;
 	width: 100%;
-	
-	background-color: rgba(255, 204, 0, 0.8);
-	
+		
 	border-radius: 0px !important;
 	
 }
@@ -1219,6 +1233,9 @@ body {
 	
 	background-color: #000;
 	
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	
 	transition: 1s;
 	
 	overflow: hidden;
@@ -1233,6 +1250,8 @@ body {
 	width: 1180px;
 		
 	background-color: rgba(0, 0, 0, 0.5);
+	
+	border-radius: 0px;
 	
 }
 
@@ -1270,9 +1289,9 @@ label[name="optionsLabels"] {
 #optionsContent #basketSection {
 	
 	top: 40px;
-	left: 50px;
+	left: 100px;
 	height: 800px;
-	width: 700px;
+	width: 800px;
 	
 	border: 3px solid #FFCC00;
 	
@@ -1284,7 +1303,7 @@ label[name="optionsLabels"] {
 #filterContainer {
 	
 	position: absolute;
-	width: 700px;
+	width: 800px;
 	height: 0px;
 	
 	overflow: hidden;
@@ -1305,9 +1324,9 @@ label[name="optionsLabels"] {
 #colourFilterSection, #sizeFilterSection, #quantityFilterSection {
 	
 	position: absolute;
-	top: 10px;
+	top: 15px;
 	height: 480px;
-	width: 200px;
+	width: 250px;
 	
 }
 
@@ -1319,13 +1338,13 @@ label[name="optionsLabels"] {
 
 #sizeFilterSection {
 	
-	left: 252px;
+	left: 275px;
 	
 }
 
 #quantityFilterSection {
 	
-	left: 482px;
+	left: 535px;
 	
 }
 
@@ -1333,9 +1352,9 @@ label[name="optionsLabels"] {
 	
 	position: absolute;
 	height: 380px;
-	width: 196px;
+	width: 246px;
 	
-	border: 2px solid #FFF;
+	border: 2px solid rgba(255, 204, 0, 0.5);
 	border-radius: 10px;
 	
 	overflow: hidden;
@@ -1347,7 +1366,7 @@ label[name="optionsLabels"] {
 	position: absolute;
 	bottom: 0px;
 	height: 80px;
-	width: 200px;
+	width: 250px;
 	
 	color: #FFCC00;
 	font-size: 25px;
@@ -1368,7 +1387,7 @@ label[name="optionsLabels"] {
 	padding: 0px 6px;
 	
 	height: 378px;
-	width: 210px;
+	width: 260px;
 	
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -1379,7 +1398,7 @@ label[name="optionsLabels"] {
 	
 	margin: 20px 0px;
 	height: 80px;
-	width: 176px;
+	width: 226px;
 		
 	border: 4px solid #FFF;
 	border-radius: 10px;
@@ -1396,7 +1415,7 @@ label[name="optionsLabels"] {
 	
 	display: table-cell;
 	height: 80px;
-	width: 176px;
+	width: 226px;
 	
 	color: #FFF;
 	font-size: 34px;
@@ -1419,7 +1438,7 @@ label[name="optionsLabels"] {
 	
 }
 
-#quantityImg {
+#quantityDial {
 	
 	position: absolute;
 	top: 100px;
@@ -1459,7 +1478,7 @@ label[name="optionsLabels"] {
 	bottom: -2px;
 	left: 0px;
 	height: 300px;
-	width: 700px;
+	width: 800px;
 	
 	
 }
@@ -1495,7 +1514,7 @@ label[name="optionsLabels"] {
 	
 	top: 15px;
 	height: 150px;
-	width: 200px;
+	width: 250px;
 	
 	font-size: 60px;
 	line-height: 150px;
@@ -1522,7 +1541,7 @@ label[name="optionsLabels"] {
 #optionSectionLabel input:checked~ #optionsWrapper 
 #optionsContent #basketSection #basketContainer #basketSizeVal {
 	
-	left: 250px;
+	left: 271px;
 	
 }
 
@@ -1535,7 +1554,7 @@ label[name="optionsLabels"] {
 #optionSectionLabel input:checked~ #optionsWrapper 
 #optionsContent #basketSection #basketContainer #basketQuantityVal {
 	
-	left: 480px;
+	left: 527px;
 	
 }
 
@@ -1571,7 +1590,7 @@ label[name="optionsLabels"] {
 	bottom: -410px;
 	right: 140px;
 	height: 400px;
-	width: 250px;
+	width: 106px;
 	
 	border: 3px solid #FFCC00;
 	border-radius: 10px;
@@ -1587,7 +1606,7 @@ label[name="optionsLabels"] {
 #optionSectionLabel input:checked~ #optionsWrapper 
 #optionsContent #outfitsContainer {
 	
-	bottom: 40px;
+	bottom: 70px;
 	
 	opacity: 0.8;
 	
@@ -1603,7 +1622,7 @@ label[name="optionsLabels"] {
 	top: 0px;
 	right: 0px;
 	height: 395px;
-	width: 250px;
+	width: 100px;
 	
 	background-color: #FFCC00;
 	
@@ -1612,7 +1631,7 @@ label[name="optionsLabels"] {
 #outfitsMainText span{
 	
 	height: 395px;
-	width: 250px;
+	width: 100px;
 	
 	display: table-cell;
 	font-size: 45px;

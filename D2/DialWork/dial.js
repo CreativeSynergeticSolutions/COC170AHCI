@@ -5,7 +5,7 @@ var Dial = function(dimensions, fontSize){
 
 	var cssText = "	.dialImage { height: " + dimensions + "px; width: " + dimensions + "px; background-image: url(images/Dial.png); background-size: 100%; background-repeat: no-repeat; background-position: center center; }\
 					.dialImage * {	transition: 0s !important;	}\
-					.dialHandle { position: relative; top: 14%; left: 11%; height: 71%; width: 71%; z-index: 100;}\
+					.dialHandle { position: relative; top: 14%; left: 11%; height: 71%; width: 71%; z-index: 20;}\
 					.dialHandle:after { content: ''; position: absolute; top: 48.5%; left: 2%; height: 3%; width: 30%; border-radius: 50px; background-color: #FFCC00; opacity: 0.3; transition: 0.2s; }\
 					.dialHandle:active { top: -50%; left: -50%; height: 200%; width: 200%; }\
 					.dialHandle:active:after { top: 48.5%; left: 20%; height: 3%; width: 20%; opacity: 1;}\
