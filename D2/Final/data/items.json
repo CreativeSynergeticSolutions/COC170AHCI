@@ -410,7 +410,7 @@
             "name": "Boston Crew Hoody",
             "mainCategory": "Mens",
             "subCategory": "Sweatshirts & Hoodies",
-            "type": "top",
+            "type": "body",
             "price": "£20.00",
             "images": {
                 "front": "images/stock/mens/body/Boston Crew Hoody/front.png",
@@ -449,7 +449,7 @@
             "name": "Jersey Hoodie",
             "mainCategory": "Mens",
             "subCategory": "Sweatshirts & Hoodies",
-            "type": "top",
+            "type": "body",
             "price": "£10.00",
             "images": {
                 "front": "images/stock/mens/body/Jersey Hoodie/front.png",
