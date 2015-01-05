@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
 #backButton{
 	background-color:rgb(255, 204, 0);
 	width:150px;
@@ -20,7 +24,7 @@
 	display:block;
 	float:left;
 	border:1px solid black;
-	
+
 }
 
 .quantityI{
@@ -51,7 +55,7 @@
 	margin-left:auto;
 	margin-right:auto;
 	border: 1px solid;
-	
+
 }
 
 
@@ -278,7 +282,7 @@ div.label1{
 	position:fixed;
 	bottom:20px;
 	left:250px;
-	
+
 	border-radius:4px;
 
 }
@@ -345,7 +349,7 @@ div.label1{
 
 table#ItemDetails td{
 	background-color:rgb(31,31,31) !important;
-	
+
 
 }
 table#ItemDetails{
@@ -414,7 +418,7 @@ table#ItemDetails{
 	position:relative;
 }
 #outfit_header{
-	
+
 	max-height:750px;
 	display:inline-block;
 	width:100%;
@@ -447,7 +451,7 @@ table#ItemDetails{
 .outfitBin{
 	text-align:center;
 	float:right;
-	color:#333;
+    color: #B71C1C;
 }
 
 .side_title{
@@ -499,5 +503,10 @@ table#ItemDetails{
 	font-size:1.2em;
 	background-color:#FFF888;
 	float:left;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 

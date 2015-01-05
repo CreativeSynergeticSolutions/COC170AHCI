@@ -26,7 +26,7 @@ $.ajax({
             wSearch = window.location.search;
         wSearch = wSearch.slice(1, wSearch.length).split("&");
         var keyValuePairs = {};
-        for(pair in wSearch) {
+        for(var pair in wSearch) {
             var parts = wSearch[pair].split("="),
                 part1 = parts[0],
                 part2 = null;
