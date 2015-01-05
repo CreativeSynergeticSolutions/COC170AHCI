@@ -11,12 +11,11 @@
 .productI{
 	height:160px;
 	padding:2px;
-	width:90px;
+	width:120px;
 	float:left;
 }
 .itemI{
 	padding:2px;
-	width:250px;
 }
 
 .quantityI{
@@ -24,9 +23,7 @@
 	font-size:1.4em !important;
 
 }
-.deliveryI{
-	background-color:white;
-}
+
 
 .subtotalI div{
 	font-size:1.4em !important;
@@ -45,16 +42,12 @@ td.basketFooter{
 }
 
 #basketItems{
-	width:98%;
+	min-width:99%;
 	color:black;
 	margin-left:auto;
 	margin-right:auto;
-
-
-
-
-
-
+	border: none;
+	
 }
 
 
@@ -67,17 +60,15 @@ td.basketFooter{
 	background-color:rgb(255, 204, 0);
 }
 
+
 .basketItems td{
 	border-bottom:none;
 	border-top:none;
 	text-align:center;
 	height:30px;
 	font-size:14pt;
-	background-color:white;
-	padding:4px;
-	margin:2px;
+	padding: 2px;
 	border:2px solid rgb(44,44,44);
-
 }
 
 #itemsBar{
@@ -86,9 +77,9 @@ td.basketFooter{
 #basketContainer{
 
 	height:99%;
-	float:left;
+	
 	width:100%;
-	overflow:scroll;
+	overflow-x:scroll;
 
 }
 .addBasket:hover{
@@ -103,8 +94,7 @@ td.basketFooter{
 	width:100%;
 	font-weight:bold;
 	color:black;
-	height:60px;
-
+	height:35px;
 
 }
 
@@ -140,7 +130,7 @@ td.basketFooter{
 	color:white;
 	border-radius:5px;
 
-
+f
 
 }
 .Categories:hover{
@@ -191,7 +181,7 @@ td.basketFooter{
 .SubCategorySelection{
 	text-align:center;
 	font-size:0.6em;
-	width:450px;
+	width:400px;
 
 	border:1px solid #ddd;
 	box-shadow:0px 0px 3px 3px #ffffff;
@@ -247,7 +237,7 @@ td.basketFooter{
     overflow: scroll;
     margin-top:5px;
     width:100%;
-    height:680px;
+    height:650px;
 	margin-left:250px;
 
 
@@ -312,12 +302,12 @@ div.label1{
 
 }
 #bottomBar{
-	height:250px;
+	height:230px;
 	width:87%;
 	position:fixed;
 	bottom:20px;
 	left:250px;
-	border:1px dotted #333;
+	
 	border-radius:4px;
 
 }
@@ -352,7 +342,7 @@ div.label1{
 
 }
 .recommendBox{
-	background-color:white;
+	background-color:inherit;
 	color:#3c3432;
 	font-size:1.4em;
 	border-width: 0px;
@@ -373,20 +363,22 @@ div.label1{
 
 .bottomBarLeft{
 	float:left;
+	text-align:center;
 
 
 }
 .bottomBarRight{
-	float:right;
+	float:left;
 	font-size:0.9em;
 	margin-left:5px;
-	width:150px;
+	width:100px;
 
 
 }
 
 table#ItemDetails td{
 	background-color:rgb(31,31,31) !important;
+	overflow:auto;
 }
 table#ItemDetails{
 	width:100% !important;
