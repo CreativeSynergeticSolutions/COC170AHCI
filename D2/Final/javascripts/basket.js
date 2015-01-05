@@ -1,8 +1,5 @@
 var wall = new wall();
-<<<<<<< HEAD
 var dial = new Dial(150, "1.5em");
-=======
->>>>>>> FETCH_HEAD
 var basket;
 function loadBasketList() {
     basket = wall.getBasket();
@@ -33,15 +30,11 @@ function loadModal(index){
 	console.log(item);
 	$("#containerInner").css("left","12.5%");
 }
-<<<<<<< HEAD
 function LoadProduct(){
 	window.location.href = 'product.html?productCode='+$("#productCode").text();
 }
 function deleteItem(index){
 	wall.removeItemFromBasket(document.getElementById("item"+index).getAttribute("data"));
-=======
-function deleteItem(index){
->>>>>>> FETCH_HEAD
 	$("#item"+index).remove();
 	var current = ($("#total").text()).substring(9,($("#total").text()).length);
 	console.log(current);
@@ -61,11 +54,7 @@ function displayItems(){
 	var html = "";
 	var total = 0;
 	for(var i = 0; i < basket.length;i++){
-<<<<<<< HEAD
 		html += "<div class='item' id='item"+i+"' data='"+ basket[i].id +"' >";
-=======
-		html += "<div class='item' id='item"+i+"'>";
->>>>>>> FETCH_HEAD
 		html += "<div class='delete' onclick='deleteItem("+i+")'><div><span title='Delete Item'><i class='icon-trash-empty'></i></span></div></div>";
 		html += "<div class='info' onclick='loadModal("+i+")'><div><span title='Product info'><i class='icon-info'></i></span></div></div>";
 		html += "<div class='price'>"+basket[i].item.price+"</div>";
@@ -73,7 +62,6 @@ function displayItems(){
 		html += "<img src='"+basket[i].item.images.front+"'>";
 		html += "</div>";
 		html += "<p>"+basket[i].item.name+"</p>";
-<<<<<<< HEAD
 		//html += "<a class='dial'>"+basket[i].quantity+"</a>";
 		
 		
@@ -88,20 +76,10 @@ function displayItems(){
 		//need quantity
 		total += parseInt((basket[i].item.price).substring(1,basket[i].item.price.length))*basket[i].quantity;
 		
-=======
-		html += "<a class='dial'>"+basket[i].quantity+"</a>";
-		html += "<p class='product'>Size: "+basket[i].size+"</p>";
-		html += "<p class='product'>Colour: "+basket[i].colour.name+"</p>";
-		html += "<p class='product'>Product Code: "+basket[i].item.productCode+"</p>";
-		html += "</div>";
-		//need quantity
-		total += parseInt((basket[i].item.price).substring(1,basket[i].item.price.length))*basket[i].quantity;
->>>>>>> FETCH_HEAD
 	}
 	$('#items').html(html);
 	$('#total').html("Total: &#163 "+add00(total))
 }
-<<<<<<< HEAD
 function removeAll(){
 	console.log(basket.length);
 	for(i=0; i<basket.length; i++){
@@ -126,17 +104,11 @@ function closeAll(){
 }
 window.onload = function () {
 	
-=======
-
-
-window.onload = function () {
->>>>>>> FETCH_HEAD
 	loadBasketList();
 	displayItems();
 	$("#items").css('left','0');
 	$("#total").css('left','0');
 	$("#options").css('right','0');
-<<<<<<< HEAD
 	for(i =0; i< basket.length; i++){
 		dial.addNewDial(i, function(dialData){
 			console.log("dialid is: " + dialData.dialid);
@@ -152,7 +124,3 @@ window.onload = function () {
 window.onresize = function(){
 	Resize();	
 }
-=======
-
-}
->>>>>>> FETCH_HEAD

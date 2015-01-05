@@ -7,7 +7,6 @@ $(document).ready(function(){
 		console.log("dialid is: " + dialData.dialid);
 		console.log("dialValue is: " + dialData.dialValue);
 	});
-	
 	dial.addNewDial(2, function(dialData){
 		
 		console.log("dialid is: " + dialData.dialid);

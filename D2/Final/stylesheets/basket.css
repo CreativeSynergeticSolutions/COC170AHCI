@@ -161,11 +161,7 @@ button:hover,button:active, .info:hover,.info:active{
 	color:#fff;
 	margin-bottom:0;
 }
-<<<<<<< HEAD
 .cancel:hover, .cancel:active , .container .closebar:hover, .container .closebar:active, .delete:hover, .delete:active{
-=======
-.cancel:hover, .cancel:active , #container .closebar:hover, #container .closebar:active, .delete:hover, .delete:active{
->>>>>>> FETCH_HEAD
 	color:rgba(120,34,25,1)!important;
 	background-color:#fff;
 }
@@ -213,11 +209,7 @@ button:hover,button:active, .info:hover,.info:active{
 	background-color:#000;
 	transition: 0.5s;
 } */
-<<<<<<< HEAD
 .container{
-=======
-#container{
->>>>>>> FETCH_HEAD
 	position:absolute;
 	top:0;
 	left:0;
@@ -226,14 +218,9 @@ button:hover,button:active, .info:hover,.info:active{
 	background-color: rgba(0,0,0,0.8);
 	transition:0.5s;
 	display:none;
-<<<<<<< HEAD
 	z-index: 110;
 }
 .container>div{
-=======
-}
-#container>div{
->>>>>>> FETCH_HEAD
 	width:75%;
 	height:75%;
 	position:relative;
@@ -246,11 +233,7 @@ button:hover,button:active, .info:hover,.info:active{
 	color:#fff;
 	font-size:200%;
 }
-<<<<<<< HEAD
 .container .topbar{
-=======
-#container .topbar{
->>>>>>> FETCH_HEAD
 	height:10%;
 	width:90%;
 	background-color:rgba(255,213,49,1);
@@ -259,16 +242,11 @@ button:hover,button:active, .info:hover,.info:active{
 	border-top-left-radius: 4px;
 	
 }
-<<<<<<< HEAD
 .container .topbar>div{
-=======
-#container .topbar>div{
->>>>>>> FETCH_HEAD
 	position:relative;
 	top: 25%;
 	color:#000;
 }
-<<<<<<< HEAD
 .container .topbar>div>i{
 	float:left;
 }
@@ -295,12 +273,6 @@ button:hover,button:active, .info:hover,.info:active{
 	margin:1%!important;
 }
 .container .closebar{
-=======
-#container .topbar>div>i{
-	float:left;
-}
-#container .closebar{
->>>>>>> FETCH_HEAD
 	width:10%;
 	height:100%;
 	background-color:rgba(120,34,25,1);
@@ -315,11 +287,7 @@ button:hover,button:active, .info:hover,.info:active{
 	transition:0.5s;
 	cursor:pointer;
 }
-<<<<<<< HEAD
 .container .goToItem{
-=======
-#container .goToItem{
->>>>>>> FETCH_HEAD
 	width:10%;
 	height:100%;
 	background-color:#3c3432;
@@ -328,37 +296,21 @@ button:hover,button:active, .info:hover,.info:active{
 	cursor:pointer;
 	float:right;
 }
-<<<<<<< HEAD
 .container .goToItem:hover, .container .goToItem:active{
-=======
-#container .goToItem:hover, #container .goToItem:active{
->>>>>>> FETCH_HEAD
 	background-color:#fff;
 	color:#3c3432;
 	transition:0.5s;
 }
-<<<<<<< HEAD
 .container .closebar>div, .container .goToItem>div{
-=======
-#container .closebar>div, #container .goToItem>div{
->>>>>>> FETCH_HEAD
 	position:relative;
 	top: 50%;
 	text-align:center;
 }
-<<<<<<< HEAD
 .container .goToItem>div>div{
 	width:50%;
 	float:left;
 }
 .container #inputText{
-=======
-#container .goToItem>div>div{
-	width:50%;
-	float:left;
-}
-#container #inputText{
->>>>>>> FETCH_HEAD
 	width: 80%;
 	float:left;
 	margin:0;
@@ -366,36 +318,23 @@ button:hover,button:active, .info:hover,.info:active{
 	white-space: nowrap;
 	overflow: hidden;
 }
-<<<<<<< HEAD
 .container #image{
-=======
-#container #image{
->>>>>>> FETCH_HEAD
 	height:90%;
 	width:25%;
 	float:left;
 }
-<<<<<<< HEAD
 .container #image>img{
-=======
-#container #image>img{
->>>>>>> FETCH_HEAD
 	margin-top:35%;
 	height:50%;
 	width:auto;
 }
-<<<<<<< HEAD
 .container #description{
-=======
-#container #description{
->>>>>>> FETCH_HEAD
 	float:right;
 	width:55%;
 	height:90%;
 	color:#fff;
 	font-size:100%;
 }
-<<<<<<< HEAD
 .container #description>div{
 	width:90%;
 	height:90%;
@@ -412,10 +351,4 @@ button:hover,button:active, .info:hover,.info:active{
 	float: left;
 	left: 45%;
 	/*margin-top: 0.5vh;*/
-=======
-#container #description>div{
-	width:90%;
-	height:90%;
-	padding:5%;
->>>>>>> FETCH_HEAD
 }

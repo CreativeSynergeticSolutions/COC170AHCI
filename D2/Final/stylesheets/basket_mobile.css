@@ -16,12 +16,9 @@
 		margin-bottom:0px;
 		height:15%!important;
 	}
-<<<<<<< HEAD
 	#container{
 		font-size:75%!important;
 	}
-=======
->>>>>>> FETCH_HEAD
 }
 @media (max-width: 900px) {
 	#total{
@@ -38,16 +35,10 @@
 		width:98vw;
 		margin: 1%;
 		height:10vh;
-<<<<<<< HEAD
         position: absolute;
         bottom: 2%;
 	}
 	button{
-=======
-	}
-	button{
-		width: 18.8vw;
->>>>>>> FETCH_HEAD
 		padding:0;
 		font-size:90%;
 		margin-bottom:0;
@@ -61,15 +52,10 @@
 		margin:0px;
 		margin-right:1%;
 	}
-<<<<<<< HEAD
 	button, form{
 		width: 23.4vw;
 	}
 	form{
-=======
-	form{
-		width: 18.8vw;
->>>>>>> FETCH_HEAD
 		padding:0;
 		margin-bottom:0;
 		height:10vh;
@@ -89,11 +75,7 @@
 	#items{
 		width:98vw;
 		height: 80vh;
-<<<<<<< HEAD
 		margin-right:0;
-=======
-		margin-right:0; 
->>>>>>> FETCH_HEAD
 	}
 	.item{
 		width:98%;
@@ -117,7 +99,6 @@
 		font-size: 75%!important;
 		height: 20%;
 	}
-<<<<<<< HEAD
 	#container{
 		font-size:50%!important;
 	}
@@ -148,10 +129,6 @@
 }
 @media (max-width: 600px) {
 	
-=======
-}
-@media (max-width: 600px) {
->>>>>>> FETCH_HEAD
 	body{
 		font-size:75%;
 	}
@@ -161,7 +138,6 @@
 		padding: 0;
 		color:#000;
 	}
-<<<<<<< HEAD
 	.item >p {
 		width:25%;
 	}
@@ -169,6 +145,3 @@
 		left:40%;
 	}
 }
-=======
-}
->>>>>>> FETCH_HEAD

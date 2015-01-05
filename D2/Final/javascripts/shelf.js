@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var shelfView=new wall();
 
 window.onload=function(){
@@ -7,27 +6,6 @@ window.onload=function(){
 	loadRecommendations();
 	loadOutfits();
 	loadSelectedProducts();
-=======
-
-var basket=new Array();
-
-var outfits=new Array();
-	outfits.push("New Year");
-	outfits.push("Kids Birthdays");
-	outfits.push("60th Birthday");
-	outfits.push("Sisters Wedding");
-	outfits.push("Cousins Wedding");
-	outfits.push("Funeral");
-	outfits.push("Daves Party");
-	outfits.push("Best Friends Wedding");
-	outfits.push("Jims going away");
-	outfits.push("Garden Party");
-
-window.onload=function(){
-	
-	loadRecommendations();
-	loadOutfits();
->>>>>>> FETCH_HEAD
 
 }
 
@@ -78,7 +56,6 @@ function loadPage(){
 	//loadSelection("Women");
 }
 
-<<<<<<< HEAD
 function addToBasket(index){
 	shelfView.addToBasket(items[index],1,items[index]["sizes"][0],items[index]["colours"][0]["name"]);
 	loadSelectedProducts();
@@ -88,38 +65,11 @@ function loadOutfits(){
 	
 	var outfits=shelfView.getOutfits();
 	
-=======
-
-
-function addToSelectedProducts(index){
-	var price=items[index]["price"];
-	var code=items[index]["productCode"];
-	var name=items[index]["name"];
-	
-	var item=new Array();
-	item["price"]=price.replace(/\£/g, "&pound");
-	item["code"]=code;
-	item["name"]=name;
-	item["index"]=index;
-	
-	basket.push(item);
-	loadSelectedProducts();
-	
-	
-}
-
-function loadOutfits(){
-
->>>>>>> FETCH_HEAD
 	var output='<div class="side_title">Outfits</div>';
 	
 	for (var i=0;i<outfits.length;i++){
 		output+="<div class='outfit'>";
-<<<<<<< HEAD
 		output+="<div class='outfitName'>"+outfits[i].name+"</div>";
-=======
-		output+="<div class='outfitName'>"+outfits[i]+"</div>";
->>>>>>> FETCH_HEAD
 		output+="<div class='outfitBin' ><span id='o_"+i+"' class='icon-trash-empty' onclick='deleteOutfit(this.id)'></span></div>";
 		output+="</div>";
 	}
@@ -129,25 +79,17 @@ function loadOutfits(){
 }
 
 function deleteOutfit(ch){
-<<<<<<< HEAD
 	var outfits=shelfView.getOutfits();
 	var index=ch.substring(2,ch.length);
 	var name=outfits[index]["name"];
 	shelfView.removeOutfit(name);
-=======
-	var index=ch.substring(2,ch.length);
-	outfits.splice(index,1);
->>>>>>> FETCH_HEAD
 	loadOutfits();
 }
 
 
 function loadRecommendations(){
-<<<<<<< HEAD
 	
 	
-=======
->>>>>>> FETCH_HEAD
 	var output='<div class="side_title">Recommendations</div>';
 	
 	var randomNumbers=randomN();
@@ -166,7 +108,6 @@ function loadRecommendations(){
 
 
 function loadSelectedProducts(){
-<<<<<<< HEAD
 	//load from localStorage
 	var savedItems=shelfView.getBasket();
 	
@@ -225,38 +166,6 @@ function loadSelectedProducts(){
 	$("#basketItems").html(output);
 }
 
-=======
-	var output="";
-	if(basket.length>0){
-		output="<tr><th>Product</th> <th>Price</th><th>Code</th><th></th></tr>";
-	}
-	
-	
-	for (var i=0;i<basket.length;i++){
-		output+="<tr>";
-		output+=("<td>"+basket[i]["name"]+"</td>");
-		output+=("<td>"+basket[i]["price"]+"</td>");
-		output+=("<td>"+basket[i]["code"]+"</td>");
-		output+="<td><div id='"+i+"' onclick='deleteItem(this.id)' class='icon-trash-empty'></div></td>";
-		output+="</tr>";
-	}
-	$("#basketItems").html(output);
-}
-function clearSelectedProducts(){
-	
-	basket= new Array();
-	loadSelectedProducts();
-	
-}
-function deleteItem(id){
-	for (var i=0;i<basket.length;i++){
-		if(i==id){
-			basket.splice(i,1);
-		}
-	}
-	loadSelectedProducts();
-}
->>>>>>> FETCH_HEAD
 
 function loadSubSubCategory(subCategory){
 	var output="";
@@ -322,14 +231,9 @@ function loadSelection(index){
 		output+="<div class='itemContainer'>";
 		output+="<div class='clothesInfo' >"+name+"</div>";
 		output+="<div class='clothesInfo' >"+price.replace(/\£/g, "&pound")+"</div>";
-<<<<<<< HEAD
 		output+="<br/>";
 		output+="<div class='addBasket' onclick='addToBasket("+index+")' >Add To Basket</div>";
 		
-=======
-		output+="<div class='viewProduct' >VIEW PRODUCT</div>";
-		output+="<div class='addBasket' onclick='addToSelectedProducts("+index+")' >ADD TO BASKET</div>";
->>>>>>> FETCH_HEAD
 		output+="</div>";
 		output+="</div>";
 		

@@ -1,8 +1,5 @@
 var wall = new wall();
-<<<<<<< HEAD
 var dial = new Dial(50,"0.8em");
-=======
->>>>>>> FETCH_HEAD
 
 function makeEmptyEle(text, className){
     var emptyEle = document.createElement('div');
@@ -44,11 +41,7 @@ function loadOutfit () {
     if(outfit!=null&&outfit.items.length>0){
         $('.outfit-trash-area').show();
         for(var i = 0; i < outfit.items.length; i++){
-<<<<<<< HEAD
             var item = outfit.items[i].item,
-=======
-            var item = outfit.items[i].item;
->>>>>>> FETCH_HEAD
                 itemEle = document.createElement('div'),
                 addEle = document.createElement('div'),
                 buyEle = document.createElement('div'),
@@ -106,11 +99,7 @@ function makeBasketItem(item) {
     itemColour.className = 'basket-item__colour';
     itemColour.className = item.colour.class;
     itemQuantity.className = 'basket-item__quantity';
-<<<<<<< HEAD
     itemQuantity.innerHTML = '<div class="basket-dial" data-dialid="'+item.id+'" data-quantity="'+item.quantity+'"></div>';
-=======
-    itemQuantity.innerHTML = item.quantity;
->>>>>>> FETCH_HEAD
     itemRemove.className = 'basket-item__remove';
     removeIcon.className = 'icon-cancel';
     itemRemove.appendChild(removeIcon);
@@ -121,7 +110,6 @@ function makeBasketItem(item) {
     itemEle.appendChild(itemQuantity);
     return itemEle;
 }
-<<<<<<< HEAD
 function getNumberOfItemInBasket (basket) {
     var number = 0;
     for(var item in basket) {
@@ -137,8 +125,6 @@ function getBasketTotal (basket) {
     }
     return number;
 }
-=======
->>>>>>> FETCH_HEAD
 function loadBasketList() {
     var basket = wall.getBasket(),
         basketEle = document.getElementById('basket');
@@ -153,7 +139,6 @@ function loadBasketList() {
     $('.basket-btn .btn .itemCount').remove();
     $('.basket-btn .btn .priceCount').remove();
     if(basket.length > 0) {
-<<<<<<< HEAD
         var itemInBasket = getNumberOfItemInBasket(basket);
         $('.basket-btn .btn .inner').append('<span class="itemCount"> | '+ itemInBasket + ((itemInBasket > 1) ? ' items' : ' item') +' | </span>');
         $('.basket-btn .btn .inner').append('<span class="priceCount">&pound;'+getBasketTotal(basket)+'</span>');
@@ -162,16 +147,6 @@ function loadBasketList() {
         var dialid = parseInt($(this).data('dialid'));
         dial.addNewDial(dialid);
     });
-=======
-        $('.basket-btn .btn .inner').append('<span class="itemCount"> | '+basket.length+' items | </span>');
-        var price = 0;
-        for(var i=0; i< basket.length; i++){
-            var itemPrice = basket[i].item.price;
-            price += parseInt(itemPrice.slice(1,itemPrice.length));
-        }
-        $('.basket-btn .btn .inner').append('<span class="priceCount">&pound;'+price+'</span>');
-    }
->>>>>>> FETCH_HEAD
 }
 function makeOutfitListItem(outfit, selected) {
     var selected = selected || false,
@@ -383,12 +358,9 @@ window.onload = function () {
     function resizeInput() {
         $(this).attr('size', $(this).val().length);
     }
-<<<<<<< HEAD
     $(".basket-dial").on('value-change', function (event, quantity){
         var itemid = $(this).parent().parent().data('item-id');
         wall.updateBasketItemQuantity(itemid, quantity);
     });
-=======
->>>>>>> FETCH_HEAD
     //$('.current-outfit-name').keyup(resizeInput).each(resizeInput);
 };

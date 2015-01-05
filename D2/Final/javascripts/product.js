@@ -1,10 +1,6 @@
 var wall = new wall();
 
-<<<<<<< HEAD
 var dial = new Dial(250, "4em");
-=======
-var dial = new Dial(200, "3em");
->>>>>>> FETCH_HEAD
 
 var currentProduct = {
             name: "No Product Selected",

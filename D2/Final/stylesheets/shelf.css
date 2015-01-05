@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #backButton{
 	background-color:rgb(255, 204, 0);
 	width:150px;
@@ -33,13 +32,10 @@
 	font-size:1.4em !important;
 	font-weight:bold !important;
 }
-=======
->>>>>>> FETCH_HEAD
 
 .info{
 	color:white;
 }
-<<<<<<< HEAD
 td.basketFooter{
 	font-size:1.4em !important;
 	background-color:rgb(44,44,44) !important;
@@ -51,17 +47,10 @@ td.basketFooter{
 #basketItems{
 	width:98%;
 	color:black;
-=======
-
-#basketItems{
-	width:98%;
-	color:#333;
->>>>>>> FETCH_HEAD
 	margin-left:auto;
 	margin-right:auto;
 	
 	
-<<<<<<< HEAD
 	
 	
 	
@@ -70,60 +59,25 @@ td.basketFooter{
 
 
 .basketItems th{
-=======
-		
-}
-tbody {
- 
- overflow: auto;
-}
-
-#basketItems span{
-	font-size:8pt;
-	background-color:rgba(255,213,49,1);
-	color:#3c3432;
-	border-width: 0px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radimargin-top:autus: 4px;
-	height:50px;
-	padding:4px;
-	text-align:center;
-	width: 200px;
-	margin-top: 5px;
-}
-
-#basketItems th{
->>>>>>> FETCH_HEAD
 	border:2px solid rgb(44,44,44);
 	border-top:none;
 	text-align:center;
 	font-size:20pt;
-<<<<<<< HEAD
 	color:black;
 	background-color:rgb(255, 204, 0);
 }
 
 .basketItems td{
-=======
-}
-
-#basketItems td{
-	border:2px solid rgb(44,44,44);
->>>>>>> FETCH_HEAD
 	border-bottom:none;
 	border-top:none;
 	text-align:center;
 	height:30px;
 	font-size:14pt;
-<<<<<<< HEAD
 	background-color:white;
 	padding:4px;
 	margin:2px;
 	border:2px solid rgb(44,44,44);
 	
-=======
->>>>>>> FETCH_HEAD
 }
 
 #itemsBar{
@@ -131,7 +85,6 @@ tbody {
 }
 #basketContainer{
 	
-<<<<<<< HEAD
 	height:99%;
 	float:left;
 	width:100%;
@@ -155,41 +108,6 @@ tbody {
 
 }
 
-=======
-	height:80%;
-	
-	float:left;
-	width:80%;
-	overflow:scroll;
-	
-}
-
-.addBasket{
-	background-color:black;
-	font-size:12pt;
-	border-radius:2px;
-	padding:2px;
-	width:100%;
-	font-weight:bold;
-	color:white;
-	border-radius:5px;
-	height:25px;
-
-}
-
-.viewProduct{
-	background-color:rgba(120,34,25,1);
-	font-size:12pt;
-	border-radius:2px;
-	padding:2px;
-	width:100%;
-	font-weight:bold;
-	color:white;
-	border-radius:5px;
-	height:25px;
-
-}
->>>>>>> FETCH_HEAD
 .itemContainer{
 	
 	background-color:#1f1f1f;
@@ -200,52 +118,11 @@ tbody {
 	border:1px solid white;
 	
 	color:#fff;
-<<<<<<< HEAD
 	
 	text-align:center;
 	
 }
 
-=======
-	border-width: 0px;
-	padding-left:0px;
-	padding-right:0px;
-	text-align:center;
-	padding:auto;
-}
-.buy{
-	background-color:rgba(255,213,49,1);
-	color:#3c3432;
-	font-size:150%;
-	border-width: 0px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radimargin-top:autus: 4px;
-	height:50px;
-	padding-left:0px;
-	padding-right:0px;
-	text-align:center;
-	width: 200px;
-	margin-top: 5px;
-
-}
-.clear{
-	background-color:rgba(120,34,25,1);
-	color:#fff;
-	font-size:150%;
-	border-width: 0px;
-	height:50px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-
-	padding-left:0px;
-	padding-right:0px;
-	text-align:center;
-	width: 200px;
-	margin-top: 10px;
-}
->>>>>>> FETCH_HEAD
 
 .Categories{
 	padding-top:10px;
@@ -370,11 +247,7 @@ tbody {
     overflow: scroll;
     margin-top:5px;
     width:100%;
-<<<<<<< HEAD
     height:680px;
-=======
-    height:760px;
->>>>>>> FETCH_HEAD
 	margin-left:250px;
 
 
@@ -427,11 +300,7 @@ div.label1{
 }
 /* Sub sub category*/
 .outer_wrapper_smaller #sub_categories_sub{
-<<<<<<< HEAD
     width:6500px; /* If you have more elements, increase the width accordingly */
-=======
-    width:6000px; /* If you have more elements, increase the width accordingly */
->>>>>>> FETCH_HEAD
 	
 
 }
@@ -443,21 +312,12 @@ div.label1{
 
 }
 #bottomBar{
-<<<<<<< HEAD
 	height:250px;
 	width:87%;
 	position:fixed;
 	bottom:20px;
 	left:250px;
 	border:1px dotted #333; 
-=======
-	height:270px;
-	width:87%;
-	position:fixed;
-	bottom:40px;
-	left:250px;
-	box-shadow:0px 0px 2px 4px #333; 
->>>>>>> FETCH_HEAD
 	border-radius:4px;
 
 }
@@ -512,7 +372,6 @@ div.label1{
 }
 
 .bottomBarLeft{
-<<<<<<< HEAD
 	float:left;
 	
 
@@ -535,23 +394,6 @@ table#ItemDetails{
 	color:white;
 	text-align:center !important;
 	
-=======
-	padding:2%;
-	height:35px;
-	margin-bottom:10px;
-	font-size:1.3em;
-	border-radius:5px;
-
-	color:#FFD530;
-
-}
-.bottomBarRight{
-	padding:2%;
-	height:35px;
-	font-size:1.3em;
-	border-radius:5px;
-	color:red;
->>>>>>> FETCH_HEAD
 }
 #topBar{
 
@@ -566,11 +408,7 @@ table#ItemDetails{
 #sideBar {
 
 	position:fixed;
-<<<<<<< HEAD
 	margin-top:5px;
-=======
-	margin-top:50px;
->>>>>>> FETCH_HEAD
 	margin-right:20px;
 	top:0;
 	left:10px;
@@ -636,23 +474,16 @@ height:100%;
 }
 #outfit_header{
 	height:500px;
-<<<<<<< HEAD
 	height:50%;
 	max-height:750px;
 	display:inline-block;
-=======
->>>>>>> FETCH_HEAD
 	width:100%;
 	text-align:center;
 	font-size:1.0em;
 	color:white;
 	border-radius:5px;
-<<<<<<< HEAD
 	overflow:scroll;
 	margin-top:10px;
-=======
-	overflow:auto;
->>>>>>> FETCH_HEAD
 	
 	background-color:rgb(31, 31, 31);
 }
@@ -695,15 +526,10 @@ height:100%;
 	
 }
 #rec_header{
-<<<<<<< HEAD
 	
 	height:500px;
 	height:50%;
 	max-height:750px;
-=======
-
-	height:500px;
->>>>>>> FETCH_HEAD
 	background-color:rgb(31, 31, 31);
 	width:100%;
 	text-align:center;
