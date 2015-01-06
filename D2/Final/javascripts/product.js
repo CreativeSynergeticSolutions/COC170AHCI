@@ -48,21 +48,10 @@ var mainPopUp = null;
 $(document).ready(function(){
 	
 	var retrievedCode = items.getCodeFromSearch();
-	
-	//console.log("Code is this: " + retrievedCode);
-	
+		
 	if (retrievedCode != null) currentProduct = items.getItemByCode(retrievedCode);
 	
 	console.log(currentProduct);
-	
-	//wall.addToBasket(item, quantity, size, colour);
-	
-	//wall.getOutfits();
-	//wall.getCurrentOutfit();  - add to current outfit
-	//wall.addOutfitItem(outfitName, item, quantity, size, colour);
-	//wall.addOutfit(name);
-	
-	//{id:int, name: string, items: array of item objects}
 	
 	document.getElementById("basketRadio").checked = true;
 	
@@ -88,6 +77,22 @@ $(document).ready(function(){
 		$("#basketQuantityVal").text(currentQuantity);
 		
 	});
+	
+	
+	
+	$("input[type=text]:not(#write)").focus(function(e){
+		
+		$(".main-area").css("display", "block");
+		
+	});
+	
+	$("input[type=text]").focusout(function(e){
+		
+		$(".main-area").css("display", "none");
+		
+    });
+    
+    $(".main-area").css("display", "none");
 	
 });
 
@@ -537,4 +542,3 @@ function popupDialog(dialogMessage){
 	}, 5000);
 	
 }
-
