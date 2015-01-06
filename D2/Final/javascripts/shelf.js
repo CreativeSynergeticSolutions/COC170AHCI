@@ -192,18 +192,18 @@ function loadSelection(index){
 	currentSelection=finder[index];
 	var array=new Array();
 	
-	if(currentCategory=="Women"){
-		
-		for (var i=0;i<items.length;i++){
-			var sub=items[i]["subCategory"];
-			var main=items[i]["mainCategory"];
-		
-			if(main=="Womens" && sub==currentSelection ){
-				array.push(i);
-			}
-		}
 	
+		
+	for (var i=0;i<items.length;i++){
+		var sub=items[i]["subCategory"];
+		var main=items[i]["mainCategory"];
+	
+		if(main==currentCategory && sub==currentSelection ){
+			array.push(i);
+		}
 	}
+	
+	
 	
 	for (var i=0;i<array.length;i++){
 		//Concatenate "_"
