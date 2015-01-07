@@ -93,7 +93,8 @@ $(document).ready(function(){
     });
     
     $(".main-area").css("display", "none");
-	
+    
+    
 });
 
 function setupHeader() {
