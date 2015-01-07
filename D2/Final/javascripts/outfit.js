@@ -12,7 +12,7 @@ function makeItemListItem (item) {
     var itemEle = document.createElement('div');
     itemEle.className = "current-item btn-link";
     itemEle.setAttribute("data-href","product.html?productCode="+item.item.productCode);
-    itemEle.innerHTML = item.item.name;
+    itemEle.innerHTML = "<i class='icon-info-circled'></i> "+item.item.name;
     return itemEle;
 }
 function loadItemList(outfit){
@@ -189,19 +189,53 @@ function loadOutfitList() {
     outfitsEle.innerHTML = "";
     if(outfits!=null&&outfits.length>0){
         for(var i=0; i<outfits.length; i++){
-            var selected = (i==0 ? true : false);
-            outfitsEle.appendChild(makeOutfitListItem(outfits[i], selected));
+            var currentOutfit = wall.getCurrentOutfit();
+                isCurrentOutfit = false;
+            if(typeof currentOutfit !== "undefined") {
+                isCurrentOutfit = (outfits[i].name==currentOutfit.name);
+            }
+            outfitsEle.appendChild(makeOutfitListItem(outfits[i], currentOutfit));
         }
     } else {
         wall.addOutfit('First outfit');
         loadOutfitList();
     }
 }
+function getSearchPairs () {
+    var result = null,
+        wSearch = window.location.search;
+    wSearch = wSearch.slice(1, wSearch.length).split("&");
+    var keyValuePairs = {};
+    for(var pair in wSearch) {
+        var parts = wSearch[pair].split("="),
+            part1 = parts[0],
+            part2 = null;
+        if(parts.length>1){
+            part2 = parts[1];
+        }
+        keyValuePairs[part1] = part2;
+    }
+    return keyValuePairs;
+};
 function initialLoad() {
+    var pairs = getSearchPairs(),
+        outfits = wall.getOutfits();
+    if(pairs.hasOwnProperty('outfitName')) {
+        for(var o in outfits){
+            var encodedOutfitName = encodeURI(outfits[o].name);
+            if(encodedOutfitName == pairs.outfitName) {
+                wall.setCurrentOutfit(outfits[o].name);
+                break;
+            }
+        }
+    }
+    console.log(wall.getCurrentOutfit());
     loadBasketList();
     loadOutfitList();
-    var outfitName = $.trim($('.outfit-selected>.outfit-name').text());
-    wall.setCurrentOutfit(outfitName);
+    if(typeof wall.getCurrentOutfit()==="undefined"){
+        var outfitName = $.trim($('.outfit-name').first().text());
+        wall.setCurrentOutfit(outfitName);
+    }
     loadOutfit();
 }
 
@@ -322,7 +356,7 @@ window.onload = function () {
     });
     $(document.body).on('click', '.add-outfit-btn', function () {
         var outfits = wall.getOutfits(),
-            outfitName = 'Outfit #'+(outfits.length+1);
+            outfitName = 'Outfit '+(outfits.length+1);
         wall.addOutfit(outfitName);
         wall.setCurrentOutfit(outfitName);
         loadOutfit();
