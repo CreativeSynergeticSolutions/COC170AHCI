@@ -45,6 +45,9 @@ var currentImage = 0;
 
 var mainPopUp = null;
 
+var slScrollY = 0;
+var clScrollY = 0;
+
 $(document).ready(function(){
 	
 	var retrievedCode = items.getCodeFromSearch();
@@ -94,6 +97,47 @@ $(document).ready(function(){
     
     $(".main-area").css("display", "none");
     
+    
+    
+    if(!("ontouchstart" in window)) {
+    	
+    	$("#sizeList").mousemove(function(event){
+			
+			if(event.pageY == slScrollY) return false;
+			
+			if(event.pageY < slScrollY){ 
+						
+				$("#sizeList").scrollTop($("#sizeList").scrollTop() + 5);
+			
+			}else{
+			
+				$("#sizeList").scrollTop($("#sizeList").scrollTop() - 5);
+			
+			}
+
+			slScrollY = event.pageY;
+
+		});
+		
+		$("#colourList").mousemove(function(event){
+			
+			if(event.pageY == clScrollY) return false;
+			
+			if(event.pageY < clScrollY){ 
+						
+				$("#colourList").scrollTop($("#colourList").scrollTop() + 5);
+			
+			}else{
+			
+				$("#colourList").scrollTop($("#colourList").scrollTop() - 5);
+			
+			}
+
+			clScrollY = event.pageY;
+
+		});
+    	
+	}
     
 });
 
