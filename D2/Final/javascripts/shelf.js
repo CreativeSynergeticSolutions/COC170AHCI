@@ -26,28 +26,28 @@ window.onload=function(){
             $("#basketContainer").scrollTop($("#basketContainer").scrollTop() + modifier);
 			basketScrollY = event.pageY;
 		});
-    	$("#categories").mousemove(function(event){
+    	$("#categories").parent().mousemove(function(event){
 			if(event.pageX == categoriesScrollX) return false;
             var modifier = (event.pageX < categoriesScrollX ? 5 : -5);
-            $("#categories").scrollLeft($("#categories").scrollLeft() + modifier);
+            $("#categories").parent().scrollLeft($("#categories").parent().scrollLeft() + modifier);
 			categoriesScrollX = event.pageY;
 		});
-    	$("#sub_categories").mousemove(function(event){
+    	$("#sub_categories").parent().mousemove(function(event){
 			if(event.pageX == subScrollX) return false;
             var modifier = (event.pageX < subScrollX ? 5 : -5);
-            $("#sub_categories").scrollLeft($("#sub_categories").scrollLeft() + modifier);
+            $("#sub_categories").parent().scrollLeft($("#sub_categories").parent().scrollLeft() + modifier);
 			subScrollX = event.pageY;
 		});
-    	$("#sub_categories_sub").mousemove(function(event){
+    	$("#sub_categories_sub").parent().mousemove(function(event){
 			if(event.pageX == subSubScrollX) return false;
             var modifier = (event.pageX < subSubScrollX ? 5 : -5);
-            $("#sub_categories_sub").scrollLeft($("#sub_categories_sub").scrollLeft() + modifier);
+            $("#sub_categories_sub").parent().scrollLeft($("#sub_categories_sub").parent().scrollLeft() + modifier);
 			subSubScrollX = event.pageY;
 		});
-    	$("#selection").mousemove(function(event){
+    	$("#selection").parent().mousemove(function(event){
 			if(event.pageX == selectionScrollX) return false;
             var modifier = (event.pageX < selectionScrollX ? 5 : -5);
-            $("#selection").scrollLeft($("#selection").scrollLeft() + modifier);
+            $("#selection").parent().scrollLeft($("#selection").parent().scrollLeft() + modifier);
 			selectionScrollX = event.pageY;
 		});
 	}
