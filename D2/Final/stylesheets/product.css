@@ -157,6 +157,23 @@ body {
 
 }
 
+.main-area {
+	
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	
+	z-index: 200;
+	
+}
+
+#keyboard {
+	
+	position: fixed;
+	left: 35%;
+	
+}
+
 
 #popupBox {
 
@@ -1459,7 +1476,7 @@ label[name="optionsLabels"] {
 	margin: 0px;
 	padding: 0px 6px;
 
-	height: 378px;
+	height: 278px;
 	width: 260px;
 
 	overflow-y: scroll;
