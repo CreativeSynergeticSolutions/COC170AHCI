@@ -71,8 +71,16 @@ function loadOutfit () {
             },
             stop: function(event, ui) {
                 $(this).css('transform','none');
-                this._originalPosition = this._originalPosition || ui.originalPosition;
-                ui.helper.animate( this._originalPosition );
+                var left = parseInt(this.style.left),
+                    top = parseInt(this.style.top);
+                if(typeof this._startPosition === "undefined") {
+                    this._startPosition = this._originalPosition || ui.originalPosition;
+                }
+                var leftDifference = Math.abs(this._startPosition.left - left),
+                    topDifference = Math.abs(this._startPosition.top - top);
+                if((leftDifference<150)&&(topDifference<150)) {
+                    ui.helper.animate( this._startPosition );
+                }
             }
         });
     }
@@ -239,22 +247,6 @@ function initialLoad() {
     loadOutfit();
 }
 
-function addNotification (icon,text) {
-    if($('.notification').length > 4) {
-        $('.notification:not(:animated)').first().fadeOut('fast', function () {
-            $('.notification').first().remove();
-        });
-    }
-    var notificationId = parseInt($('.notification').last().data('id'))+1 || 0;
-    console.log(notificationId);
-    $('.notification-area').append('<div class="notification notification-'+notificationId+'" data-id="'+notificationId+'"><i class="icon-'+icon+'"></i> '+text+'</div>');
-    $('.notification-'+notificationId).fadeIn({duration: 500, queue: false}).css('display','none').slideDown(500);
-    setTimeout(function () {
-        $('.notification-'+notificationId).fadeOut({duration: 500, queue: false}).slideUp(500, function () {
-            $('.notification-'+notificationId).remove();
-        });
-    }, 3000);
-}
 window.onload = function () {
     $('.main-area').hide().fadeIn(500);
     initialLoad();

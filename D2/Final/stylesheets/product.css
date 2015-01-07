@@ -158,22 +158,13 @@ body {
 }
 
 .main-area {
-	
+
 	position: fixed;
 	height: 100%;
 	width: 100%;
-	
 	z-index: 200;
-	
-}
 
-#keyboard {
-	
-	position: fixed;
-	left: 35%;
-	
 }
-
 
 #popupBox {
 
@@ -1978,4 +1969,27 @@ label[name="optionsLabels"] {
 }
 ::-webkit-selection {
   background: none;
+}
+
+/*
+*    Notifications
+*/
+.notification-area {
+    top: 5%;
+    position: absolute;
+    right: 5%;
+    z-index: 999;
+    width: 20%;
+}
+
+.notification {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+    display: none;
+    padding: 0.5em;
+    z-index: 999;
+}
+
+.notification .icon-cancel {
+    color: #B71C1C;
 }
