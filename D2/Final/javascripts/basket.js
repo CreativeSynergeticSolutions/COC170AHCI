@@ -102,6 +102,9 @@ function closeAll(){
 	removeAll();
 	window.location.href = 'idle.html'
 }
+
+var blScrollY = 0;
+
 window.onload = function () {
 	
 	loadBasketList();
@@ -120,6 +123,23 @@ window.onload = function () {
 		dial.setDialValue(i, basket[i].quantity);
 	}
 	Resize();
+	
+	
+	if(!("ontouchstart" in window)) {
+    	
+    	$("#items").mousemove(function(event){
+			
+			if(event.pageY == blScrollY) return false;
+			
+			if(event.pageY < blScrollY) $("#items").scrollTop($("#items").scrollTop() + 10);
+			else $("#items").scrollTop($("#items").scrollTop() - 10);
+			
+			blScrollY = event.pageY;
+
+		});
+    	
+	}
+	
 }
 window.onresize = function(){
 	Resize();	
