@@ -1,4 +1,11 @@
 var shelfView=new wall();
+var recHeaderScrollY = 0,
+    basketScrollY = 0,
+    categoriesScrollX = 0,
+    subScrollX = 0,
+    subSubScrollX = 0,
+    selectionScrollX = 0,
+    caScrollX = 0;
 
 window.onload=function(){
 
@@ -6,8 +13,45 @@ window.onload=function(){
 	loadRecommendations();
 	loadOutfits();
 	loadSelectedProducts();
-
-}
+    if(!("ontouchstart" in window)) {
+    	$("#rec_header").mousemove(function(event){
+			if(event.pageY == recHeaderScrollY) return false;
+            var modifier = (event.pageY < recHeaderScrollY ? 5 : -5);
+            $("#rec_header").scrollTop($("#rec_header").scrollTop() + modifier);
+			recHeaderScrollY = event.pageY;
+		});
+    	$("#basketContainer").mousemove(function(event){
+			if(event.pageY == basketScrollY) return false;
+            var modifier = (event.pageY < basketScrollY ? 5 : -5);
+            $("#basketContainer").scrollTop($("#basketContainer").scrollTop() + modifier);
+			basketScrollY = event.pageY;
+		});
+    	$("#categories").mousemove(function(event){
+			if(event.pageX == categoriesScrollX) return false;
+            var modifier = (event.pageX < categoriesScrollX ? 5 : -5);
+            $("#categories").scrollLeft($("#categories").scrollLeft() + modifier);
+			categoriesScrollX = event.pageY;
+		});
+    	$("#sub_categories").mousemove(function(event){
+			if(event.pageX == subScrollX) return false;
+            var modifier = (event.pageX < subScrollX ? 5 : -5);
+            $("#sub_categories").scrollLeft($("#sub_categories").scrollLeft() + modifier);
+			subScrollX = event.pageY;
+		});
+    	$("#sub_categories_sub").mousemove(function(event){
+			if(event.pageX == subSubScrollX) return false;
+            var modifier = (event.pageX < subSubScrollX ? 5 : -5);
+            $("#sub_categories_sub").scrollLeft($("#sub_categories_sub").scrollLeft() + modifier);
+			subSubScrollX = event.pageY;
+		});
+    	$("#selection").mousemove(function(event){
+			if(event.pageX == selectionScrollX) return false;
+            var modifier = (event.pageX < selectionScrollX ? 5 : -5);
+            $("#selection").scrollLeft($("#selection").scrollLeft() + modifier);
+			selectionScrollX = event.pageY;
+		});
+	}
+};
 
 
 function randomN(){
@@ -192,18 +236,18 @@ function loadSelection(index){
 	currentSelection=finder[index];
 	var array=new Array();
 
-	
-	
-		
+
+
+
 	for (var i=0;i<items.length;i++){
 		var sub=items[i]["subCategory"];
 		var main=items[i]["mainCategory"];
-	
+
 		if(main==currentCategory && sub==currentSelection ){
 			array.push(i);
 		}
 	}
-	
+
 
 
 	for (var i=0;i<array.length;i++){
