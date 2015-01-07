@@ -44,13 +44,16 @@ window.onload=function(){
             $("#sub_categories_sub").parent().scrollLeft($("#sub_categories_sub").parent().scrollLeft() + modifier);
 			subSubScrollX = event.pageY;
 		});
-    	$("#selection").parent().mousemove(function(event){
+    	$("#selection").mousemove(function(event){
 			if(event.pageX == selectionScrollX) return false;
             var modifier = (event.pageX < selectionScrollX ? 5 : -5);
             $("#selection").parent().scrollLeft($("#selection").parent().scrollLeft() + modifier);
 			selectionScrollX = event.pageY;
 		});
 	}
+    $(document.body).on('dragstart', 'img', function (e) {
+        e.preventDefault();
+    });
 };
 
 

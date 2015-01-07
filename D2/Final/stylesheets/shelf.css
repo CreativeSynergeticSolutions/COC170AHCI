@@ -10,6 +10,8 @@ body {
 	font-weight:bold;
 	height:30px;
 	font-size:14pt;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 .productI{
@@ -74,6 +76,7 @@ body {
 }
 .addBasket{
 	background-color:rgb(255, 204, 0);
+    cursor: pointer;
 	font-size:20pt;
 	border-radius:4px;
 	padding:2px;
@@ -82,12 +85,12 @@ body {
 	color:black;
 	height:35px;
 }
-
-.itemContainer{
-
-	background-color:#1f1f1f;
+* > .addBasket:first-of-type {
+    position: relative;
+    top: -5px;
 }
 .clothesInfo{
+	background-color:#1f1f1f;
 	width:100%;
 	font-size:16pt;
 	border:1px solid white;
@@ -110,6 +113,7 @@ body {
 	float:left;
 	color:white;
 	border-radius:5px;
+    cursor: pointer;
 }
 .Categories:hover{
 	background-color:white !important;
@@ -129,6 +133,7 @@ body {
 	color:white;
 	float:left;
 	border-radius:5px;
+    cursor: pointer;
 }
 .SubCategories:hover{
 	background-color:white !important;
@@ -148,6 +153,7 @@ body {
 	color:white;
 	float:left;
 	border-radius:5px;
+    cursor: pointer;
 }
 .SubSubCategories:hover{
 	background-color:white !important;
@@ -157,8 +163,6 @@ body {
 	text-align:center;
 	font-size:0.6em;
 	width:400px;
-
-	border:1px solid #ddd;
 	box-shadow:0px 0px 3px 3px #ffffff;
 	margin-top:20px;
 	height:80%;
