@@ -1,7 +1,7 @@
 var shelfView=new wall();
 
 window.onload=function(){
-	
+
 	$("#backButton").click(function(){window.history.back();});
 	loadRecommendations();
 	loadOutfits();
@@ -29,7 +29,7 @@ function loadSubCategory(category){
 	var output="";
 	var array=new Array();
 	array=CAT[category];
-	
+
 
 	for (var i=0;i<array.length;i++){
 		//Concatenate "_"
@@ -43,7 +43,7 @@ function loadSubCategory(category){
 	//Reload New Div HTML content
 	document.getElementById("sub_categories").innerHTML=output;
 	loadSubSubCategory("");
-	
+
 
 }
 
@@ -62,18 +62,18 @@ function addToBasket(index){
 }
 
 function addToOutfit(index){
-	
+
 }
 
 function loadOutfits(){
-	
+
 	var outfits=shelfView.getOutfits();
-	
+
 	var output='<div class="side_title">Outfits</div>';
-	
+
 	for (var i=0;i<outfits.length;i++){
 		output+="<div class='outfit'>";
-		output+="<div class='outfitName'>"+outfits[i].name+"</div>";
+		output+="<a href='outfit.html?outfitName="+outfits[i].name+"'><div class='outfitName'>"+outfits[i].name+"</div></a>";
 		output+="<div class='outfitBin' ><span id='o_"+i+"' class='icon-trash-empty' onclick='deleteOutfit(this.id)'></span></div>";
 		output+="</div>";
 	}
@@ -92,46 +92,46 @@ function deleteOutfit(ch){
 
 
 function loadRecommendations(){
-	
-	
+
+
 	var output='<div class="side_title">Recommendations</div>';
-	
+
 	var randomNumbers=randomN();
-	
-	
+
+
 	for (var i=0;i<randomNumbers.length;i++){
-		var index=randomNumbers[i];
-		
-		var img=items[index]["images"]["front"];
-		output+='<div class="recommendBox"><img src="'+img+'"/></div>';
-		
+		var index = randomNumbers[i],
+            img = items[index].images.front,
+            prodCode = items[index].productCode;
+		output+='<div class="recommendBox"><a href="product.html?productCode='+prodCode+'"><img src="'+img+'"/></a></div>';
+
 	}
 	$("#rec_header").html(output);
-	
+
 }
 
 
 function loadSelectedProducts(){
 	//load from localStorage
 	var savedItems=shelfView.getBasket();
-	
+
 	var output="";
 	if(savedItems.length>0){
-		output="<tr>";
+		output="";
 	}
 	var total=0;
-	
+
 	for (var i=0;i<savedItems.length;i++){
 		var howMany=1;
 		var price=savedItems[i]["item"]["price"];
 		var amount=price.substring(1,price.length-1);
-		
-		
+
+
 		if(savedItems[i]["quantity"]>0){
 			howMany=savedItems[i]["quantity"];
 		}
 		total+=parseInt(amount*howMany);
-		
+
 		var items="<div class='bottomBarLeft'>";
 		items+="<img src='"+savedItems[i]["item"]["images"]["front"]+"' class='productI' />";
 		items+="</div><!--END OF BOTTOM LEFT -->";
@@ -141,7 +141,7 @@ function loadSelectedProducts(){
 		items+=("<td>"+savedItems[i]["item"]["name"]+"</td>");
 		items+="</tr>";
 		items+="<tr>";
-		items+=("<td>"+savedItems[i]["quantity"]+"</td>");
+		items+=("<td>x"+savedItems[i]["quantity"]+"</td>");
 		items+="</tr>";
 		items+="<tr>";
 		items+=("<td>"+savedItems[i]["colour"]["name"]+"</td>");
@@ -151,13 +151,10 @@ function loadSelectedProducts(){
 		items+="</tr>";
 		items+="</table>";
 		items+="</div><!--END OF BOTTOM BAR RIGHT -->";
-	
-		
-		output+=("<td class='itemI'>"+items+"</td>");
-		
-	}
-	if(shelfView.getBasket().length>0){
-		output+="</tr><tr><td class='basketFooter' >"+total+"</td></tr>";
+
+
+		output+=("<div class='itemI'><a href='product.html?productCode="+savedItems[i].item.productCode+"'>"+items+"</a></div>");
+
 	}
 	$("#basketItems").html(output);
 }
@@ -189,50 +186,53 @@ function loadSubSubCategory(subCategory){
 }
 function loadSelection(index){
 	var output="";
-	
+
 	var finder=SUB_CAT[currentCategory+"_"+currentSubCategory];
-	
+
 	currentSelection=finder[index];
 	var array=new Array();
-	
+
 	if(currentCategory=="Women"){
-		
+
 		for (var i=0;i<items.length;i++){
 			var sub=items[i]["subCategory"];
 			var main=items[i]["mainCategory"];
-		
+
 			if(main=="Womens" && sub==currentSelection ){
 				array.push(i);
 			}
 		}
-	
+
 	}
-	
+
 	for (var i=0;i<array.length;i++){
 		//Concatenate "_"
-		var index=array[i];
-		var sub=items[index]["subCategory"];
-		var name=items[index]["name"];
-		var main=items[index]["mainCategory"];
-		var price=items[index]["price"];
-		
+		var index=array[i],
+            sub=items[index]["subCategory"],
+            name=items[index]["name"],
+            main=items[index]["mainCategory"],
+            price=items[index]["price"],
+            productCode = items[index].productCode;
+
 		var img=items[index]["images"]["front"];
-		
+
 		var id="sel_"+i.toString();
 
 		//Load Next div  with id,className and Test Text
 		output+="<div class='SubCategorySelection' >";
+		output+="<a href='product.html?productCode="+productCode+"'>";
 		output+="<img id='"+id+"' src='"+img+"'  />";
 		output+="<br /><br />";
 		output+="<div class='itemContainer'>";
 		output+="<div class='clothesInfo' >"+name+"</div>";
 		output+="<div class='clothesInfo' >"+price.replace(/\£/g, "&pound")+"</div>";
 		output+="<br/>";
+        output+="</a>";
 		output+="<div class='addBasket' onclick='addToBasket("+index+")' >Add To Basket</div>";
 		output+="<div class='addBasket' onclick='addToOufit("+index+")' >Add To Outfit</div>";
 		output+="</div>";
 		output+="</div>";
-		
+
 
 	}
 

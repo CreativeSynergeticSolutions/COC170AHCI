@@ -29,8 +29,8 @@ body{
 	transition:0.5s;
 	position:relative;
 }
-#items::-webkit-scrollbar { 
-    display: none; 
+#items::-webkit-scrollbar {
+    display: none;
 }
 #options{
 	float:right;
@@ -47,8 +47,8 @@ body{
 	transition:0.5s;
 	position:relative;
 }
-#options::-webkit-scrollbar { 
-    display: none; 
+#options::-webkit-scrollbar {
+    display: none;
 }
 .item{
 	width: 100%;
@@ -240,7 +240,7 @@ button:hover,button:active, .info:hover,.info:active{
 	-webkit-border-top-left-radius: 4px;
 	-moz-border-radius-topleft: 4px;
 	border-top-left-radius: 4px;
-	
+
 }
 .container .topbar>div{
 	position:relative;
@@ -257,7 +257,7 @@ button:hover,button:active, .info:hover,.info:active{
 	border-top-right-radius: 4px;
 	text-align:center;
 	height:20%!important;
-	
+
 }
 .topbarextended p{
 	position: relative;
@@ -351,4 +351,18 @@ button:hover,button:active, .info:hover,.info:active{
 	float: left;
 	left: 45%;
 	/*margin-top: 0.5vh;*/
+}
+
+/*
+* Hide Highlighting
+*/
+
+::selection {
+  background: none;
+}
+::-moz-selection {
+  background: none;
+}
+::-webkit-selection {
+  background: none;
 }

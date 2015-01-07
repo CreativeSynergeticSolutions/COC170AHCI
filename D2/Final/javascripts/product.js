@@ -45,24 +45,16 @@ var currentImage = 0;
 
 var mainPopUp = null;
 
+var slScrollY = 0;
+var clScrollY = 0;
+
 $(document).ready(function(){
 	
 	var retrievedCode = items.getCodeFromSearch();
-	
-	//console.log("Code is this: " + retrievedCode);
-	
+		
 	if (retrievedCode != null) currentProduct = items.getItemByCode(retrievedCode);
 	
 	console.log(currentProduct);
-	
-	//wall.addToBasket(item, quantity, size, colour);
-	
-	//wall.getOutfits();
-	//wall.getCurrentOutfit();  - add to current outfit
-	//wall.addOutfitItem(outfitName, item, quantity, size, colour);
-	//wall.addOutfit(name);
-	
-	//{id:int, name: string, items: array of item objects}
 	
 	document.getElementById("basketRadio").checked = true;
 	
@@ -89,6 +81,64 @@ $(document).ready(function(){
 		
 	});
 	
+	
+	
+	$("input[type=text]:not(#write)").focus(function(e){
+		
+		$(".main-area").css("display", "block");
+		
+	});
+	
+	$("input[type=text]").focusout(function(e){
+		
+		$(".main-area").css("display", "none");
+		
+    });
+    
+    $(".main-area").css("display", "none");
+    
+    
+    
+    if(!("ontouchstart" in window)) {
+    	
+    	$("#sizeList").mousemove(function(event){
+			
+			if(event.pageY == slScrollY) return false;
+			
+			if(event.pageY < slScrollY){ 
+						
+				$("#sizeList").scrollTop($("#sizeList").scrollTop() + 5);
+			
+			}else{
+			
+				$("#sizeList").scrollTop($("#sizeList").scrollTop() - 5);
+			
+			}
+
+			slScrollY = event.pageY;
+
+		});
+		
+		$("#colourList").mousemove(function(event){
+			
+			if(event.pageY == clScrollY) return false;
+			
+			if(event.pageY < clScrollY){ 
+						
+				$("#colourList").scrollTop($("#colourList").scrollTop() + 5);
+			
+			}else{
+			
+				$("#colourList").scrollTop($("#colourList").scrollTop() - 5);
+			
+			}
+
+			clScrollY = event.pageY;
+
+		});
+    	
+	}
+    
 });
 
 function setupHeader() {
@@ -537,4 +587,3 @@ function popupDialog(dialogMessage){
 	}, 5000);
 	
 }
-

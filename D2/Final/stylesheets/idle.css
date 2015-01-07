@@ -34,3 +34,17 @@
 .start-area .btn-touchable {
     margin-top: 5%;
 }
+
+/*
+* Hide Highlighting
+*/
+
+::selection {
+  background: none;
+}
+::-moz-selection {
+  background: none;
+}
+::-webkit-selection {
+  background: none;
+}
