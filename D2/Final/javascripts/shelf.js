@@ -277,7 +277,6 @@ function loadSelection(index){
 		output+="<br/>";
         output+="</a>";
 		output+="<div class='addBasket' onclick='addToBasket("+index+")' >Add To Basket</div>";
-		output+="<div class='addBasket' onclick='addToOufit("+index+")' >Add To Outfit</div>";
 		output+="</div>";
 		output+="</div>";
 
