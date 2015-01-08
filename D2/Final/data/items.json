@@ -693,7 +693,7 @@
         },
         {
             "name": "Union Jack Beanie",
-            "mainCategory": "mens",
+            "mainCategory": "Mens",
             "subCategory": "Accessories",
             "type": "head",
             "price": "£5.00",
@@ -721,7 +721,7 @@
         },
         {
             "name": "Check Trapper Hat",
-            "mainCategory": "mens",
+            "mainCategory": "Mens",
             "subCategory": "Accessories",
             "type": "head",
             "price": "£8.00",
@@ -754,7 +754,7 @@
         },
         {
             "name": "Wax Quilted Flat Cap",
-            "mainCategory": "mens",
+            "mainCategory": "Mens",
             "subCategory": "Accessories",
             "type": "head",
             "price": "£5.00",
@@ -783,7 +783,7 @@
         },
         {
             "name": "4 Packet Muppets Socks",
-            "mainCategory": "mens",
+            "mainCategory": "Mens",
             "subCategory": "Socks",
             "type": "feet",
             "price": "£6.00",
@@ -816,7 +816,7 @@
         },
         {
             "name": "Leopard Print Jacquard Blazer",
-            "mainCategory": "womens",
+            "mainCategory": "Womens",
             "subCategory": "Coats & Jackets",
             "type": "body",
             "price": "£16.00",
@@ -859,7 +859,7 @@
         },            
         {
             "name": "Tailored Coat",
-            "mainCategory": "womens",
+            "mainCategory": "Womens",
             "subCategory": "Coats & Jackets",
             "type": "feet",
             "price": "£32.00",
