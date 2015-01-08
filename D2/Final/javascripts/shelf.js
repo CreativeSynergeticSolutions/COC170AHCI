@@ -1,6 +1,6 @@
 var shelfView=new wall();
 var recHeaderScrollY = 0,
-    basketScrollY = 0,
+    basketScrollX = 0,
     categoriesScrollX = 0,
     subScrollX = 0,
     subSubScrollX = 0,
@@ -16,39 +16,39 @@ window.onload=function(){
     if(!("ontouchstart" in window)) {
     	$("#rec_header").mousemove(function(event){
 			if(event.pageY == recHeaderScrollY) return false;
-            var modifier = (event.pageY < recHeaderScrollY ? 5 : -5);
+            var modifier = (event.pageY < recHeaderScrollY ? 10 : -10);
             $("#rec_header").scrollTop($("#rec_header").scrollTop() + modifier);
 			recHeaderScrollY = event.pageY;
 		});
     	$("#basketContainer").mousemove(function(event){
-			if(event.pageY == basketScrollY) return false;
-            var modifier = (event.pageY < basketScrollY ? 5 : -5);
-            $("#basketContainer").scrollTop($("#basketContainer").scrollTop() + modifier);
-			basketScrollY = event.pageY;
+			if(event.pageX == basketScrollX) return false;
+            var modifier = (event.pageX < basketScrollX ? 5 : -5);
+            $("#basketContainer").scrollLeft($("#basketContainer").scrollLeft() + modifier);
+			basketScrollX = event.pageX;
 		});
-    	$("#categories").parent().mousemove(function(event){
+    	$("#categories").parent().mousemove(function(event){			
 			if(event.pageX == categoriesScrollX) return false;
-            var modifier = (event.pageX < categoriesScrollX ? 5 : -5);
+            var modifier = (event.pageX < categoriesScrollX ? 10 : -10);
             $("#categories").parent().scrollLeft($("#categories").parent().scrollLeft() + modifier);
-			categoriesScrollX = event.pageY;
+			categoriesScrollX = event.pageX;
 		});
     	$("#sub_categories").parent().mousemove(function(event){
 			if(event.pageX == subScrollX) return false;
-            var modifier = (event.pageX < subScrollX ? 5 : -5);
+            var modifier = (event.pageX < subScrollX ? 10 : -10);
             $("#sub_categories").parent().scrollLeft($("#sub_categories").parent().scrollLeft() + modifier);
-			subScrollX = event.pageY;
+			subScrollX = event.pageX;
 		});
     	$("#sub_categories_sub").parent().mousemove(function(event){
 			if(event.pageX == subSubScrollX) return false;
-            var modifier = (event.pageX < subSubScrollX ? 5 : -5);
+            var modifier = (event.pageX < subSubScrollX ? 10 : -10);
             $("#sub_categories_sub").parent().scrollLeft($("#sub_categories_sub").parent().scrollLeft() + modifier);
-			subSubScrollX = event.pageY;
+			subSubScrollX = event.pageX;
 		});
     	$("#selection").mousemove(function(event){
 			if(event.pageX == selectionScrollX) return false;
-            var modifier = (event.pageX < selectionScrollX ? 5 : -5);
+            var modifier = (event.pageX < selectionScrollX ? 10 : -10);
             $("#selection").parent().scrollLeft($("#selection").parent().scrollLeft() + modifier);
-			selectionScrollX = event.pageY;
+			selectionScrollX = event.pageX;
 		});
 	}
     $(document.body).on('dragstart', 'img', function (e) {
