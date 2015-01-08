@@ -1,6 +1,6 @@
 README
 
-This product is targeted at the demonstration device, a television using 1280x1024 resolution, with a PQ G4 Labs Multitouch device attached.
+This product is targeted at the demonstration device, a television using 1280x1024 resolution, with a PQ Labs G4 Multitouch device attached.
 
 The solution requires hosting on a server due to the nature of how the data is retrieved by the pages.
 
