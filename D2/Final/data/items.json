@@ -443,7 +443,7 @@
                 "XL",
                 "XXL"
             ],
-			"recommendations":[]
+			"recommendations":["4776442"]
         },
         {
             "name": "Jersey Hoodie",
@@ -481,7 +481,7 @@
                 "XL",
                 "XXL"
             ],
-			"recommendations":[]
+			"recommendations":["4839442"]
         },
         {
             "name": "Bootcut Jeans",
@@ -525,7 +525,7 @@
                 "38 Regular",
                 "38 Long"
             ],
-			"recommendations":[]
+			"recommendations":["4865567"]
         },
         {
             "name": "Bootcut Dark Wash Jeans",
@@ -568,7 +568,339 @@
                 "38 Regular",
                 "38 Long"
             ],
+			"recommendations":["4865571"]
+        },
+        {
+            "name": "Cossack Hat",
+            "mainCategory": "Womens",
+            "subCategory": "Accessories",
+            "type": "head",
+            "price": "£7.00",
+            "images": {
+                "front": "images/stock/womens/head/Cossack Hat/front.png"
+            },
+            "colours": [
+                {
+					"name":"Multi",
+					"class":"multi"
+				}
+            ],
+            "description": [
+                {
+                    "content": "Keep your head warm this winter with this on-trend cossack hat. This fleece lined piece is perfect for adding a classic spin to your everyday outfits this season.",
+                    "type": "paragraph"
+                }
+            ],
+            "fabric": "100% Polyester",
+            "productCode": "4831114",
+            "sizes": [
+                "One Size"
+            ],
+			"recommendations":["4816295"]
+        },
+        {
+            "name": "Faux Fur Trapper",
+            "mainCategory": "Womens",
+            "subCategory": "Accessories",
+            "type": "head",
+            "price": "£10.00",
+            "images": {
+                "front": "images/stock/womens/head/Faux Fur Trapper/front.png",
+				"side": "images/stock/womens/head/Faux Fur Trapper/side.png"
+            },
+            "colours": [
+                {
+					"name":"Wheat",
+					"class":"wheat"
+				},
+				{
+					"name":"Black",
+					"class":"black"
+				}
+            ],
+            "description": [
+                {
+                    "content": "Incredibly cosy and stylish, this faux fur trapper hat is bound to become a winter favourite. Crafted with soft fabric, this versatile piece is perfect for completing every outfit with a warm accessory.",
+                    "type": "paragraph"
+                },
+				{
+                    "content": ["Pompom detailing"],
+                    "type": "bullet"
+                }
+            ],
+            "fabric": "Synthetic fur: 78% Acrylic, 22% Polyester, Lining: 100% Nylon Excluding trim",
+            "productCode": "4813932",
+            "sizes": [
+                "One Size"
+            ],
+			"recommendations":["4816295"]
+        },
+        {
+            "name": "Faux Fur Hat",
+            "mainCategory": "Womens",
+            "subCategory": "Accessories",
+            "type": "head",
+            "price": "£10.00",
+            "images": {
+                "front": "images/stock/womens/head/Faux Fur Hat/front.png"
+            },
+            "colours": [
+                {
+					"name":"Burgundy",
+					"class":"burgundy"
+				}
+            ],
+            "description": [
+                {
+                    "content": "This faux fur Cossack hat is bang on-trend this season. Ideal for giving your everyday outfits a glam and warm twist, you’ll be wearing this piece again and again.",
+                    "type": "paragraph"
+                }
+            ],
+            "fabric": " Synthetic fur: 75% Acrylic, 25% Polyester Lining: 100% Polyester",
+            "productCode": "4831097",
+            "sizes": [
+                "One Size"
+            ],
+			"recommendations":["4816295"]
+        },
+        {
+            "name": "Polar Bear Faux Fur Trapper Hat",
+            "mainCategory": "Womens",
+            "subCategory": "Accessories",
+            "type": "head",
+            "price": "£5.00",
+            "images": {
+                "front": "images/stock/womens/head/Polar Bear Faux Fur Trapper Hat/front.png"
+            },
+            "colours": [
+                {
+					"name":"White",
+					"class":"white"
+				}
+            ],
+            "description": [
+                {
+                    "content": "Add some fun to your winter wardrobe with this great bear trapper hat. Featuring ear detailing and pompoms, this hat is sure to get you noticed this season and keep you cosy whatever the weather.",
+                    "type": "paragraph"
+                }
+            ],
+            "fabric": "Synthetic fur: 53% Acrylic, 47% Polyester, Lining: 100% Polyester",
+            "productCode": "4816295",
+            "sizes": [
+                "One Size"
+            ],
+			"recommendations":["4831097"]
+        },
+        {
+            "name": "Union Jack Beanie",
+            "mainCategory": "Mens",
+            "subCategory": "Accessories",
+            "type": "head",
+            "price": "£5.00",
+            "images": {
+                "front": "images/stock/mens/head/Union Jack Beanie/front.png"
+            },
+            "colours": [
+                {
+					"name":"Multi",
+					"class":"multi"
+				}
+            ],
+            "description": [
+                {
+                    "content": "Keep your head warm with a bit of blighty in this stylish beanie. Featuring a bold union jack design and finished with a pom pom, you'll be wearing this hat all winter.",
+                    "type": "paragraph"
+                }
+            ],
+            "fabric": "100% Acrylic",
+            "productCode": "4849833",
+            "sizes": [
+                "One Size"
+            ],
+			"recommendations":["4771178"]
+        },
+        {
+            "name": "Check Trapper Hat",
+            "mainCategory": "Mens",
+            "subCategory": "Accessories",
+            "type": "head",
+            "price": "£8.00",
+            "images": {
+                "front": "images/stock/mens/head/Check Trapper Hat/front.png"
+            },
+            "colours": [
+                {
+					"name":"Red",
+					"class":"red"
+				}
+            ],
+            "description": [
+                {
+                    "content": "A great stylish and cosy addition to your winter wardrobe, this check trapper hat is sure to become a favourite. With a trendy check pattern and snug fleece lining, this piece is perfect for completing your outfits this winter.",
+                    "type": "paragraph"
+                },
+				{
+                    "content": ["Popper fastening"],
+                    "type": "bullet"
+                }
+            ],
+            "fabric": "81% Polyester, 10% Acrylic, 3% Viscose, 3% Wool, 2% Cotton, 1% Nylon, Lining: 100% Polyester, Trim: 100% Polyester",
+            "productCode": "4771178",
+            "sizes": [
+                "S-M",
+				"L-XL"
+            ],
+			"recommendations":["4741624"]
+        },
+        {
+            "name": "Wax Quilted Flat Cap",
+            "mainCategory": "Mens",
+            "subCategory": "Accessories",
+            "type": "head",
+            "price": "£5.00",
+            "images": {
+                "front": "images/stock/mens/head/Wax Quilted Flat Cap/front.png"
+            },
+            "colours": [
+                {
+					"name":"Khaki",
+					"class":"khaki"
+				}
+            ],
+            "description": [
+                {
+                    "content": "A great new accessory, this wax quilted flat cap is ideal for adding a stylish spin to your casual outfits.",
+                    "type": "paragraph"
+                }
+            ],
+            "fabric": "100% Cotton",
+            "productCode": "4741624",
+            "sizes": [
+                "S-M",
+				"L-XL"
+            ],
 			"recommendations":[]
-        }
+        },
+        {
+            "name": "4 Packet Muppets Socks",
+            "mainCategory": "Mens",
+            "subCategory": "Socks",
+            "type": "feet",
+            "price": "£6.00",
+            "images": {
+                "front": "images/stock/mens/feet/4 Packet Muppets Socks/front.png"
+            },
+            "colours": [
+                {
+					"name":"Multi",
+					"class":"multi"
+				}
+            ],
+            "description": [
+                {
+                    "content": "Whether they're a cheeky gift for yourself or for the man who has everything, these Muppets socks are bound to put a smile on everyone's face! The 4 pack features classic designs including Kermit, Animal and Fozzy Bear. ",
+                    "type": "paragraph"
+                },
+				{
+					"content": ["4 Pack","Assorted designs"],
+					"type":"bullet"
+				}
+            ],
+            "fabric": "72% Cotton, 26% Nylon, 2% Lycra",
+            "productCode": "4806912",
+            "sizes": [
+                "6-8.5",
+				"9-12"
+            ],
+			"recommendations":[]
+        },
+        {
+            "name": "Leopard Print Jacquard Blazer",
+            "mainCategory": "Womens",
+            "subCategory": "Coats & Jackets",
+            "type": "body",
+            "price": "£16.00",
+            "images": {
+                "front": "images/stock/womens/body/Leopard Print Jacquard Blazer/front.png",
+                "back": "images/stock/womens/body/Leopard Print Jacquard Blazer/back.png"
+            },
+            "colours": [
+                {
+					"name":"Multi",
+					"class":"multi"
+				}
+            ],"description": [
+                {
+                    "content": "Jazz up your everyday looks with this stunning leopard print jacquard blazer. This piece is perfect for adding a ton of character to your formal looks and is sure be one you’ll be turning to again and again.",
+                    "type": "paragraph"
+                },
+				{
+					"content": ["Open front","Cropped sleeve"],
+					"type":"bullet"
+				}
+            ],
+            "fabric": "98% Polyester, 2% Elastane",
+            "productCode": "4995658",
+            "sizes": [
+                "6",
+                "8",
+                "10",
+                "12",
+                "14",
+                "16",
+                "18",
+                "20",
+                "22",
+                "24",
+                "26",
+                "28"
+            ],
+			"recommendations":[]
+        },            
+        {
+            "name": "Tailored Coat",
+            "mainCategory": "Womens",
+            "subCategory": "Coats & Jackets",
+            "type": "feet",
+            "price": "£32.00",
+            "images": {
+                "front": "images/stock/womens/body/Tailored Coat/front.png",
+                "back": "images/stock/womens/body/Tailored Coat/back.png",
+                "close": "images/stock/womens/body/Tailored Coat/close.png"
+            },
+            "colours": [
+                {
+					"name":"Ash",
+					"class":"ash"
+				}
+            ],
+			"description": [
+                {
+                    "content": "Jazz up your everyday looks with this stunning leopard print jacquard blazer. This piece is perfect for adding a ton of character to your formal looks and is sure be one you’ll be turning to again and again.",
+                    "type": "paragraph"
+                },
+				{
+					"content": ["Twin mock front pockets","Button through fastening"],
+					"type":"bullet"
+				}
+            ],
+            "fabric": "99% Polyester, 1% Elastane, Lining: 100% Polyester",
+            "productCode": "4890099",
+            "sizes": [
+                "6",
+                "8",
+                "10",
+                "12",
+                "14",
+                "16",
+                "18",
+                "20",
+                "22",
+                "24",
+                "26",
+                "28"
+            ],
+			"recommendations":[]
+        }            
     ]
 }
