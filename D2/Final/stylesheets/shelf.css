@@ -4,14 +4,15 @@ body {
 }
 #backButton{
 	background-color:rgb(255, 204, 0);
-	width:150px;
+	width:100%;
 	border-radius:2px;
 	text-align:center;
 	font-weight:bold;
-	height:30px;
-	font-size:14pt;
+	height:60px;
+	font-size:20pt;
     margin: 0 auto;
     cursor: pointer;
+    line-height: 60px;
 }
 
 .productI{
@@ -106,7 +107,7 @@ body {
 	width:300px;
 	height:85%;
 	margin-top:5px;
-	margin-bottom:2px;
+	margin-bottom:5px;
 	margin-left:5px;
 	float:left;
 	color:white;
@@ -213,7 +214,7 @@ body {
 .outer_wrapper_large {
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
-    margin-top:5px;
+    margin-top:10px;
     width:100%;
     height:650px;
 	margin-left:250px;
@@ -228,6 +229,8 @@ body {
     height:50px;
 	margin-left:250px;
 	font-size:1.3em;
+	
+	margin-top: 10px;
 
 }
 .outer_wrapper_smaller {
@@ -237,6 +240,8 @@ body {
     height:40px;
 	margin-left:250px;
 	font-size:1.3em;
+	
+	margin-top: 10px;
 
 }
 
@@ -461,8 +466,10 @@ table#ItemDetails{
 	color:black;
 	text-align:center;
 	width: 100%;
-	font-size:15pt;
+	font-size:17pt;
 	font-weight:bold;
+	height: 40px;
+	line-height: 40px;
 }
 #rec_header{
 	height:500px;
