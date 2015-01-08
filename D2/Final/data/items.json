@@ -817,6 +817,43 @@
 				"9-12"
             ],
 			"recommendations":[]
+        },
+        {
+            "name": "Leopard Print Jacquard Blazer",
+            "mainCategory": "womens",
+            "subCategory": "Coats & Jackets",
+            "type": "feet",
+            "price": "£6.00",
+            "images": {
+                "front": "images/stock/mens/feet/4 Packet Muppets Socks/front.png"
+            },
+            "colours": [
+                {
+					"name":"Multi",
+					"class":"multi"
+				}
+            ],
+            "description": [
+                {
+                    "content": "Whether they're a cheeky gift for yourself or for the man who has everything, these Muppets socks are bound to put a smile on everyone's face! The 4 pack features classic designs including Kermit, Animal and Fozzy Bear. ",
+                    "type": "paragraph"
+                },
+				{
+					"content": "4 Pack",
+					"type":"bullet"
+				},
+				{
+					"content": "Assorted designs",
+					"type":"bullet"
+				}
+            ],
+            "fabric": "72% Cotton, 26% Nylon, 2% Lycra",
+            "productCode": "4806912",
+            "sizes": [
+                "6-8.5",
+				"9-12"
+            ],
+			"recommendations":[]
         }
     ]
 }
