@@ -624,7 +624,7 @@
                     "type": "paragraph"
                 },
 				{
-                    "content": "Pompom detailing",
+                    "content": ["Pompom detailing"],
                     "type": "bullet"
                 }
             ],
@@ -693,7 +693,7 @@
         },
         {
             "name": "Union Jack Beanie",
-            "mainCategory": "mens",
+            "mainCategory": "Mens",
             "subCategory": "Accessories",
             "type": "head",
             "price": "£5.00",
@@ -721,7 +721,7 @@
         },
         {
             "name": "Check Trapper Hat",
-            "mainCategory": "mens",
+            "mainCategory": "Mens",
             "subCategory": "Accessories",
             "type": "head",
             "price": "£8.00",
@@ -740,7 +740,7 @@
                     "type": "paragraph"
                 },
 				{
-                    "content": " Popper fastening",
+                    "content": ["Popper fastening"],
                     "type": "bullet"
                 }
             ],
@@ -754,7 +754,7 @@
         },
         {
             "name": "Wax Quilted Flat Cap",
-            "mainCategory": "mens",
+            "mainCategory": "Mens",
             "subCategory": "Accessories",
             "type": "head",
             "price": "£5.00",
@@ -783,7 +783,7 @@
         },
         {
             "name": "4 Packet Muppets Socks",
-            "mainCategory": "mens",
+            "mainCategory": "Mens",
             "subCategory": "Socks",
             "type": "feet",
             "price": "£6.00",
@@ -802,11 +802,7 @@
                     "type": "paragraph"
                 },
 				{
-					"content": "4 Pack",
-					"type":"bullet"
-				},
-				{
-					"content": "Assorted designs",
+					"content": ["4 Pack","Assorted designs"],
 					"type":"bullet"
 				}
             ],
@@ -820,7 +816,7 @@
         },
         {
             "name": "Leopard Print Jacquard Blazer",
-            "mainCategory": "womens",
+            "mainCategory": "Womens",
             "subCategory": "Coats & Jackets",
             "type": "body",
             "price": "£16.00",
@@ -839,11 +835,7 @@
                     "type": "paragraph"
                 },
 				{
-					"content": "Open front",
-					"type":"bullet"
-				},
-				{
-					"content": "Cropped sleeve",
+					"content": ["Open front","Cropped sleeve"],
 					"type":"bullet"
 				}
             ],
@@ -867,7 +859,7 @@
         },            
         {
             "name": "Tailored Coat",
-            "mainCategory": "womens",
+            "mainCategory": "Womens",
             "subCategory": "Coats & Jackets",
             "type": "feet",
             "price": "£32.00",
@@ -888,11 +880,7 @@
                     "type": "paragraph"
                 },
 				{
-					"content": "Twin mock front pockets",
-					"type":"bullet"
-				},
-				{
-					"content": "Button through fastening",
+					"content": ["Twin mock front pockets","Button through fastening"],
 					"type":"bullet"
 				}
             ],
