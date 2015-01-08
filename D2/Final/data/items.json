@@ -764,7 +764,7 @@
             "colours": [
                 {
 					"name":"Khaki",
-					"class":"khaki
+					"class":"khaki"
 				}
             ],
             "description": [
@@ -822,38 +822,97 @@
             "name": "Leopard Print Jacquard Blazer",
             "mainCategory": "womens",
             "subCategory": "Coats & Jackets",
-            "type": "feet",
-            "price": "£6.00",
+            "type": "body",
+            "price": "£16.00",
             "images": {
-                "front": "images/stock/mens/feet/4 Packet Muppets Socks/front.png"
+                "front": "images/stock/womens/body/Leopard Print Jacquard Blazer/front.png",
+                "back": "images/stock/womens/body/Leopard Print Jacquard Blazer/back.png"
             },
             "colours": [
                 {
 					"name":"Multi",
 					"class":"multi"
 				}
-            ],
-            "description": [
+            ],"description": [
                 {
-                    "content": "Whether they're a cheeky gift for yourself or for the man who has everything, these Muppets socks are bound to put a smile on everyone's face! The 4 pack features classic designs including Kermit, Animal and Fozzy Bear. ",
+                    "content": "Jazz up your everyday looks with this stunning leopard print jacquard blazer. This piece is perfect for adding a ton of character to your formal looks and is sure be one you’ll be turning to again and again.",
                     "type": "paragraph"
                 },
 				{
-					"content": "4 Pack",
+					"content": "Open front",
 					"type":"bullet"
 				},
 				{
-					"content": "Assorted designs",
+					"content": "Cropped sleeve",
 					"type":"bullet"
 				}
             ],
-            "fabric": "72% Cotton, 26% Nylon, 2% Lycra",
-            "productCode": "4806912",
+            "fabric": "98% Polyester, 2% Elastane",
+            "productCode": "4995658",
             "sizes": [
-                "6-8.5",
-				"9-12"
+                "6",
+                "8",
+                "10",
+                "12",
+                "14",
+                "16",
+                "18",
+                "20",
+                "22",
+                "24",
+                "26",
+                "28"
             ],
 			"recommendations":[]
-        }
+        },            
+        {
+            "name": "Tailored Coat",
+            "mainCategory": "womens",
+            "subCategory": "Coats & Jackets",
+            "type": "feet",
+            "price": "£32.00",
+            "images": {
+                "front": "images/stock/womens/body/Tailored Coat/front.png",
+                "back": "images/stock/womens/body/Tailored Coat/back.png",
+                "close": "images/stock/womens/body/Tailored Coat/close.png"
+            },
+            "colours": [
+                {
+					"name":"Ash",
+					"class":"ash"
+				}
+            ],
+			"description": [
+                {
+                    "content": "Jazz up your everyday looks with this stunning leopard print jacquard blazer. This piece is perfect for adding a ton of character to your formal looks and is sure be one you’ll be turning to again and again.",
+                    "type": "paragraph"
+                },
+				{
+					"content": "Twin mock front pockets",
+					"type":"bullet"
+				},
+				{
+					"content": "Button through fastening",
+					"type":"bullet"
+				}
+            ],
+            "fabric": "99% Polyester, 1% Elastane, Lining: 100% Polyester",
+            "productCode": "4890099",
+            "sizes": [
+                "6",
+                "8",
+                "10",
+                "12",
+                "14",
+                "16",
+                "18",
+                "20",
+                "22",
+                "24",
+                "26",
+                "28"
+            ],
+			"recommendations":[]
+        }            
     ]
 }
