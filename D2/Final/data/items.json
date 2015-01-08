@@ -624,7 +624,7 @@
                     "type": "paragraph"
                 },
 				{
-                    "content": "Pompom detailing",
+                    "content": ["Pompom detailing"],
                     "type": "bullet"
                 }
             ],
@@ -740,7 +740,7 @@
                     "type": "paragraph"
                 },
 				{
-                    "content": " Popper fastening",
+                    "content": ["Popper fastening"],
                     "type": "bullet"
                 }
             ],
@@ -802,13 +802,9 @@
                     "type": "paragraph"
                 },
 				{
-					"content": "4 Pack",
+					"content": ["4 Pack","Assorted designs"],
 					"type":"bullet"
 				},
-				{
-					"content": "Assorted designs",
-					"type":"bullet"
-				}
             ],
             "fabric": "72% Cotton, 26% Nylon, 2% Lycra",
             "productCode": "4806912",
@@ -839,11 +835,7 @@
                     "type": "paragraph"
                 },
 				{
-					"content": "Open front",
-					"type":"bullet"
-				},
-				{
-					"content": "Cropped sleeve",
+					"content": ["Open front","Cropped sleeve"],
 					"type":"bullet"
 				}
             ],
@@ -888,11 +880,7 @@
                     "type": "paragraph"
                 },
 				{
-					"content": "Twin mock front pockets",
-					"type":"bullet"
-				},
-				{
-					"content": "Button through fastening",
+					"content": ["Twin mock front pockets","Button through fastening"],
 					"type":"bullet"
 				}
             ],
