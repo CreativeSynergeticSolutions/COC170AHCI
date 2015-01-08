@@ -17,7 +17,7 @@ var CAT={
 		"Appliances",
 		"Kitchen and Dining"
 	],
-	"Women":[
+	"Womens":[
 		"Clothing",
 		"Footwear",
 		"Collections",
@@ -33,7 +33,7 @@ var CAT={
 		"Nightwear and Slippers",
 		"Offers"
 	],
-	"Men":[
+	"Mens":[
 		"Clothing",
 		"Footwear",
 		"Brands",
@@ -177,7 +177,7 @@ var SUB_CAT={
 		"Utensils & Gadgets"
 	],
 
-	"Women_Clothing":[
+	"Womens_Clothing":[
 		"New In",
 		"Accessories",
 		"Blouses & Shirts",
@@ -199,7 +199,7 @@ var SUB_CAT={
 		"Tunics",
 		"Last Chance To Buy"
 	],
-	"Women_Footwear":[
+	"Womens_Footwear":[
 		"All Footwear",
 		"Boots & Wellies",
 		"Flats",
@@ -209,7 +209,7 @@ var SUB_CAT={
 		"Slippers",
 		"Trainers"
 	],
-	"Women_Collections":[
+	"Womens_Collections":[
 		"Character Shop",
 		"Fancy Dress",
 		"Graduate Fashion Week",
@@ -222,20 +222,20 @@ var SUB_CAT={
 		"Workwear"
 	],
 	
-	"Women_Latest Trends":[
+	"Womens_Latest Trends":[
 		"Autumn"
 	],
-	"Women_Shop By Fit":[
+	"Womens_Shop By Fit":[
 		"Maternity",
 		"Petite",
 		"Plus Size"
 	],
-	"Women_Offers":[
+	"Womens_Offers":[
 		"Mix & Match Lingerie - 3 for £6",
 		"Mix & Match Nightwear - 2 for £10",
 		"Mix & Match Socks - 4 for £4.50"
 	],
-	"Women_Electrical Beauty":[
+	"Womens_Electrical Beauty":[
 		"Hairdryers",
 		"Hair Removal",
 		"Hair Straighteners",
@@ -283,7 +283,7 @@ var SUB_CAT={
 		
 	],
 
-	"Men_Clothing":[
+	"Mens_Clothing":[
 		"New In",
 		"Accessories",
 		"Coats & Jackets",
@@ -303,7 +303,7 @@ var SUB_CAT={
 		"Underwear",
 		"Last Chance To Buy"
 	],
-	"Men_Footwear":[
+	"Mens_Footwear":[
 		"All Footwear",
 		"Boots",
 		"Casual Shoes",
@@ -311,10 +311,10 @@ var SUB_CAT={
 		"Slippers",
 		"Trainers"
 	],
-	"Men_Brands":[
+	"Mens_Brands":[
 		"Boston Crew"
 	],
-	"Men_Collections":[
+	"Mens_Collections":[
 		"Character Shop",
 		"Fancy Dress",
 		"Officewear",
@@ -323,11 +323,11 @@ var SUB_CAT={
 		"Thermal",
 		"Winter Warmers"
 	],
-	"Men_Offers":[
+	"Mens_Offers":[
 		
 	],
 
-	"Men_Personal Grooming":[
+	"Mens_Personal Grooming":[
 		"Clippers, Trimmers and Shavers"
 	],
 

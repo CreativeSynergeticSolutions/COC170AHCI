@@ -432,6 +432,7 @@ a {
     position: absolute;
     right: 5%;
     width: 20%;
+    z-index: 999;
 }
 
 .notification {

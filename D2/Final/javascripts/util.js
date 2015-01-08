@@ -27,3 +27,20 @@ for(var event in events) {
 }
 
 setPageTimeout();
+
+function addNotification (icon,text) {
+    if($('.notification').length > 4) {
+        $('.notification:not(:animated)').first().fadeOut('fast', function () {
+            $('.notification').first().remove();
+        });
+    }
+    var notificationId = parseInt($('.notification').last().data('id'))+1 || 0;
+    console.log(notificationId);
+    $('.notification-area').append('<div class="notification notification-'+notificationId+'" data-id="'+notificationId+'"><i class="icon-'+icon+'"></i> '+text+'</div>');
+    $('.notification-'+notificationId).fadeIn({duration: 500, queue: false}).css('display','none').slideDown(500);
+    setTimeout(function () {
+        $('.notification-'+notificationId).fadeOut({duration: 500, queue: false}).slideUp(500, function () {
+            $('.notification-'+notificationId).remove();
+        });
+    }, 3000);
+}

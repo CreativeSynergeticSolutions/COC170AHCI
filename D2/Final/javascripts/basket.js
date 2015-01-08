@@ -3,6 +3,7 @@ var dial = new Dial(150, "1.5em");
 var basket;
 function loadBasketList() {
     basket = wall.getBasket();
+    console.log("basket");
     console.log(basket);
     if(basket!=null&&basket.length>0){
         /* for(var i = 0; i < basket.length; i++){
@@ -38,7 +39,9 @@ function deleteItem(index){
 	$("#item"+index).remove();
 	var current = ($("#total").text()).substring(9,($("#total").text()).length);
 	console.log(current);
-	var total = parseInt(current) - (parseInt(basket[index].item.price.substring(1,basket[index].item.price.length)))*basket[index].quantity;
+	console.log(old[index]);
+	console.log((parseInt(basket[index].item.price.substring(1,basket[index].item.price.length))) *old[index]);
+	var total = parseInt(current) - (parseInt(basket[index].item.price.substring(1,basket[index].item.price.length))) *old[index] ;
 
 	$("#total").html("Total: &#163 "+ add00(total));
 }
@@ -102,6 +105,9 @@ function closeAll(){
 	removeAll();
 	window.location.href = 'idle.html'
 }
+
+var blScrollY = 0;
+var old = [];
 window.onload = function () {
 	
 	loadBasketList();
@@ -109,17 +115,54 @@ window.onload = function () {
 	$("#items").css('left','0');
 	$("#total").css('left','0');
 	$("#options").css('right','0');
-	for(i =0; i< basket.length; i++){
-		dial.addNewDial(i, function(dialData){
+	for(j =0; j< basket.length; j++){
+		old[j]=-1;
+		console.log("j: " + j);
+		dial.addNewDial(j, function(dialData){
+			console.log("inner j: " + j);
+			var total;
 			console.log("dialid is: " + dialData.dialid);
 			console.log("dialValue is: " + dialData.dialValue);
 			currentQuantity = dialData.dialValue;
 			$("#basketQuantityVal").text(currentQuantity);
 			
+			if (old [dialData.dialid] == -1){
+				old[dialData.dialid] = basket[dialData.dialid].quantity;
+				console.log("you FAIL");
+			}else{
+				var tot = ($("#total").text()).substring(9,($("#total").text()).length);
+				total = parseInt(tot);
+				console.log("first Total: " + total);
+				total -= (parseInt(basket[dialData.dialid].item.price.substring(1,basket[dialData.dialid].item.price.length)))*old[dialData.dialid];
+				console.log("old val: " + old[dialData.dialid]);
+				console.log("second Total: " + total);
+				total += (parseInt(basket[dialData.dialid].item.price.substring(1,basket[dialData.dialid].item.price.length)))*dialData.dialValue;
+				console.log("final Total: " + total);
+				$("#total").html("Total: &#163 "+ add00(total));
+			}
+			old[dialData.dialid] = dialData.dialValue;
+			console.log(old);
 		});
-		dial.setDialValue(i, basket[i].quantity);
+		dial.setDialValue(j, basket[j].quantity);
 	}
 	Resize();
+	
+	
+	if(!("ontouchstart" in window)) {
+    	
+    	$("#items").mousemove(function(event){
+			
+			if(event.pageY == blScrollY) return false;
+			
+			if(event.pageY < blScrollY) $("#items").scrollTop($("#items").scrollTop() + 10);
+			else $("#items").scrollTop($("#items").scrollTop() - 10);
+			
+			blScrollY = event.pageY;
+
+		});
+    	
+	}
+	
 }
 window.onresize = function(){
 	Resize();	

@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+
     <meta charset="UTF-8">
     <title>Product</title>
-    
+
+    <link rel="stylesheet" href="vendor/ahci-icon-font/css/ahci.css">
     <link rel='stylesheet' type='text/css' href='stylesheets/keyboard.css'>
     <link rel='stylesheet' type='text/css' href='stylesheets/product.css'>
 	<link rel='stylesheet' type='text/css' href='stylesheets/productColours.css'>
 	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-		
+
 </head>
 
 <body>
-	
+
 	<div id='mainWrapper'>
-		
+
 		<div id='productHeader'>
 			<div id='productTitle'></div>
 			<div id='productCode'></div>
 			<div id='productPrice'></div>
 		</div>
-		
+
 		<div id='displayWrapper'>
-			
+
 			<div id='imagesListContainer'>
 				<div id='listDisplayPlatform'></div>
 				<ul id='ulImages'>
 				</ul>
 			</div>
-			
+
 			<label id='displayImgLabel' class='inputLabels'>
 				<input id='displayImgCheck' type='checkbox'/>
 				<div id='imgContainer'>
@@ -37,100 +38,100 @@
 					<div id='closeDisplayImgBtn' class='closeOverlayButton'></div>
 				</div>
 			</label>
-			
-			<div id='leftArrowPerspective'><div id='displayImgLeftArrow'>&#171;</div></div>	
+
+			<div id='leftArrowPerspective'><div id='displayImgLeftArrow'>&#171;</div></div>
 			<div id='rightArrowPerspective'><div id='displayImgRightArrow'>&#187;</div></div>
-			
+
 		</div>
-		
+
 		<div id='buttonsWrapper'>
 			<div id='buttonsContainer'>
 				<div id='backButton' class='btnStyle'>&#9664; BACK</div>
 				<div id='homeButton' class='btnStyle'>HOME</div>
 			</div>
 		</div>
-		
+
 		<label id='productSectionLabel' class='inputLabels'>
 			<input id='productDetailsCheck' type='checkbox'/>
 			<div id='productSectionWrapper'>
-				
+
 				<div id='productSectionContainer'>
-					
+
 					<div id='productDetailsTitle' class='cardTitle'>
 						Product Details
 						<div class='titleLine'></div>
 					</div>
-					
+
 					<div id='productDetails'>
 						<div id='productDetailsContainer'>
-							
+
 							<div id='productDetailsOtherContainerA'>
 								<div id='deliveryIcons'></div>
 							</div>
-						
+
 							<div id='productDetailsOtherContainerB'>
 								<div id='socialIconsImg'></div>
 							</div>
-							
+
 						</div>
 					</div>
-					
+
 					<div id='closeProductDetailsBtn' class='closeOverlayButton'></div>
-					
+
 				</div>
-				
+
 			</div>
 		</label>
-		
+
 		<label id='recommendedSectionLabel' class='inputLabels'>
 			<input id='recommendedCheck' type='checkbox'/>
 			<div id='recommendedWrapper'>
-				
+
 				<div id='recommendedContainer'>
-					
+
 					<div id='recommendedTitle' class='cardTitle'>
 						Recommended
 						<div class='titleLine'></div>
 					</div>
-					
+
 					<div id='recommndedContent'>
-						
+
 						<div id='recommndedList'></div>
-						
-						
+
+
 						<div id='closeRecommendedBtn' class='closeOverlayButton'></div>
-						
+
 					</div>
-					
+
 				</div>
-				
+
 			</div>
 		</label>
-		
+
 		<label id='optionSectionLabel' class='inputLabels'>
 			<input id='optionsCheck' type='checkbox'/>
 			<div id='optionsWrapper'>
-				
+
 				<div id='optionSectionContainer'>
-					
+
 					<div id='optionsTitle' class='cardTitle'>
 						View All Options
 						<div class='titleLine'></div>
 					</div>
-					
+
 					<div id='optionsContent'>
-												
+
 						<label id='outfitsSectionLabel' class='inputLabels' name='optionsLabels'>
 							<input id='outfitRadio' type='radio' name='optionsRadio' />
 							<div id='outfitsContainer'>
-								
+
 								<div id='currentOutfitButton' class='btnStyle'>Add To Current Outfit</div>
 								<div id='outfitLinkButton' class='btnStyle'>Outfits</div>
-								
+
 								<div id='outfitsListContainer'>
 									<ul id='outfitsList'></ul>
 								</div>
-								
+
 								<div id='outfitsNewButtonContainer'>
 									<input id='newOutfitName' type='text' placeholder='Outfit Name' />
 									<div id='outfitsNewButton'>
@@ -139,7 +140,7 @@
 										Add New Outfit
 									</div>
 								</div>
-								
+
 								<div id='outfitsMainText'>
 									<span>
 										O
@@ -157,25 +158,25 @@
 										S
 									</span>
 								</div>
-								
-							</div>							
+
+							</div>
 						</label>
-						
+
 						<label id='basketSectionLabel' class='inputLabels' name='optionsLabels'>
-							<input id='basketRadio' type='radio' name='optionsRadio' />	
+							<input id='basketRadio' type='radio' name='optionsRadio' />
 							<div id='basketSection'>
-								
+
 								<div id='basketLinkButton' class='btnStyle'>Go To Basket</div>
-								
+
 								<div id='filterContainer'>
-																		
+
 									<div id='colourFilterSection'>
-										
+
 										<div id='colourListContainer'>
 											<ul id='colourList'>
 											</ul>
 										</div>
-										
+
 										<div id='colourFilterText'>
 											<span class='textArrows'>&#9650;</span>
 											<br />
@@ -184,14 +185,14 @@
 											<span class='textArrows'>&#9660;</span>
 										</div>
 									</div>
-									
+
 									<div id='sizeFilterSection'>
-										
+
 										<div id='sizeListContainer'>
 											<ul id='sizeList'>
 											</ul>
 										</div>
-										
+
 										<div id='sizeFilterText'>
 											<span class='textArrows'>&#9650;</span>
 											<br />
@@ -200,13 +201,13 @@
 											<span class='textArrows'>&#9660;</span>
 										</div>
 									</div>
-									
+
 									<div id='quantityFilterSection'>
-										
+
 										<div id='quantityContainer'>
 											<div id='quantityDial' data-dialid=1></div>
 										</div>
-										
+
 										<div id='quantityFilterText'>
 											<span class='textArrows'>&#9650;</span>
 											<br />
@@ -215,34 +216,34 @@
 											<span class='textArrows'>&#9660;</span>
 										</div>
 									</div>
-									
+
 								</div>
-							
+
 								<div id='basketContainer'>
 									<div id='basketColorVal'></div>
 									<div id='basketSizeVal'></div>
-									<div id='basketQuantityVal'>1</div>
-									<div id='basketText'>Add To Basket</div>
+									<div id='basketQuantityVal'>x1</div>
+									<div id='basketText'>Add +</div>
 								</div>
-						
+
 							</div>
 						</label>
-										
+
 						<div id='closeOptionsBtn' class='closeOverlayButton'></div>
-						
+
 					</div>
-					
+
 				</div>
-				
+
 			</div>
 		</label>
-		
-		<div id='popupBox'>Default Default Default Default Default Default Default Default Default Default Default Default Default </div>
-		
+
+		<div class='notification-area'></div>
+
 		<div class="main-area"></div>
-				
+
 	</div>
-	
+
 </body>
 
 <script type='text/javascript' src='vendor/jquery-1.11.1.min.js'></script>
@@ -252,6 +253,7 @@
 <script type='text/javascript' src='vendor/propeller.min.js'></script>
 <script type='text/javascript' src='javascripts/fetchItems.js'></script>
 <script type='text/javascript' src='javascripts/wall.js'></script>
+<script type='text/javascript' src='javascripts/util.js'></script>
 <script type='text/javascript' src='javascripts/keyboard.js'></script>
 <script type='text/javascript' src='javascripts/dial.js'></script>
 <script type='text/javascript' src='javascripts/product.js'></script>

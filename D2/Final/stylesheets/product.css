@@ -158,22 +158,13 @@ body {
 }
 
 .main-area {
-	
+
 	position: fixed;
 	height: 100%;
 	width: 100%;
-	
 	z-index: 200;
-	
-}
 
-#keyboard {
-	
-	position: fixed;
-	left: 35%;
-	
 }
-
 
 #popupBox {
 
@@ -1338,7 +1329,7 @@ label[name="optionsLabels"] {
 
 	background-color: #000;
 	border: 0px solid #000;
-	border-radius: 10px;
+	border-radius: 18px;
 
 
 
@@ -1380,7 +1371,7 @@ label[name="optionsLabels"] {
 
 	position: absolute;
 	padding-top: 10px;
-	top: 10px;
+	top: 15px;
 	left: 50px;
 	height: 80px;
 
@@ -1565,10 +1556,10 @@ label[name="optionsLabels"] {
 #optionSectionLabel input:checked~ #optionsWrapper
 #optionsContent #basketSection #basketContainer {
 
-	bottom: -2px;
-	left: 0px;
+	bottom: 3px;
+	left: 3px;
 	height: 300px;
-	width: 800px;
+	width: 794px;
 
 
 }
@@ -1978,4 +1969,30 @@ label[name="optionsLabels"] {
 }
 ::-webkit-selection {
   background: none;
+}
+
+/*
+*    Notifications
+*/
+.notification-area {
+    top: 5%;
+    position: absolute;
+    right: 5%;
+    z-index: 999;
+    width: 20%;
+}
+
+.notification {
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+    display: none;
+    padding: 0.5em;
+    z-index: 999;
+    
+    border-radius: 10px;
+    
+}
+
+.notification .icon-cancel {
+    color: #B71C1C;
 }

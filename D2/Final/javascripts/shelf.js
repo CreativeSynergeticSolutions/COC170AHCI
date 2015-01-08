@@ -1,4 +1,11 @@
 var shelfView=new wall();
+var recHeaderScrollY = 0,
+    basketScrollX = 0,
+    categoriesScrollX = 0,
+    subScrollX = 0,
+    subSubScrollX = 0,
+    selectionScrollX = 0,
+    caScrollX = 0;
 
 window.onload=function(){
 
@@ -6,8 +13,48 @@ window.onload=function(){
 	loadRecommendations();
 	loadOutfits();
 	loadSelectedProducts();
-
-}
+    if(!("ontouchstart" in window)) {
+    	$("#rec_header").mousemove(function(event){
+			if(event.pageY == recHeaderScrollY) return false;
+            var modifier = (event.pageY < recHeaderScrollY ? 10 : -10);
+            $("#rec_header").scrollTop($("#rec_header").scrollTop() + modifier);
+			recHeaderScrollY = event.pageY;
+		});
+    	$("#basketContainer").mousemove(function(event){
+			if(event.pageX == basketScrollX) return false;
+            var modifier = (event.pageX < basketScrollX ? 5 : -5);
+            $("#basketContainer").scrollLeft($("#basketContainer").scrollLeft() + modifier);
+			basketScrollX = event.pageX;
+		});
+    	$("#categories").parent().mousemove(function(event){			
+			if(event.pageX == categoriesScrollX) return false;
+            var modifier = (event.pageX < categoriesScrollX ? 10 : -10);
+            $("#categories").parent().scrollLeft($("#categories").parent().scrollLeft() + modifier);
+			categoriesScrollX = event.pageX;
+		});
+    	$("#sub_categories").parent().mousemove(function(event){
+			if(event.pageX == subScrollX) return false;
+            var modifier = (event.pageX < subScrollX ? 10 : -10);
+            $("#sub_categories").parent().scrollLeft($("#sub_categories").parent().scrollLeft() + modifier);
+			subScrollX = event.pageX;
+		});
+    	$("#sub_categories_sub").parent().mousemove(function(event){
+			if(event.pageX == subSubScrollX) return false;
+            var modifier = (event.pageX < subSubScrollX ? 10 : -10);
+            $("#sub_categories_sub").parent().scrollLeft($("#sub_categories_sub").parent().scrollLeft() + modifier);
+			subSubScrollX = event.pageX;
+		});
+    	$("#selection").mousemove(function(event){
+			if(event.pageX == selectionScrollX) return false;
+            var modifier = (event.pageX < selectionScrollX ? 10 : -10);
+            $("#selection").parent().scrollLeft($("#selection").parent().scrollLeft() + modifier);
+			selectionScrollX = event.pageX;
+		});
+	}
+    $(document.body).on('dragstart', 'img', function (e) {
+        e.preventDefault();
+    });
+};
 
 
 function randomN(){
@@ -192,18 +239,19 @@ function loadSelection(index){
 	currentSelection=finder[index];
 	var array=new Array();
 
-	if(currentCategory=="Women"){
 
-		for (var i=0;i<items.length;i++){
-			var sub=items[i]["subCategory"];
-			var main=items[i]["mainCategory"];
 
-			if(main=="Womens" && sub==currentSelection ){
-				array.push(i);
-			}
+
+	for (var i=0;i<items.length;i++){
+		var sub=items[i]["subCategory"];
+		var main=items[i]["mainCategory"];
+
+		if(main==currentCategory && sub==currentSelection ){
+			array.push(i);
 		}
-
 	}
+
+
 
 	for (var i=0;i<array.length;i++){
 		//Concatenate "_"
@@ -229,7 +277,6 @@ function loadSelection(index){
 		output+="<br/>";
         output+="</a>";
 		output+="<div class='addBasket' onclick='addToBasket("+index+")' >Add To Basket</div>";
-		output+="<div class='addBasket' onclick='addToOufit("+index+")' >Add To Outfit</div>";
 		output+="</div>";
 		output+="</div>";
 
