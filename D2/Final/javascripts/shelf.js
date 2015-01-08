@@ -96,21 +96,12 @@ function loadSubCategory(category){
 
 /*------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------*/
-function loadPage(){
-
-	//loadSubCategory("Christmas");
-	//loadSubSubCategory("Women");
-	//loadSelection("Women");
-}
 
 function addToBasket(index){
 	shelfView.addToBasket(items[index],1,items[index]["sizes"][0],items[index]["colours"][0]);
 	loadSelectedProducts();
 }
 
-function addToOutfit(index){
-
-}
 
 function loadOutfits(){
 
