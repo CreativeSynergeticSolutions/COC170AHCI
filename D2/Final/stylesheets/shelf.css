@@ -1,6 +1,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+ 	height:100%;
+    
 }
 #backButton{
 	background-color:rgb(255, 204, 0);
@@ -182,11 +184,11 @@ body {
 
 
 #main{
-	<!-- margin-left:200px; -->
-	height:100%;
+	
+	height:auto;
 	background-color:inherit !important;
 	position:fixed;
-    top:0;
+    top:100px;
     left:0;
     width:100%;
     height:100%;
@@ -392,7 +394,7 @@ table#ItemDetails{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3C3432',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-	height:100%;
+	
 }
 
 .sideCategories{
