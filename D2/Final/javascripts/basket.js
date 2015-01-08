@@ -121,11 +121,6 @@ window.onload = function () {
 		dial.addNewDial(j, function(dialData){
 			console.log("inner j: " + j);
 			var total;
-			console.log("dialid is: " + dialData.dialid);
-			console.log("dialValue is: " + dialData.dialValue);
-			currentQuantity = dialData.dialValue;
-			$("#basketQuantityVal").text(currentQuantity);
-			
 			if (old [dialData.dialid] == -1){
 				old[dialData.dialid] = basket[dialData.dialid].quantity;
 				console.log("you FAIL");
@@ -142,6 +137,8 @@ window.onload = function () {
 			}
 			old[dialData.dialid] = dialData.dialValue;
 			console.log(old);
+			wall.updateBasketItemQuantity(basket[dialData.dialid].id, dialData.dialValue);
+			//console.log("id is: " + basket[dialData.dialid].id + " and q is: " + dialData.dialValue);
 		});
 		dial.setDialValue(j, basket[j].quantity);
 	}

@@ -18,7 +18,6 @@
 <script type="text/javascript" src='./javascripts/categories.js'>
 </script>	
 	
-
 <script type="text/javascript" src='./javascripts/shelf.js'>
 </script>
 
@@ -28,9 +27,8 @@
 
 <body onload="loadPage();">
 
-
 <!-- MAIN -->
-<div id="main" class="blend2">
+<div id="main" class='blend2'>
 
 	<!--OUTER WRAPPER-->
 	<div class="outer_wrapper ">
@@ -83,37 +81,31 @@
 </div>
 <!-- /MAIN -->
 
-<!-- SIDE BAR -->
-
-	<!-- BOTTOMBAR -->
+<!-- BOTTOMBAR -->
+<div id="bottomBar">
+	<!-- INNER -->
 	
-	<div id="bottomBar">
-		<!-- INNER -->
+	<div id="inner">
 		
-		<div id="inner">
-			
-					<div id="basketContainer">
-					<br />
-						<div id="basketItems" class="basketItems">
-							
-						</div>
-					
+				<div id="basketContainer">
+				<br />
+					<div id="basketItems" class="basketItems">
+						
 					</div>
-					
+				
+				</div>
+				
 
-		</div>
-
-		<!-- /INNER -->
 	</div>
 
+	<!-- /INNER -->
+</div>
+<!-- / BOTTOM BAR -->
 
 
-
-</body>
-	<!-- /BOTTOMBAR -->
-	
+<!-- SIDE  BAR -->	
 <div id="sideBar" >
-	<div id="backButton">BACK</div>
+	<div id="backButton">&#9664; BACK</div>
 	<div id="outfit_header">
 		
 	</div>
@@ -122,8 +114,10 @@
 	
 	</div>
 </div>
-
-
 <!-- /SIDE BAR -->
 
+<!-- Scripts -->
+<script type="text/javascript" src="javascripts/util.js"></script>
+
+</body>
 </html>
