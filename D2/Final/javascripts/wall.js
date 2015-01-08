@@ -190,6 +190,7 @@ wall.prototype.updateBasketItemQuantity = function (id, quantity) {
             break;
         }
     }
+    this.saveObjectToStorage('basket',basket);
 };
 wall.prototype.updateBasket = function (items) {
     this.wallLog('Updating basket');
