@@ -9,8 +9,8 @@ body {
 #mainWrapper {
 
 	position: absolute;
-	height: 1024px;
-	width: 1280px;
+	height: 100%;
+	width: 100%;
 
 	//background: #858585; /* Old browsers */
 	//background: -moz-radial-gradient(center, ellipse cover, #858585 0%, #0D0D0D 100%); /* FF3.6+ */
