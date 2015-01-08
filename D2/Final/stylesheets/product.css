@@ -1329,7 +1329,7 @@ label[name="optionsLabels"] {
 
 	background-color: #000;
 	border: 0px solid #000;
-	border-radius: 10px;
+	border-radius: 18px;
 
 
 
@@ -1371,7 +1371,7 @@ label[name="optionsLabels"] {
 
 	position: absolute;
 	padding-top: 10px;
-	top: 10px;
+	top: 15px;
 	left: 50px;
 	height: 80px;
 
@@ -1556,10 +1556,10 @@ label[name="optionsLabels"] {
 #optionSectionLabel input:checked~ #optionsWrapper
 #optionsContent #basketSection #basketContainer {
 
-	bottom: -2px;
-	left: 0px;
+	bottom: 3px;
+	left: 3px;
 	height: 300px;
-	width: 800px;
+	width: 794px;
 
 
 }
@@ -1988,6 +1988,9 @@ label[name="optionsLabels"] {
     display: none;
     padding: 0.5em;
     z-index: 999;
+    
+    border-radius: 10px;
+    
 }
 
 .notification .icon-cancel {

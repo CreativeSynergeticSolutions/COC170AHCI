@@ -68,14 +68,14 @@ Dial.prototype.addNewDial = function(dialid, selectedDialFunction){
 						newDial.angle = 0;
 
 					}
-					
+					/*
 					if((dialObject.dialsValueArray[dialid] == 4) && overVal){
 
 						newDial.stop();
 						newDial.angle = 135;
 
 					}
-
+					*/
 					if((dialObject.dialsValueArray[dialid] == 5) && overVal){
 
 						newDial.stop();

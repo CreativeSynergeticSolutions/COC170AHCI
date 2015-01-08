@@ -77,7 +77,7 @@ $(document).ready(function(){
 
 		currentQuantity = dialData.dialValue;
 
-		$("#basketQuantityVal").text(currentQuantity);
+		$("#basketQuantityVal").text("x" + currentQuantity);
 
 	});
 
